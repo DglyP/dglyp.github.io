@@ -147,3 +147,20 @@ strong {
     width: 100%
     
 }
+
+.leftForm {
+	margin-top: 15px;
+	background-color: aqua
+}
+
+.leftDivisionMap {
+	width: 40%;
+	height: 800px
+}
+
+.labelLeft {
+	width: 70%;
+	color: black;
+	font-family: inherit;
+	font-size: 28px
+}

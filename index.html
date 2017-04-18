@@ -2,9 +2,19 @@
 <html>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="/css/style.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="js/markerHandler.js" type="text/javascript"></script>
+<script src="js/globalVariables.js" type="text/javascript"></script>
+<script src="js/searchHandler.js" type="text/javascript"></script>
+<script src="js/mapData.js" type="text/javascript"></script>
+<script src="js/c3.js" type="text/javascript"></script>
+<script src="js/weather.js" type="text/javascript"></script>    
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script src="http://code.highcharts.com/highcharts.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="/js/Gmap.js" type="text/javascript"></script>
+<script async defer    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQVKz7CPn4zB0ZiNOlsN8xBwrUsFHpVW0&callback=initMap"></script>
 
 <head>
     <title>IronHacks</title>
@@ -55,19 +65,19 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
             <div class="item active">
-                <img src="Carousel.png" alt="Chania">
+                <img src="/images/Carousel.png" alt="Chania">
             </div>
 
             <div class="item">
-                <img src="Carousel.png" alt="Chania">
+                <img src="/images/Carousel.png" alt="Chania">
             </div>
 
             <div class="item">
-                <img src="Carousel.png" alt="Flower">
+                <img src="/images/Carousel.png" alt="Flower">
             </div>
 
             <div class="item">
-                <img src="Carousel.png" alt="Flower">
+                <img src="/images/Carousel.png" alt="Flower">
             </div>
         </div>
         <!------------>
@@ -91,67 +101,50 @@
     <h3>Map showing places with markers </h3>
 
     <div id="GoogMap" style="height: 800px; border: 1px solid black">
-        <div class="imagecontainer pull-left" style="color: white; height: 800px ;width: 50% ;background-image: url(mapInfo.png)">
-            
-            <form class= 'well' style="height: 800px">
-              <div class="form-group">
-                <label for="budget" class='labelform'>Maximum Budget Available</label>
-                <input placeholder="Maximum budget" class="form-control" min="0" type="number" required>
-              </div>
-              <div class="form-group">
-                <label for="safety" class='labelform'>Do you plan to pay more for safety?</label>
-                  <div align="left" class="col-md-4 checkFormContainer">
-                    <label class='checkform'><input type="checkbox" > Yes </label>
-                    <label class='checkform'><input type="checkbox" > No </label>
-                    <label class='checkform'><input type="checkbox" > Not important </label>
-                  </div>
-              </div>
-                
-              <div class="form-group">
-                <label for="safety" class='labelform'>Maximum Distance from the University</label>
-                <input placeholder="Maximum Distance" class="form-control" min="0" type="number" required>
-              </div>
-              <div class="form-group">
-                <label for="safety" class='labelform'>Please choose from the following options the items that matter the most when finding a place to rent:</label>
-                <div class="col-md-4 checkFormContainer">
-                      <label class='checkform'><input type="checkbox" > Parks </label>
-                    <label class='checkform'><input type="checkbox" > Libraries </label>
-                    <label class='checkform'><input type="checkbox" > Crime Free </label>
-                    <label class='checkform'><input type="checkbox" > Police Stations </label>
-                    <label class='checkform'><input type="checkbox" > Hospitals </label>
-                    <label class='checkform'><input type="checkbox" > Supermarkets </label>
-                    <label class='checkform'><input type="checkbox" > Schools </label>
-                    <label class='checkform'><input type="checkbox" > Restaurants </label>
-                    <label class='checkform'><input type="checkbox" > Cinema </label>
+		<div class="leftDivisionMap pull-left">
+        <div class="leftForm" style="color: white; height: 25%">
+             <div class="col-xs-12">
+                <p class="labelLeft">Maximum Distance from University:</p>
+                <div class="col-xs-10">
+                    <input id="sliderDistance" type="range" min="0.1" max="10" step="0.1" onchange="sliderDistanceOnChange()"
+                    />
                 </div>
-                  
-              </div>
+                <div id="distanceKm" class="col-xs-2 divDistanceText" title="Distance from your position"> </div>
+            </div>
+            <div class="col-xs-12">
+                <p class="labelLeft">Maximum Budget Available:</p>
+                <div class="col-xs-10">
+                    <input id="sliderPrice" type="range" min="0" max="500" step="1" onchange="sliderPriceOnChange()"
+                    />
+                </div>
+                <div id="maxPriceSlider" class="col-xs-2 divDistanceText" title="Maximum price"> </div>
+            </div> 
+			</div>
+            <div style="height:25% ">
                 
-
-              <button type="submit" class="btn btn-default" id="dataButton">Let's search!</button>
-
-            </form>
-
-        </div>        
+            </div>
+			</div>
         <div id="map"></div>        
     </div>
     
 <!----------End of Google API---------->
     
     <h3 style="margin-top:15px">Graphs</h3>
-        
+
+<!----------Start Graphs---------->        
     <p>
         Using D3.JS,  Graphs will be made to show information about the current dataset. Additionally, thes user will be able to select different type of graphs
     </p>
 
-    <h2 style="border: 3px solid #00f5ff; padding:95px; text-align:center">
-        D3.js graphics will show here
-    </h2>
+    <div style="border: 3px solid #00f5ff; padding:95px; text-align:center">
+        <div class="menu">              
+               <div id="prcpsnowChart" class="chart"></div>
+                
+            </div>
+    </div>
 
     
     
-<script src="Gmap.js" type="text/javascript"></script>
-<script async defer    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQVKz7CPn4zB0ZiNOlsN8xBwrUsFHpVW0&callback=initMap"></script>
     
     
 </body>
