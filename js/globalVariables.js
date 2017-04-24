@@ -1,13 +1,20 @@
+var map;
+var parks;
 var radiusSearch = 3e3;
 var radiusPolice = 3e3;
 var maxPrice = 10e6;
+var boundaries;
 var markers = {};
-//open weather maps
-var urlBaseOWM = "http://api.openweathermap.org/data/2.5/";
-var appIdOWM = "&appid=d47ca477ae4b4337507e0104d1f579da";
+var token = "eUJAFHNCGUyRKDUalOUmhFsdVBRBacCN";
 
-//Affordable Rental Housing Developments
-var urlRental = "https://data.cityofchicago.org/api/views/s6ha-ppgi/rows.json?accessType=DOWNLOAD";
+var hospitalPin = {
+    position: {
+        lat: 41.8708,
+        lng: -87.6505
+    },
+    draggable: true,
+    title: "hospital",
+};
 
 var pinUser = {
     position: {
@@ -23,5 +30,23 @@ var rentalPin = {
         lng: -87.6505
     },
     draggable: true,
-    title: "house",
+    title: "rent",
+};
+
+var crimePin = {
+    position: {
+        lat: 41.8708,
+        lng: -87.6505
+    },
+    draggable: true,
+    title: "crime",
+};
+
+var policePin = {
+    position: {
+        lat: 41.8708,
+        lng: -87.6505
+    },
+    draggable: true,
+    title: "police",
 };

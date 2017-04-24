@@ -127,7 +127,7 @@ strong {
 
 .carousel-inner {
     width: 100%;
-    margin: auto;
+    margin: 15px;
 }
 
 .carousel-indicators {
@@ -150,12 +150,14 @@ strong {
 
 .leftForm {
 	margin-top: 15px;
-	background-color: aqua
+	background-color: #d6e9ff
 }
 
 .leftDivisionMap {
 	width: 40%;
-	height: 800px
+	height: 800px;
+    background-color: #d6e9ff
+    
 }
 
 .labelLeft {
@@ -163,4 +165,37 @@ strong {
 	color: black;
 	font-family: inherit;
 	font-size: 28px
+}
+
+.chart {
+    width: 40%
+}
+
+.menu {
+    
+}
+
+.graphs {
+    margin-top: 15px;
+    width: 50%;
+    height: 100%
+}
+
+.mapButton {
+    width: auto;
+    margin: 5px
+}
+
+.buttonsMap {
+    margin-left: 35px;
+    margin-right: 35px
+}
+
+.clearMap {
+    margin-left: 35%;
+    margin-right: 40%
+}
+
+.divDistanceText {
+    color : black
 }

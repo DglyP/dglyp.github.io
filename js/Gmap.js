@@ -11,6 +11,7 @@ function initMap() {
     var ImportantMarker = new google.maps.Marker({
                     position: {lat: 41.8708, lng: -87.6505},
                     map: map,
+                    icon: "images/school.png",
                     title: 'Department of Computer Science – University of Illinois' 
                 });
               }

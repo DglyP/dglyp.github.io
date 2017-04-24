@@ -1,7 +1,7 @@
 function sliderDistanceOnChange() {
     radiusSearch = ($("#sliderDistance").val()) * 1000;
     deleteAllMarkers();
-    loadDataInitial(pinUser);
+    loadHouses(pinUser);
     setDistanceText();
 }
 
@@ -20,7 +20,7 @@ function setSliderDistance() {
 function sliderPriceOnChange() {
     maxPrice = Number($("#sliderPrice").val());
     deleteAllMarkers();
-    loadDataInitial(pinUser);
+    loadHouses(pinUser);
     setPriceText();
 }
 
