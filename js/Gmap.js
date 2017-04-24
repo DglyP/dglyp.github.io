@@ -12,7 +12,7 @@ function initMap() {
                     position: {lat: 41.8708, lng: -87.6505},
                     map: map,
                     icon: "images/school.png",
-                    title: 'Department of Computer Science – University of Illinois' 
+                    title: 'Department of Computer Science – University of Illinois ' 
                 });
               }
 

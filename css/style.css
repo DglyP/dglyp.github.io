@@ -154,7 +154,7 @@ strong {
 }
 
 .leftDivisionMap {
-	width: 40%;
+	width: 50%;
 	height: 800px;
     background-color: #d6e9ff
     
@@ -199,3 +199,5 @@ strong {
 .divDistanceText {
     color : black
 }
+
+.divBlack{}
