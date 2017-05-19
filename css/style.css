@@ -16,13 +16,12 @@ h1, h2, h3, h4, h5, h6, p {
   }
 
 .testingA{
-    margin: 0 auto;
+    margin-top: 15px;
 }
 
 .testingTop{
-    background: #4a4a4a;
     margin: 5px;
-    padding: 55px;
+    padding: 15px;
 }
 
 .Mapdiv{
@@ -37,8 +36,11 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 body {
-  background: #FFFFFF;
-  color: #86dbfa;
+  background-image: url("../images/Home.jpg");
+  background-repeat: repeat-x;
+  background-attachment: fixed;
+  background-position: center top;
+  color: #FFFFFF;
   font: 300 18px/35px "Roboto", sans-serif;
   margin: 50px;
   -webkit-text-size-adjust: none;
@@ -84,7 +86,6 @@ h4 {
   font-size: 44px;
   line-height: 43px;
   font-weight: 100;
-  color: #6a6a6a;
 }
 
 h5 {
@@ -127,7 +128,6 @@ strong {
 
 .carousel-inner {
     width: 100%;
-    margin: 15px;
 }
 
 .carousel-indicators {
@@ -149,14 +149,13 @@ strong {
 }
 
 .leftForm {
-	margin-top: 15px;
-	background-color: #d6e9ff
+	margin: 15px;
 }
 
 .leftDivisionMap {
 	width: 50%;
 	height: 800px;
-    background-color: #d6e9ff
+    background-color: rgba(234, 234, 234, 0.78)
     
 }
 
@@ -177,14 +176,21 @@ strong {
 
 .graphs {
     margin-top: 15px;
-    width: 50%;
-    height: 100%
+    margin-left: 65px;
+    margin-right: 65px
 }
 
 .mapButton {
-    width: auto;
-    margin: 5px;
-    padding: 10px;
+  font-size: 17px;
+  line-height: 4px;
+  color: #ffffff;
+  background: #00b1ff;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  font-weight: 400;
+  padding: 21px 42px 20px 43px;
+  margin-top: 15px;
 }
 
 .buttonsMap {
@@ -202,3 +208,31 @@ strong {
 }
 
 .divBlack{}
+#backgroundImg {
+    
+}
+
+#bigDiv {
+}
+
+#topButton {
+  font-size: 21px;
+  line-height: 24px;
+  color: #ffffff;
+  background: #00b1ff;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  font-weight: 400;
+  padding: 21px 42px 20px 43px;
+  margin-top: 51px;
+  display: inline-block;
+}
+
+#myCarousel {
+}
+
+#weatherDiv {
+    height:450px; 
+    background: rgba(100, 159, 203, 0.5);
+}

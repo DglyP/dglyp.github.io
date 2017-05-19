@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html background = "images\home.jpg\">
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" href="css/style.css">
@@ -22,26 +22,27 @@
 </head>
 
 <body>
-    <div align= center class="testingTop" style=" border: 1px solid black">
-        <h2>Find the best place for your needs, easily. </h2>
-        <a class="btn" href="#GoogMap">Click here to start...</a>
+    <div align= center><img src="images/ChicagoRental.png" alt="Logo"></div>
+    <div id='bigDiv'>
+        
+    <div align= center class="testingTop">
+        
+        <h6>Find the best place for your needs, easily. </h6>
+        <a class="btn" id="topButton" href="#GoogMap">Click here to start...</a>
     </div>
     
     <div class="testingA">
-            <h2 style="margin:15px"><strong>
-                Do you need a place to stay?
-                </strong>
-            </h2>
+           
             <h4>
                 <span>
                 <strong>
-                    Here, you are able to find the best places to rent today while taking weather, safety and availability into account. 
+                    Here, you will find the best places to rent today while taking weather, safety and availability into account. 
                 </strong>
                 </span>
             </h4>
         </div>
         
-    <p style="text-align:center"><b>
+    <p style="text-align:center; opacity:0.8; margin:50px "><b>
             Using this website will help you find a safe and affordable place to rent near the Department of Computer Science at the University of Illinois in Chicago.
         </b></p>
     
@@ -67,15 +68,15 @@
             </div>
 
             <div class="item">
-                <img src="images/Carousel.png" alt="Chania">
+                <img src="images/Carousel2.png" alt="Chania">
             </div>
 
             <div class="item">
-                <img src="images/Carousel.png" alt="Flower">
+                <img src="images/Carousel3.png" alt="Flower">
             </div>
 
             <div class="item">
-                <img src="images/Carousel.png" alt="Flower">
+                <img src="images/Carousel4.png" alt="Flower">
             </div>
         </div>
         <!------------>
@@ -100,7 +101,7 @@
 		<div class="leftDivisionMap pull-left">
         <div class="leftForm" style="color: white; height: 25%">
              <div class="col-xs-12">
-                 <p style="margin:15px; color: black">In this section you can select the information yoy want the app to show you.    
+                 <p style="margin-bottom: 15px; color: black">In this section you can select the information yoy want the app to show you.    
                      
                 Choose your information with the sliders provided</p>
                 <p class="labelLeft">Maximum Distance from University:</p>
@@ -120,9 +121,8 @@
             </div> 
 			</div>
             <div style="height:70%">
-                <p style="margin:25px; color:black">Choose what you want to be shown: </p>
-                <div class="buttonsMap">
-                    <br>
+                <p style="margin: 30px; color:black">Choose what you want to be shown: </p>
+                <div align=center class="buttonsMap">
                 <button class= "mapButton btn btn-info" id="parks" onclick="loadParksData()">Show Parks</button>
                 <button class= "mapButton btn btn-info" id="crimes" onclick="loadCrimeData()">Show Crimes</button>
                 <button class= "mapButton btn btn-info" id="hospitals" onclick="loadHospitalData()">Show Hospitals</button>
@@ -143,7 +143,7 @@
     <h3 style="margin:15px">Weather in Chicago</h3>
 
 <!----------Start Graphs---------->        
-    <div style="border: 3px solid #00f5ff; height:450px">
+    <div  id="weatherDiv">
         <div class="graphs pull-left">              
                <div id="rainchart" class="chart"></div>
             </div>
@@ -152,9 +152,6 @@
             </div>
     </div>
 
-    
-    
-    
-    
+    </div>
 </body>
 </html>

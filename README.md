@@ -16,7 +16,7 @@ The University of Illinois is marked with a special icon related to the IronHack
 
 C3.js was used to make some rain precipitation and snow graphs related to the weather in Chicago and Google Maps was used to show this information.
 
-Finally, The app is up and running at dglyp.github.io as requested, however, because the requests made to make the charts are not HTTPS, it's not fully working. Please download the one provided in the GitHub.
+Finally, The app is up and running at dglyp.github.io as requested
 
 App was tested using Firefox and Google Chrome.
 
