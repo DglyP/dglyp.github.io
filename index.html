@@ -121,7 +121,8 @@
             </div> 
 			</div>
             <div style="height:70%">
-                <p style="margin: 30px; color:black">Choose what you want to be shown: </p>
+                <div class="col-xs-12">
+                <p style="margin-left: 15px; color:black">Choose what you want to be shown: </p>
                 <div align=center class="buttonsMap">
                 <button class= "mapButton btn btn-info" id="parks" onclick="loadParksData()">Show Parks</button>
                 <button class= "mapButton btn btn-info" id="crimes" onclick="loadCrimeData()">Show Crimes</button>
@@ -129,9 +130,8 @@
                 <button class= "mapButton btn btn-info" id="police" onclick="loadPoliceData()">Show police</button>
                 <button class= "mapButton btn btn-info" id="police" onclick="hideboundaries()">Hide boundaries</button>
                  <button class= "mapButton btn btn-info" id="show" onclick="showboundaries()" style="visibility:hidden">Show boundaries</button>
+                <button class= "mapButton btn btn-info" id="police " style="background-color: red" onclick="clearMap()">Clear Map</button>
             </div>
-                <div class="clearMap">
-                                <button class= "mapButton btn btn-info" id="police " style="background-color: red" onclick="clearMap()">Clear Map</button>
                 </div>
             </div>
 			</div>
@@ -144,11 +144,13 @@
 
 <!----------Start Graphs---------->        
     <div  id="weatherDiv">
+        <div class="col-xs-12">
         <div class="graphs pull-left">              
                <div id="rainchart" class="chart"></div>
             </div>
         <div class="graphs pull-right">              
                <div id="snowChart" class="chart"></div>
+            </div>
             </div>
     </div>
 

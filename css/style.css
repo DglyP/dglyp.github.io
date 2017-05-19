@@ -176,12 +176,11 @@ strong {
 
 .graphs {
     margin-top: 15px;
-    margin-left: 65px;
-    margin-right: 65px
 }
 
 .mapButton {
   font-size: 17px;
+  width: 300px;    
   line-height: 4px;
   color: #ffffff;
   background: #00b1ff;
@@ -189,18 +188,18 @@ strong {
   -moz-border-radius: 50px;
   border-radius: 50px;
   font-weight: 400;
-  padding: 21px 42px 20px 43px;
+  padding: 15px 20px 15px 20px;
   margin-top: 15px;
+  display: inline-block;
 }
 
 .buttonsMap {
+    height:30%;
     margin-left: 35px;
     margin-right: 35px
 }
 
 .clearMap {
-    margin-left: 35%;
-    margin-right: 40%
 }
 
 .divDistanceText {
