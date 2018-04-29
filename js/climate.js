@@ -121,7 +121,6 @@ function sum(acc, v, i) {
               chart: {
                 type: 'column',
                 zoomType: 'x',
-                width: 420
               },
               title: {
                     text: 'Rain precipitation in Chicago'
@@ -151,7 +150,6 @@ function sum(acc, v, i) {
               chart: {
                 type: 'spline',
                 zoomType: 'x',
-                width: 420
               },
               title: {
                     text: 'Snow in Chicago'
