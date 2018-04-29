@@ -209,6 +209,7 @@ strong {
 }
 
 #map {
+    min-height: 500px
 }
 
 .slider {
