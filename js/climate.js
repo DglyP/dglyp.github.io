@@ -123,7 +123,7 @@ function sum(acc, v, i) {
                 zoomType: 'x',
               },
               title: {
-                    text: 'Rain precipitation in Chicago'
+                    text: 'Rain precipitation in New York'
                 },
                 subtitle: {
                     text: 'Click and drag in the plot area to zoom in'
@@ -152,7 +152,7 @@ function sum(acc, v, i) {
                 zoomType: 'x',
               },
               title: {
-                    text: 'Snow in Chicago'
+                    text: 'Snow in NewYork'
                 },
                 subtitle: {
                     text: 'Click and drag in the plot area to zoom in'
