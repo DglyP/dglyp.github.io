@@ -162,6 +162,7 @@ html, body, .page {
 #p3 { background: #F6F6F6; }
 #p4 { background: #F6F6F6; }
 
+
 #t2:target #p2,
 #t3:target #p3,
 #t4:target #p4,
@@ -253,26 +254,6 @@ a {
 
 .title {
     font-size: 38px;
-}
-
-.hint {
-    font-size: 13px;
-}
-
-#p4 .hint {
-    display: inherit !important;
-}
-
-.hint a {
-    color: yellow;
-    transition: all 250ms ease-out;
-    -webkit-transition: all 250ms ease-out;
-    -moz-transition: all 250ms ease-out;
-    -o-transition: all 250ms ease-out;
-}
-
-.hint a:hover {
-    color: #FFF;
 }
 
 .line-trough {

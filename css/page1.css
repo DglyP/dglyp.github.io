@@ -4,7 +4,7 @@
 }
 
 .cardsRow{
-    padding: 50px 150px;
+    padding: 50px 50px;
 }
 
 .card{
@@ -12,3 +12,12 @@
     text-align: justify;
     align-items: center;
 }
+
+.card-body{
+    text-align: center;
+}
+
+
+/*///////////////////////////////////////////////////////
+*/
+
