@@ -83,7 +83,14 @@
                                     </section>  
                                 </div>
                                 <div class="page" id="p2">
-                                    <section class="icon fa fa-bolt"><span class="title">Upgrade Scenario</span></section>
+                                    <section>
+                                        <div id="upgradeScenario"></div>
+                                        <script> 
+                                            $(function(){
+                                                $("#upgradeScenario").load("page2.html"); 
+                                            });
+                                        </script> 
+                                    </section>  
                                 </div>  
                                 <div class="page" id="p3">
                                     <section class="icon fa fa-bolt"><span class="title">Final Selection</span></section>
