@@ -28,5 +28,14 @@
 }
 
 .card-header-tabs{
-    opacity: 100%;
+    opacity:inherit;
+}
+
+.card{
+    border: none;
+}
+
+.btn-link{
+    font-weight: 500 !important;
+    color: #6a6a6a !important;
 }

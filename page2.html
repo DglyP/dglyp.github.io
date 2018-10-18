@@ -31,6 +31,30 @@
 <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
+    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <style>
+        body {
+            font-family: "PT Sans", sans-serif;
+        }
+        
+        .bar {
+            fill: #64a7e2;
+        }
+        
+        .axis {
+            font-size: 12px;
+        }
+        
+        .axis path,
+        .axis line {
+            fill: none;
+            display: none;
+        }
+        
+        .label {
+            font-size: 13px;
+        }
+    </style>
 </head>
 
 <body>
@@ -55,7 +79,10 @@
                     </li>
                 </ul>
                 <div class="card-body">
-                    <div id="accordion">
+
+                    <div class="tab-content">
+                        <div id="home" class="container tab-pane active">
+                                                <div id="accordion">
                         <div class="card">
                             <div class="card-header" id="headingOne">
                                 <h5 class="mb-0">
@@ -64,7 +91,6 @@
                                     </button>
                                 </h5>
                             </div>
-
                             <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
                                 <div class="card-body">
                                 </div>
@@ -96,36 +122,131 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="card">
+                            <div class="card-header" id="headingThree">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        Residential Window Properties
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                                <div class="card-body">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingThree">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        Storefront Glazing Properties
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                                <div class="card-body">
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="tab-content">
-                        <div id="home" class="container tab-pane active"><br>
-                            <h3>HOME</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                         </div>
                         <div id="menu1" class="container tab-pane fade"><br>
-                            <h3>Menu 1</h3>
-                            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                         </div>
                         <div id="menu2" class="container tab-pane fade"><br>
-                            <h3>Menu 2</h3>
-                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
                         </div>
                     </div>
                 </div>
             </div>
-
+<!--////////////////////graph/////////////////////////////////////////////////-->
             <div class="col-6">
                 <div class="card text-center">
                     <div class="card-header">
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <div id="graphic"></div>
+
+    <script>
+        var data = [{
+                "name": "Piched roof with attic",
+                "value": 582501,
+        },
+            {
+                "name": "Roof Insulation",
+                "value": 578680,
+        },
+            {
+                "name": "SIPs R40",
+                "value": 572501,
+        }];
+
+        //sort bars based on value
+        data = data.sort(function (a, b) {
+            return d3.ascending(a.value, b.value);
+        })
+
+        //set up svg using margin conventions - we'll need plenty of room on the left for labels
+        var margin = {
+            top: 15,
+            right: 25,
+            bottom: 350,
+            left: 20
+        };
+
+        var width = +d3.select('#graphic').style('width').slice(0, -2) - margin.right,
+            height = 500 - margin.top - margin.bottom;
+
+        var svg = d3.select("#graphic").append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+        var x = d3.scale.linear()
+            .range([0, width])
+            .domain([0, d3.max(data, function (d) {
+                return d.value;
+            })]);
+
+        var y = d3.scale.ordinal()
+            .rangeRoundBands([height, 0], .1)
+            .domain(data.map(function (d) {
+                return d.name;
+            }));
+
+        //make y axis to show bar names
+        var yAxis = d3.svg.axis()
+            .scale(y)
+            //no tick marks
+            .tickSize(0)
+            .orient("left");
+
+//        var gy = svg.append("g")
+//            .attr("class", "y axis")
+//            .call(yAxis)
+
+        var bars = svg.selectAll(".bar")
+            .data(data)
+            .enter()
+            .append("g")
+
+        //append rects
+        bars.append("rect")
+            .attr("class", "bar")
+            .attr("y", function (d) {
+                return y(d.name);
+            })
+            .attr("height", y.rangeBand())
+            .attr("x", 0)
+            .attr("width", function (d) {
+                return x(d.value);
+            });
+
+        
+    </script>
+
                     </div>
                 </div>
             </div>
         </div>
-    </div>
     </div>
 </body>
