@@ -1,23 +1,32 @@
-.buildingSelection{
-    background-color: #F6F6F6 ;
-    height: 100%;
+#BuildingEnvelopeTab{
+    background-color: #89C7EA;
+    color: white;
 }
 
-.cardsRow{
-    padding: 50px 50px;
+#LightingTab{
+    background-color: #8B85C8;
+    color: white;
 }
 
-.card{
-    color:#6d5353;
-    text-align: justify;
-    align-items: center;
+#HVACTab{
+    background-color: #FF6433;
+    color: white;
 }
 
-.card-body{
-    text-align: center;
+#WaterTab{
+    background-color: #FFAD3C;
+    color: white;
 }
 
+#EnergyTab{
+    background-color: #F100EC;
+    color: white;
+}
 
-/*///////////////////////////////////////////////////////
-*/
+.parameterSelection{
+    border: 1px solid #DFDFDF;
+}
 
+.card-header-tabs{
+    opacity: 100%;
+}
