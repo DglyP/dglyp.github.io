@@ -91,7 +91,7 @@
                                             </button>
                                         </h5>
                                     </div>
-                                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                                         <div class="card-body">
                                             <ul class="list-group">
                                                 <li class="list-group-item">
@@ -115,6 +115,49 @@
                                     </div>
                                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                                         <div class="card-body">
+                                            
+                                            <ul class="list-group">
+                                                <li class="list-group-item">
+                                                    Piched roof with attic
+                                                    <div class="material-switch pull-right">
+                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
+                                                    </div>
+                                                </li>
+                                                
+                                                <li class="list-group-item">
+                                                    R38
+                                                    <div class="material-switch pull-right">
+                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
+                                                    </div>
+                                                </li>
+                                                
+                                                <li class="list-group-item">
+                                                    R38+4" rigid
+                                                    <div class="material-switch pull-right">
+                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
+                                                    </div>
+                                                </li>
+                                                
+                                                <li class="list-group-item">
+                                                    R49
+                                                    <div class="material-switch pull-right">
+                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
+                                                    </div>
+                                                </li>
+                                                
+                                                <li class="list-group-item">
+                                                    R60
+                                                    <div class="material-switch pull-right">
+                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -174,20 +217,20 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col-12">
-                                <P>Piched Roof with attic</P>
+                                <P class="chartName">Piched Roof with attic</P>
                                 <div id="graphic"></div>
                                 <script>
                                     var data = [{
                                         "name": "Piched roof with attic",
-                                        "value": 582501,
+                                        "value": 586360,
                                     },
                                                 {
                                                     "name": "Roof Insulation",
-                                                    "value": 578680,
+                                                    "value": 582501,
                                                 },
                                                 {
                                                     "name": "SIPs R40",
-                                                    "value": 572501,
+                                                    "value": 586240,
                                                 }];
 
                                     //sort bars based on value
@@ -198,17 +241,17 @@
                                     //set up svg using margin conventions - we'll need plenty of room on the left for labels
                                     var margin = {
                                         top: 15,
-                                        right: 25,
-                                        bottom: 350,
+                                        right: 250,
+                                        bottom: 20,
                                         left: 20
                                     };
 
                                     var width = +d3.select('#graphic').style('width').slice(0, -2) - margin.right,
-                                        height = 500 - margin.top - margin.bottom;
+                                        height = 100;
 
                                     var svg = d3.select("#graphic").append("svg")
                                     .attr("width", width + margin.left + margin.right)
-                                    .attr("height", height + margin.top + margin.bottom)
+                                    .attr("height", height)
                                     .append("g")
                                     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
@@ -254,41 +297,37 @@
                                 </script>
                             </div>
                             <div class="col-12">
-
-                                <div id="graphic"></div>
+                                <P class="chartName">R38</P>
+                                <div id="graphic2"></div>
                                 <script>
                                     var data = [{
                                         "name": "Piched roof with attic",
-                                        "value": 582501,
+                                        "value": 586360,
                                     },
                                                 {
                                                     "name": "Roof Insulation",
-                                                    "value": 578680,
+                                                    "value": 483767,
                                                 },
                                                 {
                                                     "name": "SIPs R40",
-                                                    "value": 572501,
+                                                    "value": 384028,
                                                 }];
 
-                                    //sort bars based on value
-                                    data = data.sort(function (a, b) {
-                                        return d3.ascending(a.value, b.value);
-                                    })
 
                                     //set up svg using margin conventions - we'll need plenty of room on the left for labels
                                     var margin = {
                                         top: 15,
-                                        right: 25,
-                                        bottom: 350,
+                                        right: 250,
+                                        bottom: 20,
                                         left: 20
                                     };
 
-                                    var width = +d3.select('#graphic').style('width').slice(0, -2) - margin.right,
-                                        height = 500 - margin.top - margin.bottom;
+                                    var width = +d3.select('#graphic2').style('width').slice(0, -2) - margin.right,
+                                        height = 80;
 
-                                    var svg = d3.select("#graphic").append("svg")
+                                    var svg = d3.select("#graphic2").append("svg")
                                     .attr("width", width + margin.left + margin.right)
-                                    .attr("height", height + margin.top + margin.bottom)
+                                    .attr("height", height)
                                     .append("g")
                                     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
@@ -332,6 +371,84 @@
                                         return x(d.value);
                                     });
                                 </script>
+
+                            </div>
+                            <div class="col-12">
+                                <P class="chartName">R38+4'' rigid</P>
+                                <div id="graphic3"></div>
+                                <script>
+                                    var data = [{
+                                        "name": "Piched roof with attic",
+                                        "value": 582501,
+                                    },
+                                                {
+                                                    "name": "Roof Insulation",
+                                                    "value": 200000,
+                                                },
+                                                {
+                                                    "name": "SIPs R40",
+                                                    "value": 572501,
+                                                }];
+
+
+                                    //set up svg using margin conventions - we'll need plenty of room on the left for labels
+                                    var margin = {
+                                        top: 15,
+                                        right: 250,
+                                        bottom: 20,
+                                        left: 20
+                                    };
+
+                                    var width = +d3.select('#graphic3').style('width').slice(0, -2) - margin.right,
+                                        height = 80;
+
+                                    var svg = d3.select("#graphic3").append("svg")
+                                    .attr("width", width + margin.left + margin.right)
+                                    .attr("height", height)
+                                    .append("g")
+                                    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+                                    var x = d3.scale.linear()
+                                    .range([0, width])
+                                    .domain([0, d3.max(data, function (d) {
+                                        return d.value;
+                                    })]);
+
+                                    var y = d3.scale.ordinal()
+                                    .rangeRoundBands([height, 0], .1)
+                                    .domain(data.map(function (d) {
+                                        return d.name;
+                                    }));
+
+                                    //make y axis to show bar names
+                                    var yAxis = d3.svg.axis()
+                                    .scale(y)
+                                    //no tick marks
+                                    .tickSize(0)
+                                    .orient("left");
+
+                                    //        var gy = svg.append("g")
+                                    //            .attr("class", "y axis")
+                                    //            .call(yAxis)
+
+                                    var bars = svg.selectAll(".bar")
+                                    .data(data)
+                                    .enter()
+                                    .append("g")
+
+                                    //append rects
+                                    bars.append("rect")
+                                        .attr("class", "bar")
+                                        .attr("y", function (d) {
+                                        return y(d.name);
+                                    })
+                                        .attr("height", y.rangeBand())
+                                        .attr("x", 0)
+                                        .attr("width", function (d) {
+                                        return x(d.value);
+                                    });
+                                </script>
+
                             </div>
                         </div>
                     </div>

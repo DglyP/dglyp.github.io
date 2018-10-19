@@ -43,3 +43,12 @@
     font-weight: 500 !important;
     color: #6a6a6a !important;
 }
+
+.chartName{
+    font-size: 12px;
+    margin-top: 5px;
+    margin-bottom: 0;
+    color: black;
+    float: left;
+    font-weight: bold;
+}
