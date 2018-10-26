@@ -1,44 +1,54 @@
-.material-switch > input[type="checkbox"] {
-    display: none;   
+#BuildingEnvelopeTab{
+    background-color: #89C7EA;
+    color: white;
 }
 
-.material-switch > label {
-    cursor: pointer;
-    height: 0px;
-    position: relative; 
-    width: 40px;  
+#LightingTab{
+    background-color: #8B85C8;
+    color: white;
 }
 
-.material-switch > label::before {
-    background: rgb(0, 0, 0);
-    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
-    border-radius: 8px;
-    content: '';
-    height: 16px;
-    margin-top: -8px;
-    position:absolute;
-    opacity: 0.3;
-    transition: all 0.4s ease-in-out;
-    width: 40px;
+#HVACTab{
+    background-color: #FF6433;
+    color: white;
 }
-.material-switch > label::after {
-    background: rgb(255, 255, 255);
-    border-radius: 16px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
-    content: '';
-    height: 24px;
-    left: -4px;
-    margin-top: -8px;
-    position: absolute;
-    top: -4px;
-    transition: all 0.3s ease-in-out;
-    width: 24px;
+
+#WaterTab{
+    background-color: #FFAD3C;
+    color: white;
 }
-.material-switch > input[type="checkbox"]:checked + label::before {
-    background: inherit;
-    opacity: 0.5;
+
+#EnergyTab{
+    background-color: #F100EC;
+    color: white;
 }
-.material-switch > input[type="checkbox"]:checked + label::after {
-    background: inherit;
-    left: 20px;
+
+.parameterSelection{
+    border: 1px solid #DFDFDF;
+}
+
+.card-header-tabs{
+    opacity:inherit;
+}
+
+.card{
+    border: none;
+}
+
+.cardsRow{
+    padding: 50px 50px;
+}
+
+.btn-link{
+    font-weight: 500 !important;
+    color: #6a6a6a !important;
+}
+
+.chartName{
+    font-size: 12px;
+    margin-top: 5px;
+    margin-bottom: 0;
+    color: black;
+    float: left;
+    font-weight: bold;
 }
