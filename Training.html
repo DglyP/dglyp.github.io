@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<!--        JQuery code-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.js"></script>
+        
+    </head>
+    <body>
+<!--    Title -->
+        <h2>Tutorial Javascript</h2>
+        
+        <p> This function returns the product of the arguments (a, b):</p>
+        
+        <p id="demo"></p>
+    </body>
+    
+    
+    <script>
+        var canvas = d3.select("body")
+            .append("svg")
+            .attr("width", 500)
+            .attr("height", 500);
+
+var circle = canvas.append("circle")
+            .attr("cx", 250)
+            .attr("cy", 250)
+            .attr("r", 50);
+
+var rect = canvas.append("rect")
+            .attr("width", 100)
+            .attr("height", 50);
+            
+var line = canvas.append("line")
+            .attr("x1", 0)
+            .attr("y1", 100)
+            .attr("x2", 400)
+            .attr("y2", 400)
+            .attr("stroke", "green")
+            .attr("stroke-width", 10);
+            
+            
+        
+        
+    function myFunction(a, b){
+        return a * b;
+    }
+        document.getElementById("demo").innerHTML = myFunction(10,2);
+    </script>
+
+</html>

@@ -18,13 +18,13 @@
 .btnTrans{
     margin-left: 20px;
     background-color: rgba(0, 0, 0, 0);
-    color: #4b4b4b;
+    color: #4b4b4b !important;
 }
 
 .btnContact{
     margin-right: 80px;
     background-color: rgba(0, 0, 0, 0);
-    color: #4b4b4b;
+    color: #4b4b4b !important;
 }
 
 .steps {

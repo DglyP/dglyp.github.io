@@ -33,26 +33,24 @@
 <![endif]-->
     <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <style>
-        body {
-            font-family: "PT Sans", sans-serif;
+
+        .bar--positive {
+            fill: #9BCCF5;
         }
 
-        .bar {
-            fill: #64a7e2;
+        .bar--negative {
+            fill: pink;
         }
 
-        .axis {
-            font-size: 12px;
+        text {
+            font: 10px sans-serif;
         }
 
         .axis path,
         .axis line {
             fill: none;
-            display: none;
-        }
-
-        .label {
-            font-size: 13px;
+            stroke: #000;
+            shape-rendering: crispEdges;
         }
     </style>
 </head>
@@ -96,6 +94,13 @@
                                             <ul class="list-group">
                                                 <li class="list-group-item">
                                                     Piched roof with attic
+                                                    <div class="material-switch pull-right">
+                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
+                                                    </div>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    Flat Roof
                                                     <div class="material-switch pull-right">
                                                         <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
                                                         <label for="someSwitchOptionDefault" class="label-default"></label>
@@ -1055,355 +1060,116 @@
                     <div class="card-header">
                     </div>
                     <div class="card-body">
-                        <div class="row">
-                            <style>
+                        <p id="example"></p>
+                        <script>
 
-                                .bar--positive {
-                                    fill: #9BCCF5;
+                            function tornadoChart() {
+                                var margin = {top: 20, right: 30, bottom: 40, left: 100},
+                                    width = 800 - margin.left - margin.right,
+                                    height = 400 - margin.top - margin.bottom;
+
+                                var x = d3.scale.linear()
+                                .range([0, width]);
+
+                                var y = d3.scale.ordinal()
+                                .rangeRoundBands([0, height], 0.1);
+
+                                var xAxis = d3.svg.axis()
+                                .scale(x)
+                                .orient("bottom")
+                                .ticks(10)
+
+
+                                var yAxis = d3.svg.axis()
+                                .scale(y)
+                                .orient("left")
+                                .tickSize(0)
+
+                                var svg = d3.select("#example").append("svg")
+                                .attr("width", width + margin.left + margin.right)
+                                .attr("height", height + margin.top + margin.bottom)
+                                .append("g")
+                                .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+                                var maxvalue;
+
+
+                                function chart(selection) {
+                                    selection.each(function(data) {
+
+                                        maxvalue = (Math.abs(d3.extent(data, function(d) { return d.interactions; })[0]) > Math.abs(d3.extent(data, function(d) { return d.interactions; })[1])) ? Math.abs(d3.extent(data, function(d) { return d.interactions; })[0]) : Math.abs(d3.extent(data, function(d) { return d.interactions; })[1]);
+
+                                        x.domain([maxvalue*-1, maxvalue]);
+                                        y.domain(data.map(function(d) { return d.age; }));
+
+                                        var minInteractions = Math.max.apply(Math, data.map(function(o){return o.interactions;}))*-1;
+                                        yAxis.tickPadding(Math.abs(x(minInteractions) - x(0)) + 10);
+
+                                        var bar = svg.selectAll(".bar")
+                                        .data(data)
+
+                                        bar.enter().append("rect")
+                                            .attr("class", function(d) { return "bar bar--" + (d.interactions < 0 ? "negative" : "positive"); })
+                                            .attr("x", function(d) { return x(Math.min(0, d.interactions)); })
+                                            .attr("y", function(d) { return y(d.age); })
+                                            .attr("width", function(d) { return Math.abs(x(d.interactions) - x(0)); })
+                                            .attr("id", function(d){ return d.age})
+                                            .attr("style", function(d){ return d.colour == null ? "" : "fill:" + d.colour;})
+                                            .attr("height", y.rangeBand())
+
+                                        bar.enter().append('text')
+                                            .attr("text-anchor", "end")
+                                            .attr("x", function(d,i) {
+
+                                            var titlePlacement = Math.abs(x(d.interactions) - x(0)) + x(Math.min(0, d.interactions))-5;
+                                            if( Math.abs(x(d.interactions) - x(0)) < 30 && d.interactions > 0)
+                                                titlePlacement += 30;
+                                            else if(d.interactions < 0) //Negative placement
+                                            {
+                                                titlePlacement = x(Math.min(0, d.interactions))-5;
+
+                                            }
+
+
+                                            return titlePlacement;
+                                        })
+                                            .attr("y", function(d,i) {
+                                            return y(d.age) + (y.rangeBand() / 2);
+                                        })
+                                            .attr("dy", ".35em")
+                                            .text(function (d) { return d.interactions; })
+
+                                        svg.append("g")
+                                            .attr("class", "x axis")
+                                            .attr("transform", "translate(0," + height + ")")
+                                            .call(xAxis);
+                                        svg.append("g")
+                                            .attr("class", "y axis")
+                                            .attr("transform", "translate(" + x(0) + ",0)")
+                                            .call(yAxis);
+
+                                    });
+
                                 }
 
-                                .bar--negative {
-                                    fill: green;
-                                }
-
-                                text {
-                                    font: 10px sans-serif;
-                                }
-
-                                .axis path,
-                                .axis line {
-                                    fill: none;
-                                    stroke: #000;
-                                    shape-rendering: crispEdges;
-                                }
-                            </style>
-                            <div class="col-6" id="example"></div>
-                            <script src="https://d3js.org/d3.v3.min.js"></script>
-                            <script>
-
-                                function tornadoChart() {
-                                    var margin = {top: 20, right: 30, bottom: 40, left: 100},
-                                        width = 450 - margin.left - margin.right,
-                                        height = 200 - margin.top - margin.bottom;
-
-                                    var x = d3.scale.linear()
-                                    .range([0, width]);
-
-                                    var y = d3.scale.ordinal()
-                                    .rangeRoundBands([0, height], 0.1);
-
-                                    var xAxis = d3.svg.axis()
-                                    .scale(x)
-                                    .orient("bottom")
-                                    .ticks(7)
-
-                                    var yAxis = d3.svg.axis()
-                                    .scale(y)
-                                    .orient("left")
-                                    .tickSize(0)
-
-                                    var svg = d3.select("body").append("svg")
-                                    .attr("width", width + margin.left + margin.right)
-                                    .attr("height", height + margin.top + margin.bottom)
-                                    .append("g")
-                                    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-                                    function chart(selection) {
-                                        selection.each(function(data) {
-
-                                            x.domain(d3.extent(data, function(d) { return d.interactions; })).nice();
-                                            y.domain(data.map(function(d) { return d.age; }));
-
-                                            var minInteractions = Math.min.apply(Math, data.map(function(o){return o.interactions;}))
-                                            yAxis.tickPadding(Math.abs(x(minInteractions) - x(0)) + 10);
-
-                                            var bar = svg.selectAll(".bar")
-                                            .data(data)
-
-                                            bar.enter().append("rect")
-                                                .attr("class", function(d) { return "bar bar--" + (d.interactions < 0 ? "negative" : "positive"); })
-                                                .attr("x", function(d) { return x(Math.min(0, d.interactions)); })
-                                                .attr("y", function(d) { return y(d.age); })
-                                                .attr("width", function(d) { return Math.abs(x(d.interactions) - x(0)); })
-                                                .attr("height", y.rangeBand())
-
-                                            bar.enter().append('text')
-                                                .attr("text-anchor", "middle")
-                                                .attr("x", function(d,i) {
-                                                return x(Math.min(0, d.interactions)) + (Math.abs(x(d.interactions) - x(0)) / 2);
-                                            })
-                                                .attr("y", function(d,i) {
-                                                return y(d.age) + (y.rangeBand() / 2);
-                                            })
-                                                .attr("dy", ".35em")
-                                                .text(function (d) { return d.interactions; })
-
-                                            svg.append("g")
-                                                .attr("class", "x axis")
-                                                .attr("transform", "translate(0," + height + ")")
-                                                .call(xAxis);
-
-                                            svg.append("g")
-                                                .attr("class", "y axis")
-                                                .attr("transform", "translate(" + x(0) + ",0)")
-                                                .call(yAxis);
-                                        });
-                                    }
-
-                                    return chart;
-                                }
-
-                                var data = {"BMW":[{"age":"18-24","type":"electricity","interactions":21600},{"age":"18-24","type":"naturalGas","interactions":-5500},{"age":"25-34","type":"electricity","interactions":19500},{"age":"25-34","type":"naturalGas","interactions":-5000},{"age":"35-44","type":"electricity","interactions":10700},{"age":"35-44","type":"naturalGas","interactions":-3500},{"age":"45-54","type":"electricity","interactions":5700},{"age":"45-54","type":"naturalGas","interactions":-2400},{"age":"55-64","type":"electricity","interactions":2500},{"age":"55-64","type":"naturalGas","interactions":-1100},{"age":"65+","type":"electricity","interactions":1600},{"age":"65+","type":"naturalGas","interactions":-600}],"Ford Mustang":[{"age":"18-24","type":"electricity","interactions":7600},{"age":"18-24","type":"naturalGas","interactions":-800},{"age":"25-34","type":"electricity","interactions":7100},{"age":"25-34","type":"naturalGas","interactions":-900},{"age":"35-44","type":"electricity","interactions":5100},{"age":"35-44","type":"naturalGas","interactions":-800},{"age":"45-54","type":"electricity","interactions":3500},{"age":"45-54","type":"naturalGas","interactions":-600},{"age":"55-64","type":"electricity","interactions":1400},{"age":"55-64","type":"naturalGas","interactions":-300},{"age":"65+","type":"electricity","interactions":600},{"age":"65+","type":"naturalGas","interactions":-200}],"Ford Motor Company":[{"age":"25-34","type":"electricity","interactions":4300},{"age":"25-34","type":"naturalGas","interactions":-800},{"age":"18-24","type":"electricity","interactions":4200},{"age":"18-24","type":"naturalGas","interactions":-700},{"age":"35-44","type":"electricity","interactions":3000},{"age":"35-44","type":"naturalGas","interactions":-600},{"age":"45-54","type":"electricity","interactions":1800},{"age":"45-54","type":"naturalGas","interactions":-500},{"age":"55-64","type":"electricity","interactions":800},{"age":"55-64","type":"naturalGas","interactions":-300},{"age":"65+","type":"electricity","interactions":500},{"age":"65+","type":"naturalGas","interactions":-200}]};
-
-                                for (var i in data) {
-                                    var chart = tornadoChart()
-                                    d3.select("#example")
-                                        .datum(data[i])
-                                        .call(chart);
-                                }
-
-                            </script>
-                        </div>
-                        <!--
-
-<div class="row">
-<div class="col-12">
-<P class="chartName">Piched Roof with attic</P>
-<div id="graphic"></div>
-<script>
-var data = [{
-"name": "Piched roof with attic",
-"value": 586360,
-},
-{
-"name": "Roof Insulation",
-"value": 582501,
-},
-{
-"name": "SIPs R40",
-"value": 586240,
-}];
-
-//sort bars based on value
-data = data.sort(function (a, b) {
-return d3.ascending(a.value, b.value);
-})
-
-//set up svg using margin conventions - we'll need plenty of room on the left for labels
-var margin = {
-top: 15,
-right: 250,
-bottom: 20,
-left: 20
-};
-
-var width = +d3.select('#graphic').style('width').slice(0, -2) - margin.right,
-height = 100;
-
-var svg = d3.select("#graphic").append("svg")
-.attr("width", width + margin.left + margin.right)
-.attr("height", height)
-.append("g")
-.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-var x = d3.scale.linear()
-.range([0, width])
-.domain([0, d3.max(data, function (d) {
-return d.value;
-})]);
-
-var y = d3.scale.ordinal()
-.rangeRoundBands([height, 0], .1)
-.domain(data.map(function (d) {
-return d.name;
-}));
-
-//make y axis to show bar names
-var yAxis = d3.svg.axis()
-.scale(y)
-//no tick marks
-.tickSize(0)
-.orient("left");
-
-//        var gy = svg.append("g")
-//            .attr("class", "y axis")
-//            .call(yAxis)
-
-var bars = svg.selectAll(".bar")
-.data(data)
-.enter()
-.append("g")
-
-//append rects
-bars.append("rect")
-.attr("class", "bar")
-.attr("y", function (d) {
-return y(d.name);
-})
-.attr("height", y.rangeBand())
-.attr("x", 0)
-.attr("width", function (d) {
-return x(d.value);
-});
-</script>
-</div>
-<div class="col-12">
-<P class="chartName">R38</P>
-<div id="graphic2"></div>
-<script>
-var data = [{
-"name": "Piched roof with attic",
-"value": 586360,
-},
-{
-"name": "Roof Insulation",
-"value": 483767,
-},
-{
-"name": "SIPs R40",
-"value": 384028,
-}];
+                                return chart;
+                            }
 
 
-//set up svg using margin conventions - we'll need plenty of room on the left for labels
-var margin = {
-top: 15,
-right: 250,
-bottom: 20,
-left: 20
-};
 
-var width = +d3.select('#graphic2').style('width').slice(0, -2) - margin.right,
-height = 80;
+                            var data = {
+                                "Roof Type":[{"age":"Most Energy Efficient","gender":"female","interactions":-35400,"colour":"#ecf"},{"age":"Most Energy Efficient","gender":"male","interactions":35800,"colour":"#4264FF"},{"age":"baseline","gender":"male","interactions":69484,"colour":"#4264FF"},{"age":"baseline","gender":"female","interactions":-0.1,"colour":"#ecf"},{"age":"R38","gender":"male","interactions":69132,"colour":"#4264FF"},{"age":"R38","gender":"female","interactions":-0.03,"colour":"#ecf"},{"age":"R38+4'' rigid","gender":"male","interactions":10700,"colour":"4264FF"},{"age":"R38+4'' rigid","gender":"female","interactions":-35010,"colour":"#ecf"},{"age":"R49","gender":"male","interactions":34500,"colour":"#4264FF"},{"age":"R49","gender":"female","interactions":-53500,"colour":"#ecf"},{"age":"R60","gender":"male","interactions":35050,"colour":"#4264FF"},{"age":"R60","gender":"female","interactions":-33500,"colour":"#ecf"},{"age":"R20 c.i.","gender":"male","interactions":33500,"colour":"#4264FF"},{"age":"R20 c.i.","gender":"female","interactions":-35700,"colour":"#ecf"},{"age":"R25 c.i.","gender":"male","interactions":23500,"colour":"#4264FF"},{"age":"R25","gender":"female","interactions":-35060,"colour":"#ecf"},{"age":"R30","gender":"male","interactions":83500,"colour":"#4264FF"},{"age":"R30","gender":"female","interactions":-13500,"colour":"#ecf"},{"age":"R35","gender":"male","interactions":35080,"colour":"#4264FF"},{"age":"R35","gender":"female","interactions":-35090,"colour":"#ecf"}],
 
-var svg = d3.select("#graphic2").append("svg")
-.attr("width", width + margin.left + margin.right)
-.attr("height", height)
-.append("g")
-.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+                            };
 
-var x = d3.scale.linear()
-.range([0, width])
-.domain([0, d3.max(data, function (d) {
-return d.value;
-})]);
+                            for (var i in data) {
+                                var chart = tornadoChart()
+                                d3.select("#example")
+                                    .datum(data[i])
+                                    .call(chart);
+                            }
 
-var y = d3.scale.ordinal()
-.rangeRoundBands([height, 0], .1)
-.domain(data.map(function (d) {
-return d.name;
-}));
-
-//make y axis to show bar names
-var yAxis = d3.svg.axis()
-.scale(y)
-//no tick marks
-.tickSize(0)
-.orient("left");
-
-//        var gy = svg.append("g")
-//            .attr("class", "y axis")
-//            .call(yAxis)
-
-var bars = svg.selectAll(".bar")
-.data(data)
-.enter()
-.append("g")
-
-//append rects
-bars.append("rect")
-.attr("class", "bar")
-.attr("y", function (d) {
-return y(d.name);
-})
-.attr("height", y.rangeBand())
-.attr("x", 0)
-.attr("width", function (d) {
-return x(d.value);
-});
-</script>
-
-</div>
-<div class="col-12">
-<P class="chartName">R38+4'' rigid</P>
-<div id="graphic3"></div>
-<script>
-var data = [{
-"name": "Piched roof with attic",
-"value": 582501,
-},
-{
-"name": "Roof Insulation",
-"value": 200000,
-},
-{
-"name": "SIPs R40",
-"value": 572501,
-}];
-
-
-//set up svg using margin conventions - we'll need plenty of room on the left for labels
-var margin = {
-top: 15,
-right: 250,
-bottom: 20,
-left: 20
-};
-
-var width = +d3.select('#graphic3').style('width').slice(0, -2) - margin.right,
-height = 80;
-
-var svg = d3.select("#graphic3").append("svg")
-.attr("width", width + margin.left + margin.right)
-.attr("height", height)
-.append("g")
-.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-var x = d3.scale.linear()
-.range([0, width])
-.domain([0, d3.max(data, function (d) {
-return d.value;
-})]);
-
-var y = d3.scale.ordinal()
-.rangeRoundBands([height, 0], .1)
-.domain(data.map(function (d) {
-return d.name;
-}));
-
-//make y axis to show bar names
-var yAxis = d3.svg.axis()
-.scale(y)
-//no tick marks
-.tickSize(0)
-.orient("left");
-
-//        var gy = svg.append("g")
-//            .attr("class", "y axis")
-//            .call(yAxis)
-
-var bars = svg.selectAll(".bar")
-.data(data)
-.enter()
-.append("g")
-
-//append rects
-bars.append("rect")
-.attr("class", "bar")
-.attr("y", function (d) {
-return y(d.name);
-})
-.attr("height", y.rangeBand())
-.attr("x", 0)
-.attr("width", function (d) {
-return x(d.value);
-});
-</script>
-
-</div>
-</div>
--->
-
+                        </script>
                     </div>
                 </div>
             </div>

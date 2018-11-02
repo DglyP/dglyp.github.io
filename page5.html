@@ -1,63 +1,149 @@
-<!DOCTYPE html>
-<html lang="en">
+ <!DOCTYPE html>
+<meta charset="utf-8">
+<style>
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Drimo</title>
-    <!--    favicon-->
-    <link rel="shortcut icon" href="image/fav-icon.png" type="image/x-icon">
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/themify-icons.css">
-    <link rel="stylesheet" href="css/animate.css">
-    <!--css-->
-    <link rel="stylesheet" href="css/page5.css">
-    <link rel="stylesheet" href="css/signup.css">
-    <!-- HTmL5 shim and Respond.js for IE8 support of HTmL5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-        <![endif]-->
-</head>
+.bar--positive {
+  fill: #9BCCF5;
+}
 
+.bar--negative {
+  fill: pink;
+}
+
+text {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+</style>
 <body>
-    <div class="imagepage">
-        <div class= "container" >
-            <div class = "row">
-            <div class = "col">
-                <a href="page6.html" class="btn" style="height: 50vh; width: 419px; margin-top: 30vh"></a>
-                <a href="page6.html" class="btn" style="height: 50vh; width: 419px; margin-top: 30vh"></a>
-            </div>
-            </div>
-        </div>
-    </div>
-    <!--End Footer area-->
-    <script src="js/jquery-2.2.4.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/nav.js"></script>
-    <!--waypoint js-->
-    <script src="vendores/waypoint/waypoints.min.js"></script>
-    <!--counter js-->
-    <script src="vendores/couterup/jquery.counterup.min.js"></script>
-    <script src="vendores/typedjs/typed.min.js"></script>
-    <script src="vendores/ripples/jquery.ripples-min.js"></script>
-    <script type="text/javascript" src="js/scrollIt.min.js"></script>
-    <script type="text/javascript" src="js/wow.js"></script>
-    <script src="js/custom.js"></script>
-    <script>
-    $(function() {
-        $.scrollIt();
-    });
-    </script>
-    <script>
-    new WOW().init();
-    </script>
-</body>
+<p id="example"></p>
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script>
 
-</html>
+function tornadoChart() {
+  var margin = {top: 20, right: 30, bottom: 40, left: 100},
+    width = 800 - margin.left - margin.right,
+    height = 400 - margin.top - margin.bottom;
+
+  var x = d3.scale.linear()
+      .range([0, width]);
+
+  var y = d3.scale.ordinal()
+      .rangeRoundBands([0, height], 0.1);
+
+  var xAxis = d3.svg.axis()
+      .scale(x)
+      .orient("bottom")
+      .ticks(10)
+
+
+  var yAxis = d3.svg.axis()
+      .scale(y)
+      .orient("left")
+      .tickSize(0)
+
+  var svg = d3.select("body").append("svg")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+var maxvalue;
+
+
+  function chart(selection) {
+    selection.each(function(data) {
+
+maxvalue = (Math.abs(d3.extent(data, function(d) { return d.interactions; })[0]) > Math.abs(d3.extent(data, function(d) { return d.interactions; })[1])) ? Math.abs(d3.extent(data, function(d) { return d.interactions; })[0]) : Math.abs(d3.extent(data, function(d) { return d.interactions; })[1]);
+
+      x.domain([maxvalue*-1, maxvalue]);
+      y.domain(data.map(function(d) { return d.age; }));
+
+      var minInteractions = Math.max.apply(Math, data.map(function(o){return o.interactions;}))*-1;
+      yAxis.tickPadding(Math.abs(x(minInteractions) - x(0)) + 10);
+
+      var bar = svg.selectAll(".bar")
+          .data(data)
+
+      bar.enter().append("rect")
+          .attr("class", function(d) { return "bar bar--" + (d.interactions < 0 ? "negative" : "positive"); })
+          .attr("x", function(d) { return x(Math.min(0, d.interactions)); })
+          .attr("y", function(d) { return y(d.age); })
+          .attr("width", function(d) { return Math.abs(x(d.interactions) - x(0)); })
+          .attr("id", function(d){ return d.age})
+          .attr("style", function(d){ return d.colour == null ? "" : "fill:" + d.colour;})
+          .attr("height", y.rangeBand())
+
+      bar.enter().append('text')
+          .attr("text-anchor", "end")
+          .attr("x", function(d,i) {
+
+              var titlePlacement = Math.abs(x(d.interactions) - x(0)) + x(Math.min(0, d.interactions))-5;
+              if( Math.abs(x(d.interactions) - x(0)) < 30 && d.interactions > 0)
+               titlePlacement += 30;
+              else if(d.interactions < 0) //Negative placement
+              {
+                titlePlacement = x(Math.min(0, d.interactions))-5;
+
+              }
+
+
+              return titlePlacement;
+          })
+          .attr("y", function(d,i) {
+              return y(d.age) + (y.rangeBand() / 2);
+          })
+          .attr("dy", ".35em")
+          .text(function (d) { return d.interactions; })
+
+      svg.append("g")
+          .attr("class", "x axis")
+          .attr("transform", "translate(0," + height + ")")
+          .call(xAxis);
+      svg.append("g")
+          .attr("class", "y axis")
+          .attr("transform", "translate(" + x(0) + ",0)")
+          .call(yAxis);
+
+    });
+
+  }
+
+  return chart;
+}
+
+
+
+var data = {
+            "Roof Type":[{"age":"baseline","gender":"male","interactions":69484,"colour":"#ecf"},{"age":"baseline","gender":"female","interactions":-0.1,"colour":""},{"age":"Flat Roof","gender":"male","interactions":69132,"colour":"#ecf"},{"age":"Flat Roof","gender":"female","interactions":-0.03,"colour":"#ecf"},{"age":"Piched Roof with attic","gender":"male","interactions":10700,"colour":""},{"age":"Piched Roof with attic","gender":"female","interactions":-35010,"colour":"#4264FF"},{"age":"Pisdched Roof with attic","gender":"female","interactions":34500,"colour":"#4264FF"},{"age":"Pichded Roof with attic","gender":"female","interactions":-53500,"colour":"#4264FF"},{"age":"Pichesd Roof with attic","gender":"female","interactions":-35050,"colour":"#4264FF"},{"age":"Pichefd Roof with attic","gender":"female","interactions":33500,"colour":"#4264FF"},{"age":"Pichwed Roof with attic","gender":"female","interactions":-33500,"colour":"#4264FF"},{"age":"Pic1hed Roof with attic","gender":"female","interactions":-35700,"colour":"#4264FF"},{"age":"Piche2d Roof with attic","gender":"female","interactions":23500,"colour":"#4264FF"},{"age":"Pic3hed Roof with attic","gender":"female","interactions":-35060,"colour":"#4264FF"},{"age":"Pic5hed Roof with attic","gender":"female","interactions":-83500,"colour":"#4264FF"},{"age":"Pic4hed Roof with attic","gender":"female","interactions":13500,"colour":"#4264FF"},{"age":"Pich6ed Roof with attic","gender":"female","interactions":-35080,"colour":"#4264FF"},{"age":"1Piched Roof with attic","gender":"female","interactions":-35090,"colour":"#4264FF"},{"age":"P2iched Roof with attic","gender":"female","interactions":35400,"colour":"#4264FF"},{"age":"Pi3ched Roof with attic","gender":"female","interactions":-35800,"colour":"#4264FF"},{"age":"Pic4hed Roof with attic","gender":"female","interactions":-35070,"colour":"#4264FF"},{"age":"Pich5ed Roof with attic","gender":"female","interactions":35020,"colour":"#4264FF"},{"age":"Piche6d Roof with attic","gender":"female","interactions":093500,"colour":"#4264FF"},{"age":"Piche7d Roof with attic","gender":"female","interactions":-35500,"colour":"#4264FF"},{"age":"Piche8d Roof with attic","gender":"female","interactions":33500,"colour":"#4264FF"}],
+
+            
+            "Roof Insulation":[{"age":"18-24","gender":"male","interactions":1260},{"age":"18-24","gender":"female","interactions":-0.30},{"age":"25-34","gender":"male","interactions":14660},{"age":"25-34","gender":"female","interactions":-0.250},{"age":"35-44","gender":"male","interactions":1890},{"age":"35-44","gender":"female","interactions":-2.0},{"age":"45-54","gender":"male","interactions":5700},{"age":"45-54","gender":"female","interactions":-0.2400},{"age":"55-64","gender":"male","interactions":2500},{"age":"55-64","gender":"female","interactions":-1.100},{"age":"65+","gender":"male","interactions":600},{"age":"65+","gender":"female","interactions":-6.00}],
+            
+            
+            "Exterior Wall":[{"age":"18-24","gender":"male","interactions":210},{"age":"18-24","gender":"female","interactions":-5500},{"age":"25-34","gender":"male","interactions":1500},{"age":"25-34","gender":"female","interactions":-5000},{"age":"35-44","gender":"male","interactions":12700},{"age":"35-44","gender":"female","interactions":-0.3500},{"age":"45-54","gender":"male","interactions":15700},{"age":"45-54","gender":"female","interactions":-2400},{"age":"55-64","gender":"male","interactions":22500},{"age":"55-64","gender":"female","interactions":-1100},{"age":"65+","gender":"male","interactions":600},{"age":"65+","gender":"female","interactions":-600}],
+            
+            
+            "Residential Window Properties":[{"age":"18-24","gender":"male","interactions":21600},{"age":"18-24","gender":"female","interactions":-5500},{"age":"25-34","gender":"male","interactions":19500},{"age":"25-34","gender":"female","interactions":-5000},{"age":"35-44","gender":"male","interactions":10700},{"age":"35-44","gender":"female","interactions":-3500},{"age":"45-54","gender":"male","interactions":5700},{"age":"45-54","gender":"female","interactions":-2400},{"age":"55-64","gender":"male","interactions":2500},{"age":"55-64","gender":"female","interactions":-1100},{"age":"65+","gender":"male","interactions":600},{"age":"65+","gender":"female","interactions":-600}],
+            
+            
+            "Storefront Glazing Properties":[{"age":"18-24","gender":"male","interactions":21600},{"age":"18-24","gender":"female","interactions":-5500},{"age":"25-34","gender":"male","interactions":19500},{"age":"25-34","gender":"female","interactions":-5000},{"age":"35-44","gender":"male","interactions":10700},{"age":"35-44","gender":"female","interactions":-3500},{"age":"45-54","gender":"male","interactions":5700},{"age":"45-54","gender":"female","interactions":-2400},{"age":"55-64","gender":"male","interactions":2500},{"age":"55-64","gender":"female","interactions":-1100},{"age":"65+","gender":"male","interactions":600},{"age":"65+","gender":"female","interactions":-600}],
+
+
+        };
+
+for (var i in data) {
+  var chart = tornadoChart()
+  d3.select("#example")
+      .datum(data[i])
+      .call(chart);
+}
+
+</script>
+</body>
