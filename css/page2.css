@@ -10,6 +10,11 @@
     margin-left: 500px;
 }
 
+
+tabsonTop{
+    height: 470 !important;
+}
+
 #BuildingEnvelopeTab{
     background-color: #89C7EA;
     color: white;

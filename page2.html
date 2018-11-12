@@ -1150,10 +1150,41 @@
 
 
 
-                        var data = {
-                            "Roof Type":[{"age":"Most Energy Efficient","gender":"female","interactions":-35400,"colour":"#ecf"},{"age":"Most Energy Efficient","gender":"male","interactions":35800,"colour":"#4264FF"},{"age":"baseline","gender":"male","interactions":69484,"colour":"#4264FF"},{"age":"baseline","gender":"female","interactions":-0.1,"colour":"#ecf"},{"age":"R38","gender":"male","interactions":69132,"colour":"#4264FF"},{"age":"R38","gender":"female","interactions":-0.03,"colour":"#ecf"},{"age":"R38+4'' rigid","gender":"male","interactions":10700,"colour":"4264FF"},{"age":"R38+4'' rigid","gender":"female","interactions":-35010,"colour":"#ecf"},{"age":"R49","gender":"male","interactions":34500,"colour":"#4264FF"},{"age":"R49","gender":"female","interactions":-53500,"colour":"#ecf"},{"age":"R60","gender":"male","interactions":35050,"colour":"#4264FF"},{"age":"R60","gender":"female","interactions":-33500,"colour":"#ecf"},{"age":"R20 c.i.","gender":"male","interactions":33500,"colour":"#4264FF"},{"age":"R20 c.i.","gender":"female","interactions":-35700,"colour":"#ecf"},{"age":"R25 c.i.","gender":"male","interactions":23500,"colour":"#4264FF"},{"age":"R25 c.i.","gender":"female","interactions":-35060,"colour":"#ecf"},{"age":"R30 c.i.","gender":"male","interactions":83500,"colour":"#4264FF"},{"age":"R30 c.i.","gender":"female","interactions":-13500,"colour":"#ecf"},{"age":"R35 c.i.","gender":"male","interactions":35080,"colour":"#4264FF"},{"age":"R35 c.i.","gender":"female","interactions":-35090,"colour":"#ecf"}],
+                        var data2 = {
+                            "Roof Insulation - Flat Roof":[
+                                {"age":"R25 c.i.","gender":"male","interactions":-1.61,"colour":"#4264FF"},{"age":"R25 c.i.","gender":"female","interactions":458,"colour":"#ecf"},{"age":"R30 c.i.","gender":"male","interactions":-1.59,"colour":"#4264FF"},{"age":"R30 c.i.","gender":"female","interactions":32,"colour":"#ecf"},{"age":"R35 c.i.","gender":"male","interactions":-1.59,"colour":"#4264FF"},{"age":"R35 c.i.","gender":"female","interactions":29,"colour":"#ecf"}],
+                        };
+
+                        var data2 = {
+                            "Roof Insulation - Piched Roof":[{"age":"R38","gender":"male","interactions":-1.60,"colour":"#4264FF"},{"age":"R38","gender":"female","interactions":45,"colour":"#ecf"},{"age":"R38+4'' rigid","gender":"male","interactions":-1.59,"colour":"4264FF"},{"age":"R38+4'' rigid","gender":"female","interactions":18,"colour":"#ecf"},{"age":"R49","gender":"male","interactions":-1.55,"colour":"#4264FF"},{"age":"R49","gender":"female","interactions":64,"colour":"#ecf"},{"age":"R60","gender":"male","interactions":-1.55,"colour":"#4264FF"},{"age":"R60","gender":"female","interactions":46,"colour":"#ecf"}],
 
                         };
+
+                        var data = {
+                            "Exterior Wall":[{"age":"2x6 @24 OC(R21)+ R9.6 c.i.","gender":"female","interactions":-4.27,"colour":"#ecf"},{"age":"2x6 @24 OC(R21)+ R9.6 c.i.","gender":"male","interactions":18,"colour":"#4264FF"},{"age":"2x4 staggered studs on 2x6 sill plate (R19)","gender":"male","interactions":10,"colour":"#4264FF"},{"age":"2x4 staggered studs on 2x6 sill plate (R19)","gender":"female","interactions":-4.17,"colour":"#ecf"},{"age":"2x4 staggered studs on 2x6 sill plate (R26)","gender":"male","interactions":4,"colour":"#4264FF"},{"age":"2x4 staggered studs on 2x6 sill plate (R26)","gender":"female","interactions":-4.37,"colour":"#ecf"},{"age":"SIPs R28","gender":"male","interactions":0,"colour":"4264FF"},{"age":"SIPs R28","gender":"female","interactions":-6.01,"colour":"#ecf"},{"age":"SIPs R40","gender":"male","interactions":0,"colour":"#4264FF"},{"age":"SIPs R40","gender":"female","interactions":-6.90,"colour":"#ecf"},{"age":"SIPs R50","gender":"male","interactions":0,"colour":"#4264FF"},{"age":"SIPs R50","gender":"female","interactions":-8.07,"colour":"#ecf"},{"age":"ICF 9 in","gender":"male","interactions":0,"colour":"#4264FF"},{"age":"ICF 9 in","gender":"female","interactions":-12.05,"colour":"#ecf"},{"age":"ICF 11 in","gender":"male","interactions":0,"colour":"#4264FF"},{"age":"ICF 11 in","gender":"female","interactions":-11.86,"colour":"#ecf"},{"age":"ICF 13 in","gender":"male","interactions":0,"colour":"#4264FF"},{"age":"ICF 13 in","gender":"female","interactions":-12.23,"colour":"#ecf"}],
+
+                        };
+
+                        var data2 = {
+                            "Residential Window Properties":[
+                                {"age":"Option 4: U=0.30 SHGC=0.25","gender":"male","interactions":-37,"colour":"#4264FF"},{"age":"Option 4: U=0.30 SHGC=0.25","gender":"female","interactions":52,"colour":"#ecf"},{"age":"Option 5: U=0.2 5SHGC=0.4","gender":"male","interactions":-37.50,"colour":"#4264FF"},{"age":"Option 5: U=0.2 5SHGC=0.4","gender":"female","interactions":39,"colour":"#ecf"}],
+                        };
+
+                        var data2 = {
+                            "Residential Lighting":[
+                                {"age":"CFL","gender":"female","interactions":-0.02,"colour":"#4264FF"},{"age":"CFL","gender":"male","interactions":807,"colour":"#4264FF"},{"age":"LED","gender":"female","interactions":-0.03,"colour":"#ecf"},{"age":"LED","gender":"male","interactions":342,"colour":"#4264FF"}],
+                        };
+
+                        var data2 = {
+                            "Corridor Lighting":[
+                                {"age":"LED","gender":"female","interactions":-0.30,"colour":"#ecf"},{"age":"LED","gender":"male","interactions":547,"colour":"#4264FF"}],
+                        };
+
+                        var data2 = {
+                            "Corridor Lighting":[
+                                {"age":"Residential Unit Plug load","gender":"female","interactions":-1.20,"colour":"#ecf"},{"age":"Residential Unit Plug load","gender":"male","interactions":41,"colour":"#4264FF"}],
+                        };
+
 
                         for (var i in data) {
                             var chart = tornadoChart()
@@ -1172,13 +1203,13 @@
 
 <script>
     $(document).ready(function() {
-$(".nano").nanoScroller();
+        $(".nano").nanoScroller();
     }                     
 </script>
 
 <script type="text/javascript">
-function scrollToId(clicked_id)
-{
-    $(".nano").nanoScroller({ scrollTo: $(clicked_id) });
-}
+    function scrollToId(clicked_id)
+    {
+        $(".nano").nanoScroller({ scrollTo: $(clicked_id) });
+    }
 </script>
