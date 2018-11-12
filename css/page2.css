@@ -1,3 +1,11 @@
+.nano { background: #bba; width: 500px; height: 500px; }
+.nano .nano-content { padding: 2%; }
+.nano .nano-pane   { background: #888; }
+.nano .nano-slider { background: #111; }
+
+/*...................................*/
+
+
 .#example{
     margin-left: 500px;
 }
@@ -27,16 +35,24 @@
     color: white;
 }
 
-.parameterSelection{
+.card-body{
     border: 1px solid #DFDFDF;
+    width: 100%;
+}
+
+.parameterSelection{
+    height: 500px;
+    overflow-y: scroll;
 }
 
 .card-header-tabs{
     opacity:inherit;
+    margin: 0 !important;
 }
 
 .card{
     border: none;
+    padding: 0 !important;
 }
 
 .cardsRow{
@@ -55,4 +71,21 @@
     color: black;
     float: left;
     font-weight: bold;
+}
+
+.nav-item{    
+    padding: 0 !important;
+}
+
+.nav-link{
+    position: relative;
+/*    z-index: -1;*/
+}
+
+.card-body{
+    background-color: #FFFFFF
+}
+
+.tab-active{
+    z-index: 1;
 }

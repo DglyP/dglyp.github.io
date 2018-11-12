@@ -16,21 +16,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="js/jquery.nanoscroller.min.js"></script>
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/themify-icons.css">
     <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/nanoscroller.css">
     <!--css-->
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
     <script
             src="https://code.jquery.com/jquery-3.3.1.min.js"
             integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
             crossorigin="anonymous"></script>
-    <!-- HTmL5 shim and Respond.js for IE8 support of HTmL5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-<![endif]-->
     <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <style>
 
@@ -59,32 +55,32 @@
     <div class="container-fluid">
         <div class="row cardsRow">
             <div class="col-5 tabsonTop">
-                <ul class="nav nav-tabs card-header-tabs" role="tablist">
-                    <li class="nav-item">
-                        <a class="nav-link active" id="BuildingEnvelopeTab" data-toggle="tab" href="#home">Building Envelope</a>
+                <ul class="row nav nav-tabs card-header-tabs" role="tablist">
+                    <li class="col-md-auto nav-item">
+                        <a class="nav-link tab-active" id="BuildingEnvelopeTab" data-toggle="tab" href="#home">Building Envelope</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="col-md-auto nav-item">
                         <a class="nav-link" id="LightingTab" data-toggle="tab" href="#menu1">Lighting</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="col-md-auto nav-item">
                         <a class="nav-link" id="HVACTab" data-toggle="tab" href="#menu2">HVAC</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="col-md-auto nav-item">
                         <a class="nav-link" id="WaterTab" data-toggle="tab" href="#menu3">Water</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="col-md-auto nav-item">
                         <a class="nav-link" id="EnergyTab" data-toggle="tab" href="#menu4">Energy</a>
                     </li>
                 </ul>
-                <div class="card-body parameterSelection">
+                <div class="card-body parameterSelection nano">
 
-                    <div class="tab-content">
+                    <div class="nano-content tab-content">
                         <div id="home" class="container tab-pane active">
-                            <div id="accordion">
-                                <div class="card">
+                            <div class="row" id="accordion">
+                                <div class="col-12 card">
                                     <div class="card-header" id="headingOne">
                                         <h5 class="mb-0">
-                                            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" onclick="scrollToId(this.id)">
                                                 Roof Type
                                             </button>
                                         </h5>
@@ -95,7 +91,7 @@
                                                 <li class="list-group-item">
                                                     Piched roof with attic
                                                     <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox" checked/>
                                                         <label for="someSwitchOptionDefault" class="label-default"></label>
                                                     </div>
                                                 </li>
@@ -110,7 +106,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="card">
+                                <div class="col-12 card">
                                     <div class="card-header" id="headingTwo">
                                         <h5 class="mb-0">
                                             <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
@@ -189,7 +185,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="card">
+                                <div class="col-12 card">
                                     <div class="card-header" id="headingThree">
                                         <h5 class="mb-0">
                                             <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
@@ -293,7 +289,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="card">
+                                <div class="col-12 card">
                                     <div class="card-header" id="headingThree">
                                         <h5 class="mb-0">
                                             <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
@@ -350,7 +346,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="card">
+                                <div class="col-12 card">
                                     <div class="card-header" id="headingFive">
                                         <h5 class="mb-0">
                                             <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
@@ -1055,124 +1051,134 @@
                 </div>
             </div>
             <!--////////////////////graph/////////////////////////////////////////////////-->
-            <div class="col-6">
-                <div class="card text-center">
-                    <div class="card-header">
-                    </div>
-                    <div class="card-body">
-                        <p id="example"></p>
-                        <script>
+            <div class="col-6 graphdiv">
+                <div class="card-body">
+                    <p id="example"></p>
+                    <script>
 
-                            function tornadoChart() {
-                                var margin = {top: 20, right: 30, bottom: 40, left: 100},
-                                    width = 800 - margin.left - margin.right,
-                                    height = 400 - margin.top - margin.bottom;
+                        function tornadoChart() {
+                            var margin = {top: 20, right: 30, bottom: 40, left: 100},
+                                width = 800 - margin.left - margin.right,
+                                height = 400 - margin.top - margin.bottom;
 
-                                var x = d3.scale.linear()
-                                .range([0, width]);
+                            var x = d3.scale.linear()
+                            .range([0, width]);
 
-                                var y = d3.scale.ordinal()
-                                .rangeRoundBands([0, height], 0.1);
+                            var y = d3.scale.ordinal()
+                            .rangeRoundBands([0, height], 0.1);
 
-                                var xAxis = d3.svg.axis()
-                                .scale(x)
-                                .orient("bottom")
-                                .ticks(10)
+                            var xAxis = d3.svg.axis()
+                            .scale(x)
+                            .orient("bottom")
+                            .ticks(10)
 
 
-                                var yAxis = d3.svg.axis()
-                                .scale(y)
-                                .orient("left")
-                                .tickSize(0)
+                            var yAxis = d3.svg.axis()
+                            .scale(y)
+                            .orient("left")
+                            .tickSize(0)
 
-                                var svg = d3.select("#example").append("svg")
-                                .attr("width", width + margin.left + margin.right)
-                                .attr("height", height + margin.top + margin.bottom)
-                                .append("g")
-                                .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+                            var svg = d3.select("#example").append("svg")
+                            .attr("width", width + margin.left + margin.right)
+                            .attr("height", height + margin.top + margin.bottom)
+                            .append("g")
+                            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-                                var maxvalue;
-
-
-                                function chart(selection) {
-                                    selection.each(function(data) {
-
-                                        maxvalue = (Math.abs(d3.extent(data, function(d) { return d.interactions; })[0]) > Math.abs(d3.extent(data, function(d) { return d.interactions; })[1])) ? Math.abs(d3.extent(data, function(d) { return d.interactions; })[0]) : Math.abs(d3.extent(data, function(d) { return d.interactions; })[1]);
-
-                                        x.domain([maxvalue*-1, maxvalue]);
-                                        y.domain(data.map(function(d) { return d.age; }));
-
-                                        var minInteractions = Math.max.apply(Math, data.map(function(o){return o.interactions;}))*-1;
-                                        yAxis.tickPadding(Math.abs(x(minInteractions) - x(0)) + 10);
-
-                                        var bar = svg.selectAll(".bar")
-                                        .data(data)
-
-                                        bar.enter().append("rect")
-                                            .attr("class", function(d) { return "bar bar--" + (d.interactions < 0 ? "negative" : "positive"); })
-                                            .attr("x", function(d) { return x(Math.min(0, d.interactions)); })
-                                            .attr("y", function(d) { return y(d.age); })
-                                            .attr("width", function(d) { return Math.abs(x(d.interactions) - x(0)); })
-                                            .attr("id", function(d){ return d.age})
-                                            .attr("style", function(d){ return d.colour == null ? "" : "fill:" + d.colour;})
-                                            .attr("height", y.rangeBand())
-
-                                        bar.enter().append('text')
-                                            .attr("text-anchor", "end")
-                                            .attr("x", function(d,i) {
-
-                                            var titlePlacement = Math.abs(x(d.interactions) - x(0)) + x(Math.min(0, d.interactions))-5;
-                                            if( Math.abs(x(d.interactions) - x(0)) < 30 && d.interactions > 0)
-                                                titlePlacement += 30;
-                                            else if(d.interactions < 0) //Negative placement
-                                            {
-                                                titlePlacement = x(Math.min(0, d.interactions))-5;
-
-                                            }
+                            var maxvalue;
 
 
-                                            return titlePlacement;
-                                        })
-                                            .attr("y", function(d,i) {
-                                            return y(d.age) + (y.rangeBand() / 2);
-                                        })
-                                            .attr("dy", ".35em")
-                                            .text(function (d) { return d.interactions; })
+                            function chart(selection) {
+                                selection.each(function(data) {
 
-                                        svg.append("g")
-                                            .attr("class", "x axis")
-                                            .attr("transform", "translate(0," + height + ")")
-                                            .call(xAxis);
-                                        svg.append("g")
-                                            .attr("class", "y axis")
-                                            .attr("transform", "translate(" + x(0) + ",0)")
-                                            .call(yAxis);
+                                    maxvalue = (Math.abs(d3.extent(data, function(d) { return d.interactions; })[0]) > Math.abs(d3.extent(data, function(d) { return d.interactions; })[1])) ? Math.abs(d3.extent(data, function(d) { return d.interactions; })[0]) : Math.abs(d3.extent(data, function(d) { return d.interactions; })[1]);
 
-                                    });
+                                    x.domain([maxvalue*-1, maxvalue]);
+                                    y.domain(data.map(function(d) { return d.age; }));
 
-                                }
+                                    var minInteractions = Math.max.apply(Math, data.map(function(o){return o.interactions;}))*-1;
+                                    yAxis.tickPadding(Math.abs(x(minInteractions) - x(0)) + 10);
 
-                                return chart;
+                                    var bar = svg.selectAll(".bar")
+                                    .data(data)
+
+                                    bar.enter().append("rect")
+                                        .attr("class", function(d) { return "bar bar--" + (d.interactions < 0 ? "negative" : "positive"); })
+                                        .attr("x", function(d) { return x(Math.min(0, d.interactions)); })
+                                        .attr("y", function(d) { return y(d.age); })
+                                        .attr("width", function(d) { return Math.abs(x(d.interactions) - x(0)); })
+                                        .attr("id", function(d){ return d.age})
+                                        .attr("style", function(d){ return d.colour == null ? "" : "fill:" + d.colour;})
+                                        .attr("height", y.rangeBand())
+
+                                    bar.enter().append('text')
+                                        .attr("text-anchor", "end")
+                                        .attr("x", function(d,i) {
+
+                                        var titlePlacement = Math.abs(x(d.interactions) - x(0)) + x(Math.min(0, d.interactions))-5;
+                                        if( Math.abs(x(d.interactions) - x(0)) < 30 && d.interactions > 0)
+                                            titlePlacement += 30;
+                                        else if(d.interactions < 0) //Negative placement
+                                        {
+                                            titlePlacement = x(Math.min(0, d.interactions))-5;
+
+                                        }
+
+
+                                        return titlePlacement;
+                                    })
+                                        .attr("y", function(d,i) {
+                                        return y(d.age) + (y.rangeBand() / 2);
+                                    })
+                                        .attr("dy", ".35em")
+                                        .text(function (d) { return d.interactions; })
+
+                                    svg.append("g")
+                                        .attr("class", "x axis")
+                                        .attr("transform", "translate(0," + height + ")")
+                                        .call(xAxis);
+                                    svg.append("g")
+                                        .attr("class", "y axis")
+                                        .attr("transform", "translate(" + x(0) + ",0)")
+                                        .call(yAxis);
+
+                                });
+
                             }
 
+                            return chart;
+                        }
 
 
-                            var data = {
-                                "Roof Type":[{"age":"Most Energy Efficient","gender":"female","interactions":-35400,"colour":"#ecf"},{"age":"Most Energy Efficient","gender":"male","interactions":35800,"colour":"#4264FF"},{"age":"baseline","gender":"male","interactions":69484,"colour":"#4264FF"},{"age":"baseline","gender":"female","interactions":-0.1,"colour":"#ecf"},{"age":"R38","gender":"male","interactions":69132,"colour":"#4264FF"},{"age":"R38","gender":"female","interactions":-0.03,"colour":"#ecf"},{"age":"R38+4'' rigid","gender":"male","interactions":10700,"colour":"4264FF"},{"age":"R38+4'' rigid","gender":"female","interactions":-35010,"colour":"#ecf"},{"age":"R49","gender":"male","interactions":34500,"colour":"#4264FF"},{"age":"R49","gender":"female","interactions":-53500,"colour":"#ecf"},{"age":"R60","gender":"male","interactions":35050,"colour":"#4264FF"},{"age":"R60","gender":"female","interactions":-33500,"colour":"#ecf"},{"age":"R20 c.i.","gender":"male","interactions":33500,"colour":"#4264FF"},{"age":"R20 c.i.","gender":"female","interactions":-35700,"colour":"#ecf"},{"age":"R25 c.i.","gender":"male","interactions":23500,"colour":"#4264FF"},{"age":"R25 c.i.","gender":"female","interactions":-35060,"colour":"#ecf"},{"age":"R30 c.i.","gender":"male","interactions":83500,"colour":"#4264FF"},{"age":"R30 c.i.","gender":"female","interactions":-13500,"colour":"#ecf"},{"age":"R35 c.i.","gender":"male","interactions":35080,"colour":"#4264FF"},{"age":"R35 c.i.","gender":"female","interactions":-35090,"colour":"#ecf"}],
 
-                            };
+                        var data = {
+                            "Roof Type":[{"age":"Most Energy Efficient","gender":"female","interactions":-35400,"colour":"#ecf"},{"age":"Most Energy Efficient","gender":"male","interactions":35800,"colour":"#4264FF"},{"age":"baseline","gender":"male","interactions":69484,"colour":"#4264FF"},{"age":"baseline","gender":"female","interactions":-0.1,"colour":"#ecf"},{"age":"R38","gender":"male","interactions":69132,"colour":"#4264FF"},{"age":"R38","gender":"female","interactions":-0.03,"colour":"#ecf"},{"age":"R38+4'' rigid","gender":"male","interactions":10700,"colour":"4264FF"},{"age":"R38+4'' rigid","gender":"female","interactions":-35010,"colour":"#ecf"},{"age":"R49","gender":"male","interactions":34500,"colour":"#4264FF"},{"age":"R49","gender":"female","interactions":-53500,"colour":"#ecf"},{"age":"R60","gender":"male","interactions":35050,"colour":"#4264FF"},{"age":"R60","gender":"female","interactions":-33500,"colour":"#ecf"},{"age":"R20 c.i.","gender":"male","interactions":33500,"colour":"#4264FF"},{"age":"R20 c.i.","gender":"female","interactions":-35700,"colour":"#ecf"},{"age":"R25 c.i.","gender":"male","interactions":23500,"colour":"#4264FF"},{"age":"R25 c.i.","gender":"female","interactions":-35060,"colour":"#ecf"},{"age":"R30 c.i.","gender":"male","interactions":83500,"colour":"#4264FF"},{"age":"R30 c.i.","gender":"female","interactions":-13500,"colour":"#ecf"},{"age":"R35 c.i.","gender":"male","interactions":35080,"colour":"#4264FF"},{"age":"R35 c.i.","gender":"female","interactions":-35090,"colour":"#ecf"}],
 
-                            for (var i in data) {
-                                var chart = tornadoChart()
-                                d3.select("#example")
-                                    .datum(data[i])
-                                    .call(chart);
-                            }
+                        };
 
-                        </script>
-                    </div>
+                        for (var i in data) {
+                            var chart = tornadoChart()
+                            d3.select("#example")
+                                .datum(data[i])
+                                .call(chart);
+                        }
+
+                    </script>
                 </div>
             </div>
+
         </div>
     </div>
 </body>
+
+<script>
+    $(document).ready(function() {
+$(".nano").nanoScroller();
+    }                     
+</script>
+
+<script type="text/javascript">
+function scrollToId(clicked_id)
+{
+    $(".nano").nanoScroller({ scrollTo: $(clicked_id) });
+}
+</script>
