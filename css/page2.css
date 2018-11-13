@@ -1,0 +1,94 @@
+.nano { background: #bba; width: 500px; height: 417px !important; }
+.nano .nano-content { padding: 2%; }
+.nano .nano-pane   { background: #888; }
+.nano .nano-slider { background: #111; }
+
+/*...................................*/
+
+
+.#example{
+    margin-left: 500px;
+}
+
+
+#tabsonTop{
+    height: 470px !important;
+}
+
+#BuildingEnvelopeTab{
+    background-color: #89C7EA;
+    color: white;
+}
+
+#LightingTab{
+    background-color: #8B85C8;
+    color: white;
+}
+
+#HVACTab{
+    background-color: #FF6433;
+    color: white;
+}
+
+#WaterTab{
+    background-color: #FFAD3C;
+    color: white;
+}
+
+#EnergyTab{
+    background-color: #F100EC;
+    color: white;
+}
+
+.card-body{
+    border: 1px solid #DFDFDF;
+    width: 100%;
+}
+
+.parameterSelection{
+    overflow-y: scroll;
+}
+
+.card-header-tabs{
+    opacity:inherit;
+    margin: 0 !important;
+}
+
+.card{
+    border: none;
+    padding: 0 !important;
+}
+
+.cardsRow{
+    padding: 50px 50px;
+}
+
+.btn-link{
+    font-weight: 500 !important;
+    color: #6a6a6a !important;
+}
+
+.chartName{
+    font-size: 12px;
+    margin-top: 5px;
+    margin-bottom: 0;
+    color: black;
+    float: left;
+    font-weight: bold;
+}
+
+.nav-item{    
+    padding: 0 !important;
+}
+
+.nav-link{
+    position: relative;
+/*    z-index: -1;*/
+}
+
+.card-body{
+    background-color: #FFFFFF
+}
+
+.tab-active{
+    z-index: 1;
