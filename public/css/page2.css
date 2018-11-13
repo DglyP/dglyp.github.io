@@ -1,4 +1,4 @@
-.nano { background: #bba; width: 500px; height: 500px; }
+.nano { background: #bba; width: 500px; height: 417px !important; }
 .nano .nano-content { padding: 2%; }
 .nano .nano-pane   { background: #888; }
 .nano .nano-slider { background: #111; }
@@ -11,8 +11,8 @@
 }
 
 
-tabsonTop{
-    height: 470 !important;
+#tabsonTop{
+    height: 470px !important;
 }
 
 #BuildingEnvelopeTab{
@@ -46,7 +46,6 @@ tabsonTop{
 }
 
 .parameterSelection{
-    height: 500px;
     overflow-y: scroll;
 }
 
