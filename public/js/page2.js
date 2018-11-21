@@ -129,7 +129,7 @@ function tornadoChart1() {
     .orient("left")
     .tickSize(0)
 
-    var svg = d3.select("#example").append("svg")
+    var svg = d3.select("#example1").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
     .append("g")
@@ -238,7 +238,7 @@ function tornadoChart2() {
     .orient("left")
     .tickSize(0)
 
-    var svg = d3.select("#example").append("svg")
+    var svg = d3.select("#example2").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
     .append("g")
@@ -347,7 +347,7 @@ function tornadoChart3() {
     .orient("left")
     .tickSize(0)
 
-    var svg = d3.select("#example").append("svg")
+    var svg = d3.select("#example3").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
     .append("g")
@@ -481,21 +481,21 @@ $( document ).ready(function() {
             .call(chart);
     }
 
-        for (var i in data1) {
+    for (var i in data1) {
         var chart = tornadoChart1()
         d3.select("#example1")
             .datum(data1[i])
             .call(chart);
     }
 
-        for (var i in data2) {
+    for (var i in data2) {
         var chart = tornadoChart2()
         d3.select("#example2")
             .datum(data2[i])
             .call(chart);
     }
 
-        for (var i in data3) {
+    for (var i in data3) {
         var chart = tornadoChart3()
         d3.select("#example3")
             .datum(data3[i])
