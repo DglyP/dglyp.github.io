@@ -5,8 +5,6 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Code Compliant</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" media="screen" href="./css/codeCompliant.css" />
-        <script src="codeCompliant.js"></script>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,13 +18,13 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
         <!-- jQuery library -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
         <link href="css/font-awesome.min.css" rel="stylesheet">
         <link rel="stylesheet" href="css/themify-icons.css">
         <link rel="stylesheet" href="css/animate.css">
         <!--css-->
-        <link rel="stylesheet" href="css/page1.css">
         <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
         <script
                 src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -38,20 +36,155 @@
 <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
+
+        <link rel="stylesheet" type="text/css" media="screen" href="./css/codeCompliant.css" />
+        <script src="js/codeCompliant.js"></script>
     </head>
     <body>
+        <!--Creates the popup body-->
 
-        <div class="container-fluid buildingSelection">
+            <div class="popup-overlay">
+                <!--Creates the popup content-->
+                <div class="popup-content">
+                    <h2>Baseline Information</h2>
+                    <p> This is an example of what the baseline information would look like here</p>
+                    <!--popup's close button-->
+                    <button class="btn close">Close</button>    </div>
+            </div>
+        <div class="container-fluid codeCompliantSection">
             <div class="row cardsRow justify-content-md-center">
-                <div class="card col-8" >
-                    <img class="card-img-top" src="image/pict1.png" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Code Compliant</h5>
-                        <p class="card-text">There will be changes for the actual flow</p>
-                        <a href="page2.html" class="btn btn-primary">SEE MORE</a>
+                
+                <div class="card col-5 leftCard" >
+                    <div class="card-header blueCard">Midrise Apartment #1</div>
+                    <div class="card-body row leftBody">
+                        <div class ="col-7">
+                            <img class="card-img-top img-fluid" src="image/pict1.png" alt="Card image cap">
+
+                            <div class="more-information">
+                                <button href="" class="btn btn-primary more-button open">MORE INFORMATION</button>
+                            </div>
+
+                        </div>
+                        <div class="col-5">
+                            <div class="card noBorder">
+                                <div class="card-header dropdownTitle ">Number of Floors</div>
+                                <div class="card-body ">
+                                    <div class="dropdown">
+                                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">                                            
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header dropdownTitle">Size of units [ft^2]</div>
+                                <div class="card-body">
+                                    <div class="dropdown">
+                                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">                                            
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header dropdownTitle">Window to Wall Ratio</div>
+                                <div class="card-body">
+                                    <div class="dropdown">
+                                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">                                            
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header dropdownTitle">Roof Type</div>
+                                <div class="card-body">
+                                    <div class="dropdown">
+                                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">                                            
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
+                </div>
+                <div class="card col-4 rightCard" >
+
+                    <div class="card-header blueCard">Code Selection</div>
+                    <div class="card-body row rightBody">
+                        <div class="card col-12">
+                            <div class="card-header dropdownTitle">Building Location (Affects Code Compliant)</div>
+                            <div class="card-body">
+                                <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">                                            
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card col-12">
+                            <div class="card-header dropdownTitle">HVAC System</div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <button type="button" class="btn btn-primary col">Unitary AC/Electric Heater</button>
+                                    <button type="button" class="btn btn-primary col">Unitary AC/Natural Gas Furnace</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card col-12">
+                            <div class="card-header dropdownTitle">Building Code</div>
+                            <div class="card-body">
+                                <div class="row justify-content-center">
+                                    <button type="button" class="btn btn-primary col-5">ASHRAE 90.1 2007</button>
+                                    <button type="button" class="btn btn-primary col-5">ASHRAE 90.1 2010</button>
+                                    <button type="button" class="btn btn-primary col-5">ASHRAE 90.1 2013</button>
+                                    <button type="button" class="btn btn-primary col-5">ASHRAE 90.1 2016</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 offset-10">
+
+                            <button type="button" class="btn btn-default btn-circle btn-xl"><i class="fa fa-arrow-right"></i>
+                            </button>   
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
+
+        <script>//appends an "active" class to .popup and .popup-content when the "Open" button is clicked
+            $(".open").on("click", function(){
+                $(".popup-overlay, .popup-content").addClass("active");
+            });
+
+            //removes the "active" class to .popup and .popup-content when the "Close" button is clicked 
+            $(".close, .popup-overlay").on("click", function(){
+                $(".popup-overlay, .popup-content").removeClass("active");
+            });</script>
     </body>
 </html>

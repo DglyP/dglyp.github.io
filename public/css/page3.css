@@ -68,3 +68,9 @@ html {
   .custom-checkbox .custom-control-input:focus ~ .custom-control-indicator {
     box-shadow: none !important; 
   }
+.bluebtn {
+    background-color: #007BFF;
+    color: white;
+    font-size: 20px
+}
+

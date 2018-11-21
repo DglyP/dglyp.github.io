@@ -1,4 +1,4 @@
-.nano { background: #bba; width: 500px; height: 417px !important; }
+.nano { background: #bba; width: 500px; height: 85vh !important; }
 .nano .nano-content { padding: 2%; }
 .nano .nano-pane   { background: #888; }
 .nano .nano-slider { background: #111; }
@@ -9,7 +9,6 @@
 .#example{
     margin-left: 500px;
 }
-
 
 #tabsonTop{
     height: 470px !important;
@@ -66,6 +65,7 @@
 .btn-link{
     font-weight: 500 !important;
     color: #6a6a6a !important;
+    margin-left: 720px;
 }
 
 .chartName{
@@ -92,3 +92,16 @@
 
 .tab-active{
     z-index: 1;
+}
+
+.redbg{
+    background-color: red !important;
+}
+
+.container{
+    margin: 0 !important;
+}
+
+#accordion{
+    width: 1710px
+}

@@ -17,6 +17,7 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <script src="js/jquery.nanoscroller.min.js"></script>
+    <script src="js/page2.js"></script>
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/themify-icons.css">
     <link rel="stylesheet" href="css/animate.css">
@@ -53,8 +54,8 @@
 
 <body>
     <div class="container-fluid">
-        <div class="row cardsRow">
-            <div class="col-5 tabsonTop">
+        <div class="row cardsRow ">
+            <div class="col-12 tabsonTop">
                 <ul class="row nav nav-tabs card-header-tabs" role="tablist">
                     <li class="col-md-auto nav-item">
                         <a class="nav-link tab-active" id="BuildingEnvelopeTab" data-toggle="tab" href="#home">Building Envelope</a>
@@ -77,25 +78,25 @@
                     <div class="nano-content tab-content">
                         <div id="home" class="container tab-pane active">
                             <div class="row" id="accordion">
-                                <div class="col-12 card">
+                                <div class="col-12 card ">
                                     <div class="card-header" id="headingOne">
                                         <h5 class="mb-0">
-                                            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" onclick="scrollToId(this.id)">
+                                            <button id="Roof-Type" class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" onclick="scrollToId(this.id)">
                                                 Roof Type
                                             </button>
                                         </h5>
                                     </div>
                                     <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-                                        <div class="card-body">
-                                            <ul class="list-group">
-                                                <li class="list-group-item">
+                                        <div class="card-body row">
+                                            <ul class="list-group col-6">
+                                                <li id="RT-01" class="list-group-item">
                                                     Piched roof with attic
                                                     <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox" checked/>
+                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox" />
                                                         <label for="someSwitchOptionDefault" class="label-default"></label>
                                                     </div>
                                                 </li>
-                                                <li class="list-group-item">
+                                                <li id="RT-02" class="list-group-item">
                                                     Flat Roof
                                                     <div class="material-switch pull-right">
                                                         <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
@@ -103,38 +104,44 @@
                                                     </div>
                                                 </li>
                                             </ul>
+
+                                            <div class="col-6 graphdiv float-right">
+                                                <div class="card-body">
+                                                    <p id="example"></p>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-12 card">
                                     <div class="card-header" id="headingTwo">
                                         <h5 class="mb-0">
-                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            <button id="Roof-Insulation" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                                 Roof Insulation
                                             </button>
                                         </h5>
                                     </div>
                                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                                        <div class="card-body">
+                                        <div class="card-body row">
 
-                                            <ul class="list-group">
-                                                <li class="list-group-item">
+                                            <ul class="list-group col-6">
+                                                <li id="RI-01" class="list-group-item">
                                                     R38
                                                     <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox" checked/>
                                                         <label for="someSwitchOptionDefault" class="label-default"></label>
                                                     </div>
                                                 </li>
 
-                                                <li class="list-group-item">
+                                                <li id="RI-02" class="list-group-item">
                                                     R38+4" rigid
                                                     <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox" />
                                                         <label for="someSwitchOptionDefault" class="label-default"></label>
                                                     </div>
                                                 </li>
 
-                                                <li class="list-group-item">
+                                                <li id="RI-03" class="list-group-item">
                                                     R49
                                                     <div class="material-switch pull-right">
                                                         <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
@@ -142,7 +149,7 @@
                                                     </div>
                                                 </li>
 
-                                                <li class="list-group-item">
+                                                <li id="RI-04" class="list-group-item">
                                                     R60
                                                     <div class="material-switch pull-right">
                                                         <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
@@ -150,7 +157,7 @@
                                                     </div>
                                                 </li>
 
-                                                <li class="list-group-item">
+                                                <li id="RI-05" class="list-group-item">
                                                     R20 c.i.
                                                     <div class="material-switch pull-right">
                                                         <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
@@ -158,14 +165,14 @@
                                                     </div>
                                                 </li>
 
-                                                <li class="list-group-item">
+                                                <li id="RI-06" class="list-group-item">
                                                     R25 c.i.
                                                     <div class="material-switch pull-right">
                                                         <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
                                                         <label for="someSwitchOptionDefault" class="label-default"></label>
                                                     </div>
                                                 </li>                                  
-                                                <li class="list-group-item">
+                                                <li id="RI-07" class="list-group-item">
                                                     R30 c.i.
                                                     <div class="material-switch pull-right">
                                                         <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
@@ -173,7 +180,7 @@
                                                     </div>
                                                 </li>
 
-                                                <li class="list-group-item">
+                                                <li id="RI-08" class="list-group-item">
                                                     R35 c.i.
                                                     <div class="material-switch pull-right">
                                                         <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
@@ -182,22 +189,28 @@
                                                 </li>
                                             </ul>
 
+
+                                            <div class="col-6 graphdiv float-right">
+                                                <div class="card-body">
+                                                    <p id="example"></p>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-12 card">
                                     <div class="card-header" id="headingThree">
                                         <h5 class="mb-0">
-                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                            <button id="Exterior-Wall" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                                 Exterior Wall
                                             </button>
                                         </h5>
                                     </div>
                                     <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                                        <div class="card-body">
+                                        <div class="card-body row">
 
-                                            <ul class="list-group">
-                                                <li class="list-group-item">
+                                            <ul class="list-group col-6">
+                                                <li id="EX-01" class="list-group-item">
                                                     2x4 staggered studs on 2x6 sill plate (R19)
                                                     <div class="material-switch pull-right">
                                                         <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
@@ -205,15 +218,15 @@
                                                     </div>
                                                 </li>
 
-                                                <li class="list-group-item">
+                                                <li id="EX-02" class="list-group-item">
                                                     2x4 staggered studs on 2x8 sill plate (R26)
                                                     <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox checked"/>
                                                         <label for="someSwitchOptionDefault" class="label-default"></label>
                                                     </div>
                                                 </li>
 
-                                                <li class="list-group-item">
+                                                <li id="EX-03" class="list-group-item">
                                                     2x6 @12 OC(R18)
                                                     <div class="material-switch pull-right">
                                                         <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
@@ -221,7 +234,7 @@
                                                     </div>
                                                 </li>
 
-                                                <li class="list-group-item">
+                                                <li id="EX-04" class="list-group-item">
                                                     2x6 @24 OC(R21)
                                                     <div class="material-switch pull-right">
                                                         <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
@@ -229,7 +242,7 @@
                                                     </div>
                                                 </li>
 
-                                                <li class="list-group-item">
+                                                <li id="EX-05" class="list-group-item">
                                                     SIPs R24
                                                     <div class="material-switch pull-right">
                                                         <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
@@ -237,14 +250,14 @@
                                                     </div>
                                                 </li>
 
-                                                <li class="list-group-item">
+                                                <li id="EX-06" class="list-group-item">
                                                     SIPs R28
                                                     <div class="material-switch pull-right">
                                                         <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
                                                         <label for="someSwitchOptionDefault" class="label-default"></label>
                                                     </div>
                                                 </li>                                  
-                                                <li class="list-group-item">
+                                                <li id="EX-07" class="list-group-item">
                                                     SIPs R40
                                                     <div class="material-switch pull-right">
                                                         <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
@@ -252,7 +265,7 @@
                                                     </div>
                                                 </li>
 
-                                                <li class="list-group-item">
+                                                <li id="EX-08" class="list-group-item">
                                                     SIPs R50
                                                     <div class="material-switch pull-right">
                                                         <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
@@ -260,7 +273,7 @@
                                                     </div>
                                                 </li>
 
-                                                <li class="list-group-item">
+                                                <li id="EX-09" class="list-group-item">
                                                     ICF 9 in
                                                     <div class="material-switch pull-right">
                                                         <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
@@ -268,7 +281,7 @@
                                                     </div>
                                                 </li>
 
-                                                <li class="list-group-item">
+                                                <li id="EX-10" class="list-group-item">
                                                     ICF 11in
                                                     <div class="material-switch pull-right">
                                                         <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
@@ -276,7 +289,7 @@
                                                     </div>
                                                 </li>
 
-                                                <li class="list-group-item">
+                                                <li id="EX-11" class="list-group-item">
                                                     ICF 13 in
                                                     <div class="material-switch pull-right">
                                                         <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
@@ -285,6 +298,12 @@
                                                 </li>
                                             </ul>
 
+
+                                            <div class="col-6 graphdiv float-right">
+                                                <div class="card-body">
+                                                    <p id="example"></p>
+                                                </div>
+                                            </div>
 
                                         </div>
                                     </div>
@@ -1048,187 +1067,52 @@
 
                         </div>
                     </div>
-                </div>
-            </div>
-            <!--////////////////////graph/////////////////////////////////////////////////-->
-            <div class="col-6 graphdiv">
-                <div class="card-body">
-                    <p id="example"></p>
-                    <script>
-
-                        function tornadoChart() {
-                            var margin = {top: 20, right: 30, bottom: 40, left: 100},
-                                width = 800 - margin.left - margin.right,
-                                height = 400 - margin.top - margin.bottom;
-
-                            var x = d3.scale.linear()
-                            .range([0, width]);
-
-                            var y = d3.scale.ordinal()
-                            .rangeRoundBands([0, height], 0.1);
-
-                            var xAxis = d3.svg.axis()
-                            .scale(x)
-                            .orient("bottom")
-                            .ticks(10)
 
 
-                            var yAxis = d3.svg.axis()
-                            .scale(y)
-                            .orient("left")
-                            .tickSize(0)
-
-                            var svg = d3.select("#example").append("svg")
-                            .attr("width", width + margin.left + margin.right)
-                            .attr("height", height + margin.top + margin.bottom)
-                            .append("g")
-                            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-                            var maxvalue;
-
-
-                            function chart(selection) {
-                                selection.each(function(data) {
-
-                                    maxvalue = (Math.abs(d3.extent(data, function(d) { return d.interactions; })[0]) > Math.abs(d3.extent(data, function(d) { return d.interactions; })[1])) ? Math.abs(d3.extent(data, function(d) { return d.interactions; })[0]) : Math.abs(d3.extent(data, function(d) { return d.interactions; })[1]);
-
-                                    x.domain([maxvalue*-1, maxvalue]);
-                                    y.domain(data.map(function(d) { return d.age; }));
-
-                                    var minInteractions = Math.max.apply(Math, data.map(function(o){return o.interactions;}))*-1;
-                                    yAxis.tickPadding(Math.abs(x(minInteractions) - x(0)) + 10);
-
-                                    var bar = svg.selectAll(".bar")
-                                    .data(data)
-
-                                    bar.enter().append("rect")
-                                        .attr("class", function(d) { return "bar bar--" + (d.interactions < 0 ? "negative" : "positive"); })
-                                        .attr("x", function(d) { return x(Math.min(0, d.interactions)); })
-                                        .attr("y", function(d) { return y(d.age); })
-                                        .attr("width", function(d) { return Math.abs(x(d.interactions) - x(0)); })
-                                        .attr("id", function(d){ return d.age})
-                                        .attr("style", function(d){ return d.colour == null ? "" : "fill:" + d.colour;})
-                                        .attr("height", y.rangeBand())
-
-                                    bar.enter().append('text')
-                                        .attr("text-anchor", "end")
-                                        .attr("x", function(d,i) {
-
-                                        var titlePlacement = Math.abs(x(d.interactions) - x(0)) + x(Math.min(0, d.interactions))-5;
-                                        if( Math.abs(x(d.interactions) - x(0)) < 30 && d.interactions > 0)
-                                            titlePlacement += 30;
-                                        else if(d.interactions < 0) //Negative placement
-                                        {
-                                            titlePlacement = x(Math.min(0, d.interactions))-5;
-
-                                        }
-
-
-                                        return titlePlacement;
-                                    })
-                                        .attr("y", function(d,i) {
-                                        return y(d.age) + (y.rangeBand() / 2);
-                                    })
-                                        .attr("dy", ".35em")
-                                        .text(function (d) { return d.interactions; })
-
-                                    svg.append("g")
-                                        .attr("class", "x axis")
-                                        .attr("transform", "translate(0," + height + ")")
-                                        .call(xAxis);
-                                    svg.append("g")
-                                        .attr("class", "y axis")
-                                        .attr("transform", "translate(" + x(0) + ",0)")
-                                        .call(yAxis);
-
-                                });
-
-                            }
-
-                            return chart;
-                        }
-
-
-
-                        var data2 = {
-                            "Roof Insulation - Flat Roof":[
-                                {"age":"R25 c.i.","gender":"male","interactions":-1.61,"colour":"#4264FF"},{"age":"R25 c.i.","gender":"female","interactions":458,"colour":"#ecf"},{"age":"R30 c.i.","gender":"male","interactions":-1.59,"colour":"#4264FF"},{"age":"R30 c.i.","gender":"female","interactions":32,"colour":"#ecf"},{"age":"R35 c.i.","gender":"male","interactions":-1.59,"colour":"#4264FF"},{"age":"R35 c.i.","gender":"female","interactions":29,"colour":"#ecf"}],
-                        };
-
-                        var data2 = {
-                            "Roof Insulation - Piched Roof":[{"age":"R38","gender":"male","interactions":-1.60,"colour":"#4264FF"},{"age":"R38","gender":"female","interactions":45,"colour":"#ecf"},{"age":"R38+4'' rigid","gender":"male","interactions":-1.59,"colour":"4264FF"},{"age":"R38+4'' rigid","gender":"female","interactions":18,"colour":"#ecf"},{"age":"R49","gender":"male","interactions":-1.55,"colour":"#4264FF"},{"age":"R49","gender":"female","interactions":64,"colour":"#ecf"},{"age":"R60","gender":"male","interactions":-1.55,"colour":"#4264FF"},{"age":"R60","gender":"female","interactions":46,"colour":"#ecf"}],
-
-                        };
-
-                        var data2 = {
-                            "Exterior Wall":[{"age":"2x6 @24 OC(R21)+ R9.6 c.i.","gender":"female","interactions":-4.27,"colour":"#ecf"},{"age":"2x6 @24 OC(R21)+ R9.6 c.i.","gender":"male","interactions":18,"colour":"#4264FF"},{"age":"2x4 staggered studs on 2x6 sill plate (R19)","gender":"male","interactions":10,"colour":"#4264FF"},{"age":"2x4 staggered studs on 2x6 sill plate (R19)","gender":"female","interactions":-4.17,"colour":"#ecf"},{"age":"2x4 staggered studs on 2x6 sill plate (R26)","gender":"male","interactions":4,"colour":"#4264FF"},{"age":"2x4 staggered studs on 2x6 sill plate (R26)","gender":"female","interactions":-4.37,"colour":"#ecf"},{"age":"SIPs R28","gender":"male","interactions":0,"colour":"4264FF"},{"age":"SIPs R28","gender":"female","interactions":-6.01,"colour":"#ecf"},{"age":"SIPs R40","gender":"male","interactions":0,"colour":"#4264FF"},{"age":"SIPs R40","gender":"female","interactions":-6.90,"colour":"#ecf"},{"age":"SIPs R50","gender":"male","interactions":0,"colour":"#4264FF"},{"age":"SIPs R50","gender":"female","interactions":-8.07,"colour":"#ecf"},{"age":"ICF 9 in","gender":"male","interactions":0,"colour":"#4264FF"},{"age":"ICF 9 in","gender":"female","interactions":-12.05,"colour":"#ecf"},{"age":"ICF 11 in","gender":"male","interactions":0,"colour":"#4264FF"},{"age":"ICF 11 in","gender":"female","interactions":-11.86,"colour":"#ecf"},{"age":"ICF 13 in","gender":"male","interactions":0,"colour":"#4264FF"},{"age":"ICF 13 in","gender":"female","interactions":-12.23,"colour":"#ecf"}],
-
-                        };
-
-                        var data2 = {
-                            "Residential Window Properties":[
-                                {"age":"Option 4: U=0.30 SHGC=0.25","gender":"male","interactions":-37,"colour":"#4264FF"},{"age":"Option 4: U=0.30 SHGC=0.25","gender":"female","interactions":52,"colour":"#ecf"},{"age":"Option 5: U=0.2 5SHGC=0.4","gender":"male","interactions":-37.50,"colour":"#4264FF"},{"age":"Option 5: U=0.2 5SHGC=0.4","gender":"female","interactions":39,"colour":"#ecf"}],
-                        };
-
-                        var data = {
-                            "Residential Lighting":[
-                                {"age":"CFL","gender":"female","interactions":-0.02,"colour":"#4264FF"},{"age":"CFL","gender":"male","interactions":807,"colour":"#4264FF"},{"age":"LED","gender":"female","interactions":-0.03,"colour":"#ecf"},{"age":"LED","gender":"male","interactions":342,"colour":"#4264FF"}],
-                        };
-
-                        var data2 = {
-                            "Corridor Lighting":[
-                                {"age":"LED","gender":"female","interactions":-0.30,"colour":"#ecf"},{"age":"LED","gender":"male","interactions":547,"colour":"#4264FF"}],
-                        };
-
-                        var data2 = {
-                            "Corridor Lighting":[
-                                {"age":"Residential Unit Plug load","gender":"female","interactions":-1.20,"colour":"#ecf"},{"age":"Residential Unit Plug load","gender":"male","interactions":41,"colour":"#4264FF"}],
-                        };
-
-                        function updateData() {
-
-                            // Get the data again
-                            d3.csv("data-alt.csv", function(error, data) {
-                                data.forEach(function(d) {
-                                    d.date = parseDate(d.date);
-                                    d.close = +d.close;
-                                });
-
-                                // Scale the range of the data again 
-                                x.domain(d3.extent(data, function(d) { return d.date; }));
-                                y.domain([0, d3.max(data, function(d) { return d.close; })]);
-
-                                // Select the section we want to apply our changes to
-                                var svg = d3.select("body").transition();
-
-                                // Make the changes
-                                svg.select(".line")   // change the line
-                                    .duration(750)
-                                    .attr("d", valueline(data));
-                                svg.select(".x.axis") // change the x axis
-                                    .duration(750)
-                                    .call(xAxis);
-                                svg.select(".y.axis") // change the y axis
-                                    .duration(750)
-                                    .call(yAxis);
-
-                            });
-                        }
-
-
-                        for (var i in data) {
-                            var chart = tornadoChart()
-                            d3.select("#example")
-                                .datum(data[i])
-                                .call(chart);
-                        }
-
-                    </script>
                 </div>
             </div>
 
         </div>
     </div>
+    
+    
+    
+<!-- updates
+
+    <input type="checkbox" id="myCheckbox"> Only Even
+    <div id="content"></div>
+    <script>		
+        data = [2,4,5,7,12,123,352,1000];
+        table = d3.select("#content")
+            .append("table")
+            .property("border","1px");
+        d3.select("example").on("change",update);
+        update();
+
+
+        function update(){
+            if(d3.select("#myCheckbox").property("checked")){
+                newData = data.filter(function(d,i){return d % 2 == 0;});
+            } else {
+                newData = data;			
+            }	
+
+            newRows = table.selectAll("tr")
+                .data(newData,function(d){return d;});
+            newRows.enter()
+                .append("tr")
+                .append("td")
+                .text(function(d){return d;});		
+            newRows.exit()
+                .remove();			
+        }
+    </script>
+-->
+
+
+
+
+
 </body>
 
 <script>

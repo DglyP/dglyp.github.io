@@ -1,5 +1,4 @@
 <head>
-    <link rel="stylesheet" href="css/page4.css">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,132 +20,249 @@
     <link rel="stylesheet" href="css/animate.css">
     <!--css-->
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
-    <script
-            src="https://code.jquery.com/jquery-3.3.1.min.js"
-            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-            crossorigin="anonymous"></script>
     <!-- HTmL5 shim and Respond.js for IE8 support of HTmL5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
-    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-</head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js" charset="utf-8"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
 
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.1/js/bootstrap.min.js"></script>
 
-<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.1/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
+    <link rel="stylesheet" href="css/page4.css">
+    <script src="js/page4.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
 
-<!--
+    <!--
 
 This example uses AwesomeFont.
 Please include the tags    
 <link href="assets/css/font-awesome.min.css" rel="stylesheet" media="screen">	
 -->
-<link href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css" rel="stylesheet" media="screen">	
+    <link href="https://fontawesome.io/assets/font-awesome/css/font-awesome.css" rel="stylesheet" media="screen">
+</head>
+
 <div class="container">
     <div class="row">
-		<div class="widget widget-gray"> <!-- TYPE PANEL -->
-				<div class="widget-head"> <!-- HEAD PANEL -->
-					<h4 class="heading"><i class="fa fa-briefcase"></i>  Results from your simulation</h4>
-				</div><!-- /HEAD PANEL -->
-				
-                <div class="widget-body" id="widget-body1"> <!-- CONTENT PANEL -->
-												<h4> Results Table and Energy chart </h4>
+        <div class="widget widget-gray wider"> <!-- TYPE PANEL -->
+            <div class="widget-head"> <!-- HEAD PANEL -->
+                <h4 class="heading"><i class="fa fa-briefcase"></i>  Results from your simulation</h4>
+            </div><!-- /HEAD PANEL -->
 
-                </div><!-- /CONTENT PANEL -->
-				
-                <div class="widget-footer"><!-- FOOTER PANEL--> 
-                    <a href="#" class="fa fa-minus-circle fa-1x" data-toggle="tooltip" data-placement="right" title="" data-original-title="FA-MINUS-CIRCLE"><i></i></a>
-                    <a href="#" class="fa fa-pencil fa-1x" data-toggle="tooltip" data-placement="right" title="" data-original-title="FA-PENCIL"><i></i></a>
-                    <a href="#" class="fa fa-search fa-1x" data-toggle="tooltip" data-placement="right" title="" data-original-title="FA-SEARCH"><i></i></a>
-                    <a href="#" class="fa fa-plus-circle fa-1x" data-toggle="tooltip" data-placement="right" title="" data-original-title="FA-PLUS-CIRCLE"><i></i></a>
-					<a href="#" id="toggle1" class="fa fa-chevron-up fa-1x" data-toggle="tooltip" data-placement="right" title="" data-original-title="FA-PLUS-CIRCLE"><i></i></a>
-				</div><!-- /FOOTER PANEL--> 
-				
+            <div class="widget-body" id="widget-body1"> <!-- CONTENT PANEL -->
+                		<section class="content">
+			<h1>Your results</h1>
+			<div class="col-md-8 col-md-offset-2">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<div class="pull-right">
+							<div class="btn-group">
+								<button type="button" class="btn btn-success btn-filter" data-target="Heating">Heating</button>
+								<button type="button" class="btn btn-warning btn-filter" data-target="Water Systems">Water Systems</button>
+								<button type="button" class="btn btn-danger btn-filter" data-target="Cooling">Cooling</button>
+								<button type="button" class="btn btn-default btn-filter" data-target="all">All</button>
+							</div>
+						</div>
+						<div class="table-container">
+							<table class="table table-filter">
+								<tbody>
+									<tr data-status="Heating">
+										<td>
+											<div class="ckbox">
+												<input type="checkbox" id="checkbox1">
+												<label for="checkbox1"></label>
+											</div>
+										</td>
+										<td>
+											<a href="javascript:;" class="star">
+												<i class="glyphicon glyphicon-star"></i>
+											</a>
+										</td>
+										<td>
+											<div class="media">
+												<div class="media-body">
+													<span class="media-meta pull-right">$/ft^2</span>
+													<h4 class="title">
+														SIPS R28
+														<span class="pull-right Heating">(Heating)</span>
+													</h4>
+													<p class="summary">This is a component</p>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr data-status="Water Systems">
+										<td>
+											<div class="ckbox">
+												<input type="checkbox" id="checkbox3">
+												<label for="checkbox3"></label>
+											</div>
+										</td>
+										<td>
+											<a href="javascript:;" class="star">
+												<i class="glyphicon glyphicon-star"></i>
+											</a>
+										</td>
+										<td>
+											<div class="media">
+												<div class="media-body">
+													<span class="media-meta pull-right">$/ft^2</span>
+													<h4 class="title">
+														SIPS R28
+														<span class="pull-right Water Systems">(Water Systems)</span>
+													</h4>
+													<p class="summary">This is a component</p>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr data-status="Cooling">
+										<td>
+											<div class="ckbox">
+												<input type="checkbox" id="checkbox2">
+												<label for="checkbox2"></label>
+											</div>
+										</td>
+										<td>
+											<a href="javascript:;" class="star">
+												<i class="glyphicon glyphicon-star"></i>
+											</a>
+										</td>
+										<td>
+											<div class="media">
+												<div class="media-body">
+													<span class="media-meta pull-right">$/ft^2</span>
+													<h4 class="title">
+														SIPS R28
+														<span class="pull-right Cooling">(Cooling)</span>
+													</h4>
+													<p class="summary">This is a component</p>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr data-status="Heating" class="selected">
+										<td>
+											<div class="ckbox">
+												<input type="checkbox" id="checkbox4" checked>
+												<label for="checkbox4"></label>
+											</div>
+										</td>
+										<td>
+											<a href="javascript:;" class="star star-checked">
+												<i class="glyphicon glyphicon-star"></i>
+											</a>
+										</td>
+										<td>
+											<div class="media">
+												<div class="media-body">
+													<span class="media-meta pull-right">$/ft^2</span>
+													<h4 class="title">
+														SIPS R28
+														<span class="pull-right Heating">(Heating)</span>
+													</h4>
+													<p class="summary">This is a component</p>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr data-status="Water Systems">
+										<td>
+											<div class="ckbox">
+												<input type="checkbox" id="checkbox5">
+												<label for="checkbox5"></label>
+											</div>
+										</td>
+										<td>
+											<a href="javascript:;" class="star">
+												<i class="glyphicon glyphicon-star"></i>
+											</a>
+										</td>
+										<td>
+											<div class="media">
+												<div class="media-body">
+													<span class="media-meta pull-right">$/ft^2</span>
+													<h4 class="title">
+														SIPS R28
+														<span class="pull-right Water Systems">(Water Systems)</span>
+													</h4>
+													<p class="summary">This is a component</p>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+            </div><!-- /CONTENT PANEL -->
+
+            <div class="widget-footer"><!-- FOOTER PANEL--> 
+                <a href="#" class="fa fa-minus-circle fa-1x" data-toggle="tooltip" data-placement="right" title="" data-original-title="FA-MINUS-CIRCLE"><i></i></a>
+                <a href="#" class="fa fa-pencil fa-1x" data-toggle="tooltip" data-placement="right" title="" data-original-title="FA-PENCIL"><i></i></a>
+                <a href="#" class="fa fa-search fa-1x" data-toggle="tooltip" data-placement="right" title="" data-original-title="FA-SEARCH"><i></i></a>
+                <a href="#" class="fa fa-plus-circle fa-1x" data-toggle="tooltip" data-placement="right" title="" data-original-title="FA-PLUS-CIRCLE"><i></i></a>
+                <a href="#" id="toggle1" class="fa fa-chevron-up fa-1x" data-toggle="tooltip" data-placement="right" title="" data-original-title="FA-PLUS-CIRCLE"><i></i></a>
+            </div><!-- /FOOTER PANEL--> 
+
         </div> <!-- /TYPE PANEL -->
-	</div>	
-	
+    </div>	
 
-	<div class="row">
-		<div class="widget"> <!-- TYPE PANEL -->
-				<div class="widget-head"> <!-- HEAD PANEL -->
-					<h4 class="heading"><i class="fa fa-briefcase"></i>  Monthly Timeline</h4>
-				</div><!-- /HEAD PANEL -->
-				
-                <div class="widget-body" id="widget-body2"> <!-- CONTENT PANEL -->
-												<h4> Monthly Chart with $/ft^2 units </h4>
 
-                </div><!-- /CONTENT PANEL -->
-				
-                <div class="widget-footer"><!-- FOOTER PANEL--> 
-                    <a href="#" class="fa fa-minus-circle fa-1x" data-toggle="tooltip" data-placement="right" title="" data-original-title="FA-MINUS-CIRCLE"><i></i></a>
-                    <a href="#" class="fa fa-pencil fa-1x" data-toggle="tooltip" data-placement="right" title="" data-original-title="FA-PENCIL"><i></i></a>
-                    <a href="#" class="fa fa-search fa-1x" data-toggle="tooltip" data-placement="right" title="" data-original-title="FA-SEARCH"><i></i></a>
-                    <a href="#" class="fa fa-plus-circle fa-1x" data-toggle="tooltip" data-placement="right" title="" data-original-title="FA-PLUS-CIRCLE"><i></i></a>
-					<a href="#" id="toggle2" class="fa fa-chevron-up fa-1x" data-toggle="tooltip" data-placement="right" title="" data-original-title="FA-PLUS-CIRCLE"><i></i></a>
-				</div><!-- /FOOTER PANEL--> 
-				
+    <div class="row">
+        <div class="widget"> <!-- TYPE PANEL -->
+            <div class="widget-head"> <!-- HEAD PANEL -->
+                <h4 class="heading"><i class="fa fa-briefcase"></i>  Monthly Timeline</h4>
+            </div><!-- /HEAD PANEL -->
+
+            <div class="widget-body" id="widget-body2"> <!-- CONTENT PANEL -->
+                <div id='layout'>
+                    <!-- <h2>Bar chart example</h2> -->
+                    <div id='container'>
+                        <svg />
+                    </div>
+                </div>
+            </div><!-- /CONTENT PANEL -->
+
+            <div class="widget-footer"><!-- FOOTER PANEL--> 
+                <a href="#" class="fa fa-minus-circle fa-1x" data-toggle="tooltip" data-placement="right" title="" data-original-title="FA-MINUS-CIRCLE"><i></i></a>
+                <a href="#" class="fa fa-pencil fa-1x" data-toggle="tooltip" data-placement="right" title="" data-original-title="FA-PENCIL"><i></i></a>
+                <a href="#" class="fa fa-search fa-1x" data-toggle="tooltip" data-placement="right" title="" data-original-title="FA-SEARCH"><i></i></a>
+                <a href="#" class="fa fa-plus-circle fa-1x" data-toggle="tooltip" data-placement="right" title="" data-original-title="FA-PLUS-CIRCLE"><i></i></a>
+                <a href="#" id="toggle2" class="fa fa-chevron-up fa-1x" data-toggle="tooltip" data-placement="right" title="" data-original-title="FA-PLUS-CIRCLE"><i></i></a>
+            </div><!-- /FOOTER PANEL--> 
+
         </div> <!-- /TYPE PANEL -->
-	</div>	
-	<div class="row">
-		<div class="widget"> <!-- TYPE PANEL -->
-				<div class="widget-head"> <!-- HEAD PANEL -->
-					<h4 class="heading"><i class="fa fa-briefcase"></i>  Results per category</h4>
-				</div><!-- /HEAD PANEL -->
-				
-                <div class="widget-body" id="widget-body2"> <!-- CONTENT PANEL -->
-												<h4> Each category and its results </h4>
+    </div>	
+    <div class="row">
+        <div class="widget"> <!-- TYPE PANEL -->
+            <div class="widget-head"> <!-- HEAD PANEL -->
+                <h4 class="heading"><i class="fa fa-briefcase"></i>  Results per category</h4>
+            </div><!-- /HEAD PANEL -->
 
-                </div><!-- /CONTENT PANEL -->
-				
-                <div class="widget-footer"><!-- FOOTER PANEL--> 
-                    <a href="#" class="fa fa-minus-circle fa-1x" data-toggle="tooltip" data-placement="right" title="" data-original-title="FA-MINUS-CIRCLE"><i></i></a>
-                    <a href="#" class="fa fa-pencil fa-1x" data-toggle="tooltip" data-placement="right" title="" data-original-title="FA-PENCIL"><i></i></a>
-                    <a href="#" class="fa fa-search fa-1x" data-toggle="tooltip" data-placement="right" title="" data-original-title="FA-SEARCH"><i></i></a>
-                    <a href="#" class="fa fa-plus-circle fa-1x" data-toggle="tooltip" data-placement="right" title="" data-original-title="FA-PLUS-CIRCLE"><i></i></a>
-					<a href="#" id="toggle2" class="fa fa-chevron-up fa-1x" data-toggle="tooltip" data-placement="right" title="" data-original-title="FA-PLUS-CIRCLE"><i></i></a>
-				</div><!-- /FOOTER PANEL--> 
-				
+            <div class="widget-body" id="widget-body2"> <!-- CONTENT PANEL -->
+                <h4> Each category and its results </h4>
+
+            </div><!-- /CONTENT PANEL -->
+
+            <div class="widget-footer"><!-- FOOTER PANEL--> 
+                <a href="#" class="fa fa-minus-circle fa-1x" data-toggle="tooltip" data-placement="right" title="" data-original-title="FA-MINUS-CIRCLE"><i></i></a>
+                <a href="#" class="fa fa-pencil fa-1x" data-toggle="tooltip" data-placement="right" title="" data-original-title="FA-PENCIL"><i></i></a>
+                <a href="#" class="fa fa-search fa-1x" data-toggle="tooltip" data-placement="right" title="" data-original-title="FA-SEARCH"><i></i></a>
+                <a href="#" class="fa fa-plus-circle fa-1x" data-toggle="tooltip" data-placement="right" title="" data-original-title="FA-PLUS-CIRCLE"><i></i></a>
+                <a href="#" id="toggle2" class="fa fa-chevron-up fa-1x" data-toggle="tooltip" data-placement="right" title="" data-original-title="FA-PLUS-CIRCLE"><i></i></a>
+            </div><!-- /FOOTER PANEL--> 
+
         </div> <!-- /TYPE PANEL -->
-	</div>	
-	
+    </div>	
 </div>
-
-<script>
-$(document).ready(function() {
-  $('a').tooltip({placement: 'top'});
-
-  $( "#toggle1" ).click(function() {
-      $("#widget-body1").slideToggle( "slow" );
-      
-	  $('#toggle1').toggleClass(function() {
-	  if ($(this).is('.fa fa-chevron-down')) {
-		return '.fa fa-chevron-up';
-	  } else {
-		return '.fa fa-chevron-down';
-	  }
-	})
- });  
- 
-   $( "#toggle2" ).click(function() {
-      $("#widget-body2").slideToggle( "slow" );
-	  
-	  $('#toggle2').toggleClass(function() {
-	  if ($(this).is('.fa fa-chevron-down')) {
-		return '.fa fa-chevron-up';
-	  } else {
-		return '.fa fa-chevron-down';
-	  }
-	})
- }); 
-
-});
-</script>
+]
