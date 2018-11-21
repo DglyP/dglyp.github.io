@@ -6,8 +6,13 @@
 /*...................................*/
 
 
-.#example{
+.#example , .#example1 , .#example2 , .#example3{
     margin-left: 500px;
+}
+
+.em{
+    width: 100%;
+    font-size: inherit;
 }
 
 #tabsonTop{
