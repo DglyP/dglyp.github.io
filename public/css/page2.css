@@ -110,3 +110,39 @@
 
 #accordion{
 }
+
+#leftSide{
+    height: inherit !important;
+}
+
+.list-group-item{
+    font-size: 17px;
+}
+
+body {
+  text-align: center;
+}
+
+.chart, .axis {
+  font-family: 'Courier New';
+  font-size: 1em;
+}
+
+.title {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.bar { stroke: black; }
+
+.bar--female { fill: none; }
+.bar--male   { fill: gray; }
+
+.axis .domain,
+.axis--y .tick line {
+  display: none;
+}
+
+.label { font-size: 0.75em; }
+
+.axis--y text { alignment-baseline: after-edge; }

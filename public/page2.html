@@ -75,998 +75,1022 @@
                 </ul>
                 <div class="card-body parameterSelection nano">
 
-                    <div class="nano-content tab-content">
-                        <div id="home" class="container tab-pane active">
-                            <div class="row" id="accordion">
-                                <div class="col-12 card ">
-                                    <div class="card-header" id="headingOne">
-                                        <h5 class="mb-0">
-                                            <button id="Roof-Type" class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" onclick="scrollToId(this.id)">
-                                                Roof Type
-                                            </button>
-                                        </h5>
-                                    </div>
-                                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-                                        <div class="card-body row">
-                                            <ul class="list-group col-5">
-                                                <li id="RT-01" class="list-group-item">
-                                                    Piched roof with attic
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox" />
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-                                                <li id="RT-02" class="list-group-item">
-                                                    Flat Roof
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-                                            </ul>
-
-                                            <div class="col-7 graphdiv float-right">
-                                                <div class="card-body">
-                                                    <p id="example"></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 card">
-                                    <div class="card-header" id="headingTwo">
-                                        <h5 class="mb-0">
-                                            <button id="Roof-Insulation" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                                Roof Insulation
-                                            </button>
-                                        </h5>
-                                    </div>
-                                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                                        <div class="card-body row">
-
-                                            <ul class="list-group col-5">
-                                                <li id="RI-01" class="list-group-item">
-                                                    R38
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-
-                                                <li id="RI-02" class="list-group-item">
-                                                    R38+4" rigid
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox" />
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-
-                                                <li id="RI-03" class="list-group-item">
-                                                    R49
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-
-                                                <li id="RI-04" class="list-group-item">
-                                                    R60
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-
-                                                <li id="RI-05" class="list-group-item">
-                                                    R20 c.i.
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-
-                                                <li id="RI-06" class="list-group-item">
-                                                    R25 c.i.
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>                                  
-                                                <li id="RI-07" class="list-group-item">
-                                                    R30 c.i.
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-
-                                                <li id="RI-08" class="list-group-item">
-                                                    R35 c.i.
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-                                            </ul>
-
-
-                                            <div class="col-7 graphdiv float-right">
-                                                <div class="card-body">
-                                                    <p id="example1"></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 card">
-                                    <div class="card-header" id="headingThree">
-                                        <h5 class="mb-0">
-                                            <button id="Exterior-Wall" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                                Exterior Wall
-                                            </button>
-                                        </h5>
-                                    </div>
-                                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                                        <div class="card-body row">
-
-                                            <ul class="list-group col-5">
-                                                <li id="EX-01" class="list-group-item">
-                                                    2x4 staggered studs on 2x6 sill plate (R19)
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-
-                                                <li id="EX-02" class="list-group-item">
-                                                    2x4 staggered studs on 2x8 sill plate (R26)
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox" checked/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-
-                                                <li id="EX-03" class="list-group-item">
-                                                    2x6 @12 OC(R18)
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-
-                                                <li id="EX-04" class="list-group-item">
-                                                    2x6 @24 OC(R21)
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-
-                                                <li id="EX-05" class="list-group-item">
-                                                    SIPs R24
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-
-                                                <li id="EX-06" class="list-group-item">
-                                                    SIPs R28
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>                                  
-                                                <li id="EX-07" class="list-group-item">
-                                                    SIPs R40
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-
-                                                <li id="EX-08" class="list-group-item">
-                                                    SIPs R50
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-
-                                                <li id="EX-09" class="list-group-item">
-                                                    ICF 9 in
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-
-                                                <li id="EX-10" class="list-group-item">
-                                                    ICF 11in
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-
-                                                <li id="EX-11" class="list-group-item">
-                                                    ICF 13 in
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-                                            </ul>
-
-
-                                            <div class="col-7 graphdiv float-right">
-                                                <div class="card-body">
-                                                    <p id="example2"></p>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 card">
-                                    <div class="card-header" id="headingThree">
-                                        <h5 class="mb-0">
-                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                                Residential Window Properties
-                                            </button>
-                                        </h5>
-                                    </div>
-                                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
-                                        <div class="card-body">
-
-                                            <ul class="list-group">
-                                                <li class="list-group-item">
-                                                    Option 1: U=0.3 SHGC=0.38
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-
-                                                <li class="list-group-item">
-                                                    Option 2: U=0.3 SHGC=0.38
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-
-                                                <li class="list-group-item">
-                                                    Option 3: U=0.3 SHGC=0.38
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-
-                                                <li class="list-group-item">
-                                                    Option 4: U=0.3 SHGC=0.38
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-
-                                                <li class="list-group-item">
-                                                    Option 5: U=0.3 SHGC=0.38
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-
-                                            </ul>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 card">
-                                    <div class="card-header" id="headingFive">
-                                        <h5 class="mb-0">
-                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                                Storefront Glazing Properties
-                                            </button>
-                                        </h5>
-                                    </div>
-                                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
-                                        <div class="card-body">
-
-                                            <ul class="list-group">
-                                                <li class="list-group-item">
-                                                    Option 1: U=0.3 SHGC=0.38
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-
-                                                <li class="list-group-item">
-                                                    Option 2: U=0.3 SHGC=0.38
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-
-                                                <li class="list-group-item">
-                                                    Option 3: U=0.3 SHGC=0.38
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-
-                                                <li class="list-group-item">
-                                                    Option 4: U=0.3 SHGC=0.38
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-
-                                                <li class="list-group-item">
-                                                    Option 5: U=0.3 SHGC=0.38
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-
-                                            </ul>
-
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="row leftSide">
+                        <div class="col-4 leftSide">
+                            <a href="page2.html" class="list-group-item">Roof Type</a>
+                            <a href="#" class="list-group-item">Roof Insulation</a>
+                            <a href="#" class="list-group-item">Exterior Wall</a>
+                            <a href="#" class="list-group-item">Residential Window Properties</a>
+                            <a href="#" class="list-group-item">Storefront Glazing Properties</a>
                         </div>
-                        <div id="menu1" class="container tab-pane fade">
-                            <div id="accordion">
-                                <div class="card">
-                                    <div class="card-header" id="headingOne">
-                                        <h5 class="mb-0">
-                                            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                                Residential lighting
-                                            </button>
-                                        </h5>
-                                    </div>
-                                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-                                        <div class="card-body">
-                                            <ul class="list-group">
-                                                <li class="list-group-item">
-                                                    Incandescent
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-                                                <li class="list-group-item">
-                                                    CFL
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-                                                <li class="list-group-item">
-                                                    LED
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <div class="card-header" id="headingTwo">
-                                        <h5 class="mb-0">
-                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                                Corridor Lighting
-                                            </button>
-                                        </h5>
-                                    </div>
-                                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                                        <div class="card-body">
-
-                                            <ul class="list-group">
-                                                <li class="list-group-item">
-                                                    CFL
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-
-                                                <li class="list-group-item">
-                                                    LED
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-
-
-                                            </ul>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <div class="card-header" id="headingThree">
-                                        <h5 class="mb-0">
-                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                                Residential Unit Plug Load
-                                            </button>
-                                        </h5>
-                                    </div>
-                                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                                        <div class="card-body">
-
-                                            <ul class="list-group">
-                                                <li class="list-group-item">
-                                                    Typical Equipment
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-
-                                                <li class="list-group-item">
-                                                    Energy efficient appliances
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-                                            </ul>             
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="menu2" class="container tab-pane fade">
-                            <div id="accordion">
-                                <div class="card">
-                                    <div class="card-header" id="headingOne">
-                                        <h5 class="mb-0">
-                                            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                                HVAC SYSTEM
-                                            </button>
-                                        </h5>
-                                    </div>
-                                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-                                        <div class="card-body">
-                                            <ul class="list-group">
-                                                <li class="list-group-item">
-                                                    Piched roof with attic
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <div class="card-header" id="headingTwo">
-                                        <h5 class="mb-0">
-                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                                Roof Insulation
-                                            </button>
-                                        </h5>
-                                    </div>
-                                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                                        <div class="card-body">
-
-                                            <ul class="list-group">
-                                                <li class="list-group-item">
-                                                    R38
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-
-                                                <li class="list-group-item">
-                                                    R38+4" rigid
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-
-                                                <li class="list-group-item">
-                                                    R49
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-
-                                                <li class="list-group-item">
-                                                    R60
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-
-                                                <li class="list-group-item">
-                                                    R20 c.i.
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-
-                                                <li class="list-group-item">
-                                                    R25 c.i.
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>                                  
-                                                <li class="list-group-item">
-                                                    R30 c.i.
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-
-                                                <li class="list-group-item">
-                                                    R35 c.i.
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-                                            </ul>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <div class="card-header" id="headingThree">
-                                        <h5 class="mb-0">
-                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                                Exterior Wall
-                                            </button>
-                                        </h5>
-                                    </div>
-                                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                                        <div class="card-body">
-
-                                            <ul class="list-group">
-                                                <li class="list-group-item">
-                                                    2x4 staggered studs on 2x6 sill plate (R19)
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-
-                                                <li class="list-group-item">
-                                                    2x4 staggered studs on 2x8 sill plate (R26)
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-
-                                                <li class="list-group-item">
-                                                    2x6 @12 OC(R18)
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-
-                                                <li class="list-group-item">
-                                                    2x6 @24 OC(R21)
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-
-                                                <li class="list-group-item">
-                                                    SIPs R24
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-
-                                                <li class="list-group-item">
-                                                    SIPs R28
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>                                  
-                                                <li class="list-group-item">
-                                                    SIPs R40
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-
-                                                <li class="list-group-item">
-                                                    SIPs R50
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-
-                                                <li class="list-group-item">
-                                                    ICF 9 in
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-
-                                                <li class="list-group-item">
-                                                    ICF 11in
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-
-                                                <li class="list-group-item">
-                                                    ICF 13 in
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-                                            </ul>
-
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <div class="card-header" id="headingThree">
-                                        <h5 class="mb-0">
-                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                                Residential Window Properties
-                                            </button>
-                                        </h5>
-                                    </div>
-                                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
-                                        <div class="card-body">
-
-                                            <ul class="list-group">
-                                                <li class="list-group-item">
-                                                    Option 1: U=0.3 SHGC=0.38
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-
-                                                <li class="list-group-item">
-                                                    Option 2: U=0.3 SHGC=0.38
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-
-                                                <li class="list-group-item">
-                                                    Option 3: U=0.3 SHGC=0.38
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-
-                                                <li class="list-group-item">
-                                                    Option 4: U=0.3 SHGC=0.38
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-
-                                                <li class="list-group-item">
-                                                    Option 5: U=0.3 SHGC=0.38
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-
-                                            </ul>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <div class="card-header" id="headingFive">
-                                        <h5 class="mb-0">
-                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                                Storefront Glazing Properties
-                                            </button>
-                                        </h5>
-                                    </div>
-                                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
-                                        <div class="card-body">
-
-                                            <ul class="list-group">
-                                                <li class="list-group-item">
-                                                    Option 1: U=0.3 SHGC=0.38
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-
-                                                <li class="list-group-item">
-                                                    Option 2: U=0.3 SHGC=0.38
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-
-                                                <li class="list-group-item">
-                                                    Option 3: U=0.3 SHGC=0.38
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-
-                                                <li class="list-group-item">
-                                                    Option 4: U=0.3 SHGC=0.38
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-
-                                                <li class="list-group-item">
-                                                    Option 5: U=0.3 SHGC=0.38
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-
-                                            </ul>
-
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="menu3" class="container tab-pane fade">
-                            <div id="accordion">
-                                <div class="card">
-                                    <div class="card-header" id="headingOne">
-                                        <h5 class="mb-0">
-                                            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                                System Type
-                                            </button>
-                                        </h5>
-                                    </div>
-                                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-                                        <div class="card-body">
-                                            <ul class="list-group">
-                                                <li class="list-group-item">
-                                                    Individual Water heater -electricity
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-                                                <li class="list-group-item">
-                                                    Individual Water Heater -NG
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-                                                <li class="list-group-item">
-                                                    Centralized Water heater - electricity
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-                                                <li class="list-group-item">
-                                                    Centralized Water heater -NG
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <div class="card-header" id="headingTwo">
-                                        <h5 class="mb-0">
-                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                                Efficiency (Individual Water heater -NG)
-                                            </button>
-                                        </h5>
-                                    </div>
-                                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                                        <div class="card-body">
-
-                                            <ul class="list-group">
-                                                <li class="list-group-item">
-                                                    80
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-
-                                                <li class="list-group-item">
-                                                    85
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-
-                                                <li class="list-group-item">
-                                                    90
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-
-                                                <li class="list-group-item">
-                                                    95
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-                                            </ul>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <div class="card-header" id="headingThree">
-                                        <h5 class="mb-0">
-                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                                Pump type (Centralized Water heater -electricity)
-                                            </button>
-                                        </h5>
-                                    </div>
-                                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                                        <div class="card-body">
-
-                                            <ul class="list-group">
-                                                <li class="list-group-item">
-                                                    Constant speed pump
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-
-                                                <li class="list-group-item">
-                                                    Variable speed pump
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-                                            </ul>
-
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <div class="card-header" id="headingThree">
-                                        <h5 class="mb-0">
-                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                                Efficiency (Centralized water heater -NG)
-                                            </button>
-                                        </h5>
-                                    </div>
-                                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
-                                        <div class="card-body">
-
-                                            <ul class="list-group">
-                                                <li class="list-group-item">
-                                                    80
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-
-                                                <li class="list-group-item">
-                                                    85
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-
-                                                <li class="list-group-item">
-                                                    90
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-
-                                                <li class="list-group-item">
-                                                    95
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-                                            </ul>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <div class="card-header" id="headingFive">
-                                        <h5 class="mb-0">
-                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                                Pump type (Centralized Water heater -NG)
-                                            </button>
-                                        </h5>
-                                    </div>
-                                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
-                                        <div class="card-body">
-
-                                            <ul class="list-group">
-                                                <li class="list-group-item">
-                                                    Constant speed pump
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-
-                                                <li class="list-group-item">
-                                                    Variable speed pump
-                                                    <div class="material-switch pull-right">
-                                                        <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
-                                                        <label for="someSwitchOptionDefault" class="label-default"></label>
-                                                    </div>
-                                                </li>
-                                            </ul>
-
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="menu4" class="container tab-pane fade">
-
+                        <div class="col-8 rightSide">
+                            <svg id="chart" class="chart" width="600" height="375"></svg>
                         </div>
                     </div>
+                    
+                    <script src= "https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.16.4/lodash.min.js"></script>
+                    <script src= "https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.6/d3.min.js"></script>
+                    <script src="index_oldschool.js"></script>
+
+
+
+
+
+                    <!--
+
+<div class="nano-content tab-content">
+<div id="home" class="container tab-pane active">
+<div class="row" id="accordion">
+<div class="col-12 card ">
+<div class="card-header" id="headingOne">
+<h5 class="mb-0">
+<button id="Roof-Type" class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" onclick="scrollToId(this.id)">
+Roof Type
+</button>
+</h5>
+</div>
+<div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+<div class="card-body row">
+<ul class="list-group col-5">
+<li id="RT-01" class="list-group-item">
+Piched roof with attic
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox" />
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+<li id="RT-02" class="list-group-item">
+Flat Roof
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+</ul>
+
+<div class="col-7 graphdiv float-right">
+<div class="card-body">
+<p id="example"></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-12 card">
+<div class="card-header" id="headingTwo">
+<h5 class="mb-0">
+<button id="Roof-Insulation" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+Roof Insulation
+</button>
+</h5>
+</div>
+<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+<div class="card-body row">
+
+<ul class="list-group col-5">
+<li id="RI-01" class="list-group-item">
+R38
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+
+<li id="RI-02" class="list-group-item">
+R38+4" rigid
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox" />
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+
+<li id="RI-03" class="list-group-item">
+R49
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+
+<li id="RI-04" class="list-group-item">
+R60
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+
+<li id="RI-05" class="list-group-item">
+R20 c.i.
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+
+<li id="RI-06" class="list-group-item">
+R25 c.i.
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>                                  
+<li id="RI-07" class="list-group-item">
+R30 c.i.
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+
+<li id="RI-08" class="list-group-item">
+R35 c.i.
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+</ul>
+
+
+<div class="col-7 graphdiv float-right">
+<div class="card-body">
+<p id="example1"></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-12 card">
+<div class="card-header" id="headingThree">
+<h5 class="mb-0">
+<button id="Exterior-Wall" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+Exterior Wall
+</button>
+</h5>
+</div>
+<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+<div class="card-body row">
+
+<ul class="list-group col-5">
+<li id="EX-01" class="list-group-item">
+2x4 staggered studs on 2x6 sill plate (R19)
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+
+<li id="EX-02" class="list-group-item">
+2x4 staggered studs on 2x8 sill plate (R26)
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox" checked/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+
+<li id="EX-03" class="list-group-item">
+2x6 @12 OC(R18)
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+
+<li id="EX-04" class="list-group-item">
+2x6 @24 OC(R21)
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+
+<li id="EX-05" class="list-group-item">
+SIPs R24
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+
+<li id="EX-06" class="list-group-item">
+SIPs R28
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>                                  
+<li id="EX-07" class="list-group-item">
+SIPs R40
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+
+<li id="EX-08" class="list-group-item">
+SIPs R50
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+
+<li id="EX-09" class="list-group-item">
+ICF 9 in
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+
+<li id="EX-10" class="list-group-item">
+ICF 11in
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+
+<li id="EX-11" class="list-group-item">
+ICF 13 in
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+</ul>
+
+
+<div class="col-7 graphdiv float-right">
+<div class="card-body">
+<p id="example2"></p>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<div class="col-12 card">
+<div class="card-header" id="headingThree">
+<h5 class="mb-0">
+<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+Residential Window Properties
+</button>
+</h5>
+</div>
+<div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+<div class="card-body">
+
+<ul class="list-group">
+<li class="list-group-item">
+Option 1: U=0.3 SHGC=0.38
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+
+<li class="list-group-item">
+Option 2: U=0.3 SHGC=0.38
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+
+<li class="list-group-item">
+Option 3: U=0.3 SHGC=0.38
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+
+<li class="list-group-item">
+Option 4: U=0.3 SHGC=0.38
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+
+<li class="list-group-item">
+Option 5: U=0.3 SHGC=0.38
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+
+</ul>
+
+</div>
+</div>
+</div>
+<div class="col-12 card">
+<div class="card-header" id="headingFive">
+<h5 class="mb-0">
+<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+Storefront Glazing Properties
+</button>
+</h5>
+</div>
+<div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+<div class="card-body">
+
+<ul class="list-group">
+<li class="list-group-item">
+Option 1: U=0.3 SHGC=0.38
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+
+<li class="list-group-item">
+Option 2: U=0.3 SHGC=0.38
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+
+<li class="list-group-item">
+Option 3: U=0.3 SHGC=0.38
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+
+<li class="list-group-item">
+Option 4: U=0.3 SHGC=0.38
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+
+<li class="list-group-item">
+Option 5: U=0.3 SHGC=0.38
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+
+</ul>
+
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="menu1" class="container tab-pane fade">
+<div id="accordion">
+<div class="card">
+<div class="card-header" id="headingOne">
+<h5 class="mb-0">
+<button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+Residential lighting
+</button>
+</h5>
+</div>
+<div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+<div class="card-body">
+<ul class="list-group">
+<li class="list-group-item">
+Incandescent
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+<li class="list-group-item">
+CFL
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+<li class="list-group-item">
+LED
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="card-header" id="headingTwo">
+<h5 class="mb-0">
+<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+Corridor Lighting
+</button>
+</h5>
+</div>
+<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+<div class="card-body">
+
+<ul class="list-group">
+<li class="list-group-item">
+CFL
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+
+<li class="list-group-item">
+LED
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+
+
+</ul>
+
+</div>
+</div>
+</div>
+<div class="card">
+<div class="card-header" id="headingThree">
+<h5 class="mb-0">
+<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+Residential Unit Plug Load
+</button>
+</h5>
+</div>
+<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+<div class="card-body">
+
+<ul class="list-group">
+<li class="list-group-item">
+Typical Equipment
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+
+<li class="list-group-item">
+Energy efficient appliances
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+</ul>             
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="menu2" class="container tab-pane fade">
+<div id="accordion">
+<div class="card">
+<div class="card-header" id="headingOne">
+<h5 class="mb-0">
+<button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+HVAC SYSTEM
+</button>
+</h5>
+</div>
+<div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+<div class="card-body">
+<ul class="list-group">
+<li class="list-group-item">
+Piched roof with attic
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="card-header" id="headingTwo">
+<h5 class="mb-0">
+<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+Roof Insulation
+</button>
+</h5>
+</div>
+<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+<div class="card-body">
+
+<ul class="list-group">
+<li class="list-group-item">
+R38
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+
+<li class="list-group-item">
+R38+4" rigid
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+
+<li class="list-group-item">
+R49
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+
+<li class="list-group-item">
+R60
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+
+<li class="list-group-item">
+R20 c.i.
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+
+<li class="list-group-item">
+R25 c.i.
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>                                  
+<li class="list-group-item">
+R30 c.i.
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+
+<li class="list-group-item">
+R35 c.i.
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="card">
+<div class="card-header" id="headingThree">
+<h5 class="mb-0">
+<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+Exterior Wall
+</button>
+</h5>
+</div>
+<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+<div class="card-body">
+
+<ul class="list-group">
+<li class="list-group-item">
+2x4 staggered studs on 2x6 sill plate (R19)
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+
+<li class="list-group-item">
+2x4 staggered studs on 2x8 sill plate (R26)
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+
+<li class="list-group-item">
+2x6 @12 OC(R18)
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+
+<li class="list-group-item">
+2x6 @24 OC(R21)
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+
+<li class="list-group-item">
+SIPs R24
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+
+<li class="list-group-item">
+SIPs R28
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>                                  
+<li class="list-group-item">
+SIPs R40
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+
+<li class="list-group-item">
+SIPs R50
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+
+<li class="list-group-item">
+ICF 9 in
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+
+<li class="list-group-item">
+ICF 11in
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+
+<li class="list-group-item">
+ICF 13 in
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+</ul>
+
+
+</div>
+</div>
+</div>
+<div class="card">
+<div class="card-header" id="headingThree">
+<h5 class="mb-0">
+<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+Residential Window Properties
+</button>
+</h5>
+</div>
+<div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+<div class="card-body">
+
+<ul class="list-group">
+<li class="list-group-item">
+Option 1: U=0.3 SHGC=0.38
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+
+<li class="list-group-item">
+Option 2: U=0.3 SHGC=0.38
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+
+<li class="list-group-item">
+Option 3: U=0.3 SHGC=0.38
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+
+<li class="list-group-item">
+Option 4: U=0.3 SHGC=0.38
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+
+<li class="list-group-item">
+Option 5: U=0.3 SHGC=0.38
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+
+</ul>
+
+</div>
+</div>
+</div>
+<div class="card">
+<div class="card-header" id="headingFive">
+<h5 class="mb-0">
+<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+Storefront Glazing Properties
+</button>
+</h5>
+</div>
+<div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+<div class="card-body">
+
+<ul class="list-group">
+<li class="list-group-item">
+Option 1: U=0.3 SHGC=0.38
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+
+<li class="list-group-item">
+Option 2: U=0.3 SHGC=0.38
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+
+<li class="list-group-item">
+Option 3: U=0.3 SHGC=0.38
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+
+<li class="list-group-item">
+Option 4: U=0.3 SHGC=0.38
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+
+<li class="list-group-item">
+Option 5: U=0.3 SHGC=0.38
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+
+</ul>
+
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="menu3" class="container tab-pane fade">
+<div id="accordion">
+<div class="card">
+<div class="card-header" id="headingOne">
+<h5 class="mb-0">
+<button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+System Type
+</button>
+</h5>
+</div>
+<div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+<div class="card-body">
+<ul class="list-group">
+<li class="list-group-item">
+Individual Water heater -electricity
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+<li class="list-group-item">
+Individual Water Heater -NG
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+<li class="list-group-item">
+Centralized Water heater - electricity
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+<li class="list-group-item">
+Centralized Water heater -NG
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="card">
+<div class="card-header" id="headingTwo">
+<h5 class="mb-0">
+<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+Efficiency (Individual Water heater -NG)
+</button>
+</h5>
+</div>
+<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+<div class="card-body">
+
+<ul class="list-group">
+<li class="list-group-item">
+80
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+
+<li class="list-group-item">
+85
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+
+<li class="list-group-item">
+90
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+
+<li class="list-group-item">
+95
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="card">
+<div class="card-header" id="headingThree">
+<h5 class="mb-0">
+<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+Pump type (Centralized Water heater -electricity)
+</button>
+</h5>
+</div>
+<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+<div class="card-body">
+
+<ul class="list-group">
+<li class="list-group-item">
+Constant speed pump
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+
+<li class="list-group-item">
+Variable speed pump
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+</ul>
+
+
+</div>
+</div>
+</div>
+<div class="card">
+<div class="card-header" id="headingThree">
+<h5 class="mb-0">
+<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+Efficiency (Centralized water heater -NG)
+</button>
+</h5>
+</div>
+<div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+<div class="card-body">
+
+<ul class="list-group">
+<li class="list-group-item">
+80
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+
+<li class="list-group-item">
+85
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+
+<li class="list-group-item">
+90
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+
+<li class="list-group-item">
+95
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="card">
+<div class="card-header" id="headingFive">
+<h5 class="mb-0">
+<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+Pump type (Centralized Water heater -NG)
+</button>
+</h5>
+</div>
+<div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+<div class="card-body">
+
+<ul class="list-group">
+<li class="list-group-item">
+Constant speed pump
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+
+<li class="list-group-item">
+Variable speed pump
+<div class="material-switch pull-right">
+<input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+<label for="someSwitchOptionDefault" class="label-default"></label>
+</div>
+</li>
+</ul>
+
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="menu4" class="container tab-pane fade">
+
+</div>
+</div>
+-->
 
 
                 </div>
@@ -1074,39 +1098,39 @@
 
         </div>
     </div>
-    
-    
-    
-<!-- updates
-
-    <input type="checkbox" id="myCheckbox"> Only Even
-    <div id="content"></div>
-    <script>		
-        data = [2,4,5,7,12,123,352,1000];
-        table = d3.select("#content")
-            .append("table")
-            .property("border","1px");
-        d3.select("example").on("change",update);
-        update();
 
 
-        function update(){
-            if(d3.select("#myCheckbox").property("checked")){
-                newData = data.filter(function(d,i){return d % 2 == 0;});
-            } else {
-                newData = data;			
-            }	
 
-            newRows = table.selectAll("tr")
-                .data(newData,function(d){return d;});
-            newRows.enter()
-                .append("tr")
-                .append("td")
-                .text(function(d){return d;});		
-            newRows.exit()
-                .remove();			
-        }
-    </script>
+    <!-- updates
+
+<input type="checkbox" id="myCheckbox"> Only Even
+<div id="content"></div>
+<script>		
+data = [2,4,5,7,12,123,352,1000];
+table = d3.select("#content")
+.append("table")
+.property("border","1px");
+d3.select("example").on("change",update);
+update();
+
+
+function update(){
+if(d3.select("#myCheckbox").property("checked")){
+newData = data.filter(function(d,i){return d % 2 == 0;});
+} else {
+newData = data;			
+}	
+
+newRows = table.selectAll("tr")
+.data(newData,function(d){return d;});
+newRows.enter()
+.append("tr")
+.append("td")
+.text(function(d){return d;});		
+newRows.exit()
+.remove();			
+}
+</script>
 -->
 
 
