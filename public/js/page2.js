@@ -1,7 +1,7 @@
 function tornadoChart() {
     var margin = {top: 20, right: 30, bottom: 40, left: 100},
         width = 600 - margin.left - margin.right,
-        height = 600 - margin.top - margin.bottom;
+        height = 300 - margin.top - margin.bottom;
 
     var x = d3.scale.linear()
     .range([0, width]);
@@ -110,7 +110,7 @@ function tornadoChart() {
 function tornadoChart1() {
     var margin = {top: 20, right: 30, bottom: 40, left: 100},
         width = 600 - margin.left - margin.right,
-        height = 600 - margin.top - margin.bottom;
+        height = 300 - margin.top - margin.bottom;
 
     var x = d3.scale.linear()
     .range([0, width]);
@@ -219,7 +219,7 @@ function tornadoChart1() {
 function tornadoChart2() {
     var margin = {top: 20, right: 30, bottom: 40, left: 100},
         width = 600 - margin.left - margin.right,
-        height = 600 - margin.top - margin.bottom;
+        height = 300 - margin.top - margin.bottom;
 
     var x = d3.scale.linear()
     .range([0, width]);
@@ -328,7 +328,7 @@ function tornadoChart2() {
 function tornadoChart3() {
     var margin = {top: 20, right: 30, bottom: 40, left: 100},
         width = 600 - margin.left - margin.right,
-        height = 600 - margin.top - margin.bottom;
+        height = 300 - margin.top - margin.bottom;
 
     var x = d3.scale.linear()
     .range([0, width]);
