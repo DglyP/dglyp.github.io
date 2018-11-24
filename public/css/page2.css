@@ -16,6 +16,7 @@
     padding-right: 20px;
 }
 
+
 #tabsonTop{
     height: 470px !important;
 }
@@ -111,12 +112,25 @@
 #accordion{
 }
 
-#leftSide{
-    height: inherit !important;
+.leftSide{
+    height: inherit;
+    border-right: 1px solid rgba(100, 100, 100, 0.21);
+}
+
+.rightSide{
+    height: 350;
+    border: 1px solid rgba(100, 100, 100, 0.21);
 }
 
 .list-group-item{
     font-size: 17px;
+    border: none;
 }
 
-#vis{height: 450px;}
+#ExteriorWall{
+    background-color: rgba(0, 167, 255, 0.19);
+}
+
+#vis{
+    height: 350px;
+}

@@ -6,6 +6,10 @@
     border-bottom: 2px solid #4285f4
 }
 
+#nav{
+    padding: 0;
+}
+
 .container-fluid{
     padding: 0;
 }
@@ -43,12 +47,13 @@
 }
 .steps em {
     display: block;
-    font-size: 0.6em;
+    font-size: 0.7em;
     font-family: 'PT Sans', sans-serif;
     font-style: normal;
     min-height: 100%;
     padding: 0;
 }
+
 .steps li {
     float: left;
     margin-left: 0;
@@ -103,7 +108,9 @@
 .steps li.following a em{
     color: #afaeae;
     position: relative;
+    margin-top: 5%;
 }
+
 /* Setup colors (both the background and the arrow) */
 
 /* Completed */

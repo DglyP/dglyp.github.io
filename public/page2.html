@@ -1,5 +1,4 @@
 <head>
-    <link rel="stylesheet" href="css/page2.css">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,6 +23,8 @@
     <link rel="stylesheet" href="css/nanoscroller.css">
     <!--css-->
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/page2.css">
     <script
             src="https://code.jquery.com/jquery-3.3.1.min.js"
             integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -77,20 +78,18 @@
                 </ul>
                 <div class="card-body parameterSelection nano">
 
-                    <div class="row leftSide">
+                    <div class="row">
                         <div class="col-4 leftSide">
                             <a href="page2.html" class="list-group-item">Roof Type</a>
                             <a href="page2.html" class="list-group-item">Roof Insulation</a>
-                            <a href="page2.html" class="list-group-item">Exterior Wall</a>
+                            <a href="page2.html" class="list-group-item" id="ExteriorWall">Exterior Wall</a>
                             <a href="page2.html" class="list-group-item">Residential Window Properties</a>
                             <a href="page2.html" class="list-group-item">Storefront Glazing Properties</a>
                         </div>
                         <div class="col-8 rightSide">
-                            
                     <div id="vis"></div>
                         </div>
                     </div>
-
                     <script src= "https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.16.4/lodash.min.js"></script>
                     <script src= "https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.6/d3.min.js"></script>
 
