@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-    
+
     var leftSide = [18, 
                     10,
                     4,
@@ -10,113 +10,69 @@ $( document ).ready(function() {
                     0,
                     0]
     var rightSide = [4.27, 
-                    4.17,
-                    4.37,
-                    6.01,
-                    6.90,
-                    8.07,
-                    12.05,
-                    11.86,
-                    12.23]
-        
-        
-//        {
-//    "Roof Insulation - Piched Roof":[{"age":"R38","gender":"male","interactions":-1.60,"colour":"#4264FF"},{"age":"R38","gender":"female","interactions":45,"colour":"#ecf"},{"age":"R38+4'' rigid","gender":"male","interactions":-1.59,"colour":"4264FF"},{"age":"R38+4'' rigid","gender":"female","interactions":18,"colour":"#ecf"},{"age":"R49","gender":"male","interactions":-1.55,"colour":"#4264FF"},{"age":"R49","gender":"female","interactions":64,"colour":"#ecf"},{"age":"R60","gender":"male","interactions":-1.55,"colour":"#4264FF"},{"age":"R60","gender":"female","interactions":46,"colour":"#ecf"}],
-//    }
-    
+                     4.17,
+                     4.37,
+                     6.01,
+                     6.90,
+                     8.07,
+                     12.05,
+                     11.86,
+                     12.23]
 
-var chart = new Dalaba.Chart(document.getElementById("vis"), {
-    type: "bar",
-    chart: {
-        height: 350,
-        animation: {
-            duration: 200
+    var containerHeight = +d3.select('.rightSide').style('height').slice(0, -2)
+
+
+    //        {
+    //    "Roof Insulation - Piched Roof":[{"age":"R38","gender":"male","interactions":-1.60,"colour":"#4264FF"},{"age":"R38","gender":"female","interactions":45,"colour":"#ecf"},{"age":"R38+4'' rigid","gender":"male","interactions":-1.59,"colour":"4264FF"},{"age":"R38+4'' rigid","gender":"female","interactions":18,"colour":"#ecf"},{"age":"R49","gender":"male","interactions":-1.55,"colour":"#4264FF"},{"age":"R49","gender":"female","interactions":64,"colour":"#ecf"},{"age":"R60","gender":"male","interactions":-1.55,"colour":"#4264FF"},{"age":"R60","gender":"female","interactions":46,"colour":"#ecf"}],
+    //    }
+
+
+    var data = [
+        ['2x6 @24 OC(R21)+ R9.6 c.i.', 18, -4.27],
+        ['2x4 staggered studs on 2x6 sill plate (R19)', 10, -4.17],
+        ['2x4 staggered studs on 2x8 sill plate (R26)', 4, -4.37],
+        ['SIPs R28', 0, -6.01],
+        ['SIPs R40', 0, -6.90],
+        ['SIPs R50', 0, -8.07],
+        ['ICF 9 in', 0, -12.05],
+        ['ICF 11 in', 0, -11.86],
+        ['ICF 13 in', 0, -12.23]
+    ];
+    Dalaba.Chart(document.getElementById("vis"), {
+
+        title: { enabled: false},
+        type: "bar",
+        chart: {
+            height: containerHeight
         },
-        events: {
-            ready: function(){
-                //var data = this.series[0].data;
-                //data[0] = makeData(1, 10, 100)[0];
-                setTimeout(function(){
-                    chart.series.forEach(function(series, i){
-                        series.update({
-                            data: makeData(10, 10, 100)
-                        }, !(chart.series.length ^ i + 1));
-                    });
-                }, 1000);
+        xAxis: {
+            type: "linear",
+        },
+        yAxis: [ {
+            opposite: false,
+            title: { enabled: false},
+            categories: data.map(function(t){
+                return t[0];
+            }),
+            tickAmount: data.length,
+            labels: {
+                maxWidth: 90
             }
-        }
-    },
-    title: {
-        enabled: false
-    },
-    xAxis: [{
-        type: "linear",
-        opposite: true,
-        reversed: true,
-        panelIndex: 0,
-        isLast: true,
-        isFirst: true
-    }, {
-        type: "linear",
-        opposite: true,
-        panelIndex: 1
-    }],
-    yAxis: [{
-        panelIndex: 0,
-        title: { enabled: false},
-        enabled: false,
-        isLast: true,
-        isFirst: true   
-    }, {
-        title: { enabled: false},
-        categories: (function(n){
-            var d = ["2x6 @24 OC(R21)+ R9.6 c.i.", 
-                     "2x4 staggered studs on 2x6 sill plate (R19)",
-                    "2x4 staggered studs on 2x8 sill plate (R26)",
-                    "SIPs R28",
-                    "SIPs R40",
-                    "SIPs R50",
-                    "ICF 9 in",
-                    "ICF 11 in",
-                    "ICF 13 in"]
-            return d;
-        })(10),
-        tickAmount: 10,
-        tickLength: 0,
-        lineWidth: 0,
-        panelIndex: 1,
-        labels: {
-            x: -20,
-            align: "center"
-        }
-    }],
-    plotOptions: {
-        bar: {
-            groupPadding: 0.2
-        }
-    },
-    legend: { enabled: false},
-    series: [{
-        data: leftSide,
-        xAxis: 0,
-        yAxis: 0,
-        panelIndex:  0
-    }, {
-        data: rightSide,
-        xAxis: 1,
-        yAxis: 1,
-        panelIndex: 1
-    }],
-    layout: {
-        grid: {
-            col: 2,
-            row: 1,
-            margin: [0, 10, 0, 10]
-        }
-    }
-});
-    
-    
+        }],
+        series: [{
+            name: "$/ft^2",
+            data: data.map(function(t){
+                return t[2]
+            })
+        }, {
+            name: "ROI",
+            data: data.map(function(t){
+                return t[1]
+            }),
+            yAxis: 1
+        }]
+    });    
+
 });
 
 
