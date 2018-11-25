@@ -1,13 +1,4 @@
 $( document ).ready(function() {
-    console.log( "ready!" );
-
-var makeData = function(n, min, max){
-    var d = [];
-    while(n--){
-        d.push(min + (Math.random() * (max - min) | 0));
-    }
-    return d;
-};
     
     var leftSide = [18, 
                     10,
@@ -75,7 +66,7 @@ var chart = new Dalaba.Chart(document.getElementById("vis"), {
         title: { enabled: false},
         enabled: false,
         isLast: true,
-        isFirst: true
+        isFirst: true   
     }, {
         title: { enabled: false},
         categories: (function(n){
@@ -95,7 +86,7 @@ var chart = new Dalaba.Chart(document.getElementById("vis"), {
         lineWidth: 0,
         panelIndex: 1,
         labels: {
-            x: -10,
+            x: -20,
             align: "center"
         }
     }],
