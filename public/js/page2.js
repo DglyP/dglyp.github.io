@@ -49,7 +49,8 @@ $( document ).ready(function() {
             type: "linear",
         },
         yAxis: [ {
-            opposite: false,
+            //            side of label
+            opposite: true,
             title: { enabled: false},
             categories: data.map(function(t){
                 return t[0];
@@ -58,6 +59,16 @@ $( document ).ready(function() {
             labels: {
                 maxWidth: 90
             }
+//        }, {
+//            opposite: true,
+//            title: { enabled: false},
+//            categories: data.map(function(t){
+//                return t[0];
+//            }),
+//            tickAmount: data.length,
+//            labels: {
+//                maxWidth: 90
+//            }
         }],
         series: [{
             name: "$/ft^2",
@@ -71,7 +82,8 @@ $( document ).ready(function() {
             }),
             yAxis: 1
         }]
-    });    
+    });   
+    
 
 });
 
