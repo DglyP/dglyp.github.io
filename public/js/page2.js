@@ -1,5 +1,10 @@
 $( document ).ready(function() {
 
+    $(document).on("click",".btn",function(){
+        var text = $(this).text();
+ alert("You selected: " + text );
+});
+    
     var leftSide = [18, 
                     10,
                     4,
@@ -51,7 +56,7 @@ $( document ).ready(function() {
         yAxis: [ {
             //            side of label
             opposite: true,
-            title: { enabled: false},
+            title: { enabled: false },
             categories: data.map(function(t){
                 return t[0];
             }),
@@ -59,16 +64,17 @@ $( document ).ready(function() {
             labels: {
                 maxWidth: 90
             }
-//        }, {
-//            opposite: true,
-//            title: { enabled: false},
-//            categories: data.map(function(t){
-//                return t[0];
-//            }),
-//            tickAmount: data.length,
-//            labels: {
-//                maxWidth: 90
-//            }
+        }, {
+            opposite: false,
+            title: { enabled: false},
+            categories: data.map(function(t){
+                return t[0];
+            }),
+            tickAmount: data.length,
+            visible: false,
+            labels: {
+                enabled: false
+            }
         }],
         series: [{
             name: "$/ft^2",
@@ -83,9 +89,9 @@ $( document ).ready(function() {
             yAxis: 1
         }]
     });   
-    
 
-});
+
+}); //end of doc ready
 
 
 //function tornadoChart() {
