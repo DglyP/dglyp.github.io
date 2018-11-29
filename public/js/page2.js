@@ -2,9 +2,13 @@ $( document ).ready(function() {
 
     $(document).on("click",".btn",function(){
         var text = $(this).text();
- alert("You selected: " + text );
-});
+        alert("You selected: " + text );
+    });
     
+    function myFunction() {
+    return p1 * p2;              // The function returns the product of p1 and p2
+}
+
     var leftSide = [18, 
                     10,
                     4,
@@ -48,7 +52,7 @@ $( document ).ready(function() {
         title: { enabled: false},
         type: "bar",
         chart: {
-            height: containerHeight
+            height: containerHeight,
         },
         xAxis: {
             type: "linear",
@@ -66,6 +70,7 @@ $( document ).ready(function() {
             }
         }, {
             opposite: false,
+            reversed: true,
             title: { enabled: false},
             categories: data.map(function(t){
                 return t[0];
@@ -73,14 +78,22 @@ $( document ).ready(function() {
             tickAmount: data.length,
             visible: false,
             labels: {
-                enabled: false
+                enabled: false  
             }
         }],
         series: [{
-            name: "$/ft^2",
+            name: "$/ft^2/year",
             data: data.map(function(t){
                 return t[2]
-            })
+            }),
+            
+            events: {
+                click: function (event) {
+                    console.log(this);
+                    this.color = "red";
+                    
+                }
+            }
         }, {
             name: "ROI",
             data: data.map(function(t){
