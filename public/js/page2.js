@@ -91,6 +91,8 @@ $( document ).ready(function() {
                 click: function (event) {
                     console.log(this);
                     this.color = "red";
+                            var text = this.key;
+        alert("You selected: " + text );
                     
                 }
             }
