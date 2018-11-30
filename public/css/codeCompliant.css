@@ -8,13 +8,12 @@
 
 .cardsRow{
     margin-bottom: 50px;
-    height: 605px;
+    height: 500px;
 }
 
 .blueCard{
     background-color: #007bff;
     color: white;
-    font-size: 20px;
     font-weight: 500
 }
 
@@ -54,6 +53,7 @@
 
 .dropdownTitle  {
     padding: 4px;
+    font-size: 13px;
 }
 
 .leftBody{
@@ -96,8 +96,9 @@
 }
 
 .btn-primary{
-    margin: 15px;
+    margin: 5px;
     border-radius: 15px;
+    font-size: 13px
 }
 
 /*/////////////////////*/
@@ -108,9 +109,8 @@
   position:absolute;
   background:#ffffff;
   border:3px solid #666666;
-  width:50%;
-  left:25%; 
-    margin-top: 3%;
+  width:70%;
+  left:16%; 
 }
 .popup-overlay.active{
   /*displays pop-up when "active" class is present*/
@@ -128,4 +128,9 @@
 .popup-content.active {
   /*Shows pop-up content when "active" class is present */
   visibility:visible;
+}
+
+ul{
+    text-align: left;
+    font-size: 13px;
 }

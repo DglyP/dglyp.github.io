@@ -4,10 +4,10 @@ $( document ).ready(function() {
         var text = $(this).text();
         alert("You selected: " + text );
     });
-    
+
     function myFunction() {
-    return p1 * p2;              // The function returns the product of p1 and p2
-}
+        return p1 * p2;              // The function returns the product of p1 and p2
+    }
 
     var leftSide = [18, 
                     10,
@@ -52,7 +52,17 @@ $( document ).ready(function() {
         title: { enabled: false},
         type: "bar",
         chart: {
-            height: containerHeight,
+            height: containerHeight
+        },
+        plotOptions: {
+            column: {
+                zones: [{
+                    value: 10, // Values up to 10 (not including) ...
+                    color: 'blue' // ... have the color blue.
+                },{
+                    color: 'red' // Values from 10 (including) and up have the color red
+                }]
+            }
         },
         xAxis: {
             type: "linear",
@@ -82,27 +92,55 @@ $( document ).ready(function() {
             }
         }],
         series: [{
+            type: "bar",
+            borderWidth: 1,
             name: "$/ft^2/year",
-            data: data.map(function(t){
-                return t[2]
-            }),
-            
+            color: "#6f6f6f",
+            //            data: data.map(function(t){
+            //                return t[2]
+            //            }),
+            data: [{y:-12.23, color:'black'}, -11.86, -12.05, -8.07, -6.90, -6.01, -4.37, -4.17, {y:-4.27, color:'green'}],
+
+
             events: {
                 click: function (event) {
                     console.log(this);
+                    this.borderColor = "red";                    
                     this.color = "red";
-                            var text = this.key;
-        alert("You selected: " + text );
-                    
+                    var text = this.key;
+                    alert("You selected: " + text );
+
                 }
             }
         }, {
-            name: "ROI",
-            data: data.map(function(t){
-                return t[1]
-            }),
+            name: "ROI",            
+            color: "#6f6f6f",
+            //            data: data.map(function(t){
+            //                return t[1]
+            //            }),
+            data: [0, 0, 0, 0, 0, 0, 4, 10, {y:18, color:'green'}],
             yAxis: 1
-        }]
+        },{
+            name: "Baseline",            
+            color: "black",
+            allowOverlap: true,
+            //            data: data.map(function(t){
+            //                return t[1]
+            //            }),
+            
+            data: [0],
+        },{
+            name: "Most Energy Efficient",            
+            color: "green",
+            isNULL: true,
+            //            data: data.map(function(t){
+            //                return t[1]
+            //            }),
+            
+            data: [0],
+        }
+                ]
+
     });   
 
 

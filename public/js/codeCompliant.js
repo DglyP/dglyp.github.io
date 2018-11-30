@@ -1,3 +1,5 @@
+$( document ).ready(function() {
+
 //appends an "active" class to .popup and .popup-content when the "Open" button is clicked
 $(".open").on("click", function(){
   $(".popup-overlay, .popup-content").addClass("active");
@@ -7,3 +9,5 @@ $(".open").on("click", function(){
 $(".close, .popup-overlay").on("click", function(){
   $(".popup-overlay, .popup-content").removeClass("active");
 });
+    
+}

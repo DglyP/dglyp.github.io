@@ -65,6 +65,7 @@
     background-color: #0086F8; 
     color: white;
     font-size: 20px;
+    padding-top: 15px;
 }
 /* remove extra padding on the first object since it doesn't have an arrow to the left */
 /* white arrow to the left to "erase" background (starting from the 2nd object) */
@@ -99,16 +100,15 @@
     width: 40%;
     font-size: 330%;
     color: #0086F8;
+    padding-top: 0px;
 }
 
 .steps li.current a{
-    padding: 10px;
 }
 
 .steps li.following a em{
     color: #afaeae;
     position: relative;
-    margin-top: 5%;
 }
 
 /* Setup colors (both the background and the arrow) */
