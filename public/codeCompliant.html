@@ -89,14 +89,22 @@
                             <div class="card noBorder">
                                 <div class="card-header dropdownTitle ">Number of Floors</div>
                                 <div class="card-body ">
-                                    <div class="dropdown">
-                                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">                                            
-                                        </button>
-                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                            <a class="dropdown-item" href="codeCompliant.html">1</a>
-                                            <a class="dropdown-item" href="codeCompliant.html">2</a>
-                                            <a class="dropdown-item" href="codeCompliant.html">3</a>
-                                        </div>
+                                    <!--
+<div class="dropdown">
+<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">                                            
+</button>
+<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+<a class="dropdown-item" href="codeCompliant.html">1</a>
+<a class="dropdown-item" href="codeCompliant.html">2</a>
+<a class="dropdown-item" href="codeCompliant.html">3</a>
+</div>
+</div>
+--><div class="form-group">
+                                    <select class="form-control" id="exampleFormControlSelect1">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                    </select>
                                     </div>
                                 </div>
                             </div>
@@ -131,13 +139,21 @@
                             <div class="card">
                                 <div class="card-header dropdownTitle">Roof Type</div>
                                 <div class="card-body">
-                                    <div class="dropdown">
-                                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">                                            
-                                        </button>
-                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                            <a class="dropdown-item" href="codeCompliant.html">Flat Roof</a>
-                                            <a class="dropdown-item" href="codeCompliant.html">Piched Roof</a>
-                                        </div>
+                                    <!--
+<div class="dropdown">
+<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">                                            
+</button>
+<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+<a class="dropdown-item" href="codeCompliant.html">Flat Roof</a>
+<a class="dropdown-item" href="codeCompliant.html">Piched Roof</a>
+</div>
+</div>
+-->
+                                    <div class="form-group">
+                                        <select class="form-control" id="exampleFormControlSelect1">
+                                            <option>Flat Roof</option>
+                                            <option>Piched Roof</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
@@ -152,25 +168,46 @@
                         <div class="card col-12">
                             <div class="card-header dropdownTitle">Building Location (Affects Code Compliant)</div>
                             <div class="card-body">
-                                <div class="dropdown">
-                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">                                            
-                                    </button>
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                        <a class="dropdown-item" href="codeCompliant.html">Honolulu</a>
-                                        <a class="dropdown-item" href="codeCompliant.html">Miami</a>
-                                        <a class="dropdown-item" href="codeCompliant.html">Dallas</a>
-                                        <a class="dropdown-item" href="codeCompliant.html">Atlanta</a>
-                                        <a class="dropdown-item" href="codeCompliant.html">Phoenix</a>
-                                        <a class="dropdown-item" href="codeCompliant.html">San Francisco</a>
-                                        <a class="dropdown-item" href="codeCompliant.html">Richmond</a>
-                                        <a class="dropdown-item" href="codeCompliant.html">Medford</a>
-                                        <a class="dropdown-item" href="codeCompliant.html">Indianapolis</a>
-                                        <a class="dropdown-item" href="codeCompliant.html">Salt Lake City</a>
-                                        <a class="dropdown-item" href="codeCompliant.html">Seattle</a>
-                                        <a class="dropdown-item" href="codeCompliant.html">Madison</a>
-                                        <a class="dropdown-item" href="codeCompliant.html">Helena</a>
-                                        <a class="dropdown-item" href="codeCompliant.html">Anchorage</a>
-                                    </div>
+                                <!--
+<div class="dropdown">
+<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">                                            
+</button>
+<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+<a class="dropdown-item" href="codeCompliant.html">Honolulu</a>
+<a class="dropdown-item" href="codeCompliant.html">Miami</a>
+<a class="dropdown-item" href="codeCompliant.html">Dallas</a>
+<a class="dropdown-item" href="codeCompliant.html">Atlanta</a>
+<a class="dropdown-item" href="codeCompliant.html">Phoenix</a>
+<a class="dropdown-item" href="codeCompliant.html">San Francisco</a>
+<a class="dropdown-item" href="codeCompliant.html">Richmond</a>
+<a class="dropdown-item" href="codeCompliant.html">Medford</a>
+<a class="dropdown-item" href="codeCompliant.html">Indianapolis</a>
+<a class="dropdown-item" href="codeCompliant.html">Salt Lake City</a>
+<a class="dropdown-item" href="codeCompliant.html">Seattle</a>
+<a class="dropdown-item" href="codeCompliant.html">Madison</a>
+<a class="dropdown-item" href="codeCompliant.html">Helena</a>
+<a class="dropdown-item" href="codeCompliant.html">Anchorage</a>
+</div>
+</div>
+-->
+
+                                <div class="form-group">
+                                    <select class="form-control" id="exampleFormControlSelect1">
+                                        <option>Honolulu</option>
+                                        <option>Miami</option>
+                                        <option>Dallas</option>
+                                        <option>Atlanta</option>
+                                        <option>Phoenix</option>
+                                        <option>San Francisco</option>
+                                        <option>Richmond</option>
+                                        <option>Medford</option>
+                                        <option>Indianapolis</option>
+                                        <option>Salt Lake City</option>
+                                        <option>Seattle</option>
+                                        <option>Madison</option>
+                                        <option>Helena</option>
+                                        <option>Anchorage</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>
