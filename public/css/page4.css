@@ -58,6 +58,7 @@ a:hover, a:focus {color: #434446;text-decoration: none;}
 
 body {
   font-family: 'Open Sans', sans-serif;
+    background-color: #F6F6F6
 }
 
 div#layout {
