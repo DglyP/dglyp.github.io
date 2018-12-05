@@ -111,6 +111,7 @@ $( document ).ready(function() {
             data: data.map(function(t){
                 return t[2]
             }),
+            
 
             zones: [{
                 value: 0,

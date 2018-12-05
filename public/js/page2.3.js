@@ -38,8 +38,8 @@ $( document ).ready(function() {
 
 
     var data = [
-        ['Option 4: U=0.30 SHGC=0.25', 52, -1.58],
-        ['Option 5: U=0.2 5SHGC=0.4', 39, -1.57],
+        ['(2) Option 4: U=0.30 SHGC=0.25', 52, -1.58],
+        ['(1) Option 5: U=0.2 5SHGC=0.4', 39, -1.57],
     ];
     
     var chart = Dalaba.Chart(document.getElementById("vis"),                 {

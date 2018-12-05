@@ -37,8 +37,10 @@ $( document ).ready(function() {
 
 
     var data = [
-        ['Flat Roof', 0, 0],
-        ['Piched Roof with attic', 0, 0],
+        ['(4) R38', 45, -1.60],
+        ['(3) R49', 18, -1.59],
+        ['(2) R38+4" rigid', 64, -1.55],
+        ['(1) R60', 46, -1.55],
     ];
     
     var chart = Dalaba.Chart(document.getElementById("vis"),                 {
