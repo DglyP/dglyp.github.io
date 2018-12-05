@@ -1,4 +1,901 @@
 $(document).ready(function() {      
+    
+        /////////////////////////////////////HIGH
+    
+
+    var containerHeight = +d3.select('.carda').style('height').slice(0, -2)
+
+    var data = [
+        ['Best ROI', 4, -4.37],
+        ['Final Selection', 10, -4.17],
+        ['Baseline', 18, -4.27]
+    ];
+    Dalaba.Chart(document.getElementById("vis"),                 {
+
+        title: { enabled: true, text:" "},
+        type: "bar",
+
+        chart: {
+            height: containerHeight,
+            
+
+        },
+        xAxis: {
+            labels: {
+                formatter: function () {                
+                    return Math.abs(this.value) ;
+                }},
+            title: { enabled: false, 
+                    text: "Construction Cost [$/ft^2]",style: {
+                        fontSize: '15px'
+                    },
+                    layout: 'vertical',
+                    backgroundColor: '#FFFFFF',
+                    floating: true,
+                    align: 'left',
+                    x: containerHeight * -2,
+                    verticalAlign: 'top',
+                    y: -191},
+
+            type: "linear",
+        },
+        yAxis: [ {
+            //            side of label
+            opposite: true,
+
+            title: { enabled: true, text: "Simple Annualized ROI [%]", style: {
+                fontSize: '15px'},},
+
+            categories: data.map(function(t){
+                return t[0];
+            }),
+            tickAmount: data.length,
+            labels: {
+                enabled: false,
+
+            }
+        }, {
+            title: { enabled: true, text: "Construction Cost [$/ft^2]",style: {
+                fontSize: '15px'},},
+            categories: data.map(function(t){
+                return t[0];
+            }),
+            tickAmount: data.length,
+            visible: false,
+            labels: {
+
+                maxWidth: 90
+            }
+        }],
+        legend:{
+            enabled: false
+        },
+        series: [{
+            type: "bar",
+            name: "$/ft^2/year",
+            data: data.map(function(t){
+                return t[2]
+            }),
+            
+
+            zones: [{
+                value: 0,
+                color: '#f7a35c'
+            }, {
+                value: 10,
+                color: '#7cb5ec'
+            }, {
+                color: '#90ed7d'
+            }],
+
+            events: {
+                click: function (event) {
+                    console.log(this);
+                    this.series.color = "green";
+                    this.color = "#f80000"; 
+                    var text = this.key;
+                    alert("You selected: " + text );
+
+                }
+            }
+        }, {
+            name: "ROI %",            
+            data: data.map(function(t){
+                return t[1]
+            }),
+            yAxis: 1
+        }
+                ]
+
+    });   
+    Dalaba.Chart(document.getElementById("vis2"),                 {
+
+        title: { enabled: true, text:" "},
+        type: "bar",
+
+        chart: {
+            height: containerHeight,
+            
+
+        },
+        xAxis: {
+            labels: {
+                formatter: function () {                
+                    return Math.abs(this.value) ;
+                }},
+            title: { enabled: true, 
+                    text: "Heating",style: {
+                        fontSize: '15px'
+                    },
+                    layout: 'vertical',
+                    backgroundColor: '#FFFFFF',
+                    floating: true,
+                    align: 'left',
+                    x: 0,
+                    verticalAlign: 'top',
+                    y: 0},
+
+            type: "linear",
+        },
+        yAxis: [ {
+            //            side of label
+            opposite: true,
+
+            title: { enabled: true, text: "Simple Annualized ROI [%]", style: {
+                fontSize: '15px'},},
+
+            categories: data.map(function(t){
+                return t[0];
+            }),
+            tickAmount: data.length,
+            labels: {
+                enabled: false,
+
+            }
+        }, {
+            title: { enabled: true, text: "Construction Cost [$/ft^2]",style: {
+                fontSize: '15px'},},
+            categories: data.map(function(t){
+                return t[0];
+            }),
+            tickAmount: data.length,
+            visible: false,
+            labels: {
+
+                maxWidth: 90
+            }
+        }],
+        legend:{
+            enabled: false
+        },
+        series: [{
+            type: "bar",
+            name: "$/ft^2/year",
+            data: data.map(function(t){
+                return t[2]
+            }),
+            
+
+            zones: [{
+                value: 0,
+                color: '#f7a35c'
+            }, {
+                value: 10,
+                color: '#7cb5ec'
+            }, {
+                color: '#90ed7d'
+            }],
+
+            events: {
+                click: function (event) {
+                    console.log(this);
+                    this.series.color = "green";
+                    this.color = "#f80000"; 
+                    var text = this.key;
+                    alert("You selected: " + text );
+
+                }
+            }
+        }, {
+            name: "ROI %",            
+            data: data.map(function(t){
+                return t[1]
+            }),
+            yAxis: 1
+        }
+                ]
+
+    });    
+    Dalaba.Chart(document.getElementById("vis3"),                 {
+
+        title: { enabled: true, text:" "},
+        type: "bar",
+
+        chart: {
+            height: containerHeight,
+            
+
+        },
+        xAxis: {
+            labels: {
+                formatter: function () {                
+                    return Math.abs(this.value) ;
+                }},
+            title: { enabled: true, 
+                    text: "Cooling",style: {
+                        fontSize: '15px'
+                    },
+                    layout: 'vertical',
+                    backgroundColor: '#FFFFFF',
+                    floating: true,
+                    align: 'left',
+                    x: 0,
+                    verticalAlign: 'top',
+                    y: 0},
+
+            type: "linear",
+        },
+        yAxis: [ {
+            //            side of label
+            opposite: true,
+
+            title: { enabled: true, text: "Simple Annualized ROI [%]", style: {
+                fontSize: '15px'},},
+
+            categories: data.map(function(t){
+                return t[0];
+            }),
+            tickAmount: data.length,
+            labels: {
+                enabled: false,
+
+            }
+        }, {
+            title: { enabled: true, text: "Construction Cost [$/ft^2]",style: {
+                fontSize: '15px'},},
+            categories: data.map(function(t){
+                return t[0];
+            }),
+            tickAmount: data.length,
+            visible: false,
+            labels: {
+
+                maxWidth: 90
+            }
+        }],
+        legend:{
+            enabled: false
+        },
+        series: [{
+            type: "bar",
+            name: "$/ft^2/year",
+            data: data.map(function(t){
+                return t[2]
+            }),
+            
+
+            zones: [{
+                value: 0,
+                color: '#f7a35c'
+            }, {
+                value: 10,
+                color: '#7cb5ec'
+            }, {
+                color: '#90ed7d'
+            }],
+
+            events: {
+                click: function (event) {
+                    console.log(this);
+                    this.series.color = "green";
+                    this.color = "#f80000"; 
+                    var text = this.key;
+                    alert("You selected: " + text );
+
+                }
+            }
+        }, {
+            name: "ROI %",            
+            data: data.map(function(t){
+                return t[1]
+            }),
+            yAxis: 1
+        }
+                ]
+
+    });   
+    Dalaba.Chart(document.getElementById("vis4"),                 {
+
+        title: { enabled: true, text:" "},
+        type: "bar",
+
+        chart: {
+            height: containerHeight,
+            
+
+        },
+        xAxis: {
+            labels: {
+                formatter: function () {                
+                    return Math.abs(this.value) ;
+                }},
+            title: { enabled: true, 
+                    text: "Interior Lighting",style: {
+                        fontSize: '15px'
+                    },
+                    layout: 'vertical',
+                    backgroundColor: '#FFFFFF',
+                    floating: true,
+                    align: 'left',
+                    x: 0,
+                    verticalAlign: 'top',
+                    y: 0},
+
+            type: "linear",
+        },
+        yAxis: [ {
+            //            side of label
+            opposite: true,
+
+            title: { enabled: true, text: "Simple Annualized ROI [%]", style: {
+                fontSize: '15px'},},
+
+            categories: data.map(function(t){
+                return t[0];
+            }),
+            tickAmount: data.length,
+            labels: {
+                enabled: false,
+
+            }
+        }, {
+            title: { enabled: true, text: "Construction Cost [$/ft^2]",style: {
+                fontSize: '15px'},},
+            categories: data.map(function(t){
+                return t[0];
+            }),
+            tickAmount: data.length,
+            visible: false,
+            labels: {
+
+                maxWidth: 90
+            }
+        }],
+        legend:{
+            enabled: false
+        },
+        series: [{
+            type: "bar",
+            name: "$/ft^2/year",
+            data: data.map(function(t){
+                return t[2]
+            }),
+            
+
+            zones: [{
+                value: 0,
+                color: '#f7a35c'
+            }, {
+                value: 10,
+                color: '#7cb5ec'
+            }, {
+                color: '#90ed7d'
+            }],
+
+            events: {
+                click: function (event) {
+                    console.log(this);
+                    this.series.color = "green";
+                    this.color = "#f80000"; 
+                    var text = this.key;
+                    alert("You selected: " + text );
+
+                }
+            }
+        }, {
+            name: "ROI %",            
+            data: data.map(function(t){
+                return t[1]
+            }),
+            yAxis: 1
+        }
+                ]
+
+    });   
+    Dalaba.Chart(document.getElementById("vis5"),                 {
+
+        title: { enabled: true, text:" "},
+        type: "bar",
+
+        chart: {
+            height: containerHeight,
+            
+
+        },
+        xAxis: {
+            labels: {
+                formatter: function () {                
+                    return Math.abs(this.value) ;
+                }},
+            title: { enabled: true, 
+                    text: "Interior Equipment",style: {
+                        fontSize: '15px'
+                    },
+                    layout: 'vertical',
+                    backgroundColor: '#FFFFFF',
+                    floating: true,
+                    align: 'left',
+                    x: 0,
+                    verticalAlign: 'top',
+                    y: 0},
+
+            type: "linear",
+        },
+        yAxis: [ {
+            //            side of label
+            opposite: true,
+
+            title: { enabled: true, text: "Simple Annualized ROI [%]", style: {
+                fontSize: '15px'},},
+
+            categories: data.map(function(t){
+                return t[0];
+            }),
+            tickAmount: data.length,
+            labels: {
+                enabled: false,
+
+            }
+        }, {
+            title: { enabled: true, text: "Construction Cost [$/ft^2]",style: {
+                fontSize: '15px'},},
+            categories: data.map(function(t){
+                return t[0];
+            }),
+            tickAmount: data.length,
+            visible: false,
+            labels: {
+
+                maxWidth: 90
+            }
+        }],
+        legend:{
+            enabled: false
+        },
+        series: [{
+            type: "bar",
+            name: "$/ft^2/year",
+            data: data.map(function(t){
+                return t[2]
+            }),
+            
+
+            zones: [{
+                value: 0,
+                color: '#f7a35c'
+            }, {
+                value: 10,
+                color: '#7cb5ec'
+            }, {
+                color: '#90ed7d'
+            }],
+
+            events: {
+                click: function (event) {
+                    console.log(this);
+                    this.series.color = "green";
+                    this.color = "#f80000"; 
+                    var text = this.key;
+                    alert("You selected: " + text );
+
+                }
+            }
+        }, {
+            name: "ROI %",            
+            data: data.map(function(t){
+                return t[1]
+            }),
+            yAxis: 1
+        }
+                ]
+
+    });   
+    Dalaba.Chart(document.getElementById("vis6"),                 {
+
+        title: { enabled: true, text:" "},
+        type: "bar",
+
+        chart: {
+            height: containerHeight,
+            
+
+        },
+        xAxis: {
+            labels: {
+                formatter: function () {                
+                    return Math.abs(this.value) ;
+                }},
+            title: { enabled: true, 
+                    text: "Fans",style: {
+                        fontSize: '15px'
+                    },
+                    layout: 'vertical',
+                    backgroundColor: '#FFFFFF',
+                    floating: true,
+                    align: 'left',
+                    x: 0,
+                    verticalAlign: 'top',
+                    y: 0},
+
+            type: "linear",
+        },
+        yAxis: [ {
+            //            side of label
+            opposite: true,
+
+            title: { enabled: true, text: "Simple Annualized ROI [%]", style: {
+                fontSize: '15px'},},
+
+            categories: data.map(function(t){
+                return t[0];
+            }),
+            tickAmount: data.length,
+            labels: {
+                enabled: false,
+
+            }
+        }, {
+            title: { enabled: true, text: "Construction Cost [$/ft^2]",style: {
+                fontSize: '15px'},},
+            categories: data.map(function(t){
+                return t[0];
+            }),
+            tickAmount: data.length,
+            visible: false,
+            labels: {
+
+                maxWidth: 90
+            }
+        }],
+        legend:{
+            enabled: false
+        },
+        series: [{
+            type: "bar",
+            name: "$/ft^2/year",
+            data: data.map(function(t){
+                return t[2]
+            }),
+            
+
+            zones: [{
+                value: 0,
+                color: '#f7a35c'
+            }, {
+                value: 10,
+                color: '#7cb5ec'
+            }, {
+                color: '#90ed7d'
+            }],
+
+            events: {
+                click: function (event) {
+                    console.log(this);
+                    this.series.color = "green";
+                    this.color = "#f80000"; 
+                    var text = this.key;
+                    alert("You selected: " + text );
+
+                }
+            }
+        }, {
+            name: "ROI %",            
+            data: data.map(function(t){
+                return t[1]
+            }),
+            yAxis: 1
+        }
+                ]
+
+    });  
+    Dalaba.Chart(document.getElementById("vis7"),                 {
+
+        title: { enabled: true, text:" "},
+        type: "bar",
+
+        chart: {
+            height: containerHeight,
+            
+
+        },
+        xAxis: {
+            labels: {
+                formatter: function () {                
+                    return Math.abs(this.value) ;
+                }},
+            title: { enabled: true, 
+                    text: "Pumps",style: {
+                        fontSize: '15px'
+                    },
+                    layout: 'vertical',
+                    backgroundColor: '#FFFFFF',
+                    floating: true,
+                    align: 'left',
+                    x: 0,
+                    verticalAlign: 'top',
+                    y: 0},
+
+            type: "linear",
+        },
+        yAxis: [ {
+            //            side of label
+            opposite: true,
+
+            title: { enabled: true, text: "Simple Annualized ROI [%]", style: {
+                fontSize: '15px'},},
+
+            categories: data.map(function(t){
+                return t[0];
+            }),
+            tickAmount: data.length,
+            labels: {
+                enabled: false,
+
+            }
+        }, {
+            title: { enabled: true, text: "Construction Cost [$/ft^2]",style: {
+                fontSize: '15px'},},
+            categories: data.map(function(t){
+                return t[0];
+            }),
+            tickAmount: data.length,
+            visible: false,
+            labels: {
+
+                maxWidth: 90
+            }
+        }],
+        legend:{
+            enabled: false
+        },
+        series: [{
+            type: "bar",
+            name: "$/ft^2/year",
+            data: data.map(function(t){
+                return t[2]
+            }),
+            
+
+            zones: [{
+                value: 0,
+                color: '#f7a35c'
+            }, {
+                value: 10,
+                color: '#7cb5ec'
+            }, {
+                color: '#90ed7d'
+            }],
+
+            events: {
+                click: function (event) {
+                    console.log(this);
+                    this.series.color = "green";
+                    this.color = "#f80000"; 
+                    var text = this.key;
+                    alert("You selected: " + text );
+
+                }
+            }
+        }, {
+            name: "ROI %",            
+            data: data.map(function(t){
+                return t[1]
+            }),
+            yAxis: 1
+        }
+                ]
+
+    });   
+    
+    Dalaba.Chart(document.getElementById("vis8"),                 {
+
+        title: { enabled: true, text:" "},
+        type: "bar",
+
+        chart: {
+            height: containerHeight,
+            
+
+        },
+        xAxis: {
+            labels: {
+                formatter: function () {                
+                    return Math.abs(this.value) ;
+                }},
+            title: { enabled: true, 
+                    text: "Water Systems",style: {
+                        fontSize: '15px'
+                    },
+                    layout: 'vertical',
+                    backgroundColor: '#FFFFFF',
+                    floating: true,
+                    align: 'left',
+                    x: 0,
+                    verticalAlign: 'top',
+                    y: 0},
+
+            type: "linear",
+        },
+        yAxis: [ {
+            //            side of label
+            opposite: true,
+
+            title: { enabled: true, text: "Simple Annualized ROI [%]", style: {
+                fontSize: '15px'},},
+
+            categories: data.map(function(t){
+                return t[0];
+            }),
+            tickAmount: data.length,
+            labels: {
+                enabled: false,
+
+            }
+        }, {
+            title: { enabled: true, text: "Construction Cost [$/ft^2]",style: {
+                fontSize: '15px'},},
+            categories: data.map(function(t){
+                return t[0];
+            }),
+            tickAmount: data.length,
+            visible: false,
+            labels: {
+
+                maxWidth: 90
+            }
+        }],
+        legend:{
+            enabled: false
+        },
+        series: [{
+            type: "bar",
+            name: "$/ft^2/year",
+            data: data.map(function(t){
+                return t[2]
+            }),
+            
+
+            zones: [{
+                value: 0,
+                color: '#f7a35c'
+            }, {
+                value: 10,
+                color: '#7cb5ec'
+            }, {
+                color: '#90ed7d'
+            }],
+
+            events: {
+                click: function (event) {
+                    console.log(this);
+                    this.series.color = "green";
+                    this.color = "#f80000"; 
+                    var text = this.key;
+                    alert("You selected: " + text );
+
+                }
+            }
+        }, {
+            name: "ROI %",            
+            data: data.map(function(t){
+                return t[1]
+            }),
+            yAxis: 1
+        }
+                ]
+
+    });   
+    
+    Dalaba.Chart(document.getElementById("vis9"),                 {
+
+        title: { enabled: true, text:" "},
+        type: "bar",
+
+        chart: {
+            height: containerHeight,
+            
+
+        },
+        xAxis: {
+            labels: {
+                formatter: function () {                
+                    return Math.abs(this.value) ;
+                }},
+            title: { enabled:true, 
+                    text: "Total End Uses",style: {
+                        fontSize: '15px'
+                    },
+                    layout: 'vertical',
+                    backgroundColor: '#FFFFFF',
+                    floating: true,
+                    align: 'left',
+                    x: 0,
+                    verticalAlign: 'top',
+                    y: 0},
+
+            type: "linear",
+        },
+        yAxis: [ {
+            //            side of label
+            opposite: true,
+
+            title: { enabled: true, text: "Simple Annualized ROI [%]", style: {
+                fontSize: '15px'},},
+
+            categories: data.map(function(t){
+                return t[0];
+            }),
+            tickAmount: data.length,
+            labels: {
+                enabled: false,
+
+            }
+        }, {
+            title: { enabled: true, text: "Construction Cost [$/ft^2]",style: {
+                fontSize: '15px'},},
+            categories: data.map(function(t){
+                return t[0];
+            }),
+            tickAmount: data.length,
+            visible: false,
+            labels: {
+
+                maxWidth: 90
+            }
+        }],
+        legend:{
+            enabled: false
+        },
+        series: [{
+            type: "bar",
+            name: "$/ft^2/year",
+            data: data.map(function(t){
+                return t[2]
+            }),
+            
+
+            zones: [{
+                value: 0,
+                color: '#f7a35c'
+            }, {
+                value: 10,
+                color: '#7cb5ec'
+            }, {
+                color: '#90ed7d'
+            }],
+
+            events: {
+                click: function (event) {
+                    console.log(this);
+                    this.series.color = "green";
+                    this.color = "#f80000"; 
+                    var text = this.key;
+                    alert("You selected: " + text );
+
+                }
+            }
+        }, {
+            name: "ROI %",            
+            data: data.map(function(t){
+                return t[1]
+            }),
+            yAxis: 1
+        }
+                ]
+
+    });   
+    
+    ////////////////////////////////////
 
     $('a').tooltip({placement: 'top'});
 
@@ -26,6 +923,26 @@ $(document).ready(function() {
         })
     }); 
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
 // https://insights.stackoverflow.com/survey/2018/#technology-most-loved-dreaded-and-wanted-languages
 const sample = [
@@ -260,8 +1177,5 @@ svg.append('text')
         $('.table tr').css('display', 'none').fadeIn('slow');
       }
     });
-
-    
-    
     
 });

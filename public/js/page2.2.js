@@ -60,15 +60,17 @@ $( document ).ready(function() {
                 formatter: function () {                
                     return Math.abs(this.value) ;
                 }},
-            title: { enabled: true, 
-                    text: "Utility Costs",
+            title: { enabled: false, 
+                    text: "Construction Cost [$/ft^2]",style: {
+                        fontSize: '15px'
+                    },
                     layout: 'vertical',
                     backgroundColor: '#FFFFFF',
                     floating: true,
                     align: 'left',
-                    x: -380,
+                    x: containerHeight * -2,
                     verticalAlign: 'top',
-                    y: -320},
+                    y: -191},
 
             type: "linear",
         },
@@ -76,7 +78,9 @@ $( document ).ready(function() {
             //            side of label
             opposite: true,
 
-            title: { enabled: true, text: "Return on Investment"},
+            title: { enabled: true, text: "Simple Annualized ROI [%]", style: {
+                fontSize: '15px'},},
+
             categories: data.map(function(t){
                 return t[0];
             }),
@@ -84,17 +88,10 @@ $( document ).ready(function() {
             labels: {
                 enabled: false,
 
-
-                events: {
-                    click: function (event) {                    
-                        console.log(this);
-                    }
-                }
             }
         }, {
-            opposite: false,
-            reversed: true,
-            title: { enabled: false},
+            title: { enabled: true, text: "Construction Cost [$/ft^2]", style: {
+                fontSize: '15px'},},
             categories: data.map(function(t){
                 return t[0];
             }),

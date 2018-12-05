@@ -118,7 +118,6 @@
 }
 
 .rightSide{
-    height: 350;
     border: 1px solid rgba(100, 100, 100, 0.21);
     position: relative;
 }
@@ -130,9 +129,6 @@
 
 #Selected{
     background-color: rgba(0, 167, 255, 0.19);
-}
-
-#vis{
 }
 
 .hidden-button{

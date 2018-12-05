@@ -61,17 +61,17 @@ $( document ).ready(function() {
                 formatter: function () {                
                     return Math.abs(this.value) ;
                 }},
-            title: { enabled: true, 
-                    text: "Utility Costs [$/ft^2/year]",style: {
+            title: { enabled: false, 
+                    text: "Construction Cost [$/ft^2]",style: {
                         fontSize: '15px'
                     },
                     layout: 'vertical',
                     backgroundColor: '#FFFFFF',
                     floating: true,
                     align: 'left',
-                    x: -390,
+                    x: containerHeight * -2,
                     verticalAlign: 'top',
-                    y: -320},
+                    y: -191},
 
             type: "linear",
         },
@@ -91,7 +91,8 @@ $( document ).ready(function() {
 
             }
         }, {
-            title: { enabled: false},
+            title: { enabled: true, text: "Construction Cost [$/ft^2]", style: {
+                fontSize: '15px'},},
             categories: data.map(function(t){
                 return t[0];
             }),
