@@ -1,0 +1,22 @@
+.custab{
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 2px #ccc;
+    transition: 0.5s;
+    }
+
+.custab:hover{
+    box-shadow: 3px 3px 0px transparent;
+    transition: 0.5s;
+    }
+
+.custyle {
+}
+
+.rightSide {
+    padding: 0;
+}
+
+.confirmButton {
+    width: 50%;
+    margin-left: 25%;
+}
