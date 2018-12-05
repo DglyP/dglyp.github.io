@@ -8,6 +8,7 @@ interval=setInterval(function(){
   water.style.transform='translate(0'+','+(100-percent)+'%)';
   if(percent==100){
     clearInterval(interval);
+    window.parent.document.getElementsByClassName("FinalResults")[0].click();
     window.location.href = "page4.html";
   }
 },60);

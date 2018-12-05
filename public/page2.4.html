@@ -115,7 +115,7 @@
                                     </tr>
                                 </table>
                                 
-                                <a class='btn btn-primary btn-xl confirmButton' href="page3.html"><span class="glyphicon glyphicon-edit"></span> Confirm Parameters</a>
+                                <a class='btn btn-primary btn-xl confirmButton' href="page2.4.html"><span class="glyphicon glyphicon-edit"></span> Confirm Parameters</a>
                             </div>
 
                         </div>
@@ -128,5 +128,11 @@
 
         </div>
     </div>
+    
+        <script>//appends an "active" class to .popup and .popup-content when the "Open" button is clicked
+            $('.confirmButton').on('click', function() {
+                window.parent.document.getElementsByClassName("FinalSelection")[0].click();
+            })
 
+        </script>
 </body>
