@@ -6,10 +6,59 @@ $(document).ready(function() {
     var containerHeight = +d3.select('.carda').style('height').slice(0, -2)
 
     var data = [
-        ['Best ROI', 4, -4.37],
-        ['Final Selection', 10, -4.17],
-        ['Baseline', 18, -4.27]
+        ['Best ROI', 15.06, -9.17],
+        ['Final Selection', 8.08, -9.73],
+        ['Baseline', 0, -7.31]
     ];
+    
+        var data1 = [
+        ['Best ROI', 4, -0.32],
+        ['Final Selection', 10, -0.09],
+        ['Baseline', 18, -0.37]
+    ];
+    
+        var data2 = [
+        ['Best ROI', 4, -0.05],
+        ['Final Selection', 10, -0.08],
+        ['Baseline', 18, -0.13]
+    ];
+    
+        var data3 = [
+        ['Best ROI', 4, -0.12],
+        ['Final Selection', 10, -0.12],
+        ['Baseline', 18, -0.14]
+    ];
+    
+        var data4 = [
+        ['Best ROI', 4, -0.41],
+        ['Final Selection', 10, -0.50],
+        ['Baseline', 18, -0.50]
+    ];
+    
+        var data5 = [
+        ['Best ROI', 4, -0.01],
+        ['Final Selection', 10, -0.01],
+        ['Baseline', 18, -0.06]
+    ];
+    
+        var data6 = [
+        ['Best ROI', 4, -0],
+        ['Final Selection', 10, -0.04],
+        ['Baseline', 18, -0]
+    ];
+    
+        var data7 = [
+        ['Best ROI', 4, -0.29],
+        ['Final Selection', 10, -0.41],
+        ['Baseline', 18, -0.41]
+    ];
+    
+        var data8 = [
+        ['Best ROI', 4, -1.21],
+        ['Final Selection', 10, -1.25],
+        ['Baseline', 18, -1.61]
+    ];
+    
     Dalaba.Chart(document.getElementById("vis"),                 {
 
         title: { enabled: true, text:" "},
@@ -27,7 +76,7 @@ $(document).ready(function() {
                 }},
             title: { enabled: false, 
                     text: "Construction Cost [$/ft^2]",style: {
-                        fontSize: '15px'
+                        fontSize: '13px'
                     },
                     layout: 'vertical',
                     backgroundColor: '#FFFFFF',
@@ -44,7 +93,7 @@ $(document).ready(function() {
             opposite: true,
 
             title: { enabled: true, text: "Simple Annualized ROI [%]", style: {
-                fontSize: '15px'},},
+                fontSize: '13px', fontWeight: 'bold' },},
 
             categories: data.map(function(t){
                 return t[0];
@@ -56,7 +105,7 @@ $(document).ready(function() {
             }
         }, {
             title: { enabled: true, text: "Construction Cost [$/ft^2]",style: {
-                fontSize: '15px'},},
+                fontSize: '13px', fontWeight: 'bold' },},
             categories: data.map(function(t){
                 return t[0];
             }),
@@ -124,8 +173,9 @@ $(document).ready(function() {
                     return Math.abs(this.value) ;
                 }},
             title: { enabled: true, 
-                    text: "Heating",style: {
-                        fontSize: '15px'
+                    text: "Heating",
+                    style: {
+                        fontSize: '17px'
                     },
                     layout: 'vertical',
                     backgroundColor: '#FFFFFF',
@@ -142,23 +192,23 @@ $(document).ready(function() {
             opposite: true,
 
             title: { enabled: true, text: "Simple Annualized ROI [%]", style: {
-                fontSize: '15px'},},
+                fontSize: '13px', fontWeight: 'bold' },},
 
-            categories: data.map(function(t){
+            categories: data1.map(function(t){
                 return t[0];
             }),
-            tickAmount: data.length,
+            tickAmount: data1.length,
             labels: {
                 enabled: false,
 
             }
         }, {
             title: { enabled: true, text: "Construction Cost [$/ft^2]",style: {
-                fontSize: '15px'},},
-            categories: data.map(function(t){
+                fontSize: '13px', fontWeight: 'bold' },},
+            categories: data1.map(function(t){
                 return t[0];
             }),
-            tickAmount: data.length,
+            tickAmount: data1.length,
             visible: false,
             labels: {
 
@@ -171,7 +221,7 @@ $(document).ready(function() {
         series: [{
             type: "bar",
             name: "$/ft^2/year",
-            data: data.map(function(t){
+            data: data1.map(function(t){
                 return t[2]
             }),
             
@@ -198,7 +248,7 @@ $(document).ready(function() {
             }
         }, {
             name: "ROI %",            
-            data: data.map(function(t){
+            data: data1.map(function(t){
                 return t[1]
             }),
             yAxis: 1
@@ -223,7 +273,7 @@ $(document).ready(function() {
                 }},
             title: { enabled: true, 
                     text: "Cooling",style: {
-                        fontSize: '15px'
+                        fontSize: '17px'
                     },
                     layout: 'vertical',
                     backgroundColor: '#FFFFFF',
@@ -240,23 +290,23 @@ $(document).ready(function() {
             opposite: true,
 
             title: { enabled: true, text: "Simple Annualized ROI [%]", style: {
-                fontSize: '15px'},},
+                fontSize: '13px', fontWeight: 'bold' },},
 
-            categories: data.map(function(t){
+            categories: data2.map(function(t){
                 return t[0];
             }),
-            tickAmount: data.length,
+            tickAmount: data2.length,
             labels: {
                 enabled: false,
 
             }
         }, {
             title: { enabled: true, text: "Construction Cost [$/ft^2]",style: {
-                fontSize: '15px'},},
-            categories: data.map(function(t){
+                fontSize: '13px', fontWeight: 'bold' },},
+            categories: data2.map(function(t){
                 return t[0];
             }),
-            tickAmount: data.length,
+            tickAmount: data2.length,
             visible: false,
             labels: {
 
@@ -269,7 +319,7 @@ $(document).ready(function() {
         series: [{
             type: "bar",
             name: "$/ft^2/year",
-            data: data.map(function(t){
+            data: data2.map(function(t){
                 return t[2]
             }),
             
@@ -296,7 +346,7 @@ $(document).ready(function() {
             }
         }, {
             name: "ROI %",            
-            data: data.map(function(t){
+            data: data2.map(function(t){
                 return t[1]
             }),
             yAxis: 1
@@ -321,7 +371,7 @@ $(document).ready(function() {
                 }},
             title: { enabled: true, 
                     text: "Interior Lighting",style: {
-                        fontSize: '15px'
+                        fontSize: '17px'
                     },
                     layout: 'vertical',
                     backgroundColor: '#FFFFFF',
@@ -338,23 +388,23 @@ $(document).ready(function() {
             opposite: true,
 
             title: { enabled: true, text: "Simple Annualized ROI [%]", style: {
-                fontSize: '15px'},},
+                fontSize: '13px', fontWeight: 'bold' },},
 
-            categories: data.map(function(t){
+            categories: data3.map(function(t){
                 return t[0];
             }),
-            tickAmount: data.length,
+            tickAmount: data3.length,
             labels: {
                 enabled: false,
 
             }
         }, {
             title: { enabled: true, text: "Construction Cost [$/ft^2]",style: {
-                fontSize: '15px'},},
-            categories: data.map(function(t){
+                fontSize: '13px', fontWeight: 'bold' },},
+            categories: data3.map(function(t){
                 return t[0];
             }),
-            tickAmount: data.length,
+            tickAmount: data3.length,
             visible: false,
             labels: {
 
@@ -367,7 +417,7 @@ $(document).ready(function() {
         series: [{
             type: "bar",
             name: "$/ft^2/year",
-            data: data.map(function(t){
+            data: data3.map(function(t){
                 return t[2]
             }),
             
@@ -394,7 +444,7 @@ $(document).ready(function() {
             }
         }, {
             name: "ROI %",            
-            data: data.map(function(t){
+            data: data3.map(function(t){
                 return t[1]
             }),
             yAxis: 1
@@ -419,7 +469,7 @@ $(document).ready(function() {
                 }},
             title: { enabled: true, 
                     text: "Interior Equipment",style: {
-                        fontSize: '15px'
+                        fontSize: '17px'
                     },
                     layout: 'vertical',
                     backgroundColor: '#FFFFFF',
@@ -436,23 +486,23 @@ $(document).ready(function() {
             opposite: true,
 
             title: { enabled: true, text: "Simple Annualized ROI [%]", style: {
-                fontSize: '15px'},},
+                fontSize: '13px', fontWeight: 'bold' },},
 
-            categories: data.map(function(t){
+            categories: data4.map(function(t){
                 return t[0];
             }),
-            tickAmount: data.length,
+            tickAmount: data4.length,
             labels: {
                 enabled: false,
 
             }
         }, {
             title: { enabled: true, text: "Construction Cost [$/ft^2]",style: {
-                fontSize: '15px'},},
-            categories: data.map(function(t){
+                fontSize: '13px', fontWeight: 'bold' },},
+            categories: data4.map(function(t){
                 return t[0];
             }),
-            tickAmount: data.length,
+            tickAmount: data4.length,
             visible: false,
             labels: {
 
@@ -465,7 +515,7 @@ $(document).ready(function() {
         series: [{
             type: "bar",
             name: "$/ft^2/year",
-            data: data.map(function(t){
+            data: data4.map(function(t){
                 return t[2]
             }),
             
@@ -492,7 +542,7 @@ $(document).ready(function() {
             }
         }, {
             name: "ROI %",            
-            data: data.map(function(t){
+            data: data4.map(function(t){
                 return t[1]
             }),
             yAxis: 1
@@ -517,7 +567,7 @@ $(document).ready(function() {
                 }},
             title: { enabled: true, 
                     text: "Fans",style: {
-                        fontSize: '15px'
+                        fontSize: '17px'
                     },
                     layout: 'vertical',
                     backgroundColor: '#FFFFFF',
@@ -534,23 +584,23 @@ $(document).ready(function() {
             opposite: true,
 
             title: { enabled: true, text: "Simple Annualized ROI [%]", style: {
-                fontSize: '15px'},},
+                fontSize: '13px', fontWeight: 'bold' },},
 
-            categories: data.map(function(t){
+            categories: data5.map(function(t){
                 return t[0];
             }),
-            tickAmount: data.length,
+            tickAmount: data5.length,
             labels: {
                 enabled: false,
 
             }
         }, {
             title: { enabled: true, text: "Construction Cost [$/ft^2]",style: {
-                fontSize: '15px'},},
-            categories: data.map(function(t){
+                fontSize: '13px', fontWeight: 'bold' },},
+            categories: data5.map(function(t){
                 return t[0];
             }),
-            tickAmount: data.length,
+            tickAmount: data5.length,
             visible: false,
             labels: {
 
@@ -563,7 +613,7 @@ $(document).ready(function() {
         series: [{
             type: "bar",
             name: "$/ft^2/year",
-            data: data.map(function(t){
+            data: data5.map(function(t){
                 return t[2]
             }),
             
@@ -590,7 +640,7 @@ $(document).ready(function() {
             }
         }, {
             name: "ROI %",            
-            data: data.map(function(t){
+            data: data5.map(function(t){
                 return t[1]
             }),
             yAxis: 1
@@ -615,7 +665,7 @@ $(document).ready(function() {
                 }},
             title: { enabled: true, 
                     text: "Pumps",style: {
-                        fontSize: '15px'
+                        fontSize: '17px'
                     },
                     layout: 'vertical',
                     backgroundColor: '#FFFFFF',
@@ -632,23 +682,23 @@ $(document).ready(function() {
             opposite: true,
 
             title: { enabled: true, text: "Simple Annualized ROI [%]", style: {
-                fontSize: '15px'},},
+                fontSize: '13px', fontWeight: 'bold' },},
 
-            categories: data.map(function(t){
+            categories: data6.map(function(t){
                 return t[0];
             }),
-            tickAmount: data.length,
+            tickAmount: data6.length,
             labels: {
                 enabled: false,
 
             }
         }, {
             title: { enabled: true, text: "Construction Cost [$/ft^2]",style: {
-                fontSize: '15px'},},
-            categories: data.map(function(t){
+                fontSize: '13px', fontWeight: 'bold' },},
+            categories: data6.map(function(t){
                 return t[0];
             }),
-            tickAmount: data.length,
+            tickAmount: data6.length,
             visible: false,
             labels: {
 
@@ -661,7 +711,7 @@ $(document).ready(function() {
         series: [{
             type: "bar",
             name: "$/ft^2/year",
-            data: data.map(function(t){
+            data: data6.map(function(t){
                 return t[2]
             }),
             
@@ -688,7 +738,7 @@ $(document).ready(function() {
             }
         }, {
             name: "ROI %",            
-            data: data.map(function(t){
+            data: data6.map(function(t){
                 return t[1]
             }),
             yAxis: 1
@@ -714,7 +764,7 @@ $(document).ready(function() {
                 }},
             title: { enabled: true, 
                     text: "Water Systems",style: {
-                        fontSize: '15px'
+                        fontSize: '17px'
                     },
                     layout: 'vertical',
                     backgroundColor: '#FFFFFF',
@@ -731,23 +781,23 @@ $(document).ready(function() {
             opposite: true,
 
             title: { enabled: true, text: "Simple Annualized ROI [%]", style: {
-                fontSize: '15px'},},
+                fontSize: '13px', fontWeight: 'bold' },},
 
-            categories: data.map(function(t){
+            categories: data7.map(function(t){
                 return t[0];
             }),
-            tickAmount: data.length,
+            tickAmount: data7.length,
             labels: {
                 enabled: false,
 
             }
         }, {
             title: { enabled: true, text: "Construction Cost [$/ft^2]",style: {
-                fontSize: '15px'},},
-            categories: data.map(function(t){
+                fontSize: '13px', fontWeight: 'bold' },},
+            categories: data7.map(function(t){
                 return t[0];
             }),
-            tickAmount: data.length,
+            tickAmount: data7.length,
             visible: false,
             labels: {
 
@@ -760,7 +810,7 @@ $(document).ready(function() {
         series: [{
             type: "bar",
             name: "$/ft^2/year",
-            data: data.map(function(t){
+            data: data7.map(function(t){
                 return t[2]
             }),
             
@@ -787,7 +837,7 @@ $(document).ready(function() {
             }
         }, {
             name: "ROI %",            
-            data: data.map(function(t){
+            data: data7.map(function(t){
                 return t[1]
             }),
             yAxis: 1
@@ -813,7 +863,7 @@ $(document).ready(function() {
                 }},
             title: { enabled:true, 
                     text: "Total End Uses",style: {
-                        fontSize: '15px'
+                        fontSize: '17px'
                     },
                     layout: 'vertical',
                     backgroundColor: '#FFFFFF',
@@ -830,23 +880,23 @@ $(document).ready(function() {
             opposite: true,
 
             title: { enabled: true, text: "Simple Annualized ROI [%]", style: {
-                fontSize: '15px'},},
+                fontSize: '13px', fontWeight: 'bold' },},
 
-            categories: data.map(function(t){
+            categories: data8.map(function(t){
                 return t[0];
             }),
-            tickAmount: data.length,
+            tickAmount: data8.length,
             labels: {
                 enabled: false,
 
             }
         }, {
             title: { enabled: true, text: "Construction Cost [$/ft^2]",style: {
-                fontSize: '15px'},},
-            categories: data.map(function(t){
+                fontSize: '13px', fontWeight: 'bold' },},
+            categories: data8.map(function(t){
                 return t[0];
             }),
-            tickAmount: data.length,
+            tickAmount: data8.length,
             visible: false,
             labels: {
 
@@ -859,7 +909,7 @@ $(document).ready(function() {
         series: [{
             type: "bar",
             name: "$/ft^2/year",
-            data: data.map(function(t){
+            data: data8.map(function(t){
                 return t[2]
             }),
             
@@ -886,7 +936,7 @@ $(document).ready(function() {
             }
         }, {
             name: "ROI %",            
-            data: data.map(function(t){
+            data: data8.map(function(t){
                 return t[1]
             }),
             yAxis: 1

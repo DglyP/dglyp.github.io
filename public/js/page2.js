@@ -63,7 +63,7 @@ $( document ).ready(function() {
                 }},
             title: { enabled: false, 
                     text: "Construction Cost [$/ft^2]",style: {
-                        fontSize: '15px'
+                        fontSize: '15px',
                     },
                     layout: 'vertical',
                     backgroundColor: '#FFFFFF',
@@ -80,7 +80,8 @@ $( document ).ready(function() {
             opposite: true,
 
             title: { enabled: true, text: "Simple Annualized ROI [%]", style: {
-                fontSize: '15px'},},
+                fontSize: '15px',
+                fontWeight: 'bold'},},
 
             categories: data.map(function(t){
                 return t[0];
@@ -92,7 +93,9 @@ $( document ).ready(function() {
             }
         }, {
             title: { enabled: true, text: "Construction Cost [$/ft^2]", style: {
-                fontSize: '15px'},},
+                fontSize: '15px',
+                fontWeight: 'bold'},
+                   },
             categories: data.map(function(t){
                 return t[0];
             }),
@@ -112,7 +115,7 @@ $( document ).ready(function() {
             data: data.map(function(t){
                 return t[2]
             }),
-            
+
 
             zones: [{
                 value: 0,

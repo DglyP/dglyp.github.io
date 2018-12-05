@@ -118,7 +118,9 @@
 }
 
 .rightSide{
+    height: 350px;
     border: 1px solid rgba(100, 100, 100, 0.21);
+    padding-top: 15px;
     position: relative;
 }
 
