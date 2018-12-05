@@ -280,3 +280,10 @@ body {
 .wider{
     width: 100%
 }
+.topTable {
+    z-index: 1;
+    position: absolute;
+    right: 169;
+    bottom: 50;
+    width: 600
+}
