@@ -20,7 +20,6 @@
 }
 
 .btnTrans{
-    margin-left: 20px;
     background-color: rgba(0, 0, 0, 0);
     color: #4b4b4b !important;
 }
@@ -321,4 +320,7 @@ iframe {
     width: 100%;
     height: 100%;
     border: none;
+}
+.topButtons {
+    padding-left: 5%;
 }

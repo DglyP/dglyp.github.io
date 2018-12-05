@@ -45,13 +45,13 @@
                         <div class="ct" id="t4">
                             <div class="ct" id="t5">
 
-                                <div class="row header">
+                                <div class="row header topButtons">
                                     <div class="col-1">
-                                        <a href="navigation.html" class="btn btnblue float-left">SIMULATE</a>
+                                        <a href="navigation.html" class="btn btnblue">SIMULATE</a>
                                     </div>
 
                                     <div class="col-1">
-                                        <a href="projects.html" class="btn btnTrans float-left">PROJECTS</a>
+                                        <a href="projects.html" class="btn btnTrans">PROJECTS</a>
                                     </div>
 
                                     <div class="col-10">
@@ -60,36 +60,36 @@
                                 </div>
                                 <div class=" steps steps-4" >
                                     <div class="">
-                                        <li class="current"><a href="#t1" title="" id="nav"><em>Baseline Selection</em></a></li>
+                                        <li class="current"><a href="#t1" title="" id="nav" class="BaselineSelection"><em>Baseline Selection</em></a></li>
                                     </div>
                                     <div class="">
-                                        <li class="following"><a href="#t2" title="" id="nav"><em>Upgrade Scenario</em></a></li>
+                                        <li class="following"><a href="#t2" title="" id="nav" class="UpgradeScenario"><em>Upgrade Scenario</em></a></li>
                                     </div>
                                     <div class="">
-                                        <li class="following"><a href="#t3" title="" id="nav"><em>Final Selection</em></a></li>
+                                        <li class="following"><a href="#t3" title="" id="nav" class="FinalSelection"><em>Final Selection</em></a></li>
                                     </div>
                                     <div class="">
-                                        <li class="following"><a href="#t4" title="" id="nav"><em>Final Results</em></a></li>
+                                        <li class="following"><a href="#t4" title="" id="nav" class="FinalResults"><em>Final Results</em></a></li>
                                     </div>
                                 </div>
                                 <div class="page" id="p1" >
-                                            <iframe src = "page1.html" id="p1">     </iframe>
-                                    </div>
+                                    <iframe src = "page1.html" id="p1">     </iframe>
                                 </div>
-                                <div class="page" id="p2">
-                                            <iframe src = "page2.4.html"  id="p1">     </iframe>
-                                </div>  
-                                <div class="page" id="p3">
-                                    <iframe src = "page3.html"  id="p1">     </iframe>
-                                </div>
-                                <div class="page" id="p4">
-                                    <iframe src = "page4.html"  id="p1">     </iframe>
-                                </div> 
                             </div>
+                            <div class="page" id="p2">
+                                <iframe src = "page2.1.html"  id="p1">     </iframe>
+                            </div>  
+                            <div class="page" id="p3">
+                                <iframe src = "page3.html"  id="p1">     </iframe>
+                            </div>
+                            <div class="page" id="p4">
+                                <iframe src = "page4.html"  id="p1">     </iframe>
+                            </div> 
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
 
         <script>
             $(document).ready(function () {
@@ -102,6 +102,8 @@
                     $( this ).removeClass( "following" );
                 });
             });
+
+
         </script>
 
     </body>

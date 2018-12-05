@@ -55,6 +55,8 @@
     </style>
 </head>
 
+
+
 <body>
     <div class="container-fluid">
         <div class="row cardsRow ">
@@ -70,7 +72,7 @@
                         <a class="nav-link" id="HVACTab" data-toggle="tab" href="#menu2">HVAC</a>
                     </li>
                     <li class="col-md-auto nav-item">
-                        <a class="nav-link" id="WaterTab" data-toggle="tab" href="#menu3">Water</a>
+                        <a class="nav-link" id="WaterTab" data-toggle="tab" href="#menu3">Water Heater</a>
                     </li>
                     <li class="col-md-auto nav-item">
                         <a class="nav-link" id="EnergyTab" data-toggle="tab" href="#menu4">Energy</a>
@@ -80,25 +82,49 @@
 
                     <div class="row">
                         <div class="col-4 leftSide">
-                            <a href="page2.1.html" class="list-group-item">Roof Type</a>
-                            <a href="page2.2.html" class="list-group-item" id="Selected">Roof Insulation</a>
-                            <a href="page2.html" class="list-group-item" id="ExteriorWall">Exterior Wall</a>
-                            <a href="page2.3.html" class="list-group-item">Residential Window Properties</a>
-                            <a href="page2.html" class="list-group-item">Storefront Glazing Properties</a>
+                            <a href="page2.1.html" class="list-group-item">Roof Type / Insulation</a>
+                            <!--                            <a href="page2.2.html" class="list-group-item">Roof Insulation</a>-->
+                            <a href="page2.html" class="list-group-item" id="Selected">Exterior Wall</a>
+                            <a href="page2.3.html" class="list-group-item">Window Properties</a>
                         </div>
                         <div class="col-8 rightSide">
-                    <div id="vis"></div>
+
+                            <div id="vis"></div>
                             <div class="row hidden-row">
-                            <a href="" class="btn btn-primary hidden-button col-12">ICF 13 in</a>
-                            <a href="" class="btn btn-primary hidden-button col-12">ICF 11 in</a>
-                            <a href="" class="btn btn-primary hidden-button col-12">ICF 9 in</a>
-                            <a href="" class="btn btn-primary hidden-button col-12">SIPs R50</a>
-                            <a href="" class="btn btn-primary hidden-button col-12">SIPs R40</a>
-                            <a href="" class="btn btn-primary hidden-button col-12">SIPs R28</a>
-                            <a href="" class="btn btn-primary hidden-button col-12">2x4 staggered studs on 2x8 sill plate (R26)</a>
-                            <a href="" class="btn btn-primary hidden-button col-12">2x4 staggered studs on 2x6 sill plate (R19)</a>
-                            <a href="" class="btn btn-primary hidden-button col-12">2x6 @24 OC(R21) + R9.6 c.i.</a>
+                                <a href="" class="btn btn-primary hidden-button col-12">ICF 13 in</a>
+                                <a href="" class="btn btn-primary hidden-button col-12">ICF 11 in</a>
+                                <a href="" class="btn btn-primary hidden-button col-12">ICF 9 in</a>
+                                <a href="" class="btn btn-primary hidden-button col-12">SIPs R50</a>
+                                <a href="" class="btn btn-primary hidden-button col-12">SIPs R40</a>
+                                <a href="" class="btn btn-primary hidden-button col-12">SIPs R28</a>
+                                <a href="" class="btn btn-primary hidden-button col-12">2x4 staggered studs on 2x8 sill plate (R26)</a>
+                                <a href="" class="btn btn-primary hidden-button col-12">2x4 staggered studs on 2x6 sill plate (R19)</a>
+                                <a href="" class="btn btn-primary hidden-button col-12">2x6 @24 OC(R21) + R9.6 c.i.</a>
                             </div>
+                            <div class="radio radio-info radio-inline radioRow row">
+
+                                <h6>Select an option</h6>
+                                <input type="radio" id="inlineRadio1" value="option1" name="radioInline" checked="" class="col">
+                                <label for="inlineRadio1"> 1 </label>
+                                <input type="radio" id="inlineRadio2" value="option1" name="radioInline" checked="" class="col">
+                                <label for="inlineRadio2"> 2 </label>
+                                <input type="radio" id="inlineRadio3" value="option1" name="radioInline" checked="" class="col">
+                                <label for="inlineRadio3"> 3 </label>
+                                <input type="radio" id="inlineRadio4" value="option1" name="radioInline" checked="" class="col">
+                                <label for="inlineRadio4"> 4 </label>
+                                <input type="radio" id="inlineRadio5" value="option1" name="radioInline" checked="" class="col">
+                                <label for="inlineRadio5"> 5 </label>
+                                <input type="radio" id="inlineRadio6" value="option1" name="radioInline" checked="" class="col">
+                                <label for="inlineRadio6"> 6 </label>
+                                <input type="radio" id="inlineRadio7" value="option1" name="radioInline" checked="" class="col">
+                                <label for="inlineRadio7"> 7 </label>
+                                <input type="radio" id="inlineRadio8" value="option1" name="radioInline" checked="" class="col">
+                                <label for="inlineRadio8"> 8 </label>
+                                <input type="radio" id="inlineRadio9" value="option1" name="radioInline" checked="" class="col">
+                                <label for="inlineRadio9"> 9 </label>
+                                <div class="col"></div>
+                            </div>
+
                         </div>
                     </div>
                     <script src= "https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.16.4/lodash.min.js"></script>

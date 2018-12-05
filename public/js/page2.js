@@ -37,50 +37,60 @@ $( document ).ready(function() {
 
 
     var data = [
-        ['2x6 @24 OC(R21)+ R9.6 c.i.', 18, -4.27],
-        ['2x4 staggered studs on 2x6 sill plate (R19)', 10, -4.17],
-        ['2x4 staggered studs on 2x8 sill plate (R26)', 4, -4.37],
-        ['SIPs R28', 0, -6.01],
-        ['SIPs R40', 0, -6.90],
-        ['SIPs R50', 0, -8.07],
-        ['ICF 9 in', 0, -12.05],
-        ['ICF 11 in', 0, -11.86],
-        ['ICF 13 in', 0, -12.23]
+        ['(9) ICF 13 in', 0, -12.23],
+        ['(8) ICF 11 in', 0, -11.86],
+        ['(7) ICF 9 in', 0, -12.05],
+        ['(6) SIPs R50', 0, -8.07],
+        ['(5) SIPs R40', 0, -6.90],
+        ['(4) SIPs R28', 0, -6.01],
+        ['(3) 2x4 staggered studs on 2x8 sill plate (R26)', 4, -4.37],
+        ['(2) 2x4 staggered studs on 2x6 sill plate (R19)', 10, -4.17],
+        ['(1) 2x6 @24 OC(R21)+ R9.6 c.i.', 18, -4.27]
     ];
-    Dalaba.Chart(document.getElementById("vis"), {
+    var chart = Dalaba.Chart(document.getElementById("vis"),                 {
 
-        title: { enabled: false},
+        title: { enabled: true, text:" "},
         type: "bar",
+
         chart: {
-            height: containerHeight
-        },
-        plotOptions: {
-            column: {
-                zones: [{
-                    value: 10, // Values up to 10 (not including) ...
-                    color: 'blue' // ... have the color blue.
-                },{
-                    color: 'red' // Values from 10 (including) and up have the color red
-                }]
-            }
+            height: containerHeight,
+
         },
         xAxis: {
+            labels: {
+                formatter: function () {                
+                    return Math.abs(this.value) ;
+                }},
+            title: { enabled: true, 
+                    text: "Utility Costs [$/ft^2/year]",style: {
+                        fontSize: '15px'
+                    },
+                    layout: 'vertical',
+                    backgroundColor: '#FFFFFF',
+                    floating: true,
+                    align: 'left',
+                    x: -130,
+                    verticalAlign: 'top',
+                    y: -320},
+
             type: "linear",
         },
         yAxis: [ {
             //            side of label
             opposite: true,
-            title: { enabled: false },
+
+            title: { enabled: true, text: "Simple Annualized ROI [%]", style: {
+                fontSize: '15px'},},
+
             categories: data.map(function(t){
                 return t[0];
             }),
             tickAmount: data.length,
             labels: {
-                maxWidth: 90
+                enabled: false,
+
             }
         }, {
-            opposite: false,
-            reversed: true,
             title: { enabled: false},
             categories: data.map(function(t){
                 return t[0];
@@ -88,56 +98,46 @@ $( document ).ready(function() {
             tickAmount: data.length,
             visible: false,
             labels: {
-                enabled: false  
+
+                maxWidth: 90
             }
         }],
+        legend:{
+            enabled: false
+        },
         series: [{
             type: "bar",
-            borderWidth: 1,
             name: "$/ft^2/year",
-            color: "#6f6f6f",
-            //            data: data.map(function(t){
-            //                return t[2]
-            //            }),
-            data: [{y:-12.23, color:'black'}, -11.86, -12.05, -8.07, -6.90, -6.01, -4.37, -4.17, {y:-4.27, color:'green'}],
+            data: data.map(function(t){
+                return t[2]
+            }),
 
+            zones: [{
+                value: 0,
+                color: '#f7a35c'
+            }, {
+                value: 10,
+                color: '#7cb5ec'
+            }, {
+                color: '#90ed7d'
+            }],
 
             events: {
                 click: function (event) {
                     console.log(this);
-                    this.borderColor = "red";                    
-                    this.color = "red";
+                    this.series.color = "green";
+                    this.color = "#f80000"; 
                     var text = this.key;
                     alert("You selected: " + text );
 
                 }
             }
         }, {
-            name: "ROI",            
-            color: "#6f6f6f",
-            //            data: data.map(function(t){
-            //                return t[1]
-            //            }),
-            data: [0, 0, 0, 0, 0, 0, 4, 10, {y:18, color:'green'}],
+            name: "ROI %",            
+            data: data.map(function(t){
+                return t[1]
+            }),
             yAxis: 1
-        },{
-            name: "Baseline",            
-            color: "black",
-            allowOverlap: true,
-            //            data: data.map(function(t){
-            //                return t[1]
-            //            }),
-            
-            data: [0],
-        },{
-            name: "Most Energy Efficient",            
-            color: "green",
-            isNULL: true,
-            //            data: data.map(function(t){
-            //                return t[1]
-            //            }),
-            
-            data: [0],
         }
                 ]
 

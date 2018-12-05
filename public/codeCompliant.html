@@ -46,30 +46,28 @@
         <div class="popup-overlay">
             <!--Creates the popup content-->
             <div class="popup-content">
-                <h5>Detailed Building Description</h5>
-                <ul>
-                    <li>
-                        Total Building Floor Area: 44.272 ft^2
-                        <ul>
-                            <li>
-                                Residential Units: 30.633 ft^2
-                            </li>
-                            <ul>
-                                Public Space:
 
-                                <li>
-                                    Common area: 9,650 ft2 (community room, laundry, utility room, office, etc.)
-                                </li>
-                                <li>Program area: 3,989 ft2</li>
-                                <li>2 stairwells, 4 main doors(2 vestibules), 1 elevator</li>
-                                <img src="image/FloorPlan1.PNG" alt="Smiley face" height="220" >
-                                <img src="image/FloorPlan2.PNG" alt="Smiley face" height="220" >
-                            </ul>
+                <div class="card container">
+                    <div class="card-body row">
+                        <h5 class="card-title col-5">Detailed Building Description</h5>
+                        <ul class="card-text col-7">
+                            <dl>
+                                <dt>Total Building Floor Area: 44.272 ft^2</dt>
+                                <dd>Residential Units: 30.633 ft^2</dd>
+                                <dt>Public Space:</dt>
+                                <dd>Common area: 9,650 ft2 (community room, laundry, utility room, office, etc.)<dd>
+                                <dd>Program area: 3,989 ft2<dd>
+                                <dd>2 stairwells, 4 main doors(2 vestibules), 1 elevator<dd>
+                            </dl>                         
                         </ul>
-                    </li>
-                </ul>
-                <!--popup's close button-->
-                <button class="btn close">Close</button>    </div>
+                        
+                            <img class="col-6" src="image/FloorPlan1.PNG" height="220">
+                            <img class="col-6" src="image/FloorPlan2.PNG" height="220"> 
+                    </div>
+                    <h5></h5>
+                    <!--popup's close button-->
+                    <button class="btn close">Close</button></div>
+            </div>
         </div>
         <div class="container-fluid codeCompliantSection">
             <div class="row cardsRow justify-content-md-center">
@@ -81,7 +79,7 @@
                             <img class="card-img-top img-fluid" src="image/pict1.png" alt="Card image cap">
 
                             <div class="more-information">
-                                <button href="" class="btn btn-primary more-button open">MORE INFORMATION</button>
+                                <button class="btn btn-primary more-button open">MORE INFORMATION</button>
                             </div>
 
                         </div>
@@ -111,44 +109,28 @@
                             <div class="card">
                                 <div class="card-header dropdownTitle">Size of units [ft^2]</div>
                                 <div class="card-body">
-                                    <div class="dropdown">
-                                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">                                            
-                                        </button>
-                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                            <a class="dropdown-item" href="codeCompliant.html">Action</a>
-                                            <a class="dropdown-item" href="codeCompliant.html">Another action</a>
-                                            <a class="dropdown-item" href="codeCompliant.html">Something else here</a>
-                                        </div>
+                                    <div class="form-group">
+                                        <select class="form-control" id="exampleFormControlSelect1">
+                                            <option>Option 1</option>
+                                            <option>Option 2</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
                             <div class="card">
                                 <div class="card-header dropdownTitle">Window to Wall Ratio</div>
                                 <div class="card-body">
-                                    <div class="dropdown">
-                                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">                                            
-                                        </button>
-                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                            <a class="dropdown-item" href="codeCompliant.html">Action</a>
-                                            <a class="dropdown-item" href="codeCompliant.html">Another action</a>
-                                            <a class="dropdown-item" href="codeCompliant.html">Something else here</a>
-                                        </div>
+                                    <div class="form-group">
+                                        <select class="form-control" id="exampleFormControlSelect1">
+                                            <option>2x2 Ratio</option>
+                                            <option>2x5 Ratio</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
                             <div class="card">
                                 <div class="card-header dropdownTitle">Roof Type</div>
                                 <div class="card-body">
-                                    <!--
-<div class="dropdown">
-<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">                                            
-</button>
-<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-<a class="dropdown-item" href="codeCompliant.html">Flat Roof</a>
-<a class="dropdown-item" href="codeCompliant.html">Piched Roof</a>
-</div>
-</div>
--->
                                     <div class="form-group">
                                         <select class="form-control" id="exampleFormControlSelect1">
                                             <option>Flat Roof</option>
@@ -168,28 +150,6 @@
                         <div class="card col-12">
                             <div class="card-header dropdownTitle">Building Location (Affects Code Compliant)</div>
                             <div class="card-body">
-                                <!--
-<div class="dropdown">
-<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">                                            
-</button>
-<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-<a class="dropdown-item" href="codeCompliant.html">Honolulu</a>
-<a class="dropdown-item" href="codeCompliant.html">Miami</a>
-<a class="dropdown-item" href="codeCompliant.html">Dallas</a>
-<a class="dropdown-item" href="codeCompliant.html">Atlanta</a>
-<a class="dropdown-item" href="codeCompliant.html">Phoenix</a>
-<a class="dropdown-item" href="codeCompliant.html">San Francisco</a>
-<a class="dropdown-item" href="codeCompliant.html">Richmond</a>
-<a class="dropdown-item" href="codeCompliant.html">Medford</a>
-<a class="dropdown-item" href="codeCompliant.html">Indianapolis</a>
-<a class="dropdown-item" href="codeCompliant.html">Salt Lake City</a>
-<a class="dropdown-item" href="codeCompliant.html">Seattle</a>
-<a class="dropdown-item" href="codeCompliant.html">Madison</a>
-<a class="dropdown-item" href="codeCompliant.html">Helena</a>
-<a class="dropdown-item" href="codeCompliant.html">Anchorage</a>
-</div>
-</div>
--->
 
                                 <div class="form-group">
                                     <select class="form-control" id="exampleFormControlSelect1">
@@ -234,8 +194,7 @@
                             </div>
                         </div>
                         <div class="col-12 offset-10">
-
-                            <button type="button" class="btn btn-default btn-circle btn-xl"><i class="fa fa-arrow-right"></i>
+                            <button type="button" class="btn btn-default btn-circle btn-xl" id="USArrow"><i class="fa fa-arrow-right"></i>
                             </button>   
                         </div>
                     </div>
@@ -252,6 +211,20 @@
             //removes the "active" class to .popup and .popup-content when the "Close" button is clicked 
             $(".close, .popup-overlay").on("click", function(){
                 $(".popup-overlay, .popup-content").removeClass("active");
-            });</script>
+            });
+
+            $('.btn').on('click', function() {
+                $(this).siblings().removeClass('active');
+                $(this).addClass('active');
+                console.log("changed");
+            })
+
+            $('#USArrow').on('click', function() {
+                console.log("Clicked!");
+                window.parent.document.getElementsByClassName("UpgradeScenario")[0].click();
+                console.log();
+            })
+
+        </script>
     </body>
 </html>
