@@ -271,3 +271,7 @@
   border-color: #5cb85c; }
 .radio-success input[type="radio"]:checked + label::after {
   background-color: #5cb85c; }
+
+
+html{
+    font-family: 'PT Sans', sans-serif !important;}

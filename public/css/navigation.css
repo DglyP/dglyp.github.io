@@ -324,3 +324,6 @@ iframe {
 .topButtons {
     padding-left: 5%;
 }
+
+html{
+    font-family: 'PT Sans', sans-serif !important;}

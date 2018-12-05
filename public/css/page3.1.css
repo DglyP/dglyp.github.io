@@ -69,3 +69,7 @@ body {
     transform: translate(50%, 0);
   }
 }
+
+
+html{
+    font-family: 'PT Sans', sans-serif !important;}
