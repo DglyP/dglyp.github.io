@@ -69,7 +69,7 @@ $( document ).ready(function() {
                     backgroundColor: '#FFFFFF',
                     floating: true,
                     align: 'left',
-                    x: -130,
+                    x: -390,
                     verticalAlign: 'top',
                     y: -320},
 
