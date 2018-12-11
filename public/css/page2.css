@@ -275,3 +275,6 @@
 
 html{
     font-family: 'PT Sans', sans-serif !important;}
+.tab-pane {
+    padding: 0;
+}
