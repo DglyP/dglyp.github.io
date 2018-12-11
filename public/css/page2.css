@@ -278,3 +278,7 @@ html{
 .tab-pane {
     padding: 0;
 }
+
+#summaryOption {
+    margin-top: 150px !important;
+}
