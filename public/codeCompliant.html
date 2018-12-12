@@ -60,9 +60,9 @@
                                 <dd>2 stairwells, 4 main doors(2 vestibules), 1 elevator<dd>
                             </dl>                         
                         </ul>
-                        
-                            <img class="col-6" src="image/FloorPlan1.PNG" height="220">
-                            <img class="col-6" src="image/FloorPlan2.PNG" height="220"> 
+
+                        <img class="col-6" src="image/FloorPlan1.PNG" height="220">
+                        <img class="col-6" src="image/FloorPlan2.PNG" height="220"> 
                     </div>
                     <h5></h5>
                     <!--popup's close button-->
@@ -73,7 +73,7 @@
             <div class="row cardsRow justify-content-md-center">
 
                 <div class="card col-5 leftCard" >
-                    <div class="card-header blueCard">Midrise Apartment #1</div>
+                    <div class="card-header blueCard">Building Type / Midrise Apartment #1</div>
                     <div class="card-body row leftBody">
                         <div class ="col-7">
                             <img class="card-img-top img-fluid" src="image/pict1.png" alt="Card image cap">
@@ -145,7 +145,7 @@
                 </div>
                 <div class="card col-4 rightCard" >
 
-                    <div class="card-header blueCard">Code Selection</div>
+                    <div class="card-header blueCard">Specification of Baseline Simulation</div>
                     <div class="card-body row rightBody">
                         <div class="card col-12">
                             <div class="card-header dropdownTitle">Building Location (Affects Code Compliant)</div>
@@ -193,12 +193,26 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="card col-12">
+                            <span id="ex18-label-1" class="hidden">Investment Range Selection</span>
+                            <div class="""slidecontainer">
+                                <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                            </div>
+                            <input id="ex19" type="text"
+                                   data-provide="slider"
+                                   data-slider-ticks="[1, 2, 3]"
+                                   data-slider-ticks-labels='["short", "medium", "long"]'
+                                   data-slider-min="1"
+                                   data-slider-max="3"
+                                   data-slider-step="1"
+                                   data-slider-value="3"
+                                   data-slider-tooltip="hide" />
+                        </div>
                         <div class="col-12 offset-10">
                             <button type="button" class="btn btn-default btn-circle btn-xl" id="USArrow"><i class="fa fa-arrow-right"></i>
                             </button>   
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -207,6 +221,15 @@
             $(".open").on("click", function(){
                 $(".popup-overlay, .popup-content").addClass("active");
             });
+
+
+            var slider = document.getElementById("myRange");
+            var output = document.getElementById("demo");
+            output.innerHTML = slider.value;
+
+            slider.oninput = function() {
+                output.innerHTML = this.value;
+            }
 
             //removes the "active" class to .popup and .popup-content when the "Close" button is clicked 
             $(".close, .popup-overlay").on("click", function(){
