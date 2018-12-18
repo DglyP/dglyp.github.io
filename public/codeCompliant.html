@@ -139,6 +139,15 @@
                                     </div>
                                 </div>
                             </div>
+                            
+                        <div class="card col-12">
+                            <span id="ex18-label-1" class="hidden">Investment Range Selection</span>
+
+                            <div class="""slidecontainer">
+                                <input type="range" min="10" max="20" value="15" class="slider" id="myRange">
+                                <p>Value: <span id="demo"></span></p>
+                            </div>
+                        </div>
                         </div>
                     </div>
 
@@ -175,7 +184,7 @@
                         <div class="card col-12">
                             <div class="card-header dropdownTitle">HVAC System</div>
                             <div class="card-body">
-                                <div class="row">
+                                <div class="row hvacButton">
                                     <button type="button" class="btn btn-primary col">Unitary AC/Electric Heater</button>
                                     <button type="button" class="btn btn-primary col">Unitary AC/Natural Gas Furnace</button>
                                 </div>
@@ -192,23 +201,6 @@
                                     <button type="button" class="btn btn-primary col-5">ASHRAE 90.1 2016</button>
                                 </div>
                             </div>
-                        </div>
-                        <div class="card col-12">
-                            <span id="ex18-label-1" class="hidden">Investment Range Selection</span>
-
-                            <div class="""slidecontainer">
-                                <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-                                <p>Value: <span id="demo"></span></p>
-                            </div>
-                            <input id="ex19" type="text"
-                                   data-provide="slider"
-                                   data-slider-ticks="[1, 2, 3]"
-                                   data-slider-ticks-labels='["short", "medium", "long"]'
-                                   data-slider-min="1"
-                                   data-slider-max="3"
-                                   data-slider-step="1"
-                                   data-slider-value="3"
-                                   data-slider-tooltip="hide" />
                         </div>
                         <div class="col-12 offset-10">
                             <button type="button" class="btn btn-default btn-circle btn-xl" id="USArrow"><i class="fa fa-arrow-right"></i>

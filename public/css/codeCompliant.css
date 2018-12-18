@@ -24,6 +24,7 @@
 .leftCard{
     margin-right: 15px;
     display: block;
+    height: 75vh;
 }
 
 .redb{
@@ -45,10 +46,11 @@
 
 .card{
     margin-top: 5px;
+    margin-bottom: 15px;
 }
 
 .card-body{
-    padding: 3%;
+    padding: 0px 0px 0px 0px;
 }
 
 .dropdownTitle  {
@@ -180,4 +182,11 @@ ul{
   border-radius: 50%;
   background: #0075d9;
   cursor: pointer;
+}
+.form-group {
+    margin-bottom: 0;
+}
+
+.hvacButton {
+    margin: 5px !important
 }
