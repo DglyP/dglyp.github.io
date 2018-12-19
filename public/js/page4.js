@@ -7,55 +7,55 @@ $(document).ready(function() {
 
     var data = [
         ['Best ROI', 15.06, -9.17],
-        ['Final Selection', 8.08, -9.73],
+        ['Your Selection', 8.08, -9.73],
         ['Baseline', 0, -7.31]
     ];
 
     var data1 = [
         ['Best ROI', 4, -0.32],
-        ['Final Selection', 10, -0.09],
+        ['Your Selection', 10, -0.09],
         ['Baseline', 18, -0.37]
     ];
 
     var data2 = [
         ['Best ROI', 4, -0.05],
-        ['Final Selection', 10, -0.08],
+        ['Your Selection', 10, -0.08],
         ['Baseline', 18, -0.13]
     ];
 
     var data3 = [
         ['Best ROI', 4, -0.12],
-        ['Final Selection', 10, -0.12],
+        ['Your Selection', 10, -0.12],
         ['Baseline', 18, -0.14]
     ];
 
     var data4 = [
         ['Best ROI', 4, -0.41],
-        ['Final Selection', 10, -0.50],
+        ['Your Selection', 10, -0.50],
         ['Baseline', 18, -0.50]
     ];
 
     var data5 = [
         ['Best ROI', 4, -0.01],
-        ['Final Selection', 10, -0.01],
+        ['Your Selection', 10, -0.01],
         ['Baseline', 18, -0.06]
     ];
 
     var data6 = [
         ['Best ROI', 4, -0],
-        ['Final Selection', 10, -0.04],
+        ['Your Selection', 10, -0.04],
         ['Baseline', 18, -0]
     ];
 
     var data7 = [
         ['Best ROI', 4, -0.29],
-        ['Final Selection', 10, -0.41],
+        ['Your Selection', 10, -0.41],
         ['Baseline', 18, -0.41]
     ];
 
     var data8 = [
         ['Best ROI', 4, -1.21],
-        ['Final Selection', 10, -1.25],
+        ['Your Selection', 10, -1.25],
         ['Baseline', 18, -1.61]
     ];
 
