@@ -279,6 +279,11 @@ html{
     padding: 0;
 }
 
+#SelectedSummary{
+    background-color: rgba(0, 167, 255, 0.19);
+    margin-top: 150px !important;
+}
+
 #summaryOption {
     margin-top: 150px !important;
 }

@@ -73,7 +73,7 @@ $(document).ready(function() {
                     return Math.abs(this.value) ;
                 }},
             title: { enabled: false, 
-                    text: "Utility Cost [$/ft^2]",style: {
+                    text: "Construction Cost [$/ft^2]",style: {
                         fontSize: '13px'
                     },
                     layout: 'vertical',
