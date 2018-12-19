@@ -61,7 +61,7 @@ $( document ).ready(function() {
                     return Math.abs(this.value) ;
                 }},
             title: { enabled: false, 
-                    text: "Construction Cost [$/ft^2]",style: {
+                    text: "Utility Cost [$/ft^2]",style: {
                         fontSize: '15px'
                     },
                     layout: 'vertical',
@@ -90,7 +90,7 @@ $( document ).ready(function() {
 
             }
         }, {
-            title: { enabled: true, text: "Construction Cost [$/ft^2]", style: {
+            title: { enabled: true, text: "Utility Cost [$/ft^2]", style: {
                 fontSize: '15px'},},
             categories: data.map(function(t){
                 return t[0];
