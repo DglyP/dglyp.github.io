@@ -46,7 +46,7 @@
             width: 100%;
             height: 100%;
             content: "";
-            background-color: #fff;
+            background-color: #FDFFFC;
             z-index: 1;
             opacity: .9;
         }
@@ -121,17 +121,17 @@
         float: left;
         position: relative;
         z-index: 1;
-        border-right: 10px solid #fff;
+        border-right: 10px solid #FDFFFC;
         @media #{$small_mobile}{
-            border-right: 0px solid #fff;
+            border-right: 0px solid #FDFFFC;
             margin-bottom: 20px;
         }
         @media #{$large_mobile}{
-            border-right: 0px solid #fff;
+            border-right: 0px solid #FDFFFC;
             margin-bottom: 20px;
         }
         @media #{$tab_device}{
-            border-right: 0px solid #fff;
+            border-right: 0px solid #FDFFFC;
             margin-bottom: 20px;
         }
         @media #{$medium_device}{
