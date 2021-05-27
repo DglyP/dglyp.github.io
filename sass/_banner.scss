@@ -2,7 +2,6 @@
 .banner_part{
     height: 1075px;
     position: relative;
-    background-image: url(../img/banner_bg_1.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: right bottom;
@@ -24,7 +23,6 @@
         background-size: contain;
         top: 0;
         z-index: -1;
-        background: url(../img/banner_overlay_1.png) top left no-repeat;
 
     }
     &:before{
@@ -36,7 +34,6 @@
         background-size: contain;
         top: 0;
         z-index: -1;
-        background: url(../img/banner_overlay_2.png) top left no-repeat;
 
     }
     

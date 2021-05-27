@@ -27,14 +27,33 @@
     <link rel="stylesheet" href="css/all.css">
     <!-- style CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        model-viewer{
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+        }
+    </style>
 </head>
 
 <body>
     <!--::header part start::-->
     <header class="main_menu home_menu">
-        <model-viewer src="assets\DeglyPava.glb" alt="A 3D model of an astronaut" ar ar-modes="webxr scene-viewer quick-look" environment-image="neutral" auto-rotate camera-controls></model-viewer>
+        <div class="container">
+            <div class="row align-item-center">
+                <div class="col-lg-6">
+                     </div>
+            </div>
+        </div>
+        <br>
+        <br>
     </header>
     <!-- Header part end-->
+    <!-- banner part start-->
+    <section class="banner_part">
+        <model-viewer src="assets\DeglyPava.glb" alt="A 3D model of an astronaut" ar ar-modes="webxr scene-viewer quick-look" environment-image="neutral" auto-rotate camera-controls></model-viewer>
+    </section>
+    <!-- banner part start-->
 
      <!-- footer css start -->
      <footer class="footer_Part padding_top">
