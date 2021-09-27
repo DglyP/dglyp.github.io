@@ -4818,9 +4818,17 @@ h6 {
 
 /*# sourceMappingURL=../css/style.map */
 .btn_acepto {
-    font-size: 71px
+    font-size: 71px;
+    background-color:#171238; 
 }
 
 .inputName {
     width: 100%
+}
+
+.pImage{
+  font-size: 3vw !important;
+  line-height: 110%;
+  margin: 1%;
+  text-align: center;
 }
