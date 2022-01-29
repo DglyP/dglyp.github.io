@@ -27,6 +27,8 @@ loader.load(
 
 function init() {
   container = document.getElementById( 'container' );
+  otherContainer = document.getElementById( 'elseButjs');
+  modelContainer = document.getElementById( 'my_name');
 
   camera = new THREE.Camera();
   camera.position.z = 1;
@@ -67,6 +69,10 @@ function init() {
 
 function onWindowResize( event ) {
   renderer.setSize( window.innerWidth, window.innerHeight );
+  otherContainer.style.height = window.innerHeight;
+  otherContainer.style.width = window.innerWidth;
+  my_name.style.height = window.innerHeight;
+  my_name.style.width = window.innerWidth;
   uniforms.u_resolution.value.x = renderer.domElement.width;
   uniforms.u_resolution.value.y = renderer.domElement.height;
 }
