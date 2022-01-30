@@ -55,7 +55,6 @@ function init() {
   renderer = new THREE.WebGLRenderer();
   renderer.setPixelRatio( window.devicePixelRatio );
   container.appendChild( renderer.domElement );
-  renderer.setSize( window.innerWidth, window.innerHeight );
   onWindowResize();
   window.addEventListener( 'resize', onWindowResize, false );
   document.addEventListener('pointermove', (e)=> {
