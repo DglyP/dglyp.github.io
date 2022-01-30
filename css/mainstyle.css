@@ -6,8 +6,8 @@ body {
   #container2 {
     position: fixed;
     touch-action: none;
-    height: 1vh;
-    width: 1vw;
+    height: 100%;
+    width: 100%;
     z-index: -1;
   }
 
