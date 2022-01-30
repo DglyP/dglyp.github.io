@@ -56,8 +56,7 @@ function init() {
   renderer.setPixelRatio( window.devicePixelRatio );
   container.appendChild( renderer.domElement );
   renderer.setSize( window.innerWidth, window.innerHeight );
-  uniforms.u_resolution.value.x = renderer.domElement.width;
-  uniforms.u_resolution.value.y = renderer.domElement.height;
+  onWindowResize();
   window.addEventListener( 'resize', onWindowResize, false );
   document.addEventListener('pointermove', (e)=> {
     let ratio = window.innerHeight / window.innerWidth;
@@ -68,8 +67,8 @@ function init() {
 }
 
 function onWindowResize( event ) {
-  // renderer.setSize( window.innerWidth, window.innerHeight );
-  renderer.setSize(container.clientWidth, container.clientHeight);
+  renderer.setSize( window.innerWidth, window.innerHeight );
+  // renderer.setSize(container.clientWidth, container.clientHeight);
   uniforms.u_resolution.value.x = renderer.domElement.width;
   uniforms.u_resolution.value.y = renderer.domElement.height;
 }
