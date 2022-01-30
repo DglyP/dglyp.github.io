@@ -182,14 +182,19 @@
     <header id="home"></header>
 
   <div id="container2" touch-action="none" style="position: absolute;"></div>
-    <div class="container-fluid" id="my_namecontainer" hero>
+  <div class='container-fluid customcolor text-center' style="position: absolute;">
+    <div class='row justify-content-center' style="margin-top: 70vh;">
+      <div class="col-auto">
+        <a class="cv-btn" data-scroll href="./DeglySPavaCV.pdf">Download my CV</a>
+      </div>
+      <div class="w-100"></div>
+      <div class="col-auto" style="margin-top: 10vh;">
+        <a class="projects-btn" data-scroll href="https://github.com/DglyP">Check out my projects</a> 
+      </div>
+    </div>
+  </div>
         <model-viewer id="my_name" camera-controls disable-zoom src="assets\DeglyPava.glb" alt="Put me name anywhere!" ar ar-modes="webxr scene-viewer quick-look" auto-rotate camera-controls></model-viewer>
-            <div class="hero-btns">
-                <!-- Hero Btn First -->
-                <a data-scroll href="#more-btn">Download my CV</a>
-                <!-- Hero Btn Second -->
-                <a data-scroll href="#contact-us">Check out my projects</a>
-              </div>
+
     </div>
  
  
