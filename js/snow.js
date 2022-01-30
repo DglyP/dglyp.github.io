@@ -55,7 +55,9 @@ function init() {
   renderer = new THREE.WebGLRenderer();
   renderer.setPixelRatio( window.devicePixelRatio );
   container.appendChild( renderer.domElement );
-  onWindowResize();
+  renderer.setSize( window.innerWidth, window.innerHeight );
+  uniforms.u_resolution.value.x = renderer.domElement.width;
+  uniforms.u_resolution.value.y = renderer.domElement.height;
   window.addEventListener( 'resize', onWindowResize, false );
   document.addEventListener('pointermove', (e)=> {
     let ratio = window.innerHeight / window.innerWidth;
