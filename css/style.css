@@ -281,9 +281,13 @@ figure {
       opacity: 0;
       min-height: 500px;
       z-index: 9; }
+    #colorlib-hero .flexslider .slider-innovator {
+      background-color: #ffffff96;}
       @media screen and (max-width: 768px) {
         #colorlib-hero .flexslider .slider-text {
-          background-color: rgb(255, 255, 255); } }
+          background-color: rgb(255, 255, 255); }
+          #colorlib-hero .flexslider .slider-innovator {
+            background-color: rgb(255, 255, 255); } }
       #colorlib-hero .flexslider .slider-text > .slider-text-inner {
         display: table-cell;
         vertical-align: middle;
