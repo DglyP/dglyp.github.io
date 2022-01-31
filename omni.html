@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r124/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.7/dat.gui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+
+    <title>Omni</title>
+</head>
+<body style="margin: 0; overflow: hidden;">
+
+  <!-- vertexShader -->
+  <script id="js-vertex-shader" type="x-shader/x-vertex">
+  attribute vec3 position;
+  
+  void main()	{
+    gl_Position = vec4(position, 1.0);
+  }
+  </script>
+  
+  <!-- fragmentShader -->
+  <script id="js-fragment-shader" type="x-shader/x-fragment">
+  precision highp float;
+  uniform vec2 resolution;
+  uniform float time;
+  uniform float xScale;
+  uniform float yScale;
+  uniform float distortion;
+  
+  void main() {
+    vec2 p = (gl_FragCoord.xy * 3.0 - resolution) / min(resolution.x, resolution.y);
+    
+    float d = length(p) * distortion;
+    
+    float rx = p.x * (1.0 + d);
+    float gx = p.x;
+    float bx = p.x * (1.0 - d);
+  
+    float r = 0.05 / abs(p.y + sin((rx + time) * xScale) * yScale);
+    float g = 0.05 / abs(p.y + sin((gx + time) * xScale) * yScale);
+    float b = 0.05 / abs(p.y + sin((bx + time) * xScale) * yScale);
+    
+    gl_FragColor = vec4(r, g, b, 1.0);
+  }
+  </script>
+
+  <canvas id="webgl-canvas"></canvas>
+  <script type="module" src="./js/omniLight.js"></script>
+  <p>The owner of this code is Web_yuki1027 and you can find it at <a>https://codepen.io/Web_yuki1027/pen/yLgYpWM</a></p>
+</body>
+</html>
