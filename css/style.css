@@ -228,7 +228,7 @@ figure {
   @media screen and (max-width: 768px) {
     #colorlib-main {
       width: 100%;
-      padding: 0 0 0 1em; } }
+      padding: 0 1em; } }
 
 #colorlib-hero {
   min-height: 500px;
@@ -994,11 +994,13 @@ body.offcanvas {
       transform: translate3d(0, -15px, 0);
       margin-bottom: 15px; }
       .project .desc h3 a {
-        color: #fff; }
+        color: #fff; 
+        font-weight: 900;}
     .project .desc span {
       display: block;
-      color: rgba(255, 255, 255, 0.7);
-      font-size: 13px;
+      color: rgba(255, 255, 255);
+      font-size: 14px;
+      font-weight:800;
       -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
       -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
       transition: opacity 0.3s, -webkit-transform 0.3s;
@@ -1012,7 +1014,7 @@ body.offcanvas {
     @media screen and (max-width: 768px) {
       .project .desc {
         opacity: 1;
-        background: rgba(0, 0, 0, 0.4); }
+        background: rgba(0, 0, 0, 0.753); }
         .project .desc h3 {
           font-style: 28px;
           -webkit-transform: translate3d(0, 0, 0);
