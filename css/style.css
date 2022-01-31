@@ -11,6 +11,7 @@
 *	Edit this section
 *
 * ======================================================= */
+
 body {
   font-family: "Quicksand", Arial, sans-serif;
   font-weight: 400;
@@ -187,7 +188,7 @@ figure {
             -o-transform: scaleX(1);
             transform: scaleX(1); }
   #colorlib-aside .colorlib-footer {
-    font-size: 15px;
+    font-size: 8px;
     text-align: center;
     font-weight: 400;
     color: rgba(0, 0, 0, 0.5);
@@ -213,7 +214,7 @@ figure {
           #colorlib-aside .colorlib-footer ul li a:hover, #colorlib-aside .colorlib-footer ul li a:active, #colorlib-aside .colorlib-footer ul li a:focus {
             text-decoration: none;
             outline: none;
-            color: #2c98f0; }
+            color: #5db2f8b7; }
 
 .container-wrap {
   max-width: 1170px;
