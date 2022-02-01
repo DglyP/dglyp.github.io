@@ -6,6 +6,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r124/three.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.7/dat.gui.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 
     <title>Omni</title>
 </head>
@@ -45,9 +46,13 @@
     gl_FragColor = vec4(r, g, b, 1.0);
   }
   </script>
-
-  <canvas id="webgl-canvas"></canvas>
-  <script type="module" src="./js/omniLight.js"></script>
-  <p>The owner of this code is Web_yuki1027 and you can find it at <a>https://codepen.io/Web_yuki1027/pen/yLgYpWM</a></p>
+  <div class="container-fluid" style="position: relative; padding: 0;">
+    <canvas id="webgl-canvas" style="position: absolute; z-index: 0;"></canvas>
+    <script type="module" src="./js/omniLight.js"></script>
+    <div class="col d-flex align-items-center justify-content-center" style="position: absolute; z-index: 2; height: 100vh; width: 100vw; justify-content: center; pointer-events: none;">
+      <img src="images/omni..png" class="img-fluid" alt="omni-logo">
+    </div>
+    <p style="position: absolute; z-index: 1; color: white; font-size: 6px; font-family:'Courier New', Courier, monospace; margin-top: 98vh;">This is an adaptation of the amazing art by Web_yuki1027, find more at <a>https://codepen.io/Web_yuki1027/pen/yLgYpWM</a></p>
+  </div>
 </body>
 </html>

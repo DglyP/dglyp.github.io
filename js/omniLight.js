@@ -93,8 +93,8 @@ class Mesh {
       resolution: { type: "v2", value: [ this.canvasWidth, this.canvasHeight ] },
       time: { type: "f", value: 0.0 },
       xScale: { type: "f", value: 1.0 },
-      yScale: { type: "f", value: 0.5 },
-      distortion: { type: "f", value: 0.050 }
+      yScale: { type: "f", value: 0.29 },
+      distortion: { type: "f", value: 0.090 }
     };
 
     this.stage = stage;
@@ -102,7 +102,7 @@ class Mesh {
     this.mesh = null;
     
     this.xScale = 1.0;
-    this.yScale = 0.5;
+    this.yScale = 1.5;
     this.distortion = 0.050;
   }
 
