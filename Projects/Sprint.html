@@ -38,7 +38,7 @@
     <video class="input_video" width="200px" height="150px" style="position: absolute"></video>
     <canvas class="output_canvas" width="200px" height="150px" style="position: absolute"></canvas>
   </div>
-<script type="module">
+<!-- <script type="module">
 	const videoElement = document.getElementsByClassName('input_video')[0];
 	const canvasElement = document.getElementsByClassName('output_canvas')[0];
 	const canvasCtx = canvasElement.getContext('2d');
@@ -84,7 +84,7 @@
 		height: 720
 	});
 	cameraFace.start();
-	</script>
+	</script> -->
 
 
 <script type="module">
@@ -350,7 +350,12 @@ function webojiMain() {
 }
 
 function handsfreeMain() {
+	try {
 	pointOfInterest = handsfree.data.facemesh.multiFaceLandmarks[0][0];
+	}
+	catch (exception_var) {
+		console.log("");
+	}
 	// console.log(pointOfInterest.x);
 	// camera.position.set(-pointOfInterest.x * 2, -pointOfInterest.y * 2, 1.5)
 	// camera.position.set(-pointOfInterest.x * 2, 0, 1.5)
@@ -362,9 +367,9 @@ function moveCamera() {
 	scene.rotation.y = (pointOfInterest.x * 2  - 1)
 	scene.rotation.x = (-pointOfInterest.y * 2 + 1.4)
 	
-	if (handsfreeWeb.data.weboji.isDetected) {
-	scene.position.z = (-0.8 + ( -tween.z / 5) )
-}
+// 	if (handsfreeWeb.data.weboji.isDetected) {
+// 	scene.position.z = (-0.8 + ( -tween.z / 5) )
+// }
 	// console.log(scene.position.z);
 	// scene.position.set(pointOfInterest.x, pointOfInterest.y, 0)
 }
