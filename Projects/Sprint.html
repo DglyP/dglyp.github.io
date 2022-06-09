@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">  
+		<!-- Include Handsfree.js -->
+		<link rel="stylesheet" href="https://unpkg.com/handsfree@8.5.1/build/lib/assets/handsfree.css" />
+		<script src="https://unpkg.com/handsfree@8.5.1/build/lib/handsfree.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/face_mesh.js" crossorigin="anonymous"></script>
+		<!-- Add a tweening library -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+		<style>
+			body {
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			height: 100%;
+			margin: 0;
+			overflow: hidden;
+			background-color: black;
+			background-attachment: fixed !important;
+			}
+		</style>
+		<style>
+			body {
+				font-family: Monospace;
+				margin: 0px;
+				overflow: hidden;
+			}
+		</style>
+	</head>
+	<body>
+ <div class="container" >
+    <video class="input_video" width="200px" height="150px" style="position: absolute"></video>
+    <canvas class="output_canvas" width="200px" height="150px" style="position: absolute"></canvas>
+  </div>
+<script type="module">
+
+	// Prefer camera resolution nearest to 1280x720.
+var constraints = { audio: true, video: { width: 1280, height: 720 } };
+
+navigator.mediaDevices.getUserMedia(constraints)
+.then(function(mediaStream) {
+	
+	alert("Let's get this party started")
+  var video = document.querySelector('video');
+  video.srcObject = mediaStream;
+  video.onloadedmetadata = function(e) {
+	  alert("HOOOOD")
+    video.play();
+  };
+})
+.catch(function(err) { console.log(err.name + ": " + err.message); }); // always check for errors at the end.
+
+if ('mediaDevices' in navigator && 'getUserMedia' in navigator.mediaDevices) {
+  alert("Let's get this party started")
+}
+
+	const videoElement = document.getElementsByClassName('input_video')[0];
+	const canvasElement = document.getElementsByClassName('output_canvas')[0];
+	const canvasCtx = canvasElement.getContext('2d');
+	
+	function onResults(results) {
+		canvasCtx.save();
+		canvasCtx.clearRect(0, 0, canvasElement.width, canvasElement.height);
+		canvasCtx.drawImage(
+			results.image, 0, 0, canvasElement.width, canvasElement.height);
+		if (results.multiFaceLandmarks) {
+		for (const landmarks of results.multiFaceLandmarks) {
+			drawConnectors(canvasCtx, landmarks, FACEMESH_TESSELATION,
+							{color: '#C0C0C070', lineWidth: 1});
+			drawConnectors(canvasCtx, landmarks, FACEMESH_RIGHT_EYE, {color: '#FF3030'});
+			drawConnectors(canvasCtx, landmarks, FACEMESH_RIGHT_EYEBROW, {color: '#FF3030'});
+			drawConnectors(canvasCtx, landmarks, FACEMESH_RIGHT_IRIS, {color: '#FF3030'});
+			drawConnectors(canvasCtx, landmarks, FACEMESH_LEFT_EYE, {color: '#30FF30'});
+			drawConnectors(canvasCtx, landmarks, FACEMESH_LEFT_EYEBROW, {color: '#30FF30'});
+			drawConnectors(canvasCtx, landmarks, FACEMESH_LEFT_IRIS, {color: '#30FF30'});
+			drawConnectors(canvasCtx, landmarks, FACEMESH_FACE_OVAL, {color: '#E0E0E0'});
+			drawConnectors(canvasCtx, landmarks, FACEMESH_LIPS, {color: '#E0E0E0'});
+		}
+		}
+		canvasCtx.restore();
+	}
+	
+	const faceMesh = new FaceMesh({locateFile: (file) => {
+		return `https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/${file}`;
+	}});
+	faceMesh.setOptions({
+		maxNumFaces: 1,
+		refineLandmarks: true,
+		minDetectionConfidence: 0.5,
+		minTrackingConfidence: 0.5
+	});
+	faceMesh.onResults(onResults);
+	
+	const cameraFace = new Camera(videoElement, {
+		onFrame: async () => {
+		await faceMesh.send({image: videoElement});
+		},
+		width: 1280,
+		height: 720
+	});
+	cameraFace.start();
+	</script>
+
+
+<script type="module">
+import * as THREE from 'https://cdn.skypack.dev/three@0.136.0/build/three.module.js';
+import { OrbitControls } from 'https://cdn.skypack.dev/three@0.136.0/examples/jsm/controls/OrbitControls.js';
+import { GUI } from 'https://cdn.skypack.dev/three@0.136.0/examples/jsm/libs/lil-gui.module.min';
+import { GLTFLoader } from 'https://cdn.skypack.dev/three@0.136.0/examples/jsm/loaders/GLTFLoader.js';
+
+var camera, cameraOriginalPos, controls, scene, renderer, container, guicontrols;
+var handsfree,handsfreeWeb, tween, pointOfInterest;
+
+var coolthing;
+// GUI
+var gui;
+
+init();
+animate();
+
+function init () {
+	
+
+    container = document.createElement( 'div' );
+	document.body.appendChild( container );
+	scene = new THREE.Scene(); 
+	renderer = new THREE.WebGLRenderer( { antialias: true, alpha: true } );
+	renderer.autoClear = false;
+	renderer.setPixelRatio( window.devicePixelRatio );
+	renderer.setSize( window.innerWidth, window.innerHeight );
+	renderer.shadowMap.enabled = false;
+
+	container.appendChild( renderer.domElement );
+
+	camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.001, 100 );
+	cameraOriginalPos = new THREE.Vector3( 0, 0, 0 );
+
+	camera.position.z = 2;
+
+	// const light = new THREE.AmbientLight( 0xffffff ); // soft white light
+	// scene.add( light );
+
+	const geometry = new THREE.BoxGeometry( 1, 1, 1 );
+	const material = new THREE.MeshPhongMaterial( {color: 0x00ff00} );
+	const cube = new THREE.Mesh( geometry, material );
+	scene.add( cube );
+	
+	//Grid Box
+	{
+		const size = 3;
+		const divisions = 10;
+		const group = new THREE.Group();
+		const cubeGeometry = new THREE.BoxGeometry( 3, 3, 3 );
+		const cubeMaterial = new THREE.MeshBasicMaterial( {color: 0x011628, side:THREE.DoubleSide} );
+		const gridBox = new THREE.Mesh( cubeGeometry, cubeMaterial );	
+		group.add(gridBox);
+		
+		var gridXZ = new THREE.GridHelper(size, divisions);
+		gridXZ.position.set(0,size/2,0)
+		group.add(gridXZ);
+
+		var gridXZ2 = new THREE.GridHelper(size, divisions);
+		gridXZ2.position.set(0,-size/2,0)
+		group.add(gridXZ2);
+		
+		var gridXY = new THREE.GridHelper(size, divisions);
+		gridXY.position.set(0,0,size/2)
+		gridXY.rotation.x = Math.PI/2;
+		group.add(gridXY);
+
+		var gridXY2 = new THREE.GridHelper(size, divisions);
+		gridXY2.position.set(0,0,-size/2)
+		gridXY2.rotation.x = Math.PI/2;
+		group.add(gridXY2);
+
+		var gridYZ = new THREE.GridHelper(size, divisions);
+		gridYZ.position.set(size/2,0,0)
+		gridYZ.rotation.z = Math.PI/2;
+		group.add(gridYZ);
+
+		var gridYZ2 = new THREE.GridHelper(size, divisions);
+		gridYZ2.position.set(-size/2,0,0)
+		gridYZ2.rotation.z = Math.PI/2;
+		group.add(gridYZ2);
+
+		const spotLightLeft = new THREE.SpotLight( 0xffffff );
+		spotLightLeft.position.set( -size/2, size/2, size );
+		scene.add( spotLightLeft );
+
+		const spotLightRight = new THREE.SpotLight( 0xffffff );
+		spotLightRight.position.set( size/2, size/2, size );
+		scene.add( spotLightRight );
+
+		// const spotLightHelper = new THREE.SpotLightHelper( spotLightRight );
+		// scene.add( spotLightHelper );
+
+		group.scale.set(2,2,4)
+		scene.add(group);
+	}
+	
+	//AxesHelper
+	{
+		// const axesHelper = new THREE.AxesHelper( 5 );
+		// scene.add( axesHelper );
+	}
+
+// Instantiate a loader
+// const loader = new GLTFLoader();
+
+// Load a glTF resource
+// loader.load(
+	// resource URL
+	// '3DGLTF/gltf/scene.gltf',
+	// // called when the resource is loaded
+	// function ( gltf ) {
+
+	// 	coolthing = gltf.scene;  // coolthing 3D object is loaded
+	// 	coolthing.position.set(-0.5,0,1);
+	// 	// coolthing.rotation.x = 0.95;s
+	// 	scene.add(coolthing);
+	// 	gltf.animations; // Array<THREE.AnimationClip>
+	// 	gltf.scene; // THREE.Group
+	// 	gltf.scenes; // Array<THREE.Group>
+	// 	gltf.cameras; // Array<THREE.Camera>
+	// 	gltf.asset; // Object
+	// },
+
+	// '3DGLTF/source/noopkitchencooking.glb',
+	// called when the resource is loaded
+	// function ( gltf ) {
+
+	// 	coolthing = gltf.scene;  // coolthing 3D object is loaded
+	// 	coolthing.scale.set(2, 2, 2);
+	// 	coolthing.position.set(6,0,1);
+	// 	coolthing.rotation.y = 3;
+	// 	scene.add(coolthing);
+	// 	gltf.animations; // Array<THREE.AnimationClip>
+	// 	gltf.scene; // THREE.Group
+	// 	gltf.scenes; // Array<THREE.Group>
+	// 	gltf.cameras; // Array<THREE.Camera>
+	// 	gltf.asset; // Object
+	// },
+
+
+	// called while loading is progressing
+	// function ( xhr ) {
+
+	// 	console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
+
+	// },
+	// // called when loading has errors
+	// function ( error ) {
+
+	// 	console.log( 'An error happened' );
+
+	// }
+// );
+	// controls = new OrbitControls( camera, renderer.domElement );
+	// controls.minDistance = -99;
+	// controls.maxDistance = 99;
+	// controls.enableRotate = true;
+	renderer.outputEncoding = THREE.sRGBEncoding;
+	// Used to hold tween values (without this things will be jerky)
+	tween = {yaw: 0, pitch: 0, roll: 0, x: 0, y: 0, z: 0}
+	// controls.addEventListener( 'change', render );
+	// controls.update();
+	//Handsfree - WEBOJI
+	handsfreeWeb = new Handsfree({weboji: true})
+	document.addEventListener('handsfree-data', event => {
+	const data = event.detail
+	if (!data.weboji) return
+	webojiMain()
+	moveCamera()
+	// console.log(data.weboji.isDetected)
+	})
+
+	// From a facemesh
+	handsfree = new Handsfree({facemesh: true})
+	document.addEventListener('handsfree-data', event => {
+	const data = event.detail
+	if (!data.facemesh) return
+		handsfreeMain()
+		moveCamera()
+	})
+
+	guicontrols =
+	{
+		rotateX: 0,
+		rotateY: 0,
+		rotateZ: 0
+	};
+	
+	// var gui = new GUI();
+	
+	// gui.add( guicontrols, 'rotateX', 0, 360,1 )
+	// 		.name("Enable Color")
+	// 		.onChange(function(value) { 
+	// 									coolthing.rotation.x = THREE.Math.degToRad( value )
+	// 									console.log(coolthing.rotation.x);
+	// 									} );
+	// gui.add( guicontrols, 'rotateY', -360, 360,1 )
+	// 		.name("Enable Color")
+	// 		.onChange(function(value) { 
+	// 									coolthing.rotation.y = THREE.Math.degToRad( value )
+	// 									console.log(coolthing.rotation.y);	
+	// 								} );
+	// gui.add( guicontrols, 'rotateZ', -360, 360,1 )
+	// 		.name("Enable Color")
+	// 		.onChange(function(value) { 
+	// 									coolthing.rotation.z = THREE.Math.degToRad( value )
+	// 									console.log(coolthing.rotation.z);	
+	// 								} );
+
+	handsfree.start()
+	handsfreeWeb.start()
+}
+
+function webojiMain() {
+
+	// WEBOJI START
+
+	// Let's use weboji. See: https://handsfree.js.org/ref/model/weboji
+	window.handsfreeWeb = new Handsfree({weboji: true})
+
+	// Create a new "plugin" to hook into the main loop
+	// @see https://handsfreeWeb.js.org/guide/the-loop
+	handsfreeWeb.use('lookHandsfree', ({weboji}) => {
+	if (!weboji?.degree?.[0]) return
+
+	// Calculate rotation
+	const rot = weboji.degree
+	rot[0] -= 15
+
+	// Calculate position
+	const pos = {
+		x: (weboji.translation[0] - .5) * 10,
+		y: (weboji.translation[1] - .5) * 5,
+		z: 5 - weboji.translation[2] * 30
+	}
+
+	// Tween this values
+	TweenMax.to(tween, 1, {
+		yaw: -rot[0] * 1.5,
+		pitch: -rot[1] * 1.5,
+		roll: rot[2] * 1.5,
+		x: pos.x,
+		y: pos.y,
+		z: pos.z
+	})
+	// console.log(pos);
+	// console.log(tween);
+
+	// if (handsfreeWeb.data.weboji.isDetected) {
+	// 	camera.rotateX = tween.yaw,
+	// 	camera.rotateY = tween.pitch,
+	// 	camera.rotateZ = tween.roll,
+	// 	camera.position.set(tween.x, tween.y, 3.5 + tween.z)
+	// }
+	// $rig.setAttribute('rotation', `${tween.yaw} ${tween.pitch} ${tween.roll}`)
+	// $rig.setAttribute('position', `${tween.x} ${tween.y} ${tween.z}`)
+	})
+
+	// WEBOJI END
+
+}
+
+function handsfreeMain() {
+	pointOfInterest = handsfree.data.facemesh.multiFaceLandmarks[0][0];
+	// console.log(pointOfInterest.x);
+	// camera.position.set(-pointOfInterest.x * 2, -pointOfInterest.y * 2, 1.5)
+	// camera.position.set(-pointOfInterest.x * 2, 0, 1.5)
+}
+
+function moveCamera() {
+	// console.log(scene.rotation);
+	// scene.rotation.x = THREE.Math.degToRad( pointOfInterest.x * 10 )
+	scene.rotation.y = (pointOfInterest.x * 2  - 1)
+	scene.rotation.x = (-pointOfInterest.y * 2 + 1.4)
+	
+	if (handsfreeWeb.data.weboji.isDetected) {
+	scene.position.z = (-0.8 + ( -tween.z / 5) )
+}
+	// console.log(scene.position.z);
+	// scene.position.set(pointOfInterest.x, pointOfInterest.y, 0)
+}
+
+function render () {
+	renderer.clear();
+	// var obj = { key: undefined };
+	
+	// if (handsfree.data.weboji !== undefined) {
+	// 	main();
+	// }
+	// console.log(camera.position);
+	if (typeof imageProcessing !== 'undefined') 
+		IVprocess ( imageProcessing, renderer );
+	renderer.render( scene, camera );
+	
+}
+
+function animate() {	
+	requestAnimationFrame(animate);
+	// controls.update();
+	render();
+}
+
+function onWindowResize () {
+	camera.aspect = ( window.innerWidth / window.innerHeight);
+	camera.updateProjectionMatrix();
+	renderer.setSize( window.innerWidth, window.innerHeight );
+	render();
+}
+
+</script>
+</body>
