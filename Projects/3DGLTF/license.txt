@@ -1,0 +1,11 @@
+Model Information:
+* title:	Low poly living room
+* source:	https://sketchfab.com/3d-models/low-poly-living-room-df179eebec234798aa7fbe6c7eaf492a
+* author:	Vladek (https://sketchfab.com/vladek27)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Low poly living room" (https://sketchfab.com/3d-models/low-poly-living-room-df179eebec234798aa7fbe6c7eaf492a) by Vladek (https://sketchfab.com/vladek27) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

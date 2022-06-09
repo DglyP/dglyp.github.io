@@ -1,0 +1,11 @@
+Model Information:
+* title:	anime girl#2
+* source:	https://sketchfab.com/3d-models/anime-girl2-21e24a7b3bd54d8691dad6a0b0bb110f
+* author:	pat1 (https://sketchfab.com/thinh201812)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "anime girl#2" (https://sketchfab.com/3d-models/anime-girl2-21e24a7b3bd54d8691dad6a0b0bb110f) by pat1 (https://sketchfab.com/thinh201812) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
