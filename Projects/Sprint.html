@@ -10,6 +10,7 @@
 		<script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js" crossorigin="anonymous"></script>
 		<script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
 		<script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/face_mesh.js" crossorigin="anonymous"></script>
+	  
 		<!-- Add a tweening library -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
 		<style>
@@ -38,27 +39,6 @@
     <canvas class="output_canvas" width="200px" height="150px" style="position: absolute"></canvas>
   </div>
 <script type="module">
-
-	// Prefer camera resolution nearest to 1280x720.
-var constraints = { audio: true, video: { width: 1280, height: 720 } };
-
-navigator.mediaDevices.getUserMedia(constraints)
-.then(function(mediaStream) {
-	
-	alert("Let's get this party started")
-  var video = document.querySelector('video');
-  video.srcObject = mediaStream;
-  video.onloadedmetadata = function(e) {
-	  alert("HOOOOD")
-    video.play();
-  };
-})
-.catch(function(err) { console.log(err.name + ": " + err.message); }); // always check for errors at the end.
-
-if ('mediaDevices' in navigator && 'getUserMedia' in navigator.mediaDevices) {
-  alert("Let's get this party started")
-}
-
 	const videoElement = document.getElementsByClassName('input_video')[0];
 	const canvasElement = document.getElementsByClassName('output_canvas')[0];
 	const canvasCtx = canvasElement.getContext('2d');
