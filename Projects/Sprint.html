@@ -36,34 +36,36 @@
 	<body>
  <div class="container" >
     <video class="input_video" width="200px" height="150px" style="position: absolute"></video>
-    <canvas class="output_canvas" width="200px" height="150px" style="position: absolute"></canvas>
+    <canvas class="tracking_status" width="200px" height="150px" style="position: absolute"></canvas>
+    <canvas class="output_canvas" width="100px" height="75px" style="position: absolute"></canvas>
   </div>
-<!-- <script type="module">
+<script type="module">
 	const videoElement = document.getElementsByClassName('input_video')[0];
-	const canvasElement = document.getElementsByClassName('output_canvas')[0];
-	const canvasCtx = canvasElement.getContext('2d');
-	
-	function onResults(results) {
-		canvasCtx.save();
-		canvasCtx.clearRect(0, 0, canvasElement.width, canvasElement.height);
-		canvasCtx.drawImage(
-			results.image, 0, 0, canvasElement.width, canvasElement.height);
-		if (results.multiFaceLandmarks) {
-		for (const landmarks of results.multiFaceLandmarks) {
-			drawConnectors(canvasCtx, landmarks, FACEMESH_TESSELATION,
-							{color: '#C0C0C070', lineWidth: 1});
-			drawConnectors(canvasCtx, landmarks, FACEMESH_RIGHT_EYE, {color: '#FF3030'});
-			drawConnectors(canvasCtx, landmarks, FACEMESH_RIGHT_EYEBROW, {color: '#FF3030'});
-			drawConnectors(canvasCtx, landmarks, FACEMESH_RIGHT_IRIS, {color: '#FF3030'});
-			drawConnectors(canvasCtx, landmarks, FACEMESH_LEFT_EYE, {color: '#30FF30'});
-			drawConnectors(canvasCtx, landmarks, FACEMESH_LEFT_EYEBROW, {color: '#30FF30'});
-			drawConnectors(canvasCtx, landmarks, FACEMESH_LEFT_IRIS, {color: '#30FF30'});
-			drawConnectors(canvasCtx, landmarks, FACEMESH_FACE_OVAL, {color: '#E0E0E0'});
-			drawConnectors(canvasCtx, landmarks, FACEMESH_LIPS, {color: '#E0E0E0'});
-		}
-		}
-		canvasCtx.restore();
-	}
+	// const canvasElement = document.getElementsByClassName('output_canvas')[0];
+	// const canvasCtx = canvasElement.getContext('2d');
+
+	// function onResults(results) {
+	// 	canvasCtx.save();
+	// 	canvasCtx.clearRect(0, 0, canvasElement.width, canvasElement.height);
+	// 	canvasCtx.drawImage(
+	// 		results.image, 0, 0, canvasElement.width, canvasElement.height);
+	// 	if (results.multiFaceLandmarks) {
+	// 	for (const landmarks of results.multiFaceLandmarks) {
+	// 		drawConnectors(canvasCtx, landmarks, FACEMESH_TESSELATION,
+	// 						{color: '#C0C0C070', lineWidth: 1});
+	// 		// drawConnectors(canvasCtx, landmarks, FACEMESH_RIGHT_EYE, {color: '#FF3030'});
+	// 		// drawConnectors(canvasCtx, landmarks, FACEMESH_RIGHT_EYEBROW, {color: '#FF3030'});
+	// 		// drawConnectors(canvasCtx, landmarks, FACEMESH_RIGHT_IRIS, {color: '#FF3030'});
+	// 		// drawConnectors(canvasCtx, landmarks, FACEMESH_LEFT_EYE, {color: '#30FF30'});
+	// 		// drawConnectors(canvasCtx, landmarks, FACEMESH_LEFT_EYEBROW, {color: '#30FF30'});
+	// 		// drawConnectors(canvasCtx, landmarks, FACEMESH_LEFT_IRIS, {color: '#30FF30'});
+	// 		// drawConnectors(canvasCtx, landmarks, FACEMESH_FACE_OVAL, {color: '#E0E0E0'});
+	// 		// drawConnectors(canvasCtx, landmarks, FACEMESH_LIPS, {color: '#E0E0E0'});
+	// 		// facemeshMain(landmarks);
+	// 	}
+	// 	}
+	// 	canvasCtx.restore();
+	// }
 	
 	const faceMesh = new FaceMesh({locateFile: (file) => {
 		return `https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/${file}`;
@@ -74,7 +76,7 @@
 		minDetectionConfidence: 0.5,
 		minTrackingConfidence: 0.5
 	});
-	faceMesh.onResults(onResults);
+	// faceMesh.onResults(onResults);
 	
 	const cameraFace = new Camera(videoElement, {
 		onFrame: async () => {
@@ -84,7 +86,7 @@
 		height: 720
 	});
 	cameraFace.start();
-	</script> -->
+	</script>
 
 
 <script type="module">
@@ -93,13 +95,16 @@ import { OrbitControls } from 'https://cdn.skypack.dev/three@0.136.0/examples/js
 import { GUI } from 'https://cdn.skypack.dev/three@0.136.0/examples/jsm/libs/lil-gui.module.min';
 import { GLTFLoader } from 'https://cdn.skypack.dev/three@0.136.0/examples/jsm/loaders/GLTFLoader.js';
 
-var camera, cameraOriginalPos, controls, scene, renderer, container, guicontrols;
+var camera, cameraOriginalPos, controls, scene, renderer, container, guicontrols, group;
 var handsfree,handsfreeWeb, tween, pointOfInterest;
 
-var coolthing;
+var coolthing, pencil, football, girl;
 // GUI
 var gui;
 
+
+const trackingElement = document.getElementsByClassName('tracking_status')[0];
+console.log(trackingElement);
 init();
 animate();
 
@@ -120,7 +125,7 @@ function init () {
 	camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.001, 100 );
 	cameraOriginalPos = new THREE.Vector3( 0, 0, 0 );
 
-	camera.position.z = 2;
+	camera.position.z = 3;
 
 	// const light = new THREE.AmbientLight( 0xffffff ); // soft white light
 	// scene.add( light );
@@ -134,7 +139,7 @@ function init () {
 	{
 		const size = 3;
 		const divisions = 10;
-		const group = new THREE.Group();
+		group = new THREE.Group();
 		const cubeGeometry = new THREE.BoxGeometry( 3, 3, 3 );
 		const cubeMaterial = new THREE.MeshBasicMaterial( {color: 0x011628, side:THREE.DoubleSide} );
 		const gridBox = new THREE.Mesh( cubeGeometry, cubeMaterial );	
@@ -180,7 +185,7 @@ function init () {
 		// scene.add( spotLightHelper );
 
 		group.scale.set(2,2,4)
-		scene.add(group);
+		// scene.add(group);
 	}
 	
 	//AxesHelper
@@ -190,28 +195,31 @@ function init () {
 	}
 
 // Instantiate a loader
-// const loader = new GLTFLoader();
+const loader = new GLTFLoader();
 
 // Load a glTF resource
-// loader.load(
-	// resource URL
-	// '3DGLTF/gltf/scene.gltf',
-	// // called when the resource is loaded
-	// function ( gltf ) {
-
-	// 	coolthing = gltf.scene;  // coolthing 3D object is loaded
-	// 	coolthing.position.set(-0.5,0,1);
-	// 	// coolthing.rotation.x = 0.95;s
-	// 	scene.add(coolthing);
-	// 	gltf.animations; // Array<THREE.AnimationClip>
-	// 	gltf.scene; // THREE.Group
-	// 	gltf.scenes; // Array<THREE.Group>
-	// 	gltf.cameras; // Array<THREE.Camera>
-	// 	gltf.asset; // Object
-	// },
-
-	// '3DGLTF/source/noopkitchencooking.glb',
+loader.load(
+	// // resource URL
+	'3DGLTF/gltf/scene.gltf',
 	// called when the resource is loaded
+	function ( gltf ) {
+
+		pencil = gltf.scene;  // coolthing 3D object is loaded
+		pencil.position.set(0,0,0);
+		pencil.scale.set(3,3,3);
+		pencil.rotation.y = THREE.Math.degToRad( -4 );
+		// coolthing.rotation.x = 0.95;s
+		// scene.add(pencil);
+		gltf.animations; // Array<THREE.AnimationClip>
+		gltf.scene; // THREE.Group
+		gltf.scenes; // Array<THREE.Group>
+		gltf.cameras; // Array<THREE.Camera>
+		gltf.asset; // Object
+	},
+
+	//HOUSE
+	// '3DGLTF/source/noopkitchencooking.glb',
+	// // called when the resource is loaded
 	// function ( gltf ) {
 
 	// 	coolthing = gltf.scene;  // coolthing 3D object is loaded
@@ -225,21 +233,123 @@ function init () {
 	// 	gltf.cameras; // Array<THREE.Camera>
 	// 	gltf.asset; // Object
 	// },
+	// called while loading is progressing
+	function ( xhr ) {
 
+		console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
+
+	},
+	// called when loading has errors
+	function ( error ) {
+
+		console.log( 'An error happened' );
+
+	}
+);
+
+// Instantiate a loader
+const loader2 = new GLTFLoader();
+loader2.load(
+
+	//ROOM
+	'3DGLTF/scene.gltf',
+	// called when the resource is loaded
+	function ( gltf ) {
+
+		coolthing = gltf.scene;  // coolthing 3D object is loaded
+		coolthing.position.set(-0.5,-2.5,0);
+		coolthing.scale.set(0.02,0.02,0.02);
+		coolthing.rotation.y = THREE.Math.degToRad( -45 );
+		scene.add(coolthing);
+		gltf.animations; // Array<THREE.AnimationClip>
+		gltf.scene; // THREE.Group
+		gltf.scenes; // Array<THREE.Group>
+		gltf.cameras; // Array<THREE.Camera>
+		gltf.asset; // Object
+	},
 
 	// called while loading is progressing
-	// function ( xhr ) {
+	function ( xhr ) {
 
-	// 	console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
+		console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
 
-	// },
-	// // called when loading has errors
-	// function ( error ) {
+	},
+	// called when loading has errors
+	function ( error ) {
 
-	// 	console.log( 'An error happened' );
+		console.log( 'An error happened' );
 
-	// }
-// );
+	}
+);
+
+const loader3 = new GLTFLoader();
+loader3.load(
+
+	//ROOM
+	'3DGLTF/Football/scene.gltf',
+	// called when the resource is loaded
+	function ( gltf ) {
+
+		football = gltf.scene;  // coolthing 3D object is loaded
+		football.position.set(0,0,0);
+		football.scale.set(0.02,0.02,0.02);
+		// scene.add(football);
+		gltf.animations; // Array<THREE.AnimationClip>
+		gltf.scene; // THREE.Group
+		gltf.scenes; // Array<THREE.Group>
+		gltf.cameras; // Array<THREE.Camera>
+		gltf.asset; // Object
+	},
+
+	// called while loading is progressing
+	function ( xhr ) {
+
+		console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
+
+	},
+	// called when loading has errors
+	function ( error ) {
+
+		console.log( 'An error happened' );
+
+	}
+);
+
+const loader4 = new GLTFLoader();
+loader4.load(
+
+	//ROOM
+	'3DGLTF/Girl/scene.gltf',
+	// called when the resource is loaded
+	function ( gltf ) {
+
+		girl = gltf.scene;  // coolthing 3D object is loaded
+		girl.position.set(0,-1,0);
+		girl.scale.set(0.09,0.09,0.09);
+		girl.rotation.x = THREE.Math.degToRad( -35 );
+		girl.rotation.y = THREE.Math.degToRad( -180 );
+		// scene.add(girl);
+		gltf.animations; // Array<THREE.AnimationClip>
+		gltf.scene; // THREE.Group
+		gltf.scenes; // Array<THREE.Group>
+		gltf.cameras; // Array<THREE.Camera>
+		gltf.asset; // Object
+	},
+
+	// called while loading is progressing
+	function ( xhr ) {
+
+		console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
+
+	},
+	// called when loading has errors
+	function ( error ) {
+
+		console.log( 'An error happened' );
+
+	}
+);
+
 	// controls = new OrbitControls( camera, renderer.domElement );
 	// controls.minDistance = -99;
 	// controls.maxDistance = 99;
@@ -252,52 +362,85 @@ function init () {
 	//Handsfree - WEBOJI
 	handsfreeWeb = new Handsfree({weboji: true})
 	document.addEventListener('handsfree-data', event => {
-	const data = event.detail
-	if (!data.weboji) return
-	webojiMain()
-	moveCamera()
-	// console.log(data.weboji.isDetected)
+															const data = event.detail
+															if (!data.weboji) return
+															webojiMain()
+															moveCamera()
+															// console.log(data.weboji.isDetected)
 	})
 
 	// From a facemesh
 	handsfree = new Handsfree({facemesh: true})
 	document.addEventListener('handsfree-data', event => {
-	const data = event.detail
-	if (!data.facemesh) return
-		handsfreeMain()
-		moveCamera()
+															const data = event.detail
+															if (!data.facemesh) return
+																handsfreeMain()
+																moveCamera()
 	})
 
 	guicontrols =
 	{
-		rotateX: 0,
-		rotateY: 0,
-		rotateZ: 0
+		object: 0,
+		environment: false,
+		enableDepth: false
 	};
 	
-	// var gui = new GUI();
+	var gui = new GUI();
 	
-	// gui.add( guicontrols, 'rotateX', 0, 360,1 )
-	// 		.name("Enable Color")
-	// 		.onChange(function(value) { 
-	// 									coolthing.rotation.x = THREE.Math.degToRad( value )
-	// 									console.log(coolthing.rotation.x);
-	// 									} );
-	// gui.add( guicontrols, 'rotateY', -360, 360,1 )
-	// 		.name("Enable Color")
-	// 		.onChange(function(value) { 
-	// 									coolthing.rotation.y = THREE.Math.degToRad( value )
-	// 									console.log(coolthing.rotation.y);	
-	// 								} );
-	// gui.add( guicontrols, 'rotateZ', -360, 360,1 )
-	// 		.name("Enable Color")
-	// 		.onChange(function(value) { 
-	// 									coolthing.rotation.z = THREE.Math.degToRad( value )
-	// 									console.log(coolthing.rotation.z);	
-	// 								} );
+	gui.add( guicontrols, 'environment' )
+			.name("Show Grid")
+			.onChange(function(value) { 
+										if (value == true) {
+											scene.remove(coolthing)
+											scene.add(group)
+										} else {
+											scene.remove(group)
+											scene.add(coolthing)											
+										}
+										} );
+	
+	gui.add( guicontrols, 'object', { Square: 0, Pencil: 1, Football: 2 } )
+			.name("3D Object")
+			.onChange(function(value) { 
+										if (value == 0) {
+											scene.remove(pencil)
+											scene.remove(football)
+											scene.add(cube)
+										} else if(value == 1) {
+											scene.add(pencil)
+											scene.remove(football)
+											scene.remove(cube)										
+										} else {
+											scene.remove(pencil)
+											scene.add(football)
+											scene.remove(cube)	
+										}
+										} );
+										
+	gui.add( guicontrols, 'enableDepth' )
+			.name("Enable Tracking")
+			.onChange(function(value) { 
+										if (value == true) {
+											handsfree.start()
+										} else {
+											handsfree.pause()											
+										}
+										} );	
 
-	handsfree.start()
-	handsfreeWeb.start()
+	gui.add( guicontrols, 'enableDepth' )
+			.name("Enable Weboji(Depth)")
+			.onChange(function(value) { 
+										if (value == true) {
+											alert("Experimental, may not work.")
+											handsfree.start()
+											handsfreeWeb.start()
+										} else {					
+											handsfreeWeb.pause()				
+										}
+										} );	
+
+	// handsfree.start()
+	// handsfreeWeb.start()
 }
 
 function webojiMain() {
@@ -349,12 +492,21 @@ function webojiMain() {
 
 }
 
+function facemeshMain(params) {
+	try {
+		// console.log(handsfree.data.facemesh.multiFaceLandmarks);
+	pointOfInterest = landmarks[0];
+	}
+	catch (exception_var) {
+	}
+}
+
 function handsfreeMain() {
 	try {
+		// console.log(handsfree.data.facemesh.multiFaceLandmarks);
 	pointOfInterest = handsfree.data.facemesh.multiFaceLandmarks[0][0];
 	}
 	catch (exception_var) {
-		console.log("");
 	}
 	// console.log(pointOfInterest.x);
 	// camera.position.set(-pointOfInterest.x * 2, -pointOfInterest.y * 2, 1.5)
@@ -364,14 +516,20 @@ function handsfreeMain() {
 function moveCamera() {
 	// console.log(scene.rotation);
 	// scene.rotation.x = THREE.Math.degToRad( pointOfInterest.x * 10 )
-	scene.rotation.y = (pointOfInterest.x * 2  - 1)
-	scene.rotation.x = (-pointOfInterest.y * 2 + 1.4)
+	// scene.rotation.y = (pointOfInterest.x * 2  - 1)
+	// scene.rotation.x = (-pointOfInterest.y * 2 + 1.4)
+	scene.rotation.y = (pointOfInterest.x  - 0.5)
+	scene.rotation.x = (-pointOfInterest.y + 0.7)	
+	try{
+
+if (handsfreeWeb.data.weboji.isDetected) {
+// console.log(scene.position.z);
+// scene.position.set(pointOfInterest.x, pointOfInterest.y, 0)
 	
-// 	if (handsfreeWeb.data.weboji.isDetected) {
-// 	scene.position.z = (-0.8 + ( -tween.z / 5) )
-// }
-	// console.log(scene.position.z);
-	// scene.position.set(pointOfInterest.x, pointOfInterest.y, 0)
+	scene.position.z = (-1.6 + ( -tween.z / 5) )
+}
+}
+		catch(exception_var){}
 }
 
 function render () {
