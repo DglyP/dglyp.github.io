@@ -657,6 +657,8 @@ body.offcanvas {
     border-bottom: 2px solid #2fa499; }
   .services.color-6 {
     border-bottom: 2px solid #4054b2; }
+  .services.color-7 {
+    border-bottom: 2px solid #000000; }
 
 .services {
   margin-bottom: 80px;
@@ -736,6 +738,12 @@ body.offcanvas {
       border-color: transparent transparent #4054b2 transparent; }
     .services.color-6 .icon:after {
       border-color: #4054b2 transparent transparent transparent; }
+  .services.color-7 .icon {
+    background: #000; }
+    .services.color-7 .icon:before {
+      border-color: transparent transparent #000 transparent; }
+    .services.color-7 .icon:after {
+      border-color: #000 transparent transparent transparent; }
 
 .progress-wrap h3 {
   font-size: 16px;
