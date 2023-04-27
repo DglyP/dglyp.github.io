@@ -175,8 +175,8 @@
       float n = fbm((uv + vec2(sin(u_time*.1), u_time*.1)) * 2. - 2.);
 
       vec3 colour = vec3(0.);
-      // colour = n * mix(vec3(0., .5, 1.5), vec3(1., .5, -.1), n);
-      colour = n * mix(vec3(0., 1.5, 1.5), clamp(vec3(1., .5, .25)*2., 0., 1.), n);
+      colour = n * mix(vec3(0., .5, 1.5), vec3(1., .5, -.1), n);
+      //colour = n * mix(vec3(0., 1.5, 1.5), clamp(vec3(1., .5, .25)*2., 0., 1.), n);
       // colour -= n*n*n*n*.4;
       // colour += smoothstep(.8, 2.5, sin(n*n*n*8.))*.4;
 
@@ -190,7 +190,10 @@
 
       colour /= opacity_sum;
 
+      float colorIncrease = 0.1;
       gl_FragColor = vec4(clamp(colour * 20., 0., 1.),1.0);
+      
+      gl_FragColor = vec4(gl_FragColor.x + colorIncrease , gl_FragColor.y - 0.2, gl_FragColor.z + 0.1, gl_FragColor.w);
 
   }
 </script>
