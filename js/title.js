@@ -187,10 +187,9 @@ function init() {
 
    gltf_loader.load( 
 
-       '../assets/Test2.glb', function ( gltf ) {
+       '../assets/FullAvatar.glb', function ( gltf ) {
 
-           console.log( "Model with idle animation loaded" );
-
+           let animationval = Math.floor(Math.random() * 7);
            const model = gltf.scene;
            model.position.y = -0.5;
            model.position.z = -0.7;
@@ -202,11 +201,10 @@ function init() {
                if (node.isMesh) node.castShadow = true;
            });
 
-           console.log(gltf)
-           action_1 = mixer.clipAction( gltf.animations[0]);
+           action_1 = mixer.clipAction( gltf.animations[animationval]);
            actions.push(action_1);
            action_1.play();
-           currentAction = mixer.clipAction(gltf.animations[0]);
+           currentAction = mixer.clipAction(gltf.animations[animationval]);
 
            skeleton = new THREE.SkeletonHelper( model );
            skeleton.visible = false;
@@ -218,7 +216,6 @@ function init() {
 
        }, 
        function ( xhr ) {
-           console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
        },
        function ( error ) {
            console.log( 'Error loading file' );
@@ -228,9 +225,11 @@ function init() {
    
    function load_animations() {
 
+    const myDiv = document.getElementById("containerButtons");
     ui_timer();
-    document.body.removeAttribute("loading");
-    document.body.setAttribute("loaded","");
+    myDiv.removeAttribute("loading");
+    myDiv.setAttribute("loaded","");
+    myDiv.style.visibility= "visible";
 
 }
 
@@ -266,93 +265,27 @@ function activateAllActions() {
 
       const ui_timer = function () {
 
+        const myDiv = document.getElementById("containerButtons");
           let time;
-          document.onmousemove = resetTimer;
-          document.ontouchmove = resetTimer;
-          document.onkeydown = resetTimer;
+          myDiv.onmousemove = resetTimer;
+          myDiv.ontouchmove = resetTimer;
+          myDiv.onkeydown = resetTimer;
 
           function timeout() {
-              document.body.removeAttribute("ui");
+              console.log("dones");
+              myDiv.body.removeAttribute("ui");
           };
 
           function resetTimer() {
               clearTimeout(time);
-              document.body.setAttribute("ui","");
+              console.log("done");
+              myDiv.setAttribute("ui","");
               time = setTimeout(timeout, 3000);
           };
       };
 
 
 
-      // Fullscreen button
-
-      if (document.fullscreenEnabled || document.webkitFullscreenEnabled || 
-          document.msFullscreenEnabled ) {
-          create_fullscreen_button();
-      };
-
-
-      function create_fullscreen_button() {
-
-          let fullscreen_button = document.createElement("button");
-          fullscreen_button.setAttribute('id','fullscreen-button');
-          fullscreen_button.addEventListener("click", toggle_fullscreen);
-
-          fullscreen_button.innerHTML  = `
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-          `;
-
-          document.body.appendChild(fullscreen_button);
-
-      };
-
-
-      function toggle_fullscreen() {
-
-           if (!document.fullscreenElement && !document.mozFullScreenElement && !document.webkitFullscreenElement) {  
-              if (document.documentElement.requestFullscreen) {
-                  document.documentElement.requestFullscreen()
-              } else if (document.documentElement.mozRequestFullScreen) {
-                  document.documentElement.mozRequestFullScreen()
-              } else if (document.documentElement.webkitRequestFullscreen) {
-                  document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT)
-              }
-
-              document.body.setAttribute("fullscreen","");
-
-          } else {
-              if (document.cancelFullScreen) {
-                  document.cancelFullScreen()
-              } else if (document.mozCancelFullScreen) {
-                  document.mozCancelFullScreen()
-              } else if (document.webkitCancelFullScreen) {
-                  document.webkitCancelFullScreen()
-              }
-
-              document.body.removeAttribute("fullscreen") ;
-
-          }
-                      
-      };
-
-
-      function check_fullscreen() {
-
-          // (Because users can exit / enter fullscreen via device / browser)
-
-          if (document.fullscreenElement !== null) { 
-              document.body.setAttribute("fullscreen","") ;
-          }
-
-          else  { 
-              document.body.removeAttribute("fullscreen") ;
-          }
-      };
-
-      setInterval(function(){ check_fullscreen();}, 1000); 
 
 function onWindowResize( event ) {
   renderer.setSize( window.innerWidth, window.innerHeight );
@@ -372,18 +305,13 @@ function animation(time) {
   ThreeMeshUI.update();
   for ( const mixer of mixers ) mixer.update( delta );
   rendererAvatar.render(sceneAvatar, camera2);
-  
 }
 
 let then = 0;
 function render(delta) {
 
-  animation()
-  renderer.render(scene, camera);
-  rendererAvatar.render(sceneAvatar, camera2);
-  
+  animation()  
   uniforms.u_time.value = -10000 + delta * 0.0005;
   renderer.render( scene, camera );
-  rendererAvatar.render( sceneAvatar, camera2 );
   
 }
