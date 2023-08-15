@@ -187,7 +187,7 @@ function init() {
 
    gltf_loader.load( 
 
-       '../assets/Test4.glb', function ( gltf ) {
+       '../assets/Test2.glb', function ( gltf ) {
 
            console.log( "Model with idle animation loaded" );
 
@@ -202,6 +202,7 @@ function init() {
                if (node.isMesh) node.castShadow = true;
            });
 
+           console.log(gltf)
            action_1 = mixer.clipAction( gltf.animations[0]);
            actions.push(action_1);
            action_1.play();
