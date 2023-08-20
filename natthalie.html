@@ -30,19 +30,21 @@
 
     <!-- breadcrumb start-->
 
-        <div class="container-fluid vh-100" >
-            <div class="row h-100 align-items-center"style="background-image: url(img/Carta.jpg); background-size: cover; background-position:center;">
-                <div class="col-3 w-25"></div>
-                <div class="col-6 w-50 text-center"  >
-                    <a href="natthalieOpen.html" class="btn_1 btn_acepto btn-block" onclick="thanks()" >Open Door</a>    
-                    <h1 style='font-size: 4rem;
-                    text-align: center;
-                    cursor: pointer;
-                    color: rgb(0, 255, 17);'onclick="downloadPDF()">Haz click</h1>
+    <div class="container-fluid vh-100">
+        <div class="row h-100 align-items-center" style="background-image: url(img/Loveis.jpg); background-size: cover; background-position:center;">
+            <div class="col-3 w-25"></div>
+            <div class="col-6 w-50 text-center">
+                <a href="natthalieOpen.html" class="btn btn-primary btn-block" onclick="thanks()">Open Door?</a>
+                <button class="btn btn-success btn-block mt-3" onclick="downloadPDF()">Descarga una carta hecha en Julio</button>
+                <button class="btn btn-success btn-block mt-3" style="background-color: red;"  onclick="downloadPic()">Descarga la imagen secreta?</button>
+                <div class="mt-3">
+                    <img src="img\steganography.png" class="img-fluid" alt="Your Image">
+                    <p class="image-caption">EL SECRETO ES STEGANOGRAPHY</p>
                 </div>
-                <div class="col-3 w-25"></div>
             </div>
+            <div class="col-3 w-25"></div>
         </div>
+    </div>
     <!-- breadcrumb start-->
     
 
@@ -72,6 +74,16 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
             link.download = fileName;
             link.click();
         }
+
+        
+        function downloadPic() {
+            const fileUrl = '../img/steganography.png';
+            const fileName = 'steganography.png';
+            const link = document.createElement('a');
+            link.href = fileUrl;
+            link.download = fileName;
+            link.click();
+        }
     </script>
     
 <script>
@@ -79,13 +91,13 @@ function thanks() {
     var checkVal = "false";
     while (checkVal == "false")
     {
-        var newVal = prompt("Love is an open door, escribe los números de la llave escondida en la caja que te envié, recuerda quitar el candado primero");
-        if (newVal == "462199")
-            alert("Muy bien, esa era la clave! The door is opening!")
+        var newVal = prompt("La contraseña ha cambiado, pero tus pupilas la encontrarán. Sigue y verás qué hay de nuevo...");
+        if (newVal == "552632")
+            alert("OH WOW! LO DESCUBRISTE! Ahora escríbeme a Whatsapp y dime qué va a pasar con nuestra loca vida. Te tengo una sorpresa")
         if (newVal == "20130727")
             alert("Lo Descubriste, entra a www.deglypava.com/sigopistas")
         else
-            alert("Rayos, esa no era la clave, pero eres muy bonita y tienes una energía fabulosa, entonces te voy a dejar entrar")
+            alert("Rayos, esa no era la clave, pero.. hay algo.. hmm, la puerta esconde algo para ti")
         
         checkVal = "true"; 
             
