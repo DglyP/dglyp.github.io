@@ -217,12 +217,18 @@ function init() {
            load_animations();
 
        }, 
-       function ( xhr ) {
+       function (xhr) {
         // This function is the progress callback
         if (xhr.lengthComputable) {
           // Calculate the loading progress percentage
-          loadingProgress = (xhr.loaded / xhr.total) * 100;
-    
+          const loaded = xhr.loaded;
+          const total = xhr.total;
+      
+          // Ensure that the progress value doesn't exceed 100%
+          const progress = Math.min(loaded / total, 1.0); // Limit to 1.0 if it goes above 1.0
+      
+          loadingProgress = progress * 100;
+      
           // You can display or update the loading progress here
           loadingAmountElement.textContent = loadingProgress.toFixed(2);
           console.log(`Loading Progress: ${loadingProgress.toFixed(2)}%`);
