@@ -167,9 +167,6 @@ void main() {
 </script>
 <script type="module" src="/js/title.js"></script>
 
-<style>
-
-</style>
 
 
 
@@ -184,9 +181,17 @@ void main() {
 
     <header id="home"></header>
 
-  <div id="container2" touch-action="none" style="position: absolute;"></div>
-  <div id="containerAvatar" touch-action="none" style="position: absolute;">
-  <div class='container-fluid customcolor text-center' id="containerButtons" style="position: absolute; visibility: hidden;">
+    <div id="loadingScreen">
+      <div class="spinner-container">
+        <div class="spinner"></div>
+        <p id="loadingAmount" class="mt-2 mb-0">Loading</p>
+      </div>
+    </div>
+
+  <div id="afterLoaded" style="position: absolute;">
+  <div id="containerBackground" touch-action="none"style="position: absolute;"></div>
+  <div id="containerAvatar" touch-action="none"style="position: absolute;">
+  <div class='container-fluid customcolor text-center' id="containerButtons">
     <div class='row justify-content-center' style="margin-top: 70vh;">
       <div class="col-auto">
         <a class="cv-btn" data-scroll href="./DeglySPavaCV.pdf">Download my CV</a>
@@ -197,11 +202,10 @@ void main() {
       </div>
     </div>      
   </div>
+</div>
   </div>
         <model-viewer id="my_name" camera-controls disable-zoom src="assets\DeglyPava.glb" alt="Put me name anywhere!" ar ar-modes="webxr scene-viewer quick-look" auto-rotate camera-controls></model-viewer>
-
     </div>
-   
 
  <!-- Import maps polyfill -->
     <!-- Remove this when import maps will be widely supported -->

@@ -89,7 +89,7 @@ function init() {
     
   clock = new THREE.Clock();
 
-  container = document.getElementById( 'container2' );
+  container = document.getElementById( 'containerBackground' );
   containerAvatar = document.getElementById( 'containerAvatar' );
 
   camera2 = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
@@ -184,6 +184,8 @@ function init() {
 
    const gltf_loader = new GLTFLoader();
 
+   let loadingProgress = 0;
+   const loadingAmountElement = document.getElementById("loadingAmount");
 
    gltf_loader.load( 
 
@@ -216,6 +218,15 @@ function init() {
 
        }, 
        function ( xhr ) {
+        // This function is the progress callback
+        if (xhr.lengthComputable) {
+          // Calculate the loading progress percentage
+          loadingProgress = (xhr.loaded / xhr.total) * 100;
+    
+          // You can display or update the loading progress here
+          loadingAmountElement.textContent = loadingProgress.toFixed(2);
+          console.log(`Loading Progress: ${loadingProgress.toFixed(2)}%`);
+        }
        },
        function ( error ) {
            console.log( 'Error loading file' );
@@ -225,12 +236,28 @@ function init() {
    
    function load_animations() {
 
-    const myDiv = document.getElementById("containerButtons");
-    ui_timer();
-    myDiv.removeAttribute("loading");
-    myDiv.setAttribute("loaded","");
-    myDiv.style.visibility= "visible";
-
+    loadingAmountElement.textContent = "Welcome!";
+    setTimeout(function () {
+      const buttonsDiv = document.getElementById("containerButtons");
+      const itemsLoaded = document.getElementById("afterLoaded");
+      const loadingScreen = document.getElementById("loadingScreen");
+      ui_timer();
+      buttonsDiv.removeAttribute("loading");
+      buttonsDiv.setAttribute("loaded", "");
+      buttonsDiv.style.position = "absolute";
+    
+      // Apply the fade-out class to the loadingScreen element
+      loadingScreen.classList.add("fade-out");
+    
+      // After the fade-out transition completes, hide the element
+      setTimeout(function () {
+        loadingScreen.style.display = "none";
+      }, 500); // Adjust the timing to match your transition duration (0.5 seconds in this example)
+      
+      itemsLoaded.style.visibility = "visible";
+    }, 1000); // 1000 milliseconds (1 second)
+    
+    
 }
 
 activateAllActions();
