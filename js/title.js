@@ -128,6 +128,7 @@ function init() {
   rendererAvatar = new THREE.WebGLRenderer({ });
   rendererAvatar.setPixelRatio(window.devicePixelRatio);
   rendererAvatar.setClearColor(0x000000, 0);
+  renderer.setSize(window.innerWidth, window.innerHeight);
   rendererAvatar.setSize(window.innerWidth, window.innerHeight);
   rendererAvatar.shadowMap.enabled = true;
   rendererAvatar.shadowMap.type = THREE.PCFSoftShadowMap;
@@ -288,6 +289,7 @@ function activateAllActions() {
           camera.updateProjectionMatrix();
           camera2.aspect = window.innerWidth / window.innerHeight;
           camera2.updateProjectionMatrix();
+          renderer.setSize(window.innerWidth, window.innerHeight);
           rendererAvatar.setSize(window.innerWidth, window.innerHeight);
       });
 
