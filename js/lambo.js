@@ -111,7 +111,7 @@ async function init() {
 
       model.name = "HiroMarkerCube";
       model.matrixAutoUpdate = false;
-      model.visible = true;
+      model.visible = false;
       model.rotateX(Math.PI / 2);
     },
     // called while loading is progressing
