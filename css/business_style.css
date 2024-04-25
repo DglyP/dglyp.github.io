@@ -76,9 +76,11 @@ ul {
 }
 
 ul > a > li {
-  background-color: #fff8;
+  background-color: rgba(0, 0, 0, 0.533);
   backdrop-filter: blur(10px) saturate(260%) contrast(180%);
   -webkit-backdrop-filter: blur(10px) saturate(260%) contrast(180%);
+  color: #fff;
+  font-weight: bold;
   border-radius: 10em;
   padding: 1em;
   margin: 1.4em 0;
