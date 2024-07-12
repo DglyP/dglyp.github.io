@@ -42,16 +42,19 @@
 </script>
 <script id="fragmentShader" type="x-shader/x-fragment">
   uniform vec2 u_resolution;
-uniform float u_time;
-uniform sampler2D u_noise;
+  uniform vec2 u_mouse;
+  uniform float u_time;
+  uniform sampler2D u_noise;
+  
+  #define PI 3.141592653589793
+  #define TAU 6.
+  
+  const float multiplier = 25.5;
 
-#define PI 3.141592653589793
-#define TAU 6.
+  const float zoomSpeed = 20.;
+  const int layers = 10;
 
-const float multiplier = 25.5;
-const float zoomSpeed = 20.0;
-const int layers = 5; // Adjust the number of layers as needed
-const int octaves = 5;
+  const int octaves = 5;
 
   vec2 hash2(vec2 p)
   {
@@ -108,65 +111,93 @@ const int octaves = 5;
       return domain(z);
   }
   
+  // The render function is where we render the pattern to be added to the layer
+  vec3 render(vec2 uv, float scale, vec3 colour) {
+    vec2 id = floor(uv);
+    vec2 subuv = fract(uv);
+    vec2 rand = hash2(id);
+    float bokeh = abs(scale) * 1.;
+    
+    float particle = 0.;
+    
+    if(length(rand) > 1.3) {
+      vec2 pos = subuv-.5;
+      float field = length(pos);
+      particle = smoothstep(.3, 0., field);
+      particle += smoothstep(.4, 0.34 * bokeh, field);
+    }
+    return vec3(particle*2.);
+  }
+  
   vec3 renderLayer(int layer, int layers, vec2 uv, inout float opacity, vec3 colour, float n) {
     vec2 _uv = uv;
-    
-    float scale = mod((u_time + zoomSpeed / float(layers) * float(layer)) / zoomSpeed, -1.0);
-    uv *= 500.0;
-    uv *= scale * scale;
-    uv = rotate2d(u_time / 10.0) * uv;
-    uv += vec2(25.0 + sin(u_time * 0.1)) * float(layer);
+    // Scale
+    // Generating a scale value between zero and 1 based on a mod of u_time
+    // A frequency of 10 dixided by the layer index (10 / layers * layer)
 
-    float particle = 0.0;
+    float scale = mod((u_time + zoomSpeed / float(layers) * float(layer)) / zoomSpeed, -1.);
+    uv *= 50.; // The initial scale. Increasing this makes the cells smaller and the "speed" apepar faster
+    uv *= scale*scale; // then modifying the overall scale by the generated amount
+    // uv *= 1. + ( ( n*.5 ) * ( length(_uv) ) );
+    // uv += .5*float(layer);
+    uv = rotate2d(u_time / 10.) * uv; // rotarting
+    uv += vec2(25. + sin(u_time*.1)) * float(layer); // ofsetting the UV by an arbitrary amount to make the layer appear different
 
-    if (length(hash2(floor(uv))) > 1.3) {
-        vec2 pos = fract(uv) - 0.5;
-        float field = length(pos);
-        particle = smoothstep(0.3, 0.0, field);
-        particle += smoothstep(0.4, 0.34 * abs(scale) * 1.0, field);
-    }
+    // render
+    vec3 pass = render(uv * multiplier, scale, colour) * .2; // render the pass
 
-    vec3 pass = vec3(particle * 2.0) * 0.2;
-
-    opacity = 1.0 + scale;
+     // this is the opacity of the layer fading in from the "bottom"
+    opacity = 1. + scale;
     float _opacity = opacity;
-
-    float endOpacity = smoothstep(0.0, 0.4, scale * -1.0);
+    
+    // pass += n * .5 * mix(vec3(0., .5, 1.5), vec3(1., .5, 0.), opacity);
+    
+    // This is the opacity of the layer fading out at the top (we want this minimal, hence the smoothstep)
+    float endOpacity = smoothstep(0., 0.4, scale * -1.);
     opacity += endOpacity;
 
     return pass * _opacity * endOpacity;
-}
+  }
 
-void main() {
-    vec2 uv = (gl_FragCoord.xy - 0.5 * u_resolution.xy);
-    
-    if (u_resolution.y < u_resolution.x) {
+  void main() {
+      vec2 uv = (gl_FragCoord.xy - 0.5 * u_resolution.xy);
+
+      if(u_resolution.y < u_resolution.x) {
         uv /= u_resolution.y;
-    } else {
+      } else {
         uv /= u_resolution.x;
-    }
+      }
+
+      // uv.y += cos(u_time * .1) * .5;
+      // uv.x += sin(u_time * .1) * .5;
     
-    float n = fbm((uv + vec2(sin(u_time * 0.1), u_time * 0.1)) * 2.0 - 2.0);
-    
-    vec3 colour = n * mix(vec3(0.0, 0.5, 1.5), vec3(1.0, 0.5, -0.1), n);
-    
-    float opacity = 1.0;
-    float opacity_sum = 1.0;
-    
-    for (int i = 1; i <= layers; i++) {
+      // float n = fbm(uv * 3. - 2.);
+      float n = fbm((uv + vec2(sin(u_time*.1), u_time*.1)) * 2. - 2.);
+
+      vec3 colour = vec3(0.);
+      colour = n * mix(vec3(0., .5, 1.5), vec3(1., .5, -.1), n);
+      //colour = n * mix(vec3(0., 1.5, 1.5), clamp(vec3(1., .5, .25)*2., 0., 1.), n);
+      // colour -= n*n*n*n*.4;
+      // colour += smoothstep(.8, 2.5, sin(n*n*n*8.))*.4;
+
+      float opacity = 1.;
+      float opacity_sum = 1.;
+
+      for(int i = 1; i <= layers; i++) {
         colour += renderLayer(i, layers, uv, opacity, colour, n);
         opacity_sum += opacity;
-    }
-    
-    colour /= opacity_sum;
-    
-    float colorIncrease = -0.7;
-    gl_FragColor = vec4(clamp(colour * 20.0, 0.0, 1.0), 1.0);
-    gl_FragColor = vec4(gl_FragColor.x + colorIncrease, gl_FragColor.y - 0.2, gl_FragColor.z + 0.1, gl_FragColor.w);
-}
+      }
+
+      colour /= opacity_sum;
+
+      float colorIncrease = 0.1;
+      gl_FragColor = vec4(clamp(colour * 20., 0., 1.),1.0);
+      
+      gl_FragColor = vec4(gl_FragColor.x + colorIncrease , gl_FragColor.y - 0.2, gl_FragColor.z + 0.1, gl_FragColor.w);
+
+  }
 </script>
 <script type="module" src="/js/title.js"></script>
-
 
 
 
@@ -181,35 +212,25 @@ void main() {
 
     <header id="home"></header>
 
-    <div id="loadingScreen">
-      <div class="spinner-container">
-        <div class="spinner"></div>
-        <p id="loadingAmount" class="mt-2 mb-0">Loading</p>
-      </div>
-    </div>
-
-  <div id="afterLoaded" style="position: absolute;">
-  <div id="containerBackground" touch-action="none"style="position: absolute;"></div>
-  <div id="containerAvatar" touch-action="none"style="position: absolute;">
-  <div class='container-fluid customcolor text-center' id="containerButtons">
+  <div id="container2" touch-action="none" style="position: absolute;"></div>
+  <div id="containerAvatar" touch-action="none" style="position: absolute;">
+  <div class='container-fluid customcolor text-center' style="position: absolute;">
     <div class='row justify-content-center' style="margin-top: 70vh;">
       <div class="col-auto">
         <a class="cv-btn" data-scroll href="./DeglySPavaCV.pdf">Download my CV</a>
       </div>
       <div class="w-100"></div>
       <div class="col-auto" style="margin-top: 8vh;">
-        <a class="projects-btn" data-scroll href="./projects.html">Check out my projects</a> 
+        <a class="projects-btn" data-scroll href="./GLTFTest.html">Check out my projects</a> 
       </div>
     </div>      
   </div>
-</div>
   </div>
-  <div id="3d_model" style="width: 100%; height: 100%;display: flex;align-items: center;">
-    <model-viewer id="my_name" camera-controls disable-zoom src="assets\dpLogo.glb"" alt="Put my logo anywhere!" ar ar-modes="webxr scene-viewer quick-look" auto-rotate camera-controls></model-viewer>
-  </div>
- </div>
- 
- 
+        <model-viewer id="my_name" camera-controls disable-zoom src="assets\DeglyPava.glb" alt="Put me name anywhere!" ar ar-modes="webxr scene-viewer quick-look" auto-rotate camera-controls></model-viewer>
+
+    </div>
+   
+    
 
  <!-- Import maps polyfill -->
     <!-- Remove this when import maps will be widely supported -->
@@ -225,6 +246,7 @@ void main() {
 
     <script type="module">
 
+        import * as THREE from 'https://unpkg.com/three@0.139.0/build/three.module.js';
         import { OrbitControls } from 'https://unpkg.com/three@0.139.0/examples/jsm/controls/OrbitControls.js';
         import { FBXLoader } from 'https://unpkg.com/three@0.139.0/examples/jsm/loaders/FBXLoader'
         import Stats from 'https://unpkg.com/three@0.139.0/examples/jsm/libs/stats.module'
