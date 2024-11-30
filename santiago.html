@@ -21,12 +21,22 @@
           touchControls: true,
           gyroControls: true,
           minHeight: 200.0,
-          minWidth: 200.0,          
-          amplitudeFactor: 3.00,
-          yOffset: -0.40,
-          size: 2.00
+          minWidth: 200.0,
+          amplitudeFactor: 3.0,
+          yOffset: -0.4,
+          size: 2.0,
         });
       });
+
+      function redirectToLink() {
+        const number = document.getElementById("numberInput").value;
+        if (number) {
+          const baseUrl = "https://example.com/resource/";
+          window.location.href = baseUrl + number;
+        } else {
+          alert("No habilitado aún");
+        }
+      }
     </script>
     <title>Santiago Corrales - Links</title>
   </head>
@@ -47,18 +57,29 @@
         </h1>
       </header>
       <ul>
-        <a href="https://adobeaero.app.link/l7LwJ25p5Ib">   
-            <li>
-              <img src="./images/ARExperience.svg" alt="AR experience" width="20" />
-              AR Business Card Experience
-            </li>
-          </a>
-        <a href="https://luciddreamsinteraction.com">   
-            <li>
-              <img src="./img/LucidLogo.png" alt="LucidLogo" width="20" />
-              Lucid Dreams Website
-            </li>
-          </a>
+        <li>
+          <div class="custom-button">
+            <label for="numberInput">Inserta tu PhotoID:</label>
+            <input
+              type="number"
+              id="numberInput"
+              placeholder="Not available yet"
+            />
+            <button onclick="redirectToLink()">Click here</button>
+          </div>
+        </li>
+        <a href="https://adobeaero.app.link/l7LwJ25p5Ib">
+          <li>
+            <img src="./images/ARExperience.svg" alt="AR experience" width="20" />
+            AR Business Card Experience
+          </li>
+        </a>
+        <a href="https://luciddreamsinteraction.com">
+          <li>
+            <img src="./img/LucidLogo.png" alt="LucidLogo" width="20" />
+            Lucid Dreams Website
+          </li>
+        </a>
         <a href="https://www.linkedin.com/in/santiago-corrales-ux/">
           <li>
             <img
@@ -68,15 +89,11 @@
             />LinkedIn
           </li>
         </a>
-        <a href="mailto:santiagoc@luciddreamsinteraction.com"">
-          <li>
-            Envíame un E-mail
-          </li>
+        <a href="mailto:santiagoc@luciddreamsinteraction.com">
+          <li>Envíame un E-mail</li>
         </a>
-        <a href="tel:+573208032002"">
-          <li>
-            Llámame
-          </li>
+        <a href="tel:+573208032002">
+          <li>Llámame</li>
         </a>
       </ul>
     </main>
