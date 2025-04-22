@@ -1449,3 +1449,14 @@ body.offcanvas {
 
 .js .animate-box {
   opacity: 0; }
+
+  .social-reel .item {
+    height: 200px;          /* pick whatever uniform height you like */
+    overflow: hidden;       /* hide any overflow from object‐fit */
+  }
+  .social-reel .item img {
+    width: 100%;            /* fill container’s width */
+    height: 100%;           /* fill container’s height */
+    object-fit: cover;      /* crop to cover without distortion */
+    display: block;         /* remove inline‑img gaps */
+  }
