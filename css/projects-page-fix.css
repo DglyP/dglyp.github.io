@@ -1,0 +1,21 @@
+/* Force projects to be visible on projects page */
+#all-projects .animate-box {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Animation classes for when they do animate */
+.animate-box.animated {
+    opacity: 1 !important;
+}
+
+/* Ensure project containers are visible */
+#all-projects .col-md-6 {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Override any JavaScript opacity settings */
+.project {
+    opacity: 1 !important;
+}

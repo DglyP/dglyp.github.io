@@ -1,0 +1,21 @@
+/* Force featured projects to be visible on main site */
+#featured-projects .animate-box {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Ensure featured project containers are visible */
+#featured-projects .col-md-6 {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Override any JavaScript opacity settings for featured projects */
+#featured-projects .project {
+    opacity: 1 !important;
+}
+
+/* Make sure animated classes work properly */
+#featured-projects .animate-box.animated {
+    opacity: 1 !important;
+}

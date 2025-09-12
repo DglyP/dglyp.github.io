@@ -1,0 +1,84 @@
+{
+  "projects": [
+    {
+      "id": "avatar-ar-logo",
+      "title": "Animated Avatar & AR Logo",
+      "description": "Created a custom avatar with ThreeJS & GLSL, plus an AR logo for mobile.",
+      "image": "images/img-0.png",
+      "url": "portfolio1.html",
+      "demoUrl": "https://deglypava.com/portfolio1.html",
+      "technologies": ["ThreeJS", "GLSL", "AR"],
+      "featured": true
+    },
+    {
+      "id": "mediapipe-parallax",
+      "title": "MediaPipe Parallax 3D Effect",
+      "description": "Facemesh-driven motion parallax for AR.",
+      "image": "images/img-7.jpg",
+      "url": "Projects/Sprint.html",
+      "demoUrl": "https://deglypava.com/Projects/Sprint.html",
+      "technologies": ["MediaPipe", "AR", "3D"],
+      "featured": true
+    },
+    {
+      "id": "holobrain",
+      "title": "HoloBrain 2.0",
+      "description": "Project developed with the help of Microsoft Garage. A Holographic brain floats in space to teach Neuroanatomy students about its parts and how to read and understand MRI.",
+      "image": "images/img-2.jpg",
+      "url": "https://youtu.be/Hd8Lbw6UR2M",
+      "demoUrl": "https://youtu.be/Hd8Lbw6UR2M",
+      "technologies": ["Unity", "AR", "VR", "Education", "Microsoft Garage"],
+      "featured": true
+    },
+    {
+      "id": "3d-visualizer",
+      "title": "Realtime 3D Visualizer",
+      "description": "Web-based 3D color & light visualizer, VR-ready.",
+      "image": "images/img-6.jpg",
+      "url": "https://github.com/DglyP/3DColorVisualizer",
+      "demoUrl": "https://github.com/DglyP/3DColorVisualizer",
+      "technologies": ["Web3D", "VR", "Visualization"],
+      "featured": true
+    },
+    {
+      "id": "3d-reconstructions",
+      "title": "3D Reconstructions (Colmap & MeshLab)",
+      "description": "Outdoor scene reconstructed from 1983 video frames.",
+      "image": "images/img-8.jpg",
+      "url": "./images/img-8.jpg",
+      "demoUrl": "./images/Kadan.jpg",
+      "technologies": ["Colmap", "MeshLab", "3D Reconstruction"],
+      "featured": false
+    },
+    {
+      "id": "ar-car-tracking",
+      "title": "AR Car Tracking",
+      "description": "Using Vuforia Image Trackers, an Arduino developed car and a HoloLens device, we created this OpenXR Application that lets you play a Mario-Kart-esque game where you get powerups when you hit the special orbs",
+      "image": "images/img-3.jpg",
+      "url": "https://github.com/DglyP/AR_Car_Tracking",
+      "demoUrl": "https://github.com/DglyP/AR_Car_Tracking",
+      "technologies": ["OpenXR", "Vuforia", "Arduino", "HoloLens"],
+      "featured": false
+    },
+    {
+      "id": "clinical-simulation",
+      "title": "Online Clinical Simulation",
+      "description": "As a UBC faculty of medicine research project, we used augmented reality to give life to Annie, the mannequin that would teach students how to perform PCR and other medical techniques. We used ARCore and ARKit for mobile development.",
+      "image": "images/img-4.jpg",
+      "url": "https://youtu.be/rN7Y3q2KkUU",
+      "demoUrl": "https://youtu.be/rN7Y3q2KkUU",
+      "technologies": ["ARCore", "ARKit", "Medical Education", "UBC"],
+      "featured": false
+    },
+    {
+      "id": "emotion-recognition",
+      "title": "Facial Emotion Recognition",
+      "description": "Using Deep Convolutional Neural Networks and a whole lot of reading about emotions, I developed a 65% accurate Facial Emotion Recognition software using OpenCV and CUDA. It even shows nice emojis",
+      "image": "images/img-5.jpg",
+      "url": "./images/Emotion.mp4",
+      "demoUrl": "./images/Emotion.mp4",
+      "technologies": ["CNN", "OpenCV", "CUDA", "Deep Learning"],
+      "featured": false
+    }
+  ]
+}

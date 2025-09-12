@@ -1,0 +1,114 @@
+/* Project Grid Styles */
+.project {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 300px;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    margin-bottom: 30px;
+    border-radius: 4px;
+    /* Add a subtle border to make cards visible */
+    border: 1px solid #e6e6e6;
+    /* Add shadow for depth */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Add a gradient overlay to make text more readable */
+.project:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%);
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.project .desc {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    display: flex;
+    align-items: flex-end;  /* Align content to bottom */
+}
+
+.project:hover .desc {
+    opacity: 1;
+}
+
+.project .desc .con {
+    padding: 20px;
+    width: 100%;
+    /* Always show title at the bottom */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.project .desc h3 {
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 10px;
+    /* Make title always visible */
+    opacity: 1;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.project .desc h3 a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.project .desc span {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 14px;
+    display: block;
+    line-height: 1.4;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.project .desc span a {
+    color: #f9bf3f !important;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Make sure images are visible */
+.project {
+    background-color: #f5f5f5; /* Fallback color */
+}
+
+/* Ensure the more projects section displays correctly */
+#more-projects {
+    opacity: 1 !important;
+}
+
+#more-projects[style*="display: block"] {
+    display: flex !important;
+    flex-wrap: wrap;
+}
+
+/* Animation for revealing more projects */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.animate-box {
+    animation: fadeIn 0.5s ease-out;
+}

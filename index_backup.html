@@ -106,7 +106,6 @@
 	<link rel="stylesheet" href="css/hero-text-fixes.css">
 	<link rel="stylesheet" href="css/mobile-nav-fixes.css">
 	<link rel="stylesheet" href="css/section-loading-fixes.css">
-	<link rel="stylesheet" href="css/featured-projects-fix.css">
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="css/style.css">
 
@@ -424,14 +423,123 @@
 						<!-- Featured projects will be loaded here dynamically -->
 					</div>
 
-					<!-- View All Projects Link -->
+					<!-- See More Projects Button -->
 					<div class="col-md-12 animate-box" style="text-align:center; margin: 2em 0 1em 0;">
-						<a href="projects.html" class="btn btn-primary btn-lg btn-load-more" style="background-color: #f9bf3f; border-color: #f9bf3f; color: #222; font-weight: 600;">View All Projects →</a>
+						<button id="see-more-projects" class="btn btn-primary btn-lg btn-load-more" style="background-color: #f9bf3f; border-color: #f9bf3f; color: #222; font-weight: 600;">See More Projects</button>
+					</div>
+
+					<!-- Hidden: Additional Projects -->
+					<div id="more-projects" style="display:none;">
+						<!-- Additional projects will be loaded here dynamically -->
+					</div>
+		<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
+			<div class="project" style="background-image: url(images/img-8.jpg);">
+				<div class="desc">
+					<div class="con">
+						<h3><a href="./images/img-8.jpg" target="_blank" rel="noreferrer noopener">3D Reconstructions (Colmap & MeshLab)</a></h3>
+						<span>Outdoor scene reconstructed from 1983 video frames. <a href="./images/Kadan.jpg" style="color: orange" target="_blank" rel="noreferrer noopener">See image</a></span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6 animate-box" data-animate-effect="fadeInTop">
+			<div class="project" style="background-image: url(images/img-3.jpg);">
+				<div class="desc">
+					<div class="con">
+						<h3><a href="https://github.com/DglyP/AR_Car_Tracking" target="_blank" rel="noreferrer noopener">AR Car Tracking</a></h3>
+						<span>OpenXR app: Vuforia, Arduino car, HoloLens. <a href="https://github.com/DglyP/AR_Car_Tracking" style="color: orange" target="_blank" rel="noreferrer noopener">See code</a></span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6 animate-box" data-animate-effect="fadeInBottom">
+			<div class="project" style="background-image: url(images/img-4.jpg);">
+				<div class="desc">
+					<div class="con">
+						<h3><a href="https://youtu.be/rN7Y3q2KkUU" target="_blank" rel="noreferrer noopener">Online Clinical Simulation</a></h3>
+						<span>AR mannequin for medical training, UBC research. <a href="https://youtu.be/rN7Y3q2KkUU" style="color: orange" target="_blank" rel="noreferrer noopener">Watch video</a></span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+			<div class="project" style="background-image: url(images/img-5.jpg);">
+				<div class="desc">
+					<div class="con">
+						<h3><a href="./images/Emotion.mp4" target="_blank" rel="noreferrer noopener">Facial Emotion Recognition</a></h3>
+						<span>65% accurate CNN-based emotion recognition. <a href="./images/Emotion.mp4" style="color: orange" target="_blank" rel="noreferrer noopener">Watch video</a></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+				</div>
+			</section>
+					<!-- Button to show more projects -->
+					<div class="row">
+						<div class="col-md-12 animate-box">
+							<p><button id="see-more-projects" class="btn btn-primary btn-lg btn-load-more">See More Projects</button></p>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col-md-12 animate-box">
+							<p><a href="https://www.instagram.com/deglypava/" class="btn btn-primary btn-lg btn-load-more" style="background-color: #f9bf3f; border-color: #f9bf3f  ;">See my AR effects on Instagram <i class="icon-instagram"></i></a></p>
+							<p><a href="https://github.com/DglyP" class="btn btn-primary btn-lg btn-load-more" rel="noreferrer noopener">See more projects at my Github <i class="icon-github"></i></a></p>
+						</div>
 					</div>
 				</div>
 			</section>
-
-<section class="colorlib-services" data-section="services">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 animate-box" data-animate-effect="fadeInBottom">
+							<div class="project" style="background-image: url(images/img-4.jpg);">
+								<div class="desc">
+									<div class="con">
+										<h3><a href="https://youtu.be/rN7Y3q2KkUU" target="_blank" rel="noreferrer noopener">Online Clinical Simulation</a></h3>
+										<span>As a UBC faculty of medicine research project, we used augmented reality to give life to Annie, the mannequin that would teach students how to perform PCR and other medical techniques. We used ARCore and ARKit for mobile development. <br><a href="https://youtu.be/rN7Y3q2KkUU" style="color: orange" target="_blank" rel="noreferrer noopener">Cool video here</a></span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+							<div class="project" style="background-image: url(images/img-5.jpg);">
+								<div class="desc">
+									<div class="con">
+										<h3><a href="./images/Emotion.mp4" target="_blank" rel="noreferrer noopener">Facial Emotion Recognition</a></h3>
+										<span>Using Deep Convolutional Neural Networks and a whole lot of reading about emotions, I developed a 65% accurate Facial Emotion Recognition software using OpenCV and CUDA. It even shows nice emojis<br><a href="./images/Emotion.mp4" style="color: orange" target="_blank" rel="noreferrer noopener">Funny video here</a></span>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<!-- <div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+							<div class="project " style="background-image: url(images/img-1.jpg);">
+								<div class="desc">
+									<div class="con">
+										<h3><a href="./omni.html" target="_blank" rel="noreferrer noopener">La Panadería Gourmet</a><br><a href="./omni.html">Omni Applications LLC</a></h3>
+										<span>When I’m old and dying, I plan to look back on my life and say ‘wow, that was an adventure,’ not ‘wow, I sure felt safe.’ – Tom Preston-Werner, Github Co-founder <br><a href="./omni.html" style="color: orange;">Cool website here</a> </span>
+									</div>
+								</div>
+							</div>
+						</div> -->
+						
+					</div>
+					
+					<div class="row">
+						<div class="col-md-12 animate-box">
+							<p><a href="https://www.instagram.com/deglypava/" class="btn btn-primary btn-lg btn-load-more" style="background-color: #f9bf3f; border-color: #f9bf3f  ;">See my AR effects on Instagram <i class="icon-instagram"></i></a></p>
+							<p><a href="https://github.com/DglyP" class="btn btn-primary btn-lg btn-load-more" rel="noreferrer noopener">See more projects at my Github <i class="icon-github"></i></a></p>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+			<section class="colorlib-services" data-section="services">
 				<div class="colorlib-narrow-content">
 					<div class="row">
 						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
