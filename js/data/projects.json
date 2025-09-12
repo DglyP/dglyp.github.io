@@ -13,72 +13,192 @@
     {
       "id": "mediapipe-parallax",
       "title": "MediaPipe Parallax 3D Effect",
-      "description": "Facemesh-driven motion parallax for AR.",
+      "description": "Facemesh-driven motion parallax for AR using real-time head tracking.",
       "image": "images/img-7.jpg",
       "url": "Projects/Sprint.html",
       "demoUrl": "https://deglypava.com/Projects/Sprint.html",
-      "technologies": ["MediaPipe", "AR", "3D"],
-      "featured": true
+      "technologies": ["MediaPipe", "AR", "3D", "Computer Vision"],
+      "featured": false
+    },
+    {
+      "id": "astroscoop-vision-pro",
+      "title": "Astroscoop – Apple Vision Pro Demo",
+      "description": "Space exploration game for Apple Vision Pro, showcased live at MWC 2025. Built in Unity using STYLY XR tools for immersive mixed reality.",
+      "image": "images/astroscoop.jpg",
+      "url": "https://styly.inc/ja/news/mwc2025/",
+      "demoUrl": "https://styly.inc/ja/news/mwc2025/",
+      "technologies": ["Unity", "Vision Pro", "STYLY", "Mixed Reality"],
+      "featured": false
     },
     {
       "id": "holobrain",
       "title": "HoloBrain 2.0",
-      "description": "Project developed with the help of Microsoft Garage. A Holographic brain floats in space to teach Neuroanatomy students about its parts and how to read and understand MRI.",
-      "image": "images/img-2.jpg",
+      "description": "Interactive volumetric brain visualizer in MR using MRI scan data and HoloLens, developed with Blender, C++ shaders, and Unity.",
+      "image": "images/HoloBrain.png",
       "url": "https://youtu.be/Hd8Lbw6UR2M",
       "demoUrl": "https://youtu.be/Hd8Lbw6UR2M",
-      "technologies": ["Unity", "AR", "VR", "Education", "Microsoft Garage"],
+      "technologies": ["Unity", "C++", "Medical XR", "HoloLens"],
       "featured": true
     },
     {
       "id": "3d-visualizer",
       "title": "Realtime 3D Visualizer",
-      "description": "Web-based 3D color & light visualizer, VR-ready.",
+      "description": "Web-based visualizer simulating light and color in real-time using shaders and video input. Extended to VR with Quest support.",
       "image": "images/img-6.jpg",
       "url": "https://github.com/DglyP/3DColorVisualizer",
       "demoUrl": "https://github.com/DglyP/3DColorVisualizer",
-      "technologies": ["Web3D", "VR", "Visualization"],
-      "featured": true
+      "technologies": ["ThreeJS", "GLSL", "WebXR", "VR"],
+      "featured": false
     },
     {
       "id": "3d-reconstructions",
-      "title": "3D Reconstructions (Colmap & MeshLab)",
-      "description": "Outdoor scene reconstructed from 1983 video frames.",
+      "title": "3D Reconstructions (COLMAP & MeshLab)",
+      "description": "Processed 1,983 video frames to generate a complete outdoor 3D reconstruction with COLMAP and MeshLab.",
       "image": "images/img-8.jpg",
-      "url": "./images/img-8.jpg",
+      "url": "./images/colmap.png",
       "demoUrl": "./images/Kadan.jpg",
-      "technologies": ["Colmap", "MeshLab", "3D Reconstruction"],
+      "technologies": ["COLMAP", "MeshLab", "Photogrammetry"],
       "featured": false
     },
     {
       "id": "ar-car-tracking",
-      "title": "AR Car Tracking",
-      "description": "Using Vuforia Image Trackers, an Arduino developed car and a HoloLens device, we created this OpenXR Application that lets you play a Mario-Kart-esque game where you get powerups when you hit the special orbs",
-      "image": "images/img-3.jpg",
+      "title": "AR Car Tracking Game (HoloLens)",
+      "description": "Mixed reality racing game with real Arduino-powered car, Vuforia Image Trackers, and HoloLens. Features physical power-ups and dynamic AR interactions.",
+      "image": "images/ARCar.png",
       "url": "https://github.com/DglyP/AR_Car_Tracking",
       "demoUrl": "https://github.com/DglyP/AR_Car_Tracking",
-      "technologies": ["OpenXR", "Vuforia", "Arduino", "HoloLens"],
+      "technologies": ["Vuforia", "Arduino", "OpenXR", "HoloLens"],
       "featured": false
     },
     {
       "id": "clinical-simulation",
-      "title": "Online Clinical Simulation",
-      "description": "As a UBC faculty of medicine research project, we used augmented reality to give life to Annie, the mannequin that would teach students how to perform PCR and other medical techniques. We used ARCore and ARKit for mobile development.",
+      "title": "Mr. Manikin – Online Clinical Simulation",
+      "description": "AR mobile simulation for teaching medical procedures like PCR using virtual mannequins. Built with ARCore, ARKit, and Photon for multiplayer.",
       "image": "images/img-4.jpg",
       "url": "https://youtu.be/rN7Y3q2KkUU",
       "demoUrl": "https://youtu.be/rN7Y3q2KkUU",
-      "technologies": ["ARCore", "ARKit", "Medical Education", "UBC"],
+      "technologies": ["ARCore", "ARKit", "Photon", "Medical AR"],
       "featured": false
     },
     {
       "id": "emotion-recognition",
       "title": "Facial Emotion Recognition",
-      "description": "Using Deep Convolutional Neural Networks and a whole lot of reading about emotions, I developed a 65% accurate Facial Emotion Recognition software using OpenCV and CUDA. It even shows nice emojis",
+      "description": "Deep CNN-powered system using OpenCV and CUDA to detect emotions and display emojis with 65% accuracy.",
       "image": "images/img-5.jpg",
       "url": "./images/Emotion.mp4",
       "demoUrl": "./images/Emotion.mp4",
-      "technologies": ["CNN", "OpenCV", "CUDA", "Deep Learning"],
+      "technologies": ["Deep Learning", "CNN", "OpenCV", "CUDA"],
       "featured": false
-    }
-  ]
+    },
+    {
+      "id": "ar-filters",
+      "title": "Augmented Reality Filters",
+      "description": "Created AR filters for TikTok, Snapchat, and Instagram using Spark AR, Lens Studio, and Effect House. Generated 291M+ interactions.",
+      "image": "images/ARfilters.png",
+      "url": "https://www.instagram.com/arfiltercreator/",
+      "demoUrl": "https://www.instagram.com/arfiltercreator/",
+      "technologies": ["Spark AR", "Effect House", "Lens Studio", "Social XR"],
+      "featured": true
+    },
+    {
+      "id": "pupil-mimicry",
+      "title": "Pupil Mimicry in Virtual Agents",
+      "description": "Unity and OpenXR system to simulate and track pupil dilation, showing enhanced emotional connection via unconscious mimicry in HCI.",
+      "image": "images/PupilMimicry.png",
+      "url": "https://deglypava.com/projects/pupil-mimicry.html",
+      "demoUrl": "https://deglypava.com/projects/pupil-mimicry.html",
+      "technologies": ["Unity", "OpenXR", "Eye Tracking", "AI", "HCI"],
+      "featured": false
+  },
+  {
+    "id": "ar-asteroids",
+    "title": "Asteroids AR",
+    "description": "Unity AR reinterpretation of the classic arcade game with spawning asteroids, UFOs, scoring and health systems.",
+    "image": "images/ARAsteroids.png",
+    "url": "https://github.com/DglyP/AR_AsteroidsGame",
+    "demoUrl": "https://github.com/DglyP/AR_AsteroidsGame",
+    "technologies": ["Unity", "AR", "C#", "ShaderLab", "HLSL"],
+    "featured": false
+  },
+  {
+    "id": "unity-zeromq-multiplayer",
+    "title": "Unity ZeroMQ Multiplayer Test",
+    "description": "Prototype networking bridge using ZeroMQ between Unity clients (with some Python helpers).",
+    "image": "images/ZeroMQ.png",
+    "url": "https://github.com/DglyP/UnityZeroMQ_MultiplayerTest",
+    "demoUrl": "https://github.com/DglyP/UnityZeroMQ_MultiplayerTest",
+    "technologies": ["Unity", "ZeroMQ", "C#", "Python", "Networking"],
+    "featured": false
+  },
+  {
+    "id": "realtime-3d-rendering",
+    "title": "Realtime 3D Rendering (JS & GLSL)",
+    "description": "Interactive 3D scenes in the browser with custom shader effects and controls.",
+    "image": "images/GLSLShaders.png",
+    "url": "https://github.com/DglyP/Realtime3DRendering",
+    "demoUrl": "https://github.com/DglyP/Realtime3DRendering",
+    "technologies": ["JavaScript", "GLSL", "WebGL"],
+    "featured": false
+  },
+  {
+    "id": "shader-image-processing",
+    "title": "Shader-Based Image Processing (Three.js)",
+    "description": "GPU-accelerated image processing pipeline in Three.js with custom GLSL shaders.",
+    "image": "images/Shaders.png",
+    "url": "https://github.com/DglyP/ShaderBasedImageProcessing",
+    "demoUrl": "https://github.com/DglyP/ShaderBasedImageProcessing",
+    "technologies": ["ThreeJS", "GLSL", "WebGL"],
+    "featured": false
+  },
+  {
+    "id": "ar-marker-opencv",
+    "title": "AR Marker Detection (OpenCV, C++)",
+    "description": "Real-time detection and tracking of AR markers as a basis for robust overlays.",
+    "image": "images/ARTracker.png",
+    "url": "https://github.com/DglyP/ARMarker",
+    "demoUrl": "https://github.com/DglyP/ARMarker",
+    "technologies": ["OpenCV", "C++"],
+    "featured": false
+  },
+  {
+    "id": "eye-tracking-testbed",
+    "title": "Eye Tracking Testbed",
+    "description": "Unity playground for eye-tracking experiments (blinks, luminance, fixation tasks).",
+    "image": "images/EYETracking.png",
+    "url": "https://github.com/DglyP/EyeTest",
+    "demoUrl": "https://github.com/DglyP/EyeTest",
+    "technologies": ["Unity", "Eye Tracking", "C#"],
+    "featured": false
+  },
+  {
+    "id": "colombia-xr",
+    "title": "Colombia XR",
+    "description": "Community site highlighting XR organizations and events in Colombia (static site, Vercel).",
+    "image": "images/ColombiaXR.png",
+    "url": "https://colombiaxr.com",
+    "demoUrl": "https://colombiaxr.com",
+    "technologies": ["HTML", "JavaScript", "Static Site"],
+    "featured": true
+  },
+  {
+    "id": "arduino-robotics",
+    "title": "Arduino Robotics (AR Car Base)",
+    "description": "Bluetooth-controlled Arduino car that became the physical base for the HoloLens AR racing game.",
+    "image": "images/ArduinoCar.png",
+    "url": "https://github.com/DglyP/ArduinoRobotics",
+    "demoUrl": "https://github.com/DglyP/ArduinoRobotics",
+    "technologies": ["Arduino", "C++", "Bluetooth"],
+    "featured": false
+  },
+  {
+    "id": "steamvr-training",
+    "title": "SteamVR Training Project",
+    "description": "Early VR training exercises for HTC Vive/SteamVR as part of visual computing coursework.",
+    "image": "images/STEAMVR.png",
+    "url": "https://github.com/DglyP/SteamVR-Project-1",
+    "demoUrl": "https://github.com/DglyP/SteamVR-Project-1",
+    "technologies": ["Unity", "SteamVR", "VR", "C#"],
+    "featured": false
+  }
+]
 }
