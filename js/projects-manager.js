@@ -1,25 +1,20 @@
-console.log('Projects Manager script loaded');
 
 // Function to load projects from JSON
 async function loadProjects() {
-    console.log('Attempting to load projects from JSON...');
     try {
         const response = await fetch('js/data/projects.json');
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
         const data = await response.json();
-        console.log('Projects loaded successfully:', data.projects);
         return data.projects;
     } catch (error) {
-        console.error('Error loading projects:', error);
         return [];
     }
 }
 
 // Function to render a single project
 function renderProject(project, effect = "fadeInRight") {
-    console.log('Rendering project:', project.title);
     return `
     <div class="col-md-6 animate-box" data-animate-effect="${effect}">
         <div class="project" style="background-image: url(${project.image});">
@@ -40,25 +35,20 @@ function renderProject(project, effect = "fadeInRight") {
 
 // Function to initialize the projects section
 async function initializeProjects() {
-    console.log('Initializing projects section...');
     
     const featuredContainer = document.getElementById('featured-projects');
     const moreProjectsContainer = document.getElementById('more-projects');
     
     if (!featuredContainer) {
-        console.error('Featured projects container not found!');
         return;
     }
 
     try {
         const projects = await loadProjects();
-        console.log('Total projects loaded:', projects.length);
         
         const featuredProjects = projects.filter(p => p.featured);
         const otherProjects = projects.filter(p => !p.featured);
         
-        console.log('Featured projects:', featuredProjects.length);
-        console.log('Other projects:', otherProjects.length);
 
         // Create rows for featured projects
         featuredContainer.innerHTML = `
@@ -81,21 +71,17 @@ async function initializeProjects() {
 
         // Initialize animations for initial projects
         setTimeout(() => {
-            console.log('Projects Manager: Initializing animations...');
             const allProjects = document.querySelectorAll('#featured-projects .animate-box, #more-projects .animate-box');
-            console.log(`Projects Manager: Found ${allProjects.length} projects to animate`);
             allProjects.forEach((el, index) => {
                 setTimeout(() => {
                     el.style.opacity = '1';
                     el.style.visibility = 'visible';
                     el.classList.add('animated', el.getAttribute('data-animate-effect'));
-                    console.log(`Projects Manager: Animated project ${index + 1}`);
                 }, index * 200); // Stagger the animations
             });
         }, 100);
 
     } catch (error) {
-        console.error('Error in initializeProjects:', error);
     }
 }
 
