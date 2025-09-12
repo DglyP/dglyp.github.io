@@ -73,17 +73,8 @@
 	}
 	</script>
 
-	<!-- Preload critical resources -->
-	<link rel="preload" href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" as="style" onload="this.onload=null;this.rel='stylesheet'">
-	<link rel="preload" href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" as="style" onload="this.onload=null;this.rel='stylesheet'">
-	<link rel="preload" href="img/Profile2.jpg" as="image">
-	<link rel="preload" href="images/img_bg_1.jpg" as="image">
-	
-	<!-- Fallback for non-JS browsers -->
-	<noscript>
-		<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
-	</noscript>
+	<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
 	
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="css/animate.css">
@@ -91,22 +82,18 @@
 	<link rel="stylesheet" href="css/icomoon.css">
 	<!-- Bootstrap  -->
 	<link rel="stylesheet" href="css/bootstrap.css">
+
 	<!-- Flexslider  -->
 	<link rel="stylesheet" href="css/flexslider.css">
+	
 	<!-- Flaticons  -->
 	<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+
 	<!-- Owl Carousel -->
 	<link rel="stylesheet" href="css/owl.carousel.min.css">
 	<link rel="stylesheet" href="css/owl.theme.default.min.css">
 	<link rel="stylesheet" href="css/carousel-custom.css">
-	<link rel="stylesheet" href="css/custom-spacing.css">
-	<link rel="stylesheet" href="css/navigation-fixes.css">
-	<link rel="stylesheet" href="css/footer-fixes.css">
-	<link rel="stylesheet" href="css/hero-mobile-fixes.css">
-	<link rel="stylesheet" href="css/hero-text-fixes.css">
-	<link rel="stylesheet" href="css/mobile-nav-fixes.css">
-	<link rel="stylesheet" href="css/section-loading-fixes.css">
-	<link rel="stylesheet" href="css/featured-projects-fix.css">
+
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="css/style.css">
 
@@ -131,7 +118,7 @@
 		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation menu"><i></i></a>
 		<aside id="colorlib-aside" role="complementary" class="border js-fullheight" style="overflow: hidden;">
 			<div class="text-center">
-				<a href="https://www.instagram.com/deglypava/"><div class="author-img" style="background-image: url(img/Profile2.jpg);" role="img" aria-label="Degly Pava profile photo"></div></a>
+				<a href="https://www.instagram.com/deglypava/"><div class="author-img" style="background-image: url('./img/Profile2.jpg'); width: 150px; height: 150px; border-radius: 50%; background-size: cover; background-position: center; display: block; margin: 0 auto 30px; border: 2px solid #999; background-color: #f0f0f0;" role="img" aria-label="Degly Pava profile photo"></div></a>
 				<h1 id="colorlib-logo"><a href="index.html">Degly Pava</a></h1>
 				<span class="position">
 					Senior XR Specialist – CEO<br>
@@ -144,7 +131,9 @@
 						<li class="active" role="none"><a href="#" data-nav-section="home" role="menuitem">Home</a></li>
 						<li role="none"><a href="#" data-nav-section="about" role="menuitem">About</a></li>
 						<li role="none"><a href="#" data-nav-section="work" role="menuitem">Work / Portfolio</a></li>
+						<li role="none"><a href="#" data-nav-section="experience-latest" role="menuitem">Latest Experience</a></li>
 						<li role="none"><a href="#" data-nav-section="services" role="menuitem">What I can do</a></li>
+						<li role="none"><a href="#" data-nav-section="certificates" role="menuitem">Certificates</a></li>
 						<li role="none"><a href="#" data-nav-section="education" role="menuitem">Education</a></li>
 						<li role="none"><a href="#" data-nav-section="awards" role="menuitem">Honors and Awards</a></li>
 						<li role="none"><a href="#" data-nav-section="skills" role="menuitem">Skills and Certifications</a></li>
@@ -279,7 +268,31 @@
 				</div>
 			</section>
 
-			<section class="colorlib-work" data-section="work">
+			<section class="colorlib-work" id="portfolio" data-section="work">
+				<div class="colorlib-narrow-content">
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 col-md-pull-3 " data-animate-effect="fadeInLeft">
+							<span class="heading-meta">My Work</span>
+							<h2 class="colorlib-heading animate-box">Recent Work</h2>
+						</div>
+					</div>
+					<div class="row row-bottom-padded-sm " data-animate-effect="fadeInLeft">
+						<div class="col-md-12">
+							<p class="work-menu"><span>You can find some of my amazing projects here, if you want more information about them just check out my GitHub, Instagram or the videos included in some of them.</span></p>
+						</div>
+					</div>
+					<div id="featured-projects">
+						<!-- Featured projects will be loaded here dynamically -->
+					</div>
+
+					<!-- View All Projects Link -->
+					<div class="col-md-12 animate-box" style="text-align:center; margin: 2em 0 1em 0;">
+						<a href="projects.html" class="btn btn-primary btn-lg btn-load-more" style="background-color: #f9bf3f; border-color: #f9bf3f; color: #222; font-weight: 600;">View All Projects →</a>
+					</div>
+				</div>
+			</section>
+
+			<section class="colorlib-work" data-section="experience-latest">
 				<div class="colorlib-narrow-content">
 					<div class="row">
 						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
@@ -404,30 +417,6 @@
 							</div>
 					   </div>
 				   </div>
-				</div>
-			</section>
-
-			<section class="colorlib-work" id="portfolio" data-section="work">
-				<div class="colorlib-narrow-content">
-					<div class="row">
-						<div class="col-md-6 col-md-offset-3 col-md-pull-3 " data-animate-effect="fadeInLeft">
-							<span class="heading-meta">My Work</span>
-							<h2 class="colorlib-heading animate-box">Recent Work</h2>
-						</div>
-					</div>
-					<div class="row row-bottom-padded-sm " data-animate-effect="fadeInLeft">
-						<div class="col-md-12">
-							<p class="work-menu"><span>You can find some of my amazing projects here, if you want more information about them just check out my GitHub, Instagram or the videos included in some of them.</span></p>
-						</div>
-					</div>
-					<div id="featured-projects">
-						<!-- Featured projects will be loaded here dynamically -->
-					</div>
-
-					<!-- View All Projects Link -->
-					<div class="col-md-12 animate-box" style="text-align:center; margin: 2em 0 1em 0;">
-						<a href="projects.html" class="btn btn-primary btn-lg btn-load-more" style="background-color: #f9bf3f; border-color: #f9bf3f; color: #222; font-weight: 600;">View All Projects →</a>
-					</div>
 				</div>
 			</section>
 
@@ -1128,9 +1117,34 @@
 		// List of all images in the carousel folder
 		// The system will automatically detect and load these images
 		const carouselImageList = [
+			'ATMIT.jpg',
+			'AppleVisionProMeetup.jpg',
+			'BestMentor.jpg',
+			'BestMentorsOfMIT.jpg',
+			'BlaBlaEvents.jpg',
+			'BlaBlaMeetup.jpg',
+			'ColombiaXR.JPG',
 			'Degly@MIT.jpeg',
+			'IMG-20250123-WA0011.jpg',
+			'IMG_3452.jpg',
+			'IMG_3454.jpg',
+			'IMG_3570.jpg',
+			'KDDI Demos.jpg',
+			'KDDI.jpg',
+			'LineXR.jpeg',
+			'MITTalk.jpg',
+			'MWC2025.jpeg',
+			'MostRecognizedMentors.jpeg',
+			'STYLYBusinessCard.png',
+			'STYLYTeam.jpg',
+			'Screenshot 2025-04-11 at 19.59.32.png',
+			'Screenshot 2025-07-02 at 14.03.00.png',
+			'Screenshot 2025-07-02 at 14.08.22.png',
+			'Screenshot 2025-07-02 at 14.08.38.png',
 			'SpaceTraveliumTenQ.jpg',
 			'StarVAir2Glasses.jpeg',
+			'TokyoXRNode.jpg',
+			'Vision1.jpg',
 			'caroussel1.jpg',
 			'caroussel2.jpg',
 			'caroussel3.jpeg',
@@ -1138,7 +1152,8 @@
 			'caroussel5.jpeg',
 			'caroussel6.jpeg',
 			'caroussel7.jpeg',
-			'caroussel8.jpeg'
+			'caroussel8.jpeg',
+			'image.png'
 		];
 		
 		// Function to generate alt text from filename
