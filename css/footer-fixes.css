@@ -1,0 +1,55 @@
+/* Fix footer positioning and styling */
+.colorlib-footer {
+    position: relative !important;
+    bottom: 0;
+    width: 100%;
+    padding: 1rem 0;
+    text-align: center;
+    background: #f2f3f7;
+    margin-top: auto;
+}
+
+.colorlib-footer p {
+    margin-bottom: 0.5rem;
+}
+
+.colorlib-footer ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.colorlib-footer ul li {
+    margin: 0 10px;
+}
+
+.colorlib-footer ul li a {
+    color: #2c98f0;
+    font-size: 18px;
+    padding: 4px;
+    transition: color 0.3s ease;
+}
+
+.colorlib-footer ul li a:hover {
+    color: #000;
+}
+
+/* Make sure the aside container properly handles the footer */
+#colorlib-aside {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Mobile adjustments */
+@media screen and (max-width: 768px) {
+    .colorlib-footer {
+        padding: 1rem;
+        position: relative !important;
+    }
+    
+    .colorlib-footer ul li {
+        margin: 0 8px;
+    }
+}

@@ -1,0 +1,27 @@
+/* Override section padding */
+.colorlib-experience,
+.colorlib-skills,
+.colorlib-education,
+.colorlib-blog,
+.colorlib-work,
+.colorlib-about,
+.colorlib-services,
+.colorlib-contact {
+    padding-top: 2em !important;
+    padding-bottom: 2em !important;
+}
+
+/* Keep mobile padding reasonable */
+@media screen and (max-width: 768px) {
+    .colorlib-experience,
+    .colorlib-skills,
+    .colorlib-education,
+    .colorlib-blog,
+    .colorlib-work,
+    .colorlib-about,
+    .colorlib-services,
+    .colorlib-contact {
+        padding-top: 2em !important;
+        padding-bottom: 2em !important;
+    }
+}

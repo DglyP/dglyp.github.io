@@ -1,0 +1,27 @@
+/* Hero section animation fixes */
+@media screen and (max-width: 768px) {
+    #colorlib-hero .flexslider .slides > li {
+        background-image: initial !important; /* Keep the image but don't show initially */
+    }
+
+    #colorlib-hero .flexslider .slider-text {
+        background: #fff;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    /* Applying animation to the slider text container */
+    #colorlib-hero .flexslider .slides > li:not(.flex-active-slide) .slider-text {
+        opacity: 0 !important;
+    }
+
+    #colorlib-hero .flexslider .slides > li.flex-active-slide .slider-text {
+        opacity: 1 !important;
+    }
+
+    /* Add fade transition to the background image */
+    #colorlib-hero .flexslider .slides > li {
+        transition: opacity 0.5s ease-in-out;
+        background-size: cover !important;
+        background-position: center center !important;
+    }
+}

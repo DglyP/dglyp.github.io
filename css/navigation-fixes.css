@@ -1,0 +1,83 @@
+/* Fix navigation panel height and z-index issues */
+#colorlib-aside {
+    min-height: 100vh !important;
+    height: 100% !important;
+    position: fixed !important;
+    top: 0;
+    bottom: 0;
+    overflow-y: auto;
+    width: 300px;
+}
+
+/* Hamburger menu styling */
+.js-colorlib-nav-toggle {
+    position: fixed !important;
+    z-index: 2000 !important;
+    top: 0 !important;
+    right: 0 !important;
+    padding: 1rem 1.5rem !important;
+    border: none !important;
+    outline: none !important;
+}
+
+.js-colorlib-nav-toggle i {
+    position: relative;
+    display: inline-block;
+    width: 25px;
+    height: 2px;
+    color: #000;
+    font: bold 14px/.4 Helvetica;
+    text-transform: uppercase;
+    text-indent: -55px;
+    background: #000;
+    transition: all .2s ease-out;
+}
+
+.js-colorlib-nav-toggle i::before,
+.js-colorlib-nav-toggle i::after {
+    content: '';
+    width: 25px;
+    height: 2px;
+    background: #000;
+    position: absolute;
+    left: 0;
+    transition: all .2s ease-out;
+}
+
+.js-colorlib-nav-toggle i::before {
+    top: -7px;
+}
+
+.js-colorlib-nav-toggle i::after {
+    bottom: -7px;
+}
+
+/* Mobile navigation styles */
+@media screen and (max-width: 768px) {
+    #colorlib-aside {
+        width: 300px;
+        transform: translateX(-300px);
+        transition: 0.5s;
+    }
+
+    #colorlib-aside.active {
+        transform: translateX(0);
+        z-index: 999;
+    }
+
+    /* Darken the rest of the page when menu is open */
+    body.offcanvas::after {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 998;
+    }
+
+    #colorlib-main {
+        padding-top: 3.5rem !important;
+    }
+}

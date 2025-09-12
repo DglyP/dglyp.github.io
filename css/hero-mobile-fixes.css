@@ -1,0 +1,34 @@
+/* Additional hero mobile fixes */
+@media screen and (max-width: 768px) {
+    #colorlib-hero {
+        min-height: 100vh !important;
+    }
+    
+    #colorlib-hero .flexslider {
+        height: 100vh !important;
+    }
+    
+    #colorlib-hero .flexslider .slides li {
+        height: 100vh !important;
+        background-image: none !important;
+    }
+
+    #colorlib-hero .flexslider .slider-text {
+        height: 100vh !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        background: #fff !important;
+    }
+
+    #colorlib-hero .flexslider .slider-text-inner {
+        padding: 2em;
+        text-align: center;
+        width: 100%;
+    }
+
+    #colorlib-hero .flexslider .slider-text-inner .desc {
+        padding: 0 1em;
+    }
+}
+}

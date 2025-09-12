@@ -1,0 +1,23 @@
+.colorlib-experience,
+.colorlib-skills,
+.colorlib-education,
+.colorlib-blog,
+.colorlib-work,
+.colorlib-about,
+.colorlib-services,
+.colorlib-contact {
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+#colorlib-hero {
+    margin-bottom: 2em;
+}
+
+.colorlib-heading {
+    margin-bottom: 2em;
+}
+
+.heading-meta {
+    margin-bottom: 1em;
+}
