@@ -104,8 +104,56 @@
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 
+	<style>
+		/* Swipe Down Indicator Styles */
+		#swipe-down-indicator {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100vw;
+			z-index: 9999;
+			display: flex;
+			justify-content: center;
+			pointer-events: none;
+			transition: opacity 0.3s;
+		}
+		#swipe-down-indicator-inner {
+			margin-top: 10px;
+			background: none;
+			pointer-events: none;
+			color: #f9bf3f;
+			font-size: 1.2em;
+			font-weight: 600;
+			text-shadow: 0 2px 4px rgba(0,0,0,0.12);
+			animation: swipe-bounce 1.2s infinite;
+		}
+		@media (min-width: 768px) {
+			#swipe-down-indicator { display: none !important; }
+		}
+		@media (max-width: 767px) {
+			#swipe-down-indicator {
+				opacity: 0;
+			}
+		}
+		@keyframes swipe-bounce {
+			0%, 100% { transform: translateY(0); }
+			50% { transform: translateY(18px); }
+		}
+		#swipe-down-indicator.hide {
+			opacity: 0;
+			pointer-events: none;
+		}
+	</style>
+
 	</head>
 	<body>
+		<!-- Swipe Down Indicator (Mobile Only) -->
+		<div id="swipe-down-indicator">
+			<div id="swipe-down-indicator-inner">
+				<span>Swipe down to explore</span>
+			</div>
+		</div>
+		
 		<!-- Skip Navigation for Accessibility -->
 		<a href="#colorlib-main" class="skip-link">Skip to main content</a>
 		
@@ -1270,6 +1318,48 @@
 	
 	<!-- Projects Manager -->
 	<script src="js/projects-manager.js"></script>
+
+	<script>
+		// Swipe Down Indicator Hide on Swipe and Scroll (Mobile)
+		(function() {
+			var indicator = document.getElementById('swipe-down-indicator');
+			if (!indicator) return;
+			
+			// Show indicator after 3 second delay
+			setTimeout(function() {
+				indicator.style.opacity = '1';
+			}, 3000);
+			
+			var touchStartY = null;
+			var threshold = 30; // px
+			var hideIndicator = function() {
+				indicator.classList.add('hide');
+				window.removeEventListener('touchstart', onTouchStart);
+				window.removeEventListener('touchmove', onTouchMove);
+				window.removeEventListener('scroll', onScroll);
+			};
+			function onTouchStart(e) {
+				if (e.touches && e.touches.length === 1) {
+					touchStartY = e.touches[0].clientY;
+				}
+			}
+			function onTouchMove(e) {
+				if (touchStartY === null) return;
+				var currentY = e.touches[0].clientY;
+				if (currentY - touchStartY > threshold) {
+					hideIndicator();
+				}
+			}
+			function onScroll() {
+				if (window.scrollY > 50) {
+					hideIndicator();
+				}
+			}
+			window.addEventListener('touchstart', onTouchStart, {passive:true});
+			window.addEventListener('touchmove', onTouchMove, {passive:true});
+			window.addEventListener('scroll', onScroll, {passive:true});
+		})();
+	</script>
 
 	<style>
 		/* Pre-load sections but keep animations */
