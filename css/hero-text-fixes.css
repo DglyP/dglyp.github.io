@@ -1,0 +1,17 @@
+/* Hero text fixes for mobile */
+@media screen and (max-width: 768px) {
+    #colorlib-hero .slider-text-inner h1 {
+        font-size: 28px !important;
+        margin-bottom: 10px !important;
+    }
+
+    #colorlib-hero .slider-text-inner h2 {
+        font-size: 16px !important;
+        line-height: 1.4 !important;
+    }
+
+    #colorlib-hero .slider-text-inner {
+        margin: 0 auto !important;
+        padding: 1em !important;
+    }
+}

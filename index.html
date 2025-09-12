@@ -103,6 +103,9 @@
 	<link rel="stylesheet" href="css/navigation-fixes.css">
 	<link rel="stylesheet" href="css/footer-fixes.css">
 	<link rel="stylesheet" href="css/hero-mobile-fixes.css">
+	<link rel="stylesheet" href="css/hero-text-fixes.css">
+	<link rel="stylesheet" href="css/mobile-nav-fixes.css">
+	<link rel="stylesheet" href="css/section-loading-fixes.css">
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="css/style.css">
 
@@ -1406,6 +1409,28 @@
 	
 	<!-- MAIN JS -->
 	<script src="js/main.js"></script>
+
+	<style>
+		/* Pre-load sections but keep animations */
+		#colorlib-main > div {
+			visibility: visible;
+			will-change: opacity;
+		}
+		
+		/* Smooth scroll behavior */
+		html {
+			scroll-behavior: smooth;
+		}
+	</style>
+
+	<script>
+		// Pre-load all sections but keep animations
+		document.addEventListener('DOMContentLoaded', function() {
+			document.querySelectorAll('.colorlib-about, .colorlib-services, .colorlib-skills, .colorlib-education, .colorlib-experience, .colorlib-work, .colorlib-blog, .colorlib-contact').forEach(function(section) {
+				section.style.visibility = 'visible';
+			});
+		});
+	</script>
 
 	</body>
 </html>

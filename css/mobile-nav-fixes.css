@@ -1,0 +1,173 @@
+/* Mobile navigation styles */
+@media screen and (max-width: 768px) {
+    #colorlib-aside {
+        width: 300px;
+        transform: translateX(-300px);
+        transition: 0.5s;
+        background: #f2f3f7;
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        bottom: 0 !important;
+        height: 100vh !important;
+        display: flex !important;
+        flex-direction: column !important;
+        overflow: hidden !important;
+        padding-top: 20px !important; /* Added top padding */
+    }
+
+    /* Set exact proportions for each section */
+    #colorlib-aside .profile-section {
+        height: 15% !important;
+        min-height: 15% !important;
+        max-height: 15% !important;
+        flex: 0 0 15% !important;
+    }
+
+    #colorlib-aside .colorlib-nav {
+        height: 70% !important;
+        min-height: 70% !important;
+        max-height: 70% !important;
+        flex: 0 0 70% !important;
+    }
+
+    #colorlib-aside .colorlib-nav.main-menu {
+        height: auto !important;
+        min-height: auto !important;
+        max-height: none !important;
+        flex: 0 0 auto !important;
+    }
+
+    #colorlib-aside .colorlib-footer {
+        height: 15% !important;
+        min-height: 15% !important;
+        max-height: 15% !important;
+        flex: 0 0 15% !important;
+    }
+
+    #colorlib-aside.active {
+        transform: translateX(0);
+        z-index: 999;
+    }
+
+    /* Section 1: Profile Section */
+    #colorlib-aside .profile-section {
+        padding: 10px 0 !important;
+        text-align: center !important;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    #colorlib-aside .author-img {
+        width: 60px !important;
+        height: 60px !important;
+        margin: 0 auto 5px !important;
+        border-radius: 50% !important;
+    }
+
+    #colorlib-aside h1 {
+        font-size: 16px !important;
+        margin: 0 0 2px 0 !important;
+        color: #333 !important;
+    }
+
+    #colorlib-aside span.position {
+        font-size: 12px !important;
+        color: #666 !important;
+        display: block !important;
+        margin: 0 !important;
+    }
+
+    /* Section 2: Navigation Menu */
+    #colorlib-aside .colorlib-nav {
+        overflow-y: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        padding: 5px 0 !important;
+    }
+
+    #colorlib-aside .colorlib-nav ul {
+        padding: 0 !important;
+        margin: 0 !important;
+        list-style: none !important;
+    }
+
+    #colorlib-aside .colorlib-nav ul li {
+        margin: 0 !important;
+        padding: 0 !important;
+        height: 40px !important; /* Fixed height for menu items */
+        min-height: 40px !important;
+        max-height: 40px !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+
+    #colorlib-aside .colorlib-nav ul li a {
+        padding: 0 20px !important;
+        display: flex !important;
+        align-items: center !important;
+        color: #333 !important;
+        font-size: 14px !important;
+        text-decoration: none !important;
+        transition: all 0.3s ease !important;
+        height: 100% !important;
+        width: 100% !important;
+    }
+
+    /* Specific styles for main menu */
+    #colorlib-aside .colorlib-nav.main-menu ul li {
+        height: 35px !important; /* Slightly smaller height for main menu */
+        min-height: 35px !important;
+        max-height: 35px !important;
+    }
+
+    #colorlib-aside .colorlib-nav ul li.active a {
+        color: #2c98f0 !important;
+        background: rgba(44, 152, 240, 0.05) !important;
+    }
+
+    /* Section 3: Social Icons Footer */
+    #colorlib-aside .colorlib-footer {
+        padding: 10px !important;
+        text-align: center !important;
+        border-top: 1px solid rgba(0, 0, 0, 0.05) !important;
+        background: #f2f3f7 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    #colorlib-aside .colorlib-footer h3 {
+        font-size: 16px !important;
+        margin-bottom: 15px !important;
+    }
+
+    #colorlib-aside .colorlib-footer ul {
+        padding: 0 !important;
+        margin: 0 !important;
+        list-style: none !important;
+        display: flex !important;
+        justify-content: center !important;
+        gap: 15px !important;
+    }
+
+    #colorlib-aside .colorlib-footer ul li a {
+        color: #666 !important;
+        font-size: 18px !important;
+    }
+
+    /* Overlay effect */
+    body.offcanvas::after {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 998;
+    }
+}

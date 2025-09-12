@@ -1,0 +1,56 @@
+/* Mobile content organization fixes */
+@media screen and (max-width: 768px) {
+    /* General content fixes */
+    #colorlib-main {
+        width: 100% !important;
+        float: none !important;
+        margin-left: 0 !important;
+    }
+
+    /* Section spacing */
+    .colorlib-about,
+    .colorlib-services,
+    .colorlib-skills,
+    .colorlib-education,
+    .colorlib-experience,
+    .colorlib-work,
+    .colorlib-contact {
+        padding: 4em 1em !important;
+        clear: both;
+        width: 100% !important;
+    }
+
+    /* Fix skills section positioning */
+    .colorlib-skills {
+        margin-top: 0 !important;
+        padding-top: 4em !important;
+    }
+
+    /* Make sure sections don't overflow */
+    .row {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        width: 100% !important;
+    }
+
+    /* Fix container width issues */
+    .container-fluid {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+
+    /* Ensure proper spacing between sections */
+    .colorlib-heading {
+        margin-bottom: 2em !important;
+    }
+
+    /* Fix skills progress bars */
+    .progress {
+        margin-bottom: 20px !important;
+    }
+
+    /* Adjust certification items */
+    .timeline-entry {
+        margin-bottom: 30px !important;
+    }
+}

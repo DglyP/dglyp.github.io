@@ -10,7 +10,8 @@
     
     #colorlib-hero .flexslider .slides li {
         height: 100vh !important;
-        background-image: none !important;
+        background-size: cover !important;
+        background-position: center !important;
     }
 
     #colorlib-hero .flexslider .slider-text {
@@ -19,6 +20,19 @@
         align-items: center !important;
         justify-content: center !important;
         background: #fff !important;
+    }
+
+    /* Special styling for innovator slide on mobile */
+    #colorlib-hero .flexslider .slider-innovator {
+        background: rgba(255, 255, 255, 0.8) !important;
+    }
+    
+    #colorlib-hero .flexslider .slider-innovator .slider-text-inner {
+        background: transparent !important;
+    }
+    
+    #colorlib-hero .flexslider .slider-innovator .desc {
+        background: transparent !important;
     }
 
     #colorlib-hero .flexslider .slider-text-inner {

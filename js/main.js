@@ -2,6 +2,13 @@
 	
 	'use strict';
 
+	// Pre-load sections on page load
+	$(document).ready(function() {
+		$('.colorlib-about, .colorlib-services, .colorlib-skills, .colorlib-education, .colorlib-experience, .colorlib-work, .colorlib-blog, .colorlib-contact').each(function() {
+			$(this).css('visibility', 'visible');
+		});
+	});
+
 
 
 	var isMobile = {
@@ -144,28 +151,38 @@
 	};
 
 	var clickMenu = function() {
-
-		$('#navbar a:not([class="external"])').click(function(event){
-			var section = $(this).data('nav-section'),
-				navbar = $('#navbar');
-
-				if ( $('[data-section="' + section + '"]').length ) {
-			    	$('html, body').animate({
-			        	scrollTop: $('[data-section="' + section + '"]').offset().top - 55
-			    	}, 500);
-			   }
-
-		    if ( navbar.is(':visible')) {
-		    	navbar.removeClass('in');
-		    	navbar.attr('aria-expanded', 'false');
-		    	$('.js-colorlib-nav-toggle').removeClass('active');
-		    }
-
-		    event.preventDefault();
-		    return false;
+		// Enhanced navigation with instant content display
+		$('#navbar a:not([class="external"]), a[href^="#"]').click(function(event){
+			event.preventDefault();
+			
+			var section = $(this).data('nav-section');
+			var target = section ? $('[data-section="' + section + '"]') : $(this.hash);
+			
+			if (target.length) {
+				// Ensure target section is visible immediately
+				target.css('visibility', 'visible');
+				
+				// Close mobile menu if open
+				if ($('body').hasClass('offcanvas')) {
+					$('body').removeClass('offcanvas');
+					$('.js-colorlib-nav-toggle').removeClass('active');
+				}
+				
+				// Close navbar if visible
+				var navbar = $('#navbar');
+				if (navbar.is(':visible')) {
+					navbar.removeClass('in');
+					navbar.attr('aria-expanded', 'false');
+				}
+				
+				// Smooth scroll to target
+				$('html, body').animate({
+					scrollTop: target.offset().top - 55
+				}, 500, 'easeInOutExpo');
+			}
+			
+			return false;
 		});
-
-
 	};
 
 	// Reflect scrolling in navigation

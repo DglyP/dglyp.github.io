@@ -1,0 +1,41 @@
+/* Section loading and transitions */
+.colorlib-about,
+.colorlib-services,
+.colorlib-skills,
+.colorlib-education,
+.colorlib-experience,
+.colorlib-work,
+.colorlib-blog,
+.colorlib-contact {
+    visibility: visible !important;
+    opacity: 1 !important;
+    transition: none !important;
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth !important;
+}
+
+/* Ensure sections are pre-loaded */
+#colorlib-main {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transition: none !important;
+}
+
+/* Force immediate rendering */
+#colorlib-main > div {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    will-change: transform !important; /* Hardware acceleration */
+    transform: translateZ(0) !important;
+}
+
+/* Disable AOS animations that might cause delay */
+[data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+}
