@@ -1450,13 +1450,212 @@ body.offcanvas {
 .js .animate-box {
   opacity: 0; }
 
-  .social-reel .item {
-    height: 200px;          /* pick whatever uniform height you like */
-    overflow: hidden;       /* hide any overflow from object‐fit */
+  .social-reel {
+    margin: 20px 0;
+    padding: 10px 0;
   }
+  
+  .social-reel .item {
+    height: 220px;          /* slightly taller for better visibility */
+    overflow: hidden;       /* hide any overflow from object‐fit */
+    border-radius: 12px;    /* rounded corners */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 5px;          /* spacing between items */
+  }
+  
+  .social-reel .item:hover {
+    transform: translateY(-5px); /* lift on hover */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15); /* enhanced shadow on hover */
+  }
+  
   .social-reel .item img {
-    width: 100%;            /* fill container’s width */
-    height: 100%;           /* fill container’s height */
+    width: 100%;            /* fill container's width */
+    height: 100%;           /* fill container's height */
     object-fit: cover;      /* crop to cover without distortion */
     display: block;         /* remove inline‑img gaps */
+    border-radius: 12px;    /* match container radius */
+    transition: transform 0.3s ease;
+    cursor: pointer;        /* indicate clickable */
   }
+  
+  .social-reel .item:hover img {
+    transform: scale(1.05); /* slight zoom on hover */
+  }
+  
+  /* Owl Carousel custom styling */
+  .social-reel .owl-stage-outer {
+    padding: 10px 0;
+  }
+  
+  .social-reel .owl-stage {
+    display: flex;
+    align-items: center;
+  }
+  
+  .social-reel .owl-item {
+    display: flex;
+    align-items: center;
+  }
+
+/* Enhanced Carousel Smoothness */
+.social-reel .owl-stage {
+  transition: transform 1s ease-in-out;
+}
+
+.social-reel .owl-item {
+  transition: transform 0.3s ease;
+}
+
+.social-reel .owl-stage-outer {
+  overflow: hidden;
+  position: relative;
+}
+
+/* Smooth transitions for better animation */
+.social-reel .owl-item {
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* Image Modal Styles */
+.image-modal {
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.modal-content {
+  position: relative;
+  max-width: 50%;
+  max-height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.close {
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.7);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  z-index: 10001;
+}
+
+.close:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+
+/* Mobile responsive for modal */
+@media (max-width: 768px) {
+  .close {
+    top: -30px;
+    right: -30px;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+  }
+  
+  .modal-content {
+    max-width: 80%;
+    max-height: 80%;
+  }
+}
+
+/* Performance and Accessibility Improvements */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: #000;
+  color: #fff;
+  padding: 8px;
+  text-decoration: none;
+  z-index: 10000;
+  border-radius: 4px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.skip-link:focus {
+  top: 6px;
+  left: 6px;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Improve focus indicators */
+a:focus,
+button:focus {
+  outline: 2px solid #2c98f0;
+  outline-offset: 2px;
+}
+
+/* Lazy loading placeholder */
+img[loading="lazy"] {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+img[loading="lazy"].loaded {
+  opacity: 1;
+}
+
+/* Improve color contrast */
+.colorlib-heading {
+  color: #000;
+}
+
+/* Better mobile touch targets */
+@media (max-width: 768px) {
+  .colorlib-nav-toggle {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  #colorlib-main-menu ul li a {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
