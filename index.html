@@ -122,6 +122,10 @@
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="css/style.css">
 
+	<!-- D3.js and Chart.js for interactive visualizations -->
+	<script src="https://d3js.org/d3.v7.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
 	<!-- FOR IE9 below -->
@@ -1038,256 +1042,57 @@
 				</div>
 			</section>
 			
-			<section class="colorlib-skills" data-section="skills">
-				<div class="colorlib-narrow-content">
-					<div class="row">
-						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-							<span class="heading-meta">Skills & Certifications</span>
-							<h2 class="colorlib-heading">Technical Expertise & Community Impact</h2>
-						</div>
+		<section class="colorlib-skills" data-section="skills">
+			<div class="colorlib-narrow-content">
+				<div class="row">
+					<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+						<span class="heading-meta">Skills & Impact</span>
+						<h2 class="colorlib-heading">XR Leadership & Technical Expertise</h2>
 					</div>
-					<div class="row">
-						<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
-							<p>From individual developer to community catalyst, building bridges between technology and people in the XR space.</p>
-						</div>
-					</div>
+				</div>
 
-					<!-- Community Journey Timeline -->
-					<div class="row" style="margin-top: 40px;">
-						<div class="col-md-12">
-							<div class="journey-timeline">
-								
-								<!-- Stage 1: Individual Developer -->
-								<div class="timeline-item animate-box" data-animate-effect="fadeInLeft">
-									<div class="timeline-marker">
-										<div class="timeline-icon individual">
-											<i class="icon-user"></i>
-										</div>
-									</div>
-									<div class="timeline-content">
-										<div class="timeline-header">
-											<h3>Individual Developer</h3>
-											<div class="timeline-visual">
-												<div class="dev-avatar">
-													<i class="icon-code"></i>
-												</div>
-												<div class="tech-orbit">
-													<div class="tech-item unity"><span>Unity</span></div>
-													<div class="tech-item ar"><span>AR</span></div>
-													<div class="tech-item vr"><span>VR</span></div>
-												</div>
-											</div>
-										</div>
-										<p>Started as a solo XR developer, exploring Unity, C#, and spatial computing possibilities</p>
-										<div class="skills-showcase">
-											<span class="skill-item">Unity 3D</span>
-											<span class="skill-item">C# Programming</span>
-											<span class="skill-item">Apple Vision Pro</span>
-											<span class="skill-item">ARKit/ARCore</span>
-										</div>
-									</div>
-								</div>
-
-								<!-- Stage 2: Mentor & Educator -->
-								<div class="timeline-item animate-box" data-animate-effect="fadeInRight">
-									<div class="timeline-marker">
-										<div class="timeline-icon mentor">
-											<i class="icon-graduation-cap"></i>
-										</div>
-									</div>
-									<div class="timeline-content">
-										<div class="timeline-header">
-											<h3>Developer Mentor</h3>
-											<div class="timeline-visual">
-												<div class="mentor-hub">
-													<i class="icon-users"></i>
-												</div>
-												<div class="mentee-network">
-													<div class="mentee-dot"></div>
-													<div class="mentee-dot"></div>
-													<div class="mentee-dot"></div>
-													<div class="mentee-dot"></div>
-													<div class="mentee-dot"></div>
-												</div>
-											</div>
-										</div>
-										<p>Began mentoring developers, sharing knowledge and fostering growth in XR technologies</p>
-										<div class="impact-highlight">
-											<div class="impact-number">700+</div>
-											<div class="impact-label">Developers Mentored</div>
-										</div>
-									</div>
-								</div>
-
-								<!-- Stage 3: Community Builder -->
-								<div class="timeline-item animate-box" data-animate-effect="fadeInLeft">
-									<div class="timeline-marker">
-										<div class="timeline-icon community">
-											<i class="icon-globe"></i>
-										</div>
-									</div>
-									<div class="timeline-content">
-										<div class="timeline-header">
-											<h3>XR Community Builder</h3>
-											<div class="timeline-visual">
-												<div class="community-hub">
-													<i class="icon-heart"></i>
-												</div>
-												<div class="community-members">
-													<div class="member-group">
-														<div class="member"></div>
-														<div class="member"></div>
-														<div class="member"></div>
-													</div>
-													<div class="member-group">
-														<div class="member"></div>
-														<div class="member"></div>
-													</div>
-													<div class="member-group">
-														<div class="member"></div>
-														<div class="member"></div>
-														<div class="member"></div>
-														<div class="member"></div>
-													</div>
-												</div>
-											</div>
-										</div>
-										<p>Creating a thriving ecosystem where developers, creators, and innovators collaborate on XR projects</p>
-										<div class="community-stats">
-											<div class="stat-box">
-												<div class="stat-number">291M+</div>
-												<div class="stat-label">AR Interactions</div>
-											</div>
-											<div class="stat-box">
-												<div class="stat-number">€12M</div>
-												<div class="stat-label">Program Value</div>
-											</div>
-											<div class="stat-box">
-												<div class="stat-number">5</div>
-												<div class="stat-label">Global Partnerships</div>
-											</div>
-										</div>
-									</div>
-								</div>
+				<!-- Visual Dashboard -->
+				<div class="row" style="margin-top: 40px;">
+					<!-- XR Community Impact -->
+					<div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
+						<div class="visual-card">
+							<h4>XR Community Impact</h4>
+							<div id="community-impact" style="height: 200px;"></div>
+							<div class="gauge-labels">
+								<span class="gauge-value" id="community-reach">200+ Members</span>
+								<span class="gauge-description">Across 4 Countries</span>
 							</div>
 						</div>
 					</div>
 
-					<!-- Technical Expertise Grid -->
-					<div class="row" style="margin-top: 60px;">
-						<div class="col-md-12 animate-box" data-animate-effect="fadeInUp">
-							<h3 style="text-align: center; margin-bottom: 40px; color: #333;">Technical Expertise</h3>
-						</div>
-						
-						<div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
-							<div class="expertise-card">
-								<div class="expertise-icon xr">
-									<i class="icon-eye2"></i>
-								</div>
-								<h4>XR Development</h4>
-								<ul class="expertise-list">
-									<li>Unity 3D & C#</li>
-									<li>Apple Vision Pro</li>
-									<li>ARKit / ARCore</li>
-									<li>HoloLens MRTK</li>
-								</ul>
-							</div>
-						</div>
-
-						<div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
-							<div class="expertise-card">
-								<div class="expertise-icon devrel">
-									<i class="icon-users"></i>
-								</div>
-								<h4>Developer Relations</h4>
-								<ul class="expertise-list">
-									<li>Technical Evangelism</li>
-									<li>Developer Mentorship</li>
-									<li>Global Partnerships</li>
-									<li>Conference Speaking</li>
-								</ul>
-							</div>
-						</div>
-
-						<div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInRight">
-							<div class="expertise-card">
-								<div class="expertise-icon fullstack">
-									<i class="icon-code"></i>
-								</div>
-								<h4>Full-Stack Development</h4>
-								<ul class="expertise-list">
-									<li>JavaScript / Three.js</li>
-									<li>Python & ML</li>
-									<li>Android Development</li>
-									<li>Web Technologies</li>
-								</ul>
-							</div>
-						</div>
-
-						<div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInRight">
-							<div class="expertise-card">
-								<div class="expertise-icon emerging">
-									<i class="icon-bulb"></i>
-								</div>
-								<h4>Emerging Tech</h4>
-								<ul class="expertise-list">
-									<li>AI Integration</li>
-									<li>Computer Vision</li>
-									<li>3D Photogrammetry</li>
-									<li>Innovation Strategy</li>
-								</ul>
-							</div>
+					<!-- Technical Skills Radar -->
+					<div class="col-md-4 animate-box" data-animate-effect="fadeInUp">
+						<div class="visual-card">
+							<h4>Technical Expertise</h4>
+							<div id="skills-radar" style="height: 200px;"></div>
 						</div>
 					</div>
 
-					<!-- Recognition & Achievements -->
-					<div class="row" style="margin-top: 50px;">
-						<div class="col-md-12 animate-box" data-animate-effect="fadeInUp">
-							<h4 style="text-align: center; margin-bottom: 30px; color: #333;">Recognition & Partnerships</h4>
-							<div class="achievements-grid">
-								<div class="achievement-item">
-									<div class="achievement-icon">
-										<i class="icon-award"></i>
-									</div>
-									<div class="achievement-details">
-										<h5>Qualcomm AR Pathfinder</h5>
-										<p>Advanced AR Development</p>
-									</div>
-								</div>
-								<div class="achievement-item">
-									<div class="achievement-icon">
-										<i class="icon-graduation-cap"></i>
-									</div>
-									<div class="achievement-details">
-										<h5>ERASMUS-IMLEX Board</h5>
-										<p>International Leadership</p>
-									</div>
-								</div>
-								<div class="achievement-item">
-									<div class="achievement-icon">
-										<i class="icon-mobile"></i>
-									</div>
-									<div class="achievement-details">
-										<h5>MWC 2025 Speaker</h5>
-										<p>Mobile World Congress</p>
-									</div>
-								</div>
-								<div class="achievement-item">
-									<div class="achievement-icon">
-										<i class="icon-beaker"></i>
-									</div>
-									<div class="achievement-details">
-										<h5>MIT Partnership</h5>
-										<p>Research Collaboration</p>
-									</div>
-								</div>
-							</div>
+					<!-- Technology Stack -->
+					<div class="col-md-4 animate-box" data-animate-effect="fadeInRight">
+						<div class="visual-card">
+							<h4>Tech Stack</h4>
+							<div id="tech-bubbles" style="height: 200px;"></div>
 						</div>
 					</div>
 				</div>
-			</section>
 
-			<section class="colorlib-experience" data-section="experience">
+				<!-- Career Focus Pie Chart -->
+				<div class="row" style="margin-top: 40px;">
+					<div class="col-md-12 animate-box" data-animate-effect="fadeInUp">
+						<div class="visual-card">
+							<h4>Career Focus Distribution</h4>
+							<div id="career-focus-pie"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>			<section class="colorlib-experience" data-section="experience">
 				<div class="colorlib-narrow-content">
 					<div class="row">
 						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
@@ -1644,6 +1449,9 @@
 	
 	<!-- Projects Manager -->
 	<script src="js/projects-manager.js"></script>
+	
+	<!-- Visual Skills Dashboard -->
+	<script src="js/visual-skills.js"></script>
 
 	<script>
 		// Swipe Down Indicator Hide on Swipe and Scroll (Mobile)
