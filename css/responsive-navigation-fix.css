@@ -1,0 +1,311 @@
+/* Enhanced Navigation Responsive Fixes - Keep Original Width */
+
+/* Override existing styles to ensure proper scaling */
+#colorlib-aside {
+    box-sizing: border-box !important;
+}
+
+#colorlib-aside #colorlib-main-menu ul li {
+    box-sizing: border-box !important;
+}
+
+#colorlib-aside #colorlib-main-menu ul li a {
+    box-sizing: border-box !important;
+}
+
+/* Desktop Navigation Enhancements - Keep Original Width with Better Scrolling */
+@media screen and (min-width: 769px) {
+    #colorlib-aside {
+        width: 300px !important; /* Keep original width */
+        height: 100vh !important; /* Full height */
+        overflow-y: auto !important; /* Enable scrolling */
+        position: fixed !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    
+    /* Make desktop navigation menu scrollable */
+    #colorlib-aside .colorlib-nav {
+        flex-grow: 1 !important;
+        max-height: calc(100vh - 250px) !important; /* Reserve space for profile and footer */
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+        padding-right: 10px !important; /* Space for scrollbar */
+    }
+    
+    /* Style desktop scrollbar */
+    #colorlib-aside .colorlib-nav::-webkit-scrollbar {
+        width: 8px !important;
+    }
+    
+    #colorlib-aside .colorlib-nav::-webkit-scrollbar-track {
+        background: rgba(0, 0, 0, 0.05) !important;
+        border-radius: 4px !important;
+    }
+    
+    #colorlib-aside .colorlib-nav::-webkit-scrollbar-thumb {
+        background: rgba(44, 152, 240, 0.7) !important;
+        border-radius: 4px !important;
+    }
+    
+    #colorlib-aside .colorlib-nav::-webkit-scrollbar-thumb:hover {
+        background: rgba(44, 152, 240, 0.9) !important;
+    }
+    
+    /* Better desktop navigation spacing */
+    #colorlib-aside .colorlib-nav ul li {
+        padding: 10px 15px !important;
+        min-height: 45px !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+    
+    #colorlib-aside .colorlib-nav ul li a {
+        font-size: 14px !important;
+        line-height: 1.4 !important;
+        word-wrap: break-word !important;
+        white-space: normal !important;
+        padding: 8px 0 !important;
+        width: 100% !important;
+        display: flex !important;
+        align-items: center !important;
+        overflow: hidden !important;
+        hyphens: auto !important;
+        -webkit-hyphens: auto !important;
+        -moz-hyphens: auto !important;
+        -ms-hyphens: auto !important;
+        word-break: break-word !important;
+        overflow-wrap: break-word !important;
+    }
+    
+    /* Fade indicators for scrollable content */
+    #colorlib-aside .colorlib-nav:before,
+    #colorlib-aside .colorlib-nav:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 20px;
+        background: linear-gradient(to bottom, rgba(255,255,255,0.8), transparent);
+        pointer-events: none;
+        z-index: 10;
+    }
+    
+    #colorlib-aside .colorlib-nav:before {
+        top: 0;
+    }
+    
+    #colorlib-aside .colorlib-nav:after {
+        bottom: 0;
+        background: linear-gradient(to top, rgba(255,255,255,0.8), transparent);
+    }
+    
+    /* Make social icons visible with same gray styling as mobile */
+    #colorlib-aside .colorlib-footer ul li a {
+        color: #666 !important;
+        font-size: 18px !important;
+    }
+    
+    #colorlib-aside .colorlib-footer ul li a:hover {
+        color: #5db2f8b7 !important;
+        text-decoration: none !important;
+        outline: none !important;
+    }
+}
+
+/* Mobile Navigation Enhancements - Keep Original Width with Better Scrolling */
+@media screen and (max-width: 768px) {
+    #colorlib-aside {
+        width: 300px !important; /* Keep original width */
+        max-width: 90vw !important; /* Ensure it doesn't exceed screen width */
+        min-width: 250px !important;
+        height: 100vh !important; /* Full height */
+        overflow-y: auto !important; /* Enable scrolling */
+        -webkit-overflow-scrolling: touch !important; /* Smooth scrolling */
+        touch-action: pan-y !important; /* Allow vertical touch scrolling */
+    }
+    
+    /* Make mobile navigation menu scrollable */
+    #colorlib-aside .colorlib-nav {
+        max-height: calc(100vh - 150px) !important; /* Reserve space for profile */
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+        -webkit-overflow-scrolling: touch !important;
+        padding-right: 5px !important; /* Space for scrollbar */
+        touch-action: pan-y !important; /* Allow vertical touch scrolling */
+    }
+    
+    /* Specific touch handling for main menu */
+    #colorlib-aside #colorlib-main-menu {
+        touch-action: pan-y !important; /* Allow vertical scrolling */
+        -webkit-overflow-scrolling: touch !important;
+        overflow-y: auto !important;
+    }
+    
+    /* Style mobile scrollbar */
+    #colorlib-aside .colorlib-nav::-webkit-scrollbar {
+        width: 3px !important;
+    }
+    
+    #colorlib-aside .colorlib-nav::-webkit-scrollbar-track {
+        background: rgba(0, 0, 0, 0.05) !important;
+    }
+    
+    #colorlib-aside .colorlib-nav::-webkit-scrollbar-thumb {
+        background: rgba(44, 152, 240, 0.5) !important;
+        border-radius: 2px !important;
+    }
+    
+    /* Better mobile navigation spacing within original width */
+    #colorlib-aside .colorlib-nav ul li {
+        padding: 8px 12px !important; /* Reduced padding to fit more text and scrollbar */
+        min-height: 40px !important; /* Slightly smaller touch targets */
+        display: flex !important;
+        align-items: center !important;
+        box-sizing: border-box !important;
+        touch-action: manipulation !important; /* Optimize touch handling */
+    }
+    
+    #colorlib-aside .colorlib-nav ul li a {
+        font-size: 13px !important; /* Smaller font to fit in original width */
+        line-height: 1.3 !important;
+        word-wrap: break-word !important;
+        white-space: normal !important;
+        padding: 6px 0 !important;
+        width: 100% !important;
+        display: flex !important;
+        align-items: center !important;
+        box-sizing: border-box !important;
+        overflow: hidden !important;
+        hyphens: auto !important;
+        -webkit-hyphens: auto !important;
+        -moz-hyphens: auto !important;
+        -ms-hyphens: auto !important;
+        word-break: break-word !important;
+        overflow-wrap: break-word !important;
+        touch-action: manipulation !important; /* Optimize touch handling */
+    }
+}
+
+/* Very Small Mobile Screens - Keep proportional */
+@media screen and (max-width: 480px) {
+    #colorlib-aside {
+        width: 280px !important; /* Slightly smaller for very small screens */
+        max-width: 85vw !important;
+        min-width: 240px !important;
+    }
+    
+    #colorlib-aside .colorlib-nav ul li a {
+        font-size: 12px !important;
+        line-height: 1.2 !important;
+    }
+    
+    #colorlib-aside .colorlib-nav ul li {
+        padding: 6px 12px !important;
+    }
+}
+
+/* Ultra Small Screens */
+@media screen and (max-width: 360px) {
+    #colorlib-aside {
+        width: 260px !important;
+        max-width: 80vw !important;
+        min-width: 220px !important;
+    }
+    
+    #colorlib-aside .colorlib-nav ul li {
+        padding: 6px 10px !important;
+    }
+    
+    #colorlib-aside .colorlib-nav ul li a {
+        font-size: 11px !important;
+        line-height: 1.1 !important;
+    }
+}
+
+/* General Text Wrapping Improvements */
+#colorlib-aside #colorlib-main-menu ul li a {
+    overflow-wrap: break-word !important;
+    word-wrap: break-word !important;
+    hyphens: auto !important;
+    -webkit-hyphens: auto !important;
+    -moz-hyphens: auto !important;
+    -ms-hyphens: auto !important;
+    white-space: normal !important;
+}
+
+/* Ensure navigation is accessible and scrollable */
+#colorlib-aside .colorlib-nav {
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+}
+
+/* Add scroll indicator for navigation */
+#colorlib-aside #colorlib-main-menu ul {
+    position: relative !important;
+}
+
+/* Fade effect at top and bottom to indicate scrollable content */
+#colorlib-aside #colorlib-main-menu::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    height: 10px !important;
+    background: linear-gradient(to bottom, rgba(242, 243, 247, 1), rgba(242, 243, 247, 0)) !important;
+    pointer-events: none !important;
+    z-index: 10 !important;
+}
+
+#colorlib-aside #colorlib-main-menu::after {
+    content: '' !important;
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    height: 10px !important;
+    background: linear-gradient(to top, rgba(242, 243, 247, 1), rgba(242, 243, 247, 0)) !important;
+    pointer-events: none !important;
+    z-index: 10 !important;
+}
+
+/* Smooth transitions for responsive changes */
+#colorlib-aside,
+#colorlib-main {
+    transition: width 0.3s ease, margin 0.3s ease !important;
+}
+
+/* Fix for longer navigation items - ensure they don't get cut off */
+#colorlib-aside #colorlib-main-menu ul li {
+    overflow: visible !important;
+    text-overflow: clip !important;
+}
+
+#colorlib-aside #colorlib-main-menu ul li a {
+    overflow: visible !important;
+    text-overflow: clip !important;
+}
+
+/* Specific fixes for problematic menu items */
+#colorlib-aside #colorlib-main-menu ul li a[data-nav-section="speaking"],
+#colorlib-aside #colorlib-main-menu ul li a[data-nav-section="services"],
+#colorlib-aside #colorlib-main-menu ul li a[data-nav-section="certificates"],
+#colorlib-aside #colorlib-main-menu ul li a[data-nav-section="experience-latest"],
+#colorlib-aside #colorlib-main-menu ul li a[data-nav-section="experience"] {
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+    white-space: normal !important;
+    text-align: center !important;
+}
+
+/* Ensure mobile hamburger menu works properly */
+@media screen and (max-width: 768px) {
+    .js-colorlib-nav-toggle {
+        display: block !important;
+        position: fixed !important;
+        top: 20px !important;
+        right: 20px !important;
+        z-index: 2001 !important;
+    }
+}

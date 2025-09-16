@@ -460,7 +460,7 @@
 }
 
 /* Center the chart containers */
-#community-impact, #skills-radar, #tech-bubbles, 
+#skills-radar, #tech-bubbles, 
 #ar-interactions-visual, #program-value-visual, #partnerships-visual, 
 #career-focus-pie {
     display: flex;
@@ -597,7 +597,7 @@
     }
     
     /* Ensure all charts are centered */
-    #community-impact, #skills-radar, #tech-bubbles, 
+    #skills-radar, #tech-bubbles, 
     #ar-interactions-visual, #program-value-visual, #partnerships-visual {
         margin: 0 auto;
         display: block;
@@ -708,7 +708,7 @@
     }
     
     /* Make sure charts are centered within their containers */
-    #community-impact svg, #skills-radar svg, #tech-bubbles svg,
+    #skills-radar svg, #tech-bubbles svg,
     #ar-interactions-visual svg, #program-value-visual svg, #partnerships-visual svg {
         display: block;
         margin: 0 auto;

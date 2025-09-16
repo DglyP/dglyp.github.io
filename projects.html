@@ -51,16 +51,16 @@
 	<!-- Custom CSS -->
 	<link rel="stylesheet" href="css/carousel-custom.css">
 	<link rel="stylesheet" href="css/custom-spacing.css">
-	<link rel="stylesheet" href="css/navigation-fixes.css">
 	<link rel="stylesheet" href="css/footer-fixes.css">
-	<link rel="stylesheet" href="css/hero-mobile-fixes.css">
-	<link rel="stylesheet" href="css/hero-text-fixes.css">
-	<link rel="stylesheet" href="css/mobile-nav-fixes.css">
-	<link rel="stylesheet" href="css/section-loading-fixes.css">
 	<link rel="stylesheet" href="css/projects-page-fix.css">
-	
+
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="css/style.css">
+	
+	<!-- Responsive Navigation Fixes -->
+	<link rel="stylesheet" href="css/responsive-navigation-fix.css">
+	<link rel="stylesheet" href="css/navigation-fixes.css">
+	<link rel="stylesheet" href="css/mobile-nav-fixes.css">
 
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
@@ -78,24 +78,29 @@
 
 	<div id="colorlib-page">
 		<div class="container-wrap">
-		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
+		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation menu"><i></i></a>
 		<aside id="colorlib-aside" role="complementary" class="border js-fullheight" style="overflow: hidden;">
 			<div class="text-center">
-				<a href="https://www.instagram.com/deglypava/"><div class="author-img" style="background-image: url(img/Profile2.jpg);" role="img" aria-label="Degly Pava profile photo"></div></a>
+				<a href="https://www.instagram.com/deglypava/"><div class="author-img" style="background-image: url('./img/Profile2.jpg'); width: 150px; height: 150px; border-radius: 50%; background-size: cover; background-position: center; display: block; margin: 0 auto 30px; border: 2px solid #999; background-color: #f0f0f0;" role="img" aria-label="Degly Pava profile photo"></div></a>
 				<h1 id="colorlib-logo"><a href="index.html">Degly Pava</a></h1>
-				<span class="position">Systems and Computer Engineer<br>AR / VR Developer<br>Tokyo, Japan</span>
+				<span class="position">
+					Senior XR Specialist – CEO<br>
+					Tokyo, Japan
+				</span>
 			</div>
 			<nav id="colorlib-main-menu" role="navigation" class="navbar" aria-label="Main navigation">
 				<div id="navbar" class="collapse">
 					<ul role="menubar">
 						<li role="none"><a class="external" href="index.html" data-nav-section="home" role="menuitem">Home</a></li>
 						<li role="none"><a class="external" href="index.html#about" data-nav-section="about" role="menuitem">About</a></li>
-						<li role="none"><a class="external" href="index.html#experience" data-nav-section="experience" role="menuitem">Previous Experience</a></li>
-						<li role="none"><a class="external" href="index.html#services" data-nav-section="services" role="menuitem">What I can do</a></li>
-						<li role="none"><a class="external" href="index.html#education" data-nav-section="education" role="menuitem">Education</a></li>
-						<li role="none"><a class="external" href="index.html#awards" data-nav-section="awards" role="menuitem">Honors and Awards</a></li>
-						<li role="none"><a class="external" href="index.html#skills" data-nav-section="skills" role="menuitem">Skills and Certifications</a></li>
+						<li role="none"><a class="external" href="index.html#speaking" data-nav-section="speaking" role="menuitem">Speaking & Leadership</a></li>
 						<li class="active" role="none"><a href="projects.html" data-nav-section="work" role="menuitem">Work / Portfolio</a></li>
+						<li role="none"><a class="external" href="index.html#experience-latest" data-nav-section="experience-latest" role="menuitem">Latest Experience</a></li>
+						<li role="none"><a class="external" href="index.html#services" data-nav-section="services" role="menuitem">What I can do</a></li>
+						<li role="none"><a class="external" href="index.html#certificates" data-nav-section="certificates" role="menuitem">Certificates</a></li>
+						<li role="none"><a class="external" href="index.html#education" data-nav-section="education" role="menuitem">Education</a></li>
+						<li role="none"><a class="external" href="index.html#skills" data-nav-section="skills" role="menuitem">Skills & Impact</a></li>
+						<li role="none"><a class="external" href="index.html#experience" data-nav-section="experience" role="menuitem">Previous Experience</a></li>
 						<li role="none"><a class="external" href="index.html#contact" data-nav-section="contact" role="menuitem">Contact</a></li>
 					</ul>
 				</div>
@@ -113,7 +118,7 @@
 
 		</aside>
 
-		<div id="colorlib-main">
+		<main id="colorlib-main" role="main">
 			
 			<section class="colorlib-work" data-section="work">
 				<div class="colorlib-narrow-content">
@@ -164,7 +169,7 @@
 				</div>
 			</section>
 
-		</div><!-- end:colorlib-main -->
+		</main><!-- end:colorlib-main -->
 	</div><!-- end:colorlib-page -->
 
 	<!-- jQuery -->
@@ -184,6 +189,9 @@
 
 	<!-- MAIN JS -->
 	<script src="js/main.js"></script>
+	
+	<!-- Navigation Scroll Fix -->
+	<script src="js/navigation-scroll-fix.js"></script>
 	
 	<!-- Projects Page Manager -->
 	<script src="js/projects-page.js"></script>

@@ -21,7 +21,9 @@ async function loadAllProjects() {
     try {
         console.log('Projects Page Manager: Loading all projects...');
         const response = await fetch('js/data/projects.json');
+        console.log('Response status:', response.status);
         const data = await response.json();
+        console.log('Loaded data:', data);
         
         if (data && data.projects && Array.isArray(data.projects)) {
             displayAllProjects(data.projects);
@@ -39,7 +41,13 @@ async function loadAllProjects() {
  */
 function displayAllProjects(projects) {
     const container = document.getElementById('all-projects');
-    if (!container) return;
+    if (!container) {
+        console.error('Container #all-projects not found!');
+        return;
+    }
+    
+    console.log('Displaying projects in container:', container);
+    console.log('Projects to display:', projects);
     
     // Sort projects to show featured ones first
     const sortedProjects = [...projects].sort((a, b) => {
@@ -51,9 +59,12 @@ function displayAllProjects(projects) {
     container.innerHTML = '';
     
     sortedProjects.forEach((project, index) => {
+        console.log(`Rendering project ${index}:`, project.title);
         const projectElement = renderProjectForPage(project, index);
         container.appendChild(projectElement);
     });
+    
+    console.log('All projects rendered. Container HTML:', container.innerHTML.substring(0, 200) + '...');
     
     // Add animation delay for staggered effect
     addStaggeredAnimation();
