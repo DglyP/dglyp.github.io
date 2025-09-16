@@ -15,15 +15,39 @@ async function loadProjects() {
 
 // Function to render a single project
 function renderProject(project, effect = "fadeInRight") {
+    // Map project IDs to translation keys
+    const translationMap = {
+        'avatar-ar-logo': 'avatar',
+        'holobrain': 'holoBrain', 
+        'ar-filters': 'arFilters',
+        'colombia-xr': 'colombiaXr',
+        // For projects that don't have translations yet, use the fallback text
+        'astroscoop-vision-pro': 'astroscoop',
+        '3d-visualizer': '3dVisualizer',
+        '3d-reconstructions': '3dReconstructions',
+        'ar-car-tracking': 'arCarTracking',
+        'clinical-simulation': 'clinicalSimulation',
+        'emotion-recognition': 'emotionRecognition',
+        'pupil-mimicry': 'pupilMimicry',
+        'ar-asteroids': 'arAsteroids',
+        'unity-zeromq-multiplayer': 'unityZeromq',
+        'mediapipe-parallax': 'mediapipeParallax'
+    };
+    
+    const translationKey = translationMap[project.id] || project.id;
+    
+    // Check if translation exists, otherwise use fallback
+    const hasTranslation = translationKey && ['avatar', 'holoBrain', 'arFilters', 'colombiaXr'].includes(translationKey);
+    
     return `
     <div class="col-md-6 animate-box" data-animate-effect="${effect}">
         <div class="project" style="background-image: url(${project.image});">
             <div class="desc">
                 <div class="con">
-                    <h3><a href="${project.url}" target="_blank" rel="noreferrer noopener">${project.title}</a></h3>
-                    <span>${project.description} ${
+                    <h3><a href="${project.url}" target="_blank" rel="noreferrer noopener">${hasTranslation ? `<span data-translate="work.projects.${translationKey}.title">${project.title}</span>` : project.title}</a></h3>
+                    <span>${hasTranslation ? `<span data-translate="work.projects.${translationKey}.description">${project.description}</span>` : project.description} ${
                         project.demoUrl ? 
-                        `<a href="${project.demoUrl}" style="color: #f9bf3f" target="_blank" rel="noreferrer noopener">Try it</a>` :
+                        `<a href="${project.demoUrl}" style="color: #f9bf3f" target="_blank" rel="noreferrer noopener">${hasTranslation ? `<span data-translate="work.projects.${translationKey}.action">Try it</span>` : 'Try it'}</a>` :
                         ''
                     }</span>
                 </div>
@@ -79,6 +103,11 @@ async function initializeProjects() {
                     el.classList.add('animated', el.getAttribute('data-animate-effect'));
                 }, index * 200); // Stagger the animations
             });
+            
+            // Update translations for dynamically loaded projects
+            if (window.TranslationManager && window.TranslationManager.applyTranslations) {
+                window.TranslationManager.applyTranslations();
+            }
         }, 100);
 
     } catch (error) {

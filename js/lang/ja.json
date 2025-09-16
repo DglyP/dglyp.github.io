@@ -1,0 +1,347 @@
+{
+  "meta": {
+    "title": "Degly Pava - シニアXRスペシャリスト | 700+開発者メンタリング | Apple Vision Pro MWC 2025",
+    "description": "Degly Pava - 世界中で700人以上の開発者をメンタリングし、291M+ ARインタラクションを創造し、MWC 2025でApple Vision Proを発表したシニアXRスペシャリスト兼CEO。MIT、KDDI、Metaとのパートナーシップを持つUnity、AR/VR開発エキスパート。",
+    "keywords": "XR開発者, AR VRスペシャリスト, Unity開発者, Apple Vision Pro, MWC 2025, 開発者メンター, 291M ARインタラクション, MITパートナーシップ, KDDI, Meta, 東京日本, イマーシブテクノロジー, 拡張現実, 仮想現実, 複合現実",
+    "author": "Degly Pava",
+    "ogTitle": "Degly Pava - シニアXRスペシャリスト | 700+開発者メンタリング | Apple Vision Pro MWC 2025",
+    "ogSiteName": "Degly Pava ポートフォリオ",
+    "twitterTitle": "Degly Pava - シニアXRスペシャリスト | 700+開発者メンタリング | Apple Vision Pro MWC 2025"
+  },
+  "navigation": {
+    "home": "ホーム",
+    "about": "自己紹介",
+    "speaking": "講演とリーダーシップ",
+    "work": "作品 / ポートフォリオ",
+    "experienceLatest": "最新の経験",
+    "services": "できること",
+    "certificates": "認定",
+    "education": "教育",
+    "skills": "スキルと影響",
+    "experience": "過去の経験",
+    "contact": "連絡先"
+  },
+  "sidebar": {
+    "name": "Degly Pava",
+    "position": "シニアXRスペシャリスト – CEO",
+    "location": "東京、日本"
+  },
+  "hero": {
+    "slide1": {
+      "title": "こんにちは！<br>私はDeglyです",
+      "subtitle": "シニアXRスペシャリスト兼CEO<br>世界中で700+人のクリエイターをメンタリング<br>AI/XRカンファレンスでの定期講演者<br>MWC 2025とMITで発表",
+      "downloadCV": "履歴書ダウンロード",
+      "viewProjects": "プロジェクト表示"
+    },
+    "slide2": {
+      "title": "XRの<br>未来を構築",
+      "subtitle": "MIT、KDDI、Metaとのグローバルパートナーシップ<br>MWC 2025でApple Vision Proプレゼンター<br>SNSで291M+ XRインタラクション",
+      "viewPortfolio": "ポートフォリオ表示"
+    }
+  },
+  "about": {
+    "heading": "自己紹介",
+    "title": "私は誰ですか？",
+    "intro": "<strong>こんにちは、私はDegly Pavaです</strong>、東京在住のシニア拡張現実スペシャリスト兼CEOです。世界中で700人以上の開発者をメンタリングし、291M+のARインタラクションを創造し、MIT、KDDI、Metaとのパートナーシップを構築しています。",
+    "summary": "MWC 2025でApple Vision Proデモを発表 • 50,000+ XRエクスペリエンスをホストするSTYLYプラットフォームを開発 • グローバルXRコミュニティリーダー",
+    "detailed": {
+      "paragraph1": "私の専門知識は、日本、米国、コロンビアの業界リーダーから注目を集めた最先端の拡張現実体験に及びます。CAPCOMやNintendoなどのゲーム大手と協力し、ユニバーサル・スタジオ・ジャパンのAR開発を主導し、QualcommのAR Developer Pathfinders Programを通じてARグラス技術を開拓しました。",
+      "paragraph2": "XRを超えて、2つのAndroidアプリケーションを開発し、数多くのオープンソースプロジェクトに貢献し、モバイルおよびWebプラットフォーム全体での多様性を実証しました。また、Apple Vision ProのSpatial Personaのシームレスな統合のためのUnityパッケージライブラリを作成し、開発者コミュニティのための複雑なvisionOS開発ワークフローを簡素化しました。",
+      "paragraph3": "Apple Vision Pro向けUnityベースの宇宙探査ゲームの調整から、12M€のヨーロッパXRマスタープログラムの品質基準の確保まで、私はイノベーションと教育を橋渡ししています。"
+    },
+    "readMore": "もっと読む",
+    "readLess": "閉じる",
+    "expertise": {
+      "title1": "コンピュータエンジニアリング",
+      "title2": "拡張・仮想現実",
+      "title3": "革新的テクノロジー",
+      "title4": "研究・イノベーション重視"
+    },
+    "callToAction": "もっと知りたいですか？",
+    "socialPrompt": "私のソーシャルメディアをチェック",
+    "socialHandle": "@deglypava"
+  },
+  "speaking": {
+    "heading": "講演とリーダーシップ",
+    "title": "グローバルインパクトと認知",
+    "events": {
+      "xrTokyo": {
+        "title": "XRTokyo - AI/XRグラスカンファレンス",
+        "date": "2025年8月",
+        "role": "基調講演者",
+        "description": "XRTokyoでAIとXRグラステクノロジーの交差点について発表しました。空間コンピューティングの新興トレンド、XRエクスペリエンスへのAI統合、ウェアラブル複合現実デバイスの未来について議論しました。"
+      },
+      "mwc": {
+        "title": "Mobile World Congress (MWC) 2025",
+        "date": "2025年2月",
+        "role": "主要プレゼンター",
+        "description": "KDDIのXRイノベーションショーケースの一部として、Apple Vision Proゲーム「Astroscoop」を発表しました。100,000人以上の参加者を持つグローバルオーディエンスに最先端の空間コンピューティングとイマーシブゲーミングエクスペリエンスをデモンストレーション。"
+      },
+      "mit": {
+        "title": "MIT Reality Hack & パートナーシップ",
+        "date": "2024-2025",
+        "role": "戦略的パートナー兼メンター",
+        "description": "XRイノベーションのためのSTYLYとMIT間の二国間パートナーシップを構築しました。学生チームをメンタリングし、技術的指導を提供し、学術と産業の協力を促進しました。"
+      },
+      "tgs": {
+        "title": "東京ゲームショウ & グローバルイベント",
+        "date": "2024-2025",
+        "role": "業界講演者",
+        "description": "東京ゲームショウ、SushiTech、AWE、その他主要業界イベントで発表。XR開発、グローバルコミュニティ構築、新興技術について国際的なオーディエンスに向けて講演しました。"
+      },
+      "community": {
+        "title": "開発者コミュニティリーダーシップ",
+        "date": "2021年-現在",
+        "role": "グローバルメンター兼教育者",
+        "description": "米国、韓国、ラテンアメリカ、日本で技術ワークショップを主導。実践的なトレーニング、コードレビュー、XR技術のキャリア指導を通じて700人以上の開発者をメンタリングしました。"
+      }
+    }
+  },
+  "work": {
+    "heading": "私の作品",
+    "title": "最近の作品",
+    "subtitle": "ここで私の素晴らしいプロジェクトの一部を見ることができます。詳細については、私のGitHub、Instagram、または一部に含まれているビデオをチェックしてください。",
+    "projects": {
+      "avatar": {
+        "title": "アニメーションアバターとARロゴ",
+        "description": "ThreeJSとGLSLを使用してカスタムアバターを作成し、モバイル用ARロゴも制作しました。",
+        "action": "試してみる"
+      },
+      "holoBrain": {
+        "title": "HoloBrain 2.0",
+        "description": "MRIスキャンデータとHoloLensを使用したMRでのインタラクティブボリューメトリック脳ビジュアライザー、Blender、C++シェーダー、Unityで開発。",
+        "action": "試してみる"
+      },
+      "arFilters": {
+        "title": "拡張現実フィルター",
+        "description": "Spark AR、Lens Studio、Effect Houseを使用してTikTok、Snapchat、Instagram用のARフィルターを作成。291M+のインタラクションを生成。",
+        "action": "試してみる"
+      },
+      "colombiaXr": {
+        "title": "Colombia XR",
+        "description": "コロンビアのXR組織とイベントを紹介するコミュニティサイト（静的サイト、Vercel）。",
+        "action": "試してみる"
+      }
+    }
+  },
+  "experienceLatest": {
+    "heading": "最新情報",
+    "title": "最新の経験",
+    "jobs": {
+      "styly": {
+        "title": "STYLY Inc. シニア拡張現実スペシャリスト – マネージャー",
+        "date": "2024年7月 – 現在",
+        "bullet1": "KDDIの最先端XRイニシアティブの一部としてMWC 2025で発表された、Apple Vision Pro向けに設計されたUnityベースの空間探索ゲーム「Astroscoop」のデモを調整；イマーシブゲームと体験におけるSTYLYの成長する評判に貢献。",
+        "bullet2": "STYLYのグローバル開発者アウトリーチとバイリンガルパートナーシップを主導し、日本と国際チーム間の協力を促進；MIT、Parsons School of Design、米国、韓国、ラテンアメリカの主要XR開発者との戦略的関係を構築。",
+        "bullet3": "メンタリング、技術ワークショップ、グローバルイベント参加を通じてプラットフォーム成長を推進—700人以上の開発者をサポートし、50,000以上のXRコンテンツカタログに貢献；東京ゲームショウ、MIT Reality Hack、SushiTech、AWE、その他主要業界イベントで発表。"
+      },
+      "erasmus": {
+        "title": "XR品質保証（QA）スペシャリスト、ERASMUS-IMLEX理事会",
+        "date": "2023年9月 – 現在",
+        "bullet1": "欧州委員会資金による12M€のXRマスタープログラムの品質と業界関連性を確保し、複数の大学でイマーシブテクノロジーとゲームデザインの次世代人材開発をサポート。"
+      },
+      "pretia": {
+        "title": "Pretia Technologies ソリューション部門 シニアUnity ARエンジニア",
+        "date": "2023年10月 – 2024年7月",
+        "bullet1": "ARPuzzleGame、AnimalPal、ARgamemadeEZなどのモバイルゲームを支えるコアARシステムを開発し、173カ国でローンチされ、ユニバーサル・スタジオ・ジャパンで紹介。",
+        "bullet2": "CAPCOMとNintendoを含むグローバルゲーム企業と協力し、クロスファンクショナルチームを主導し、外部開発者を管理して洗練されたARゲーミング体験を提供。",
+        "bullet3": "Qualcomm AR Pioneer Developer Programを通じてARグラス開発をパイオニア、マルチデバイス協力、シームレスUX、高性能モバイル-ヘッドセットインタラクションに焦点。"
+      },
+      "omni": {
+        "title": "Omni Applications LLC & LucidDreams S.A.S 創設者 / XRエンジニア",
+        "date": "2021年4月 – 2023年9月",
+        "bullet1": "TikTok、Instagram、Snapchatで生涯291百万インタラクションを生成する高インパクトAR体験を作成・ローンチし、マルチプラットフォームXR戦略を通じてイマーシブマーケティングとゲーミングキャンペーンを配信するブランドを支援。",
+        "bullet2": "XRColと協力してコロンビアでXR開発者イベントを主導し、Meta Oculus Startコミュニティとの強い結びつきを構築し、地元クリエイターをサポート；空間ゲーミング用に構築された環境反応型VRシューターを含むオリジナルゲームデモをプロトタイプ。"
+      }
+    }
+  },
+  "services": {
+    "heading": "何ができるか？",
+    "title": "私のスキルの一部です",
+    "vr": {
+      "title": "VR/AR/XR開発者",
+      "description": "最終的にすべての人の脳を騙すために毎日働き、学んでいます"
+    },
+    "startup": {
+      "title": "スタートアップ愛好家",
+      "description": "Omni Applications、LucidDreams、La Panadería Gourmetの創設者"
+    },
+    "engineer": {
+      "title": "システム・コンピュータエンジニア",
+      "description": "「科学者は現在の世界を研究し；エンジニアは存在しなかった世界を創造する。」"
+    },
+    "photonics": {
+      "title": "フォトニクス",
+      "description": "私たちの目が受け取る情報の量は驚くべきものです..."
+    },
+    "languages": {
+      "title": "言語",
+      "description": "あなたの名前をEspañol、Français、한국어、または日本語に翻訳できます"
+    },
+    "social": {
+      "title": "ソーシャルスキル",
+      "description": "音楽制作、DJ、写真、スポーツ、何でもできるでしょう"
+    },
+    "stats": {
+      "projects": "プロジェクト",
+      "research": "研究グループ",
+      "awards": "賞",
+      "countries": "訪問国"
+    }
+  },
+  "certificates": {
+    "heading": "専門認定",
+    "items": [
+      "Meta Oculus Start開発者",
+      "MIT メンター / 最高投票ハッカソン",
+      "Apple Vision Pro開発者",
+      "Meta Spark Creator AR認定",
+      "UnityとC#熟練",
+      "複数SDKを使用したVRおよびARゲーム開発",
+      "AR/VR/MR/XRのユーザーエクスペリエンスとインタラクションデザイン",
+      "ARストリーミングサービスとビデオコーデック新興技術",
+      "グローバル関係とパートナーシップ経験豊富"
+    ]
+  },
+  "education": {
+    "heading": "教育",
+    "title": "認定教育",
+    "degrees": {
+      "masters": {
+        "title": "ERASMUS Mundus 日本共同修士（IMLEX）",
+        "subtitle": "拡張現実におけるイメージングと光科学修士",
+        "scholarships": [
+          "IMLEX プログラム奨学金",
+          "Erasmus Mundus 奨学金",
+          "Manutech-Sleight 奨学金",
+          "BRMI 奨学金"
+        ],
+        "universities": "東フィンランド大学（フィンランド）、豊橋技術科学大学（日本）、サンテティエンヌ・ジャンモネ大学（フランス）、KUルーヴェン（ベルギー）"
+      },
+      "bachelor1": "システム・コンピュータ工学学士",
+      "bachelor2": "オーディオ制作・操作学士",
+      "research": "医学研究トレーニング - 国際客員研究員"
+    },
+    "awards": {
+      "title": "栄誉と賞",
+      "items": {
+        "colfuturo": {
+          "title": "Programa crédito beca - COLFUTURO（コロンビア）",
+          "description": "コロンビアのトップ学生のための完全修士奨学金"
+        },
+        "brmie": {
+          "title": "オーヴェルニュ・ローヌ・アルプ地域奨学金（BRMIE）",
+          "description": "フランス・オーヴェルニュ・ローヌ・アルプ地域からの奨学金"
+        },
+        "manutech": {
+          "title": "MANUTECH SLEIGHT",
+          "description": "リヨン大学・サンテティエンヌ・ジャンモネ大学からの奨学金と証明書"
+        },
+        "erasmus": {
+          "title": "Erasmus Mundus",
+          "description": "東フィンランド大学ヨエンスー校からのモビリティ賞（2021年）"
+        },
+        "imlex": {
+          "title": "ERASMUS - IMLEX",
+          "description": "ERASMUS IMLEXコンソーシアムからの完全授業料奨学金（2021-2023年）"
+        },
+        "elap": {
+          "title": "ELAP Award - VIRS",
+          "description": "カナダ政府・ブリティッシュコロンビア大学（2019-2021年）"
+        },
+        "purdue": {
+          "title": "Purdue奨学金",
+          "description": "IronHacks研究助成金 - パデュー大学（2018年）"
+        },
+        "colombia": {
+          "title": "完全奨学金",
+          "description": "コロンビアのトップ卒業生、コロンビア国立大学（2013-2019年）"
+        }
+      }
+    }
+  },
+  "skills": {
+    "heading": "スキルと影響",
+    "title": "XRリーダーシップと技術的専門知識",
+    "community": {
+      "title": "XRコミュニティインパクト",
+      "subtitle": "XRコミュニティ",
+      "members": "4カ国で200+メンバー"
+    },
+    "technical": {
+      "title": "技術的専門知識",
+      "skills": ["Unity", "AR/VR", "JavaScript", "Python"]
+    },
+    "leadership": {
+      "title": "リーダーシップ",
+      "subtitle": "技術スタック",
+      "stack": ["Unity", "AR", "JS", "Python", "C#"]
+    },
+    "focus": {
+      "title": "キャリアフォーカス分布",
+      "areas": [
+        "XRリーダーシップ",
+        "技術学習",
+        "プロジェクト創造",
+        "戦略的パートナーシップ",
+        "メンタリングと指導"
+      ]
+    }
+  },
+  "experience": {
+    "heading": "2021年以前",
+    "title": "過去の経験",
+    "jobs": {
+      "omniFounder": {
+        "title": "Omni Applications L.L.C. 創設者兼開発者",
+        "date": "2020年",
+        "description": "eコマース、小売、ヘルスケア、マーケティング・広告、ゲーム、教育、産業および関連分野向けの拡張現実ソリューション提供を専門とする企業。私たちの目標は、拡張現実と仮想現実を一般の顧客に届けることです。米国拠点"
+      },
+      "panaderia": {
+        "title": "事業主 - La Panadería Gourmet",
+        "date": "2013-2021年",
+        "description": "コロンビアの首都の隣、クンディナマルカ州チア市にあるグルメベーカリー。現在リモート管理。私からコロンビアコーヒーをどうぞ"
+      },
+      "fellowship": {
+        "title": "XR開発フェローシップ",
+        "date": "2018-2019年",
+        "description": "カナダの国際客員研究員として、Microsoft Garageインターンシッププログラムと協力してHoloBrainプロジェクトの最初のバージョンを担当。HoloLens v1で動作するのに十分効率的なMRIスキャン脳のボリューメトリックレンダリングを開発。"
+      },
+      "lead": {
+        "title": "リード開発者",
+        "date": "2017-2019年",
+        "description": "製品管理の産業工学コースベースのNetLogoソフトウェアを開発。このシミュレーションは材料所要量計画とスケジューリング分野に焦点を当てていました"
+      },
+      "ironhacks": {
+        "title": "IronHacksフェロー兼開発者 @ Purdue",
+        "date": "2018年",
+        "description": "Purdue - UNAL Fall IronHacks 2018を可能にした研究者の一人。また、EnergyPlus処理、オープンデータ、コスト計算のためのMatlabクラウドコンピューティングから得られたデータを使用して、土木エンジニアと建築家がエネルギー効率的な建物を建設する最良の方法を見つけるのを支援することに焦点を当てたHTMLとAmazon Web Services（AWS）ベースの研究ソフトウェアを開発。"
+      },
+      "teacher": {
+        "title": "Asset-Tutores 教師",
+        "date": "2016-2018年",
+        "description": "英語、数学、技術、物理、化学、生物学および関連科目で知識とスキルの向上が必要な小中学生に授業を提供。"
+      },
+      "designer": {
+        "title": "Asset-Tutores デザイナー/コーダー",
+        "date": "2016-2017年",
+        "description": "ビジネスを宣伝し、すべてのサービスを伝えるための直感的なBootstrap + HTML + CSSウェブサイトを作成・デザイン。The WayBack Machineで当時の様子を見ることができます"
+      }
+    }
+  },
+  "contact": {
+    "heading": "私のプロフィールをご覧いただきありがとうございます",
+    "title": "連絡を取る",
+    "subtitle": "お問い合わせ",
+    "findMe": "@deglypava でフォロー",
+    "email": "deglypavapava@gmail.com",
+    "location": "東京、日本",
+    "cvLink": "履歴書を見るにはここをクリック"
+  },
+  "footer": {
+    "copyright": "全著作権所有。"
+  },
+  "language": {
+    "label": "言語"
+  }
+}

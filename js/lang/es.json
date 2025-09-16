@@ -1,0 +1,347 @@
+{
+  "meta": {
+    "title": "Degly Pava - Especialista Senior en XR | 700+ Desarrolladores Mentoreados | Apple Vision Pro MWC 2025",
+    "description": "Degly Pava - Especialista Senior en XR y CEO que ha mentoreado a más de 700 desarrolladores globalmente, creó 291M+ de interacciones AR, y presentó Apple Vision Pro en MWC 2025. Experto en Unity, desarrollo AR/VR con alianzas con MIT, KDDI y Meta.",
+    "keywords": "desarrollador XR, especialista AR VR, desarrollador Unity, Apple Vision Pro, MWC 2025, mentor desarrolladores, 291M interacciones AR, alianza MIT, KDDI, Meta, Tokio Japón, tecnología inmersiva, realidad extendida, realidad aumentada, realidad virtual",
+    "author": "Degly Pava",
+    "ogTitle": "Degly Pava - Especialista Senior en XR | 700+ Desarrolladores Mentoreados | Apple Vision Pro MWC 2025",
+    "ogSiteName": "Portafolio de Degly Pava",
+    "twitterTitle": "Degly Pava - Especialista Senior en XR | 700+ Desarrolladores Mentoreados | Apple Vision Pro MWC 2025"
+  },
+  "navigation": {
+    "home": "Inicio",
+    "about": "Acerca de",
+    "speaking": "Conferencias y Liderazgo",
+    "work": "Trabajo / Portafolio",
+    "experienceLatest": "Experiencia Reciente",
+    "services": "Qué puedo hacer",
+    "certificates": "Certificaciones",
+    "education": "Educación",
+    "skills": "Habilidades e Impacto",
+    "experience": "Experiencia Previa",
+    "contact": "Contacto"
+  },
+  "sidebar": {
+    "name": "Degly Pava",
+    "position": "Especialista Senior en XR – CEO",
+    "location": "Tokio, Japón"
+  },
+  "hero": {
+    "slide1": {
+      "title": "¡Hola!<br>Soy Degly",
+      "subtitle": "Especialista Senior en XR y CEO<br>He mentoreado más de 700+ creadores globalmente<br>Orador habitual en conferencias de IA/XR<br>Presentado en MWC 2025 y MIT",
+      "downloadCV": "Descargar CV",
+      "viewProjects": "Ver Proyectos"
+    },
+    "slide2": {
+      "title": "Construyendo el<br>Futuro de XR",
+      "subtitle": "Alianzas globales con MIT, KDDI, Meta<br>Presentador de Apple Vision Pro en MWC 2025<br>291M+ interacciones XR en Redes Sociales",
+      "viewPortfolio": "Ver Portafolio"
+    }
+  },
+  "about": {
+    "heading": "Acerca de Mí",
+    "title": "¿Quién Soy?",
+    "intro": "<strong>Hola, soy Degly Pava</strong>, Especialista Senior en Realidad Extendida y CEO en Tokio, Japón. He mentorado más de 700 desarrolladores globalmente, creado 291M+ interacciones AR, y construido alianzas con MIT, KDDI y Meta.",
+    "summary": "Presentado en MWC 2025 con demo de Apple Vision Pro • Desarrollé la plataforma STYLY alojando 50,000+ experiencias XR • Líder de comunidad XR global",
+    "detailed": {
+      "paragraph1": "Mi experiencia abarca experiencias de Realidad Extendida de vanguardia que han captado la atención de líderes de la industria en Japón, EE.UU. y Colombia. He trabajado con gigantes de los videojuegos como CAPCOM y Nintendo, lideré el desarrollo AR para Universal Studios Japan, y fui pionero en tecnología de gafas AR a través del Programa de Desarrolladores Pioneros de Qualcomm.",
+      "paragraph2": "Más allá de XR, he desarrollado 2 aplicaciones Android y contribuido a numerosos proyectos de código abierto, demostrando versatilidad en plataformas móviles y web. También creé una librería de paquetes Unity para integración perfecta de Spatial Persona de Apple Vision Pro, simplificando flujos de trabajo complejos de desarrollo visionOS para la comunidad de desarrolladores.",
+      "paragraph3": "Desde coordinar juegos de exploración espacial basados en Unity para Apple Vision Pro hasta asegurar estándares de calidad para un programa de Maestría XR europeo de €12M, conecto la innovación con la educación."
+    },
+    "readMore": "Leer Más",
+    "readLess": "Leer Menos",
+    "expertise": {
+      "title1": "Ingeniería Informática",
+      "title2": "Realidades Aumentadas y Virtuales",
+      "title3": "Tecnologías Innovadoras",
+      "title4": "Enfoque en Investigación e Innovación"
+    },
+    "callToAction": "¿Quieres saber más?",
+    "socialPrompt": "Consulta mis redes sociales",
+    "socialHandle": "@deglypava"
+  },
+  "speaking": {
+    "heading": "Conferencias y Liderazgo",
+    "title": "Impacto Global y Reconocimiento",
+    "events": {
+      "xrTokyo": {
+        "title": "XRTokyo - Conferencia IA/Gafas XR",
+        "date": "Agosto 2025",
+        "role": "Orador Principal",
+        "description": "Presenté sobre la intersección de IA y tecnología de gafas XR en XRTokyo. Discutí tendencias emergentes en computación espacial, integración de IA en experiencias XR, y el futuro de dispositivos de realidad mixta portables."
+      },
+      "mwc": {
+        "title": "Mobile World Congress (MWC) 2025",
+        "date": "Febrero 2025",
+        "role": "Presentador Principal",
+        "description": "Presenté el juego de Apple Vision Pro 'Astroscoop' como parte del showcase de innovación XR de KDDI. Demostré computación espacial de vanguardia y experiencias de juego inmersivas a una audiencia global de 100,000+ asistentes."
+      },
+      "mit": {
+        "title": "MIT Reality Hack y Alianzas",
+        "date": "2024-2025",
+        "role": "Socio Estratégico y Mentor",
+        "description": "Construí alianzas bilaterales entre STYLY y MIT para innovación XR. Mentoré equipos estudiantiles, proporcioné orientación técnica, y facilité colaboración entre academia e industria."
+      },
+      "tgs": {
+        "title": "Tokyo Game Show y Eventos Globales",
+        "date": "2024-2025",
+        "role": "Orador de la Industria",
+        "description": "Presenté en Tokyo Game Show, SushiTech, AWE, y otros eventos importantes de la industria. Hablé sobre desarrollo XR, construcción de comunidad global, y tecnologías emergentes a audiencias internacionales."
+      },
+      "community": {
+        "title": "Liderazgo de Comunidad de Desarrolladores",
+        "date": "2021-Presente",
+        "role": "Mentor Global y Educador",
+        "description": "Dirigí talleres técnicos en EE.UU., Corea, Latinoamérica y Japón. Mentoré 700+ desarrolladores a través de entrenamiento práctico, revisiones de código, y orientación profesional en tecnologías XR."
+      }
+    }
+  },
+  "work": {
+    "heading": "Mi Trabajo",
+    "title": "Trabajo Reciente",
+    "subtitle": "Puedes encontrar algunos de mis proyectos increíbles aquí, si quieres más información sobre ellos solo revisa mi GitHub, Instagram o los videos incluidos en algunos de ellos.",
+    "projects": {
+      "avatar": {
+        "title": "Avatar Animado y Logo AR",
+        "description": "Creé un avatar personalizado con ThreeJS y GLSL, además de un logo AR para móvil.",
+        "action": "Pruébalo"
+      },
+      "holoBrain": {
+        "title": "HoloBrain 2.0",
+        "description": "Visualizador volumétrico interactivo del cerebro en MR usando datos de escaneo de resonancia magnética y HoloLens, desarrollado con Blender, shaders C++, y Unity.",
+        "action": "Pruébalo"
+      },
+      "arFilters": {
+        "title": "Filtros de Realidad Aumentada",
+        "description": "Creé filtros AR para TikTok, Snapchat, e Instagram usando Spark AR, Lens Studio, y Effect House. Generé 291M+ interacciones.",
+        "action": "Pruébalo"
+      },
+      "colombiaXr": {
+        "title": "Colombia XR",
+        "description": "Sitio de comunidad destacando organizaciones y eventos XR en Colombia (sitio estático, Vercel).",
+        "action": "Pruébalo"
+      }
+    }
+  },
+  "experienceLatest": {
+    "heading": "¿Qué hay de nuevo?",
+    "title": "Experiencia Reciente",
+    "jobs": {
+      "styly": {
+        "title": "Especialista Senior en Realidad Extendida – Manager en STYLY Inc.",
+        "date": "Julio 2024 – Presente",
+        "bullet1": "Coordiné una demo de juego de exploración espacial basado en Unity diseñado para Apple Vision Pro llamado Astroscoop, presentado en MWC 2025 como parte de la iniciativa XR vanguardista de KDDI; contribuí a la creciente reputación de STYLY en juegos inmersivos y experiencias.",
+        "bullet2": "Lideré el alcance global de desarrolladores y alianzas bilingües para STYLY, facilitando colaboración entre equipos japoneses e internacionales; construí relaciones estratégicas con MIT, Parsons School of Design, y desarrolladores XR líderes en EE.UU., Corea y Latinoamérica.",
+        "bullet3": "Impulsé el crecimiento de la plataforma a través de mentoría, talleres técnicos y presencia en eventos globales—apoyando más de 700 desarrolladores y contribuyendo a un catálogo de 50,000+ contenidos XR publicados; presenté en Tokyo Game Show, MIT Reality Hack, SushiTech, AWE, y otros eventos importantes de la industria."
+      },
+      "erasmus": {
+        "title": "Especialista en Aseguramiento de Calidad (QA) en XR, Junta Directiva ERASMUS-IMLEX",
+        "date": "Septiembre 2023 – Presente",
+        "bullet1": "Aseguré la calidad y relevancia industrial de un programa de maestría XR de 12M€ financiado por la Comisión Europea, apoyando el desarrollo de talento de próxima generación en tecnologías inmersivas y diseño de juegos en múltiples universidades."
+      },
+      "pretia": {
+        "title": "Ingeniero Senior Unity AR, División de Soluciones en Pretia Technologies",
+        "date": "Octubre 2023 – Julio 2024",
+        "bullet1": "Desarrollé sistemas AR centrales que impulsan juegos móviles como ARPuzzleGame, AnimalPal, y ARgamemadeEZ, lanzados en 173 países y presentados en Universal Studios Japan.",
+        "bullet2": "Colaboré con gigantes globales de juegos incluyendo CAPCOM y Nintendo, liderando equipos multifuncionales y gestionando desarrolladores externos para entregar experiencias de juego AR pulidas.",
+        "bullet3": "Fui pionero en el desarrollo de gafas AR a través del Programa de Desarrolladores Pioneros AR de Qualcomm, enfocándome en colaboración multi-dispositivo, UX sin interrupciones, e interacciones móvil-auricular de alto rendimiento."
+      },
+      "omni": {
+        "title": "Fundador / Ingeniero XR en Omni Applications LLC y LucidDreams S.A.S",
+        "date": "Abril 2021 – Septiembre 2023",
+        "bullet1": "Creé y lancé experiencias AR de alto impacto en TikTok, Instagram y Snapchat generando más de 291 millones de interacciones de por vida y ayudando a marcas a entregar campañas inmersivas de marketing y juegos a través de estrategias XR multiplataforma.",
+        "bullet2": "Lideré eventos de desarrolladores XR en Colombia en colaboración con XRCol, construyendo lazos fuertes con la comunidad Meta Oculus Start y apoyando creadores locales; prototipé demos de juegos originales incluyendo un shooter VR reactivo al entorno construido para juego espacial."
+      }
+    }
+  },
+  "services": {
+    "heading": "¿Qué puedo hacer?",
+    "title": "Aquí están algunas de mis habilidades",
+    "vr": {
+      "title": "Desarrollador VR/AR/XR",
+      "description": "Trabajando y aprendiendo cada día para finalmente engañar el cerebro de todos"
+    },
+    "startup": {
+      "title": "Entusiasta de Startups",
+      "description": "Fundador de Omni Applications, LucidDreams y La Panadería Gourmet"
+    },
+    "engineer": {
+      "title": "Ingeniero en Sistemas y Computación",
+      "description": "\"Los científicos estudian el mundo como es; los ingenieros crean el mundo que nunca ha sido.\""
+    },
+    "photonics": {
+      "title": "Fotónica",
+      "description": "Es increíble cuánta información reciben nuestros ojos..."
+    },
+    "languages": {
+      "title": "Idiomas",
+      "description": "Puedo traducir tu nombre a Español, Français, 한국어 o 日本語"
+    },
+    "social": {
+      "title": "Habilidades Sociales",
+      "description": "Producción Musical, DJ, Fotografía y Deportes, podré hacer todo"
+    },
+    "stats": {
+      "projects": "Proyectos",
+      "research": "Grupos de investigación",
+      "awards": "Premios",
+      "countries": "Países visitados"
+    }
+  },
+  "certificates": {
+    "heading": "Certificaciones Profesionales",
+    "items": [
+      "Desarrollador Meta Oculus Start",
+      "Mentor MIT / Hackathon Más Votado",
+      "Desarrollador Apple Vision Pro",
+      "Certificación Meta Spark Creator AR",
+      "Competencia en Unity y C#",
+      "Desarrollo de juegos VR y AR usando múltiples SDKs",
+      "Experiencia de Usuario y Diseño de Interacción para AR/VR/MR/XR",
+      "Servicios de Streaming AR y Tecnologías Emergentes de Códec de Video",
+      "Experimentado en Relaciones Globales y Alianzas"
+    ]
+  },
+  "education": {
+    "heading": "Educación",
+    "title": "Educación Certificada",
+    "degrees": {
+      "masters": {
+        "title": "Máster Conjunto ERASMUS Mundus Japón (IMLEX)",
+        "subtitle": "Máster en Ciencias en Imágenes y Luz en Realidades Extendidas",
+        "scholarships": [
+          "Beca del Programa IMLEX",
+          "Beca Erasmus Mundus",
+          "Beca Manutech-Sleight",
+          "Beca BRMI"
+        ],
+        "universities": "Universidad de Finlandia Oriental (Finlandia), Universidad Tecnológica de Toyohashi (Japón), Universidad Jean Monnet Saint-Etienne (Francia) y KU Leuven (Bélgica)"
+      },
+      "bachelor1": "Licenciatura en Ingeniería de Sistemas y Computación",
+      "bachelor2": "Licenciatura en Producción y Manipulación de Audio",
+      "research": "Entrenamiento en Investigación Médica - Académico Investigador Visitante Internacional"
+    },
+    "awards": {
+      "title": "Honores y Premios",
+      "items": {
+        "colfuturo": {
+          "title": "Programa crédito beca - COLFUTURO (Colombia)",
+          "description": "Beca completa de Maestría para los mejores estudiantes de Colombia"
+        },
+        "brmie": {
+          "title": "Beca de la región Auvergne Rhône Alpes (BRMIE)",
+          "description": "Beca de la Región Auvergne Rhône Alpes en Francia"
+        },
+        "manutech": {
+          "title": "MANUTECH SLEIGHT",
+          "description": "Beca y Certificado de la Universidad de Lyon y Universidad Jean-Monnet"
+        },
+        "erasmus": {
+          "title": "Erasmus Mundus",
+          "description": "Premio de Movilidad de la Universidad de Finlandia Oriental, Joensuu (2021)"
+        },
+        "imlex": {
+          "title": "ERASMUS - IMLEX",
+          "description": "Beca completa de matrícula del Consorcio ERASMUS IMLEX (2021-2023)"
+        },
+        "elap": {
+          "title": "Premio ELAP - VIRS",
+          "description": "Gobierno de Canadá y La Universidad de Columbia Británica (2019-2021)"
+        },
+        "purdue": {
+          "title": "Beca Purdue",
+          "description": "Subvención para investigación en IronHacks - Universidad Purdue (2018)"
+        },
+        "colombia": {
+          "title": "Beca Completa",
+          "description": "Mejores Graduados de Colombia, Universidad Nacional de Colombia (2013-2019)"
+        }
+      }
+    }
+  },
+  "skills": {
+    "heading": "Habilidades e Impacto",
+    "title": "Liderazgo XR y Experiencia Técnica",
+    "community": {
+      "title": "Impacto de Comunidad XR",
+      "subtitle": "Comunidad XR",
+      "members": "200+ miembros en 4 países"
+    },
+    "technical": {
+      "title": "Experiencia Técnica",
+      "skills": ["Unity", "AR/VR", "JavaScript", "Python"]
+    },
+    "leadership": {
+      "title": "Liderazgo",
+      "subtitle": "Stack Tecnológico",
+      "stack": ["Unity", "AR", "JS", "Python", "C#"]
+    },
+    "focus": {
+      "title": "Distribución de Enfoque Profesional",
+      "areas": [
+        "Liderazgo XR",
+        "Aprendizaje Tecnológico",
+        "Creación de Proyectos",
+        "Alianzas Estratégicas",
+        "Mentoría y Enseñanza"
+      ]
+    }
+  },
+  "experience": {
+    "heading": "Pre-2021",
+    "title": "Experiencia Previa",
+    "jobs": {
+      "omniFounder": {
+        "title": "Fundador y Desarrollador en Omni Applications L.L.C.",
+        "date": "2020",
+        "description": "Empresa especializada en proporcionar soluciones de realidad aumentada para e-commerce, retail, salud, marketing y publicidad, juegos, educación, sectores industriales y asociados. Nuestro objetivo es llevar la Realidad Aumentada y Virtual al cliente regular. Con sede en Estados Unidos"
+      },
+      "panaderia": {
+        "title": "Propietario de Empresa - La Panadería Gourmet",
+        "date": "2013-2021",
+        "description": "Panadería Gourmet ubicada en el pueblo de Chía en Cundinamarca, justo al lado de la Capital en Colombia. Actualmente siendo gestionada remotamente. Toma un café colombiano de mi parte"
+      },
+      "fellowship": {
+        "title": "Beca de Desarrollo XR",
+        "date": "2018-2019",
+        "description": "Como Académico Investigador Visitante Internacional en Canadá estuve a cargo de la primera versión del proyecto HoloBrain en colaboración con el programa de Pasantías Microsoft Garage. Desarrollé un renderizado volumétrico de un cerebro escaneado por resonancia magnética lo suficientemente eficiente para funcionar en HoloLens v1."
+      },
+      "lead": {
+        "title": "Desarrollador Principal",
+        "date": "2017-2019",
+        "description": "Desarrollé un software NetLogo basado en clases de Ingeniería Industrial de Gestión de Productos. Esta simulación se enfocó en las áreas de Planificación de Requerimientos de Materiales y Programación"
+      },
+      "ironhacks": {
+        "title": "Becario IronHacks y Desarrollador @ Purdue",
+        "date": "2018",
+        "description": "Uno de los investigadores que hizo realidad Purdue - UNAL Fall IronHacks 2018. También, desarrollé un software de investigación basado en HTML y Amazon Web Services (AWS) enfocado en ayudar a ingenieros civiles y arquitectos a encontrar la mejor manera de construir un edificio energéticamente eficiente usando datos obtenidos del procesamiento EnergyPlus, Datos Abiertos y Computación en la Nube Matlab para cálculo de costos."
+      },
+      "teacher": {
+        "title": "Profesor Asset-Tutores",
+        "date": "2016-2018",
+        "description": "Dar clases a estudiantes de escuela y colegio que necesitan mejorar su conocimiento y habilidades en cierto tema relacionado con Inglés, Matemáticas, Tecnología, Física, Química, Biología y relacionados."
+      },
+      "designer": {
+        "title": "Diseñador/Codificador Asset-Tutores",
+        "date": "2016-2017",
+        "description": "Creé y diseñé un sitio web intuitivo Bootstrap + HTML + CSS para promover la empresa y comunicar todos sus servicios. Puedes ver cómo se veía en The WayBack Machine"
+      }
+    }
+  },
+  "contact": {
+    "heading": "Gracias por mirar mi perfil",
+    "title": "Ponerse en Contacto",
+    "subtitle": "Contáctame",
+    "findMe": "Encuéntrame como @deglypava",
+    "email": "deglypavapava@gmail.com",
+    "location": "Tokio, Japón",
+    "cvLink": "Haz clic aquí para revisar mi CV"
+  },
+  "footer": {
+    "copyright": "Todos los derechos reservados."
+  },
+  "language": {
+    "label": "Idioma"
+  }
+}

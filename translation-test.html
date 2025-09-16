@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="meta.title">Translation Test - Degly Pava</title>
+</head>
+<body style="font-family: Arial, sans-serif; padding: 20px; line-height: 1.6;">
+    <div style="max-width: 800px; margin: 0 auto;">
+        <h1>🌐 Translation System Test</h1>
+        
+        <!-- Language Selector -->
+        <div style="margin-bottom: 30px; padding: 20px; background: #f0f0f0; border-radius: 8px;">
+            <label for="language-select" style="display: block; margin-bottom: 10px; font-weight: bold;">
+                Select Language:
+            </label>
+            <select id="language-select" style="padding: 8px 12px; border: 1px solid #ccc; border-radius: 4px; background: white; font-size: 16px;">
+                <option value="en">🇺🇸 English</option>
+                <option value="es">🇪🇸 Español</option>
+                <option value="fr">🇫🇷 Français</option>
+                <option value="ja">🇯🇵 日本語</option>
+            </select>
+        </div>
+
+        <!-- Test Content -->
+        <div style="background: white; padding: 20px; border: 1px solid #ddd; border-radius: 8px;">
+            <h2 data-translate="hero.slide1.title">Hi! <br>I'm <strong>Degly Pava</strong></h2>
+            <p data-translate="hero.slide1.subtitle">Senior XR Specialist & CEO based in Tokyo</p>
+            <p data-translate="about.description">I am a passionate Senior XR Specialist and CEO who pushes the boundaries of immersive technology.</p>
+            
+            <h3 data-translate="navigation.about">About</h3>
+            <ul>
+                <li data-translate="navigation.work">Work / Portfolio</li>
+                <li data-translate="navigation.skills">Skills & Impact</li>
+                <li data-translate="navigation.contact">Contact</li>
+            </ul>
+            
+            <div style="margin-top: 20px; padding: 15px; background: #e8f4fd; border-radius: 6px;">
+                <strong>Current Language:</strong> <span id="current-lang">en</span><br>
+                <strong>Status:</strong> <span id="translation-status">Loading...</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Translation System -->
+    <script src="js/lang/translations.js"></script>
+    <script>
+        // Initialize translation system
+        const translationManager = new TranslationManager();
+        
+        // Update status display
+        function updateStatus() {
+            document.getElementById('current-lang').textContent = translationManager.currentLanguage;
+            document.getElementById('translation-status').textContent = 'Ready';
+        }
+        
+        // Initialize
+        translationManager.init().then(() => {
+            updateStatus();
+            
+            // Set up language selector
+            const selector = document.getElementById('language-select');
+            selector.value = translationManager.currentLanguage;
+            
+            selector.addEventListener('change', (e) => {
+                translationManager.switchLanguage(e.target.value);
+                updateStatus();
+            });
+        }).catch(error => {
+            console.error('Translation system failed to initialize:', error);
+            document.getElementById('translation-status').textContent = 'Error: ' + error.message;
+        });
+    </script>
+</body>
+</html>
