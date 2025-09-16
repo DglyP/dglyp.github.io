@@ -94,7 +94,7 @@
       "id": "ar-filters",
       "title": "Augmented Reality Filters",
       "description": "Created AR filters for TikTok, Snapchat, and Instagram using Spark AR, Lens Studio, and Effect House. Generated 291M+ interactions.",
-      "image": "images/ARfilters.png",
+      "image": "images/ARFilters.png",
       "url": "https://www.instagram.com/arfiltercreator/",
       "demoUrl": "https://www.instagram.com/arfiltercreator/",
       "technologies": ["Spark AR", "Effect House", "Lens Studio", "Social XR"],
