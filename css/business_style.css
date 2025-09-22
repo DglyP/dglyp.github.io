@@ -7,6 +7,7 @@ body {
   color: white;
   background: url(./images/Clearday.jpg) repeat center center fixed;
   background-size: cover;
+  line-height: 1.6;
 }
 
 #vanta {
@@ -106,6 +107,32 @@ a {
   text-decoration: none;
 }
 
+.tagline {
+  font-size: 1.1em;
+  color: #ffd700;
+  margin: 0.5em 0 1em 0;
+  animation: fadeInUp 1s ease;
+}
+
+.contact-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  margin-bottom: 1em;
+  animation: fadeInUp 1.2s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .custom-button {
   background-color: rgba(0, 0, 0, 0.533);
   backdrop-filter: blur(10px) saturate(260%) contrast(180%);
@@ -117,6 +144,13 @@ a {
   margin: 1.4em 0;
   box-shadow: rgb(28 32 93 / 24%) 0px 2px 80px 0px;
   text-align: center;
+  transition: background 300ms, transform 300ms;
+}
+
+.custom-button:hover {
+  background-color: #ffd700;
+  color: #222;
+  transform: scale(1.05);
 }
 
 .custom-button label {
@@ -148,4 +182,72 @@ a {
 
 .custom-button button:hover {
   background-color: #01c8cf;
+}
+
+/* Professional Layout Improvements */
+.tagline {
+  text-align: center;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+.contact-buttons {
+  flex-wrap: wrap;
+  max-width: 600px;
+  margin: 0 auto 2em auto;
+}
+
+.contact-buttons .custom-button {
+  flex: 1;
+  min-width: 180px;
+  margin: 0.5em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* Responsive Design Improvements */
+@media (max-width: 768px) {
+  header a > img {
+    width: 5em;
+    height: 5em;
+  }
+  
+  .contact-buttons {
+    flex-direction: column;
+    gap: 0.8em;
+    align-items: center;
+    max-width: 350px;
+  }
+  
+  .contact-buttons .custom-button {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 0.95em;
+  }
+  
+  header a > img {
+    width: 4em;
+    height: 4em;
+  }
+  
+  ul {
+    padding: 1em;
+    max-width: 95vw;
+  }
+  
+  ul > a > li {
+    font-size: 0.9em;
+    padding: 0.8em;
+    margin: 0.8em 0;
+  }
+  
+  .tagline {
+    font-size: 1em;
+  }
 }
