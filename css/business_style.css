@@ -193,21 +193,25 @@ a {
 
 .contact-buttons {
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   max-width: 600px;
   margin: 0 auto 2em auto;
 }
 
 .contact-buttons .custom-button {
-  flex: 1;
+  flex: 0 0 auto;
   min-width: 180px;
   margin: 0.5em;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Responsive Design Improvements */
-@media (max-width: 768px) {
+@media (max-width: 300px) {
   header a > img {
     width: 5em;
     height: 5em;
@@ -217,12 +221,15 @@ a {
     flex-direction: column;
     gap: 0.8em;
     align-items: center;
+    width: 100%;
     max-width: 350px;
+    padding: 0 1em;
   }
   
   .contact-buttons .custom-button {
-    width: 100%;
-    margin: 0;
+    width: min(100%, 280px);
+    margin: 0 auto;
+    align-self: center;
   }
 }
 
