@@ -1,3 +1,8 @@
+#colorlib-aside > .text-center,
+#language-selector,
+#colorlib-aside .colorlib-footer {
+    flex: 0 0 auto;
+}
 /* Fix navigation panel height and z-index issues */
 #colorlib-aside {
     min-height: 100vh !important;
@@ -5,8 +10,10 @@
     position: fixed !important;
     top: 0;
     bottom: 0;
-    overflow-y: auto;
     width: 300px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
 }
 
 #colorlib-aside .author-img {
@@ -21,6 +28,43 @@
     background-size: cover !important;
     background-position: center center !important;
     display: block !important;
+}
+
+/* Sidebar spacing refinements */
+#colorlib-aside #colorlib-main-menu {
+    padding: 0 2rem 1.5rem !important;
+    flex: 1 1 auto;
+    overflow-y: auto;
+}
+
+#colorlib-aside #colorlib-main-menu ul {
+    margin-bottom: 1.5rem !important;
+}
+
+#colorlib-aside #colorlib-main-menu ul li a {
+    display: block !important;
+    padding: 8px 0 !important;
+    line-height: 1.4 !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+}
+
+#language-selector {
+    margin: 0 !important;
+    padding: 0 2rem 1.75rem;
+    text-align: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+#language-selector > div:last-child {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+#language-selector .lang-btn {
+    margin: 0 6px 10px !important;
 }
 
 /* Hamburger menu styling */
