@@ -12,37 +12,12 @@
         height: 100vh !important;
         display: flex !important;
         flex-direction: column !important;
-        overflow: hidden !important;
-        padding-top: 20px !important; /* Added top padding */
-    }
-
-    /* Set exact proportions for each section */
-    #colorlib-aside .profile-section {
-        height: 15% !important;
-        min-height: 15% !important;
-        max-height: 15% !important;
-        flex: 0 0 15% !important;
-    }
-
-    #colorlib-aside .colorlib-nav {
-        height: auto !important;
-        min-height: auto !important;
-        max-height: none !important;
-        flex: 1 1 auto !important;
-    }
-
-    #colorlib-aside .colorlib-nav.main-menu {
-        height: auto !important;
-        min-height: auto !important;
-        max-height: none !important;
-        flex: 0 0 auto !important;
-    }
-
-    #colorlib-aside .colorlib-footer {
-        height: 15% !important;
-        min-height: 15% !important;
-        max-height: 15% !important;
-        flex: 0 0 15% !important;
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+        -webkit-overflow-scrolling: touch !important;
+        padding-top: 20px !important;
+        padding-bottom: 20px !important;
+        gap: 20px !important;
     }
 
     #colorlib-aside.active {
@@ -50,110 +25,124 @@
         z-index: 999;
     }
 
-    /* Section 1: Profile Section */
-    #colorlib-aside .profile-section {
-        padding: 10px 0 !important;
+    #colorlib-aside > .text-center {
+        padding: 10px 24px 15px !important;
         text-align: center !important;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
-        display: flex !important;
-        flex-direction: column !important;
-        justify-content: center !important;
-        align-items: center !important;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
     }
 
     #colorlib-aside .author-img {
-        width: 60px !important;
-        height: 60px !important;
-        margin: 0 auto 5px !important;
-        border-radius: 50% !important;
+        width: 100px !important;
+        height: 100px !important;
+        margin: 0 auto 15px !important;
     }
 
     #colorlib-aside h1 {
-        font-size: 16px !important;
-        margin: 0 0 2px 0 !important;
+        font-size: 18px !important;
+        margin-bottom: 2px !important;
         color: #333 !important;
     }
 
     #colorlib-aside span.position {
-        font-size: 12px !important;
+        font-size: 13px !important;
         color: #666 !important;
+        line-height: 1.3 !important;
+        margin-bottom: 0 !important;
         display: block !important;
-        margin: 0 !important;
     }
 
-    /* Section 2: Navigation Menu */
-    #colorlib-aside .colorlib-nav {
+    #colorlib-aside #colorlib-main-menu {
+        flex: 1 1 auto !important;
+        padding: 0 24px !important;
         overflow-y: auto !important;
         -webkit-overflow-scrolling: touch !important;
-        padding: 5px 0 !important;
     }
 
-    #colorlib-aside .colorlib-nav ul {
-        padding: 0 !important;
-        margin: 0 !important;
-        list-style: none !important;
-    }
-
-    #colorlib-aside .colorlib-nav ul li {
-        margin: 0 !important;
-        padding: 0 !important;
-        height: auto !important;
-        min-height: 40px !important;
+    #colorlib-aside #navbar {
+        display: block !important;
         max-height: none !important;
-        display: flex !important;
-        align-items: center !important;
     }
 
-    #colorlib-aside .colorlib-nav ul li a {
-    padding: 0 20px !important;
-        display: flex !important;
-        align-items: center !important;
+    #colorlib-aside #colorlib-main-menu ul {
+        margin: 0 !important;
+        padding: 12px 0 0 !important;
+    }
+
+    #colorlib-aside #colorlib-main-menu ul li {
+        margin: 0 !important;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+    }
+
+    #colorlib-aside #colorlib-main-menu ul li:last-child {
+        border-bottom: none !important;
+    }
+
+    #colorlib-aside #colorlib-main-menu ul li a {
+        padding: 10px 0 !important;
+        display: block !important;
         color: #333 !important;
-        font-size: 14px !important;
+        font-size: 15px !important;
+        line-height: 1.4 !important;
         text-decoration: none !important;
-        transition: all 0.3s ease !important;
-        height: 100% !important;
-        width: 100% !important;
-    line-height: 1.3 !important;
-    white-space: normal !important;
+        white-space: normal !important;
+        transition: color 0.3s ease !important;
     }
 
-    /* Specific styles for main menu */
-    #colorlib-aside .colorlib-nav.main-menu ul li {
-        height: 35px !important; /* Slightly smaller height for main menu */
-        min-height: 35px !important;
-        max-height: 35px !important;
-    }
-
-    #colorlib-aside .colorlib-nav ul li.active a {
+    #colorlib-aside #colorlib-main-menu ul li.active a {
         color: #2c98f0 !important;
-        background: rgba(44, 152, 240, 0.05) !important;
     }
 
-    /* Section 3: Social Icons Footer */
-    #colorlib-aside .colorlib-footer {
-        padding: 10px !important;
-        text-align: center !important;
+    #language-selector {
+        margin: 0 24px !important;
+        padding: 16px 0 8px !important;
         border-top: 1px solid rgba(0, 0, 0, 0.05) !important;
-        background: #f2f3f7 !important;
+        text-align: center !important;
+    }
+
+    #language-selector > div:first-child {
+        font-size: 13px !important;
+        color: #666 !important;
+    }
+
+    #language-selector > div:last-child {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 8px !important;
+        margin-top: 10px !important;
+    }
+
+    #language-selector .lang-btn {
+        padding: 6px 12px !important;
+        font-size: 12px !important;
+    }
+
+    #colorlib-aside .colorlib-footer {
+        margin: 0 16px !important;
+        margin-top: auto !important;
+        padding: 20px 0 0 !important;
+        border-top: 1px solid rgba(0, 0, 0, 0.08) !important;
+        text-align: center !important;
         display: flex !important;
         flex-direction: column !important;
-        justify-content: center !important;
         align-items: center !important;
+        gap: 16px !important;
     }
 
-    #colorlib-aside .colorlib-footer h3 {
-        font-size: 16px !important;
-        margin-bottom: 15px !important;
+    #colorlib-aside .colorlib-footer p {
+        width: 100% !important;
+        margin: 0 !important;
     }
 
     #colorlib-aside .colorlib-footer ul {
-        padding: 0 !important;
+        width: 100% !important;
         margin: 0 !important;
-        list-style: none !important;
+        padding: 0 !important;
         display: flex !important;
         justify-content: center !important;
-        gap: 15px !important;
+        align-items: center !important;
+        gap: 18px !important;
+        list-style: none !important;
     }
 
     #colorlib-aside .colorlib-footer ul li a {
