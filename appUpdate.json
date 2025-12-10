@@ -1,0 +1,4 @@
+{
+  "enabled": true,
+  "apps": ["kiosk", "unity", "nebula"]
+}
