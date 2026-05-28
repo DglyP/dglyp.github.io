@@ -1,14 +1,14 @@
 {
   "meta": {
     "title": "Degly Pava - XR Technology Evangelist | Cross-Platform XR & Wearable Engineer",
-    "description": "I'm Degly Pava, an XR Technology Evangelist and cross-platform XR & wearable engineer based in Tokyo. I build across smart glasses, WebXR, visionOS, and Unity while doing developer relations, speaking internationally, mentoring through Meta Horizon Start and MIT Reality Hack, and helping developer ecosystems grow across regions.",
+    "description": "I'm Degly Pava, an XR Technology Evangelist in Tokyo. I build cross-platform XR and wearable experiences across visionOS, WebXR, Unity, and smart glasses while doing developer relations, speaking internationally, mentoring through Meta Horizon Start and MIT Reality Hack, and helping partnerships and developer ecosystems grow across regions.",
     "keywords": "XR Technology Evangelist, Extended Reality Evangelist, cross-platform XR engineer, wearable developer, developer relations, global XR mentor, MIT Reality Hack mentor, Meta Horizon Start Mentor, Unity developer, OpenXR, visionOS, WebXR, Meta Ray-Ban Display, XREAL, AR glasses, smart glasses, public speaking, Tokyo Japan",
     "author": "Degly Pava",
     "ogTitle": "Degly Pava - XR Technology Evangelist | Cross-Platform XR & Wearable Engineer",
     "ogSiteName": "Degly Pava Portfolio",
     "twitterTitle": "Degly Pava - XR Technology Evangelist | Cross-Platform XR & Wearable Engineer",
-    "ogDescription": "I'm Degly Pava, an XR Technology Evangelist and cross-platform XR & wearable engineer based in Tokyo. I build across smart glasses, WebXR, visionOS, and Unity while doing developer relations, speaking internationally, mentoring through Meta Horizon Start and MIT Reality Hack, and helping developer ecosystems grow across regions.",
-    "twitterDescription": "I'm Degly Pava, an XR Technology Evangelist and cross-platform XR & wearable engineer based in Tokyo. I build across smart glasses, WebXR, visionOS, and Unity while doing developer relations, speaking internationally, mentoring through Meta Horizon Start and MIT Reality Hack, and helping developer ecosystems grow across regions."
+    "ogDescription": "I'm Degly Pava, an XR Technology Evangelist in Tokyo. I build cross-platform XR and wearable experiences across visionOS, WebXR, Unity, and smart glasses while doing developer relations, speaking internationally, mentoring through Meta Horizon Start and MIT Reality Hack, and helping partnerships and developer ecosystems grow across regions.",
+    "twitterDescription": "I'm Degly Pava, an XR Technology Evangelist in Tokyo. I build cross-platform XR and wearable experiences across visionOS, WebXR, Unity, and smart glasses while doing developer relations, speaking internationally, mentoring through Meta Horizon Start and MIT Reality Hack, and helping partnerships and developer ecosystems grow across regions."
   },
   "navigation": {
     "home": "Home",
@@ -27,13 +27,13 @@
   },
   "sidebar": {
     "name": "Degly Pava",
-    "position": "XR Technology Evangelist<br>Cross-Platform XR & Wearable Engineer<br>Meta Horizon Start Mentor • MIT Reality Hack Mentor • Global Developer Mentor",
+    "position": "XR Technology Evangelist<br>Cross-Platform XR & Wearable Engineer<br>Developer Relations • Meta Horizon Start Mentor • MIT Mentor • Global Developer Mentor",
     "location": "Tokyo, Japan"
   },
   "hero": {
     "slide1": {
       "title": "Hi!<br>I'm Degly",
-      "subtitle": "XR Technology Evangelist<br>Cross-Platform XR & Wearable Engineer<br>Meta Horizon Start Mentor • MIT Reality Hack Mentor • Global Developer Mentor",
+      "subtitle": "XR Technology Evangelist<br>Cross-Platform XR & Wearable Engineer<br>Developer Relations • Meta Horizon Start Mentor • MIT Mentor • Global Developer Mentor",
       "downloadCV": "Download CV",
       "viewProjects": "View Projects"
     },
@@ -46,12 +46,12 @@
   "about": {
     "heading": "About Me",
     "title": "Who Am I?",
-    "intro": "<strong>Hey, I'm Degly Pava</strong>. I'm an XR Technology Evangelist, a cross-platform XR & wearable engineer, and a developer-relations mentor based in Tokyo. I build and ship spatial experiences across Unity, OpenXR, visionOS, WebXR, AR glasses, and mobile XR, and I love turning that work into talks, workshops, and partnerships that help more developers build with these technologies.",
-    "summary": "I work at the intersection of XR evangelism, engineering, and developer community building—shipping across platforms while mentoring, speaking, and helping global ecosystems grow.",
+    "intro": "<strong>Hey, I'm Degly Pava</strong>. I'm an XR Technology Evangelist and cross-platform XR & wearable engineer based in Tokyo. I build spatial experiences across Unity, OpenXR, visionOS, WebXR, and smart glasses, and I also do developer relations work—speaking, mentoring, and helping teams understand how these technologies create real value.",
+    "summary": "The work I enjoy most sits between evangelism and engineering: shipping real XR products, representing the technology publicly, and helping developers and partners grow with it.",
     "detailed": {
-      "paragraph1": "My work spans smart glasses, wearables, mobile AR, WebXR, and large-scale spatial installations across Japan, the US, Europe, and Latin America. I've worked with CAPCOM and Nintendo, led AR development for Universal Studios Japan, and represented XR publicly through demos, talks, and partner-facing ecosystem work.",
-      "paragraph2": "I planned and developed Meta Ray-Ban Display WebApps, XREAL large-scale location-based entertainment experiences, and DEN-NOH Vision / Ghost in the Shell at TOKYO NODE. I also created OpenUPM packages and cross-platform tooling now used by 15+ companies in Japan's XR market.",
-      "paragraph3": "At STYLY, I help ship platform work like Apple Vision Pro compatibility and public spatial demos, while also mentoring developers around the world, speaking internationally about XR glasses, and supporting partnerships like MIT Reality Hack and a €1.58M European XR master's program. That mix of evangelism, engineering, and developer relations is where I do my best work."
+      "paragraph1": "My work spans smart glasses, wearables, mobile AR, WebXR, and large-scale spatial installations across Japan, the US, Europe, and Latin America. I've worked with CAPCOM and Nintendo, led AR development for Universal Studios Japan, and represented XR publicly through demos, talks, and ecosystem work with partners across regions.",
+      "paragraph2": "I've planned and developed Meta Ray-Ban Display WebApps, XREAL large-scale location-based entertainment experiences, and DEN-NOH Vision / Ghost in the Shell at TOKYO NODE. I also build OpenUPM packages and cross-platform tooling now used by 15+ companies in Japan's XR market.",
+      "paragraph3": "At STYLY, I help ship platform work like Apple Vision Pro compatibility and public spatial demos while supporting developer relations, workshops, and partnerships. I mentor through Meta Horizon Start and MIT Reality Hack, work with developers around the world, and enjoy being the bridge between deep technical delivery and public-facing storytelling."
     },
     "readMore": "Read More",
     "readLess": "Read Less",
@@ -73,18 +73,18 @@
   "snapshot": {
     "heading": "Recruiter Snapshot",
     "title": "Where I Create the Most Value",
-    "lede": "I do my best work where XR evangelism, cross-platform engineering, wearable product work, developer relations, and international partnerships meet. I can build the experience, adapt it across devices, mentor developers around the world, and help partners and audiences quickly understand why the work matters.",
+    "lede": "I do my best work where XR evangelism, cross-platform engineering, wearable product work, developer relations, and international partnerships come together. I can help build the experience, adapt it across devices, mentor developers around the world, and make the value clear for partners, communities, and end users.",
     "roles": {
       "title": "Best-fit roles",
-      "item1": "XR Technology Evangelist / Developer Relations lead for XR, wearables, spatial computing, AI, or developer platforms",
-      "item2": "Senior Unity / OpenXR / XR Engineer for wearables, smart glasses, visionOS, WebXR, and cross-platform spatial products",
-      "item3": "XR product, partnerships, ecosystem, or mentor-program lead bridging Japan, North America, Europe, and Latin America"
+      "item1": "XR Technology Evangelist / Developer Relations lead for spatial computing, wearables, AI, or developer platforms",
+      "item2": "Senior Unity / OpenXR engineer who can take wearable, smart-glasses, visionOS, and WebXR products from prototype to launch",
+      "item3": "XR product, partnerships, ecosystem, or mentor-program lead connecting Japan, North America, Europe, and Latin America"
     },
     "skills": {
       "title": "Core strengths",
-      "item1": "Strong hands-on delivery across Unity, C#, C++, Swift bridge work, visionOS, OpenXR, ARKit, ARCore, WebXR, wearable web apps, shaders, and OpenUPM packages",
-      "item2": "Wearable UX, AR/VR/MR product strategy, performance optimization, publishing workflows, large-scale location-based entertainment delivery, and partner-facing solution design",
-      "item3": "Public speaking, workshops, MIT and Meta mentoring, technical storytelling, and global developer enablement across regions"
+      "item1": "Hands-on delivery across Unity, C#, C++, Swift bridging, visionOS, OpenXR, ARKit, ARCore, WebXR, wearable web apps, shaders, and OpenUPM packages",
+      "item2": "Wearable UX, AR/VR/MR product strategy, performance optimization, publishing workflows, large-scale location-based entertainment, and partner-facing solution design",
+      "item3": "Developer relations, public speaking, workshops, MIT and Meta mentoring, technical storytelling, and global developer enablement"
     },
     "search": {
       "title": "Search signals",
@@ -214,7 +214,7 @@
         "date": "June 2024 – Present",
         "bullet1": "Expanded STYLY Gallery for Apple Vision Pro compatibility by bridging Swift and Unity, helping extend reach to 20,000+ downloads across XR platforms.",
         "bullet2": "Developed OpenUPM packages and cross-platform tooling for Apple Vision Pro, PICO XR, and broader XR workflows, adopted by 15+ companies in Japan's market.",
-        "bullet3": "Planned and developed wearable and location-based XR work including XREAL large-scale entertainment experiences and DEN-NOH Vision / Ghost in the Shell at TOKYO NODE, while also supporting demos, workshops, partner programs, and international developer ecosystem initiatives."
+        "bullet3": "Planned and developed smart-glasses, wearable, and location-based XR work including Meta Ray-Ban Display WebApps, XREAL large-scale entertainment experiences, and DEN-NOH Vision / Ghost in the Shell at TOKYO NODE, while also supporting demos, workshops, developer relations, partner programs, and international ecosystem initiatives."
       },
       "erasmus": {
         "title": "ERASMUS - IMLEX Quality Board Member",
@@ -238,14 +238,14 @@
   },
   "services": {
     "heading": "What can I do?",
-    "title": "What I can build, represent, and lead",
+    "title": "What I can build, represent, and help grow",
     "vr": {
       "title": "XR Technology Evangelist & Cross-Platform XR Engineer",
-      "description": "I build AR, VR, MR, WebXR, visionOS, and smart-glasses products with Unity, OpenXR, ARKit, ARCore, and real-time 3D pipelines, and I know how to represent that work clearly to public and partner audiences."
+      "description": "I build AR, VR, MR, WebXR, visionOS, and smart-glasses products with Unity, OpenXR, ARKit, ARCore, and real-time 3D pipelines, and I know how to represent that work clearly in demos, talks, and partner conversations."
     },
     "startup": {
-      "title": "Developer Relations, Ecosystem & Product Lead",
-      "description": "I lead prototypes, client deliveries, workshops, partner programs, and launch-ready experiences for spatial computing, wearable products, and developer ecosystems."
+      "title": "Developer Relations, Ecosystem & Partnership Work",
+      "description": "I help developer ecosystems grow through workshops, partner programs, launch support, and practical guidance that connects products, communities, and business goals."
     },
     "engineer": {
       "title": "Software & Computer Engineer",
@@ -261,7 +261,7 @@
     },
     "social": {
       "title": "Public Speaking & Ecosystem Storytelling",
-      "description": "Turns technical work into polished demos, talks, documentation, and developer-facing storytelling for products, partners, and international communities."
+      "description": "I turn technical work into clear demos, talks, documentation, and developer-facing stories for products, partners, and international communities."
     },
     "stats": {
       "projects": "Projects",
@@ -344,18 +344,18 @@
   "skills": {
     "heading": "Skills & Impact",
     "title": "Technical Skill Matrix",
-    "intro": "A recruiter-friendly view of the cross-platform systems I can build, the developer ecosystems I help grow, and the public-facing leadership signals behind the work.",
+    "intro": "A recruiter-friendly view of the systems I can ship, the developer ecosystems I help grow, and the public-facing leadership that makes the work useful beyond the build itself.",
     "engineering": {
       "title": "XR Engineering",
-      "item1": "Unity, C#, C++, Swift bridging, visionOS, OpenXR, ARKit, ARCore, WebXR, wearable web apps, ShaderLab, and HLSL.",
-      "item2": "Apple Vision Pro, Meta Ray-Ban Display, Meta Quest, PICO XR, XREAL, mobile AR, smart glasses, and cross-platform XR delivery.",
-      "item3": "Performance optimization, SDK integration, package development, input systems, spatial UI, LBE deployment constraints, and real-time 3D pipelines."
+      "item1": "I ship XR systems across Unity, C#, C++, Swift bridging, visionOS, OpenXR, ARKit, ARCore, WebXR, wearable web apps, ShaderLab, and HLSL.",
+      "item2": "That work has included Apple Vision Pro, Meta Ray-Ban Display, Meta Quest, PICO XR, XREAL, mobile AR, smart glasses, and cross-platform XR delivery.",
+      "item3": "I'm comfortable with performance optimization, SDK integration, package development, input systems, spatial UI, LBE deployment constraints, and real-time 3D pipelines."
     },
     "ecosystem": {
       "title": "Developer Ecosystems",
-      "item1": "Meta Horizon Start mentoring, MIT Reality Hack mentoring, hackathon judging, and global developer education.",
-      "item2": "OpenUPM package publishing, technical documentation, demos, onboarding, partner enablement, and developer ecosystem building.",
-      "item3": "Public speaking for XR Tokyo, TOKYO NODE LAB, AWE Nite Orlando, ColombiaXR, and international XR communities."
+      "item1": "I mentor through Meta Horizon Start and MIT Reality Hack, judge hackathons, and support developers globally.",
+      "item2": "I turn technical work into OpenUPM packages, documentation, demos, onboarding, partner enablement, and healthier developer ecosystems.",
+      "item3": "I speak at XR Tokyo, TOKYO NODE LAB, AWE Nite Orlando, ColombiaXR, and other international XR communities."
     },
     "product": {
       "title": "Product & Leadership",

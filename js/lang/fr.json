@@ -1,14 +1,14 @@
 {
   "meta": {
     "title": "Degly Pava - Évangéliste Technologique XR | Ingénieur XR Multiplateforme et Wearables",
-    "description": "Je suis Degly Pava, évangéliste technologique XR et ingénieur XR multiplateforme et wearables basé à Tokyo. Je construis pour les smart glasses, WebXR, visionOS et Unity tout en faisant du developer relations, en intervenant à l'international, en mentorant via Meta Horizon Start et MIT Reality Hack, et en aidant les écosystèmes développeurs à grandir entre régions.",
+    "description": "Je suis Degly Pava, évangéliste technologique XR à Tokyo. Je construis des expériences XR et wearables multiplateformes sur visionOS, WebXR, Unity et smart glasses tout en faisant du developer relations, en intervenant à l'international, en mentorant via Meta Horizon Start et MIT Reality Hack, et en aidant partenariats et écosystèmes développeurs à grandir entre régions.",
     "keywords": "évangéliste technologique XR, évangéliste réalité étendue, ingénieur XR multiplateforme, wearables, developer relations, mentor XR global, mentor MIT Reality Hack, Meta Horizon Start Mentor, Unity, OpenXR, visionOS, WebXR, Meta Ray-Ban Display, XREAL, lunettes AR, smart glasses, prise de parole publique, Tokyo Japon",
     "author": "Degly Pava",
     "ogTitle": "Degly Pava - Évangéliste Technologique XR | Ingénieur XR Multiplateforme et Wearables",
     "ogSiteName": "Portfolio de Degly Pava",
     "twitterTitle": "Degly Pava - Évangéliste Technologique XR | Ingénieur XR Multiplateforme et Wearables",
-    "ogDescription": "Je suis Degly Pava, évangéliste technologique XR et ingénieur XR multiplateforme et wearables basé à Tokyo. Je construis pour les smart glasses, WebXR, visionOS et Unity tout en faisant du developer relations, en intervenant à l'international, en mentorant via Meta Horizon Start et MIT Reality Hack, et en aidant les écosystèmes développeurs à grandir entre régions.",
-    "twitterDescription": "Je suis Degly Pava, évangéliste technologique XR et ingénieur XR multiplateforme et wearables basé à Tokyo. Je construis pour les smart glasses, WebXR, visionOS et Unity tout en faisant du developer relations, en intervenant à l'international, en mentorant via Meta Horizon Start et MIT Reality Hack, et en aidant les écosystèmes développeurs à grandir entre régions."
+    "ogDescription": "Je suis Degly Pava, évangéliste technologique XR à Tokyo. Je construis des expériences XR et wearables multiplateformes sur visionOS, WebXR, Unity et smart glasses tout en faisant du developer relations, en intervenant à l'international, en mentorant via Meta Horizon Start et MIT Reality Hack, et en aidant partenariats et écosystèmes développeurs à grandir entre régions.",
+    "twitterDescription": "Je suis Degly Pava, évangéliste technologique XR à Tokyo. Je construis des expériences XR et wearables multiplateformes sur visionOS, WebXR, Unity et smart glasses tout en faisant du developer relations, en intervenant à l'international, en mentorant via Meta Horizon Start et MIT Reality Hack, et en aidant partenariats et écosystèmes développeurs à grandir entre régions."
   },
   "navigation": {
     "home": "Accueil",
@@ -27,13 +27,13 @@
   },
   "sidebar": {
     "name": "Degly Pava",
-    "position": "Évangéliste Technologique XR<br>Ingénieur XR Multiplateforme et Wearables<br>Meta Horizon Start Mentor • Mentor MIT Reality Hack • Mentor Global des Développeurs",
+    "position": "Évangéliste Technologique XR<br>Ingénieur XR Multiplateforme et Wearables<br>Developer Relations • Meta Horizon Start Mentor • Mentor MIT • Mentor Global des Développeurs",
     "location": "Tokyo, Japon"
   },
   "hero": {
     "slide1": {
       "title": "Salut !<br>Je suis Degly",
-      "subtitle": "Évangéliste Technologique XR<br>Ingénieur XR Multiplateforme et Wearables<br>Meta Horizon Start Mentor • Mentor MIT Reality Hack • Mentor Global des Développeurs",
+      "subtitle": "Évangéliste Technologique XR<br>Ingénieur XR Multiplateforme et Wearables<br>Developer Relations • Meta Horizon Start Mentor • Mentor MIT • Mentor Global des Développeurs",
       "downloadCV": "Télécharger CV",
       "viewProjects": "Voir Projets"
     },
@@ -46,8 +46,8 @@
   "about": {
     "heading": "À Propos de Moi",
     "title": "Qui Suis-Je ?",
-    "intro": "<strong>Salut, je suis Degly Pava</strong>. Je suis évangéliste technologique XR, ingénieur XR multiplateforme et wearables, et mentor en developer relations basé à Tokyo. Je conçois et livre des expériences spatiales avec Unity, OpenXR, visionOS, WebXR, lunettes AR et XR mobile, et j'aime transformer ce travail en conférences, ateliers et partenariats qui aident davantage de développeurs à créer avec ces technologies.",
-    "summary": "Je travaille à l'intersection de l'évangélisme XR, de l'ingénierie et de la construction de communautés développeurs : je livre sur plusieurs plateformes tout en mentorant, en prenant la parole et en aidant les écosystèmes mondiaux à grandir.",
+    "intro": "<strong>Salut, je suis Degly Pava</strong>. Je suis évangéliste technologique XR et ingénieur XR multiplateforme et wearables basé à Tokyo. Je construis des expériences spatiales avec Unity, OpenXR, visionOS, WebXR et smart glasses, et je fais aussi du developer relations : je prends la parole, je mentorise et j'aide les équipes à comprendre comment ces technologies créent une vraie valeur.",
+    "summary": "Ce que j'aime le plus, c'est le travail à la croisée de l'évangélisme et de l'ingénierie : livrer de vrais produits XR, représenter la technologie publiquement et aider développeurs et partenaires à grandir avec elle.",
     "detailed": {
       "paragraph1": "Mon expertise englobe des expériences de Réalité Étendue de pointe qui ont attiré l'attention des leaders de l'industrie au Japon, aux États-Unis et en Colombie. J'ai travaillé avec des géants du jeu comme CAPCOM et Nintendo, dirigé le développement AR pour Universal Studios Japan, et été pionnier dans la technologie des lunettes AR grâce au Programme des Développeurs Pionniers de Qualcomm.",
       "paragraph2": "Au-delà de la XR, j'ai développé 2 applications Android et contribué à des projets open source, démontrant une polyvalence sur les plateformes mobiles et web. J'ai développé plusieurs packages OpenUPM pour des technologies émergentes comme Apple Vision Pro et les appareils PICO XR, adoptés par 15+ entreprises sur le marché XR japonais.",
@@ -73,7 +73,7 @@
   "snapshot": {
     "heading": "Résumé Recruteur",
     "title": "Là Où Je Crée le Plus de Valeur",
-    "lede": "Je crée le plus de valeur là où se rencontrent l'évangélisme XR, l'ingénierie multiplateforme, le travail produit wearable, le developer relations et les partenariats internationaux. Je peux construire l'expérience, l'adapter d'un appareil à l'autre, mentoriser des développeurs partout dans le monde et aider partenaires et audiences à comprendre rapidement pourquoi ce travail compte.",
+    "lede": "Je crée le plus de valeur là où se rencontrent l'évangélisme XR, l'ingénierie multiplateforme, le travail wearable, le developer relations et les partenariats internationaux. Je peux aider à construire l'expérience, l'adapter d'un appareil à l'autre, mentoriser des développeurs partout dans le monde et rendre sa valeur claire pour partenaires, communautés et utilisateurs finaux.",
     "roles": {
       "title": "Rôles idéaux",
       "item1": "Responsable XR Technology Evangelist / Developer Relations pour XR, wearables, informatique spatiale, IA ou plateformes développeurs",
@@ -214,7 +214,7 @@
         "date": "Juin 2024 – Présent",
         "bullet1": "J'ai étendu STYLY Gallery à la compatibilité Apple Vision Pro en reliant Swift et Unity, contribuant à porter sa diffusion à 20 000+ téléchargements sur les plateformes XR.",
         "bullet2": "J'ai développé des packages OpenUPM et un outillage multiplateforme pour Apple Vision Pro, PICO XR et des workflows XR plus larges, adoptés par 15+ entreprises au Japon.",
-        "bullet3": "J'ai planifié et développé des projets XR wearables et géolocalisés, dont des expériences XREAL à grande échelle et DEN-NOH Vision / Ghost in the Shell à TOKYO NODE, tout en soutenant des démos, ateliers, programmes partenaires et initiatives internationales d'écosystème développeur."
+        "bullet3": "J'ai planifié et développé des projets XR smart glasses, wearables et géolocalisés, dont Meta Ray-Ban Display WebApps, des expériences XREAL à grande échelle et DEN-NOH Vision / Ghost in the Shell à TOKYO NODE, tout en soutenant aussi des démos, ateliers, actions de developer relations, programmes partenaires et initiatives internationales d'écosystème."
       },
       "erasmus": {
         "title": "Membre du Conseil Qualité ERASMUS - IMLEX",
@@ -238,14 +238,14 @@
   },
   "services": {
     "heading": "Que puis-je faire ?",
-    "title": "Ce que je peux construire, représenter et diriger",
+    "title": "Ce que je peux construire, représenter et aider à faire grandir",
     "vr": {
       "title": "Évangéliste XR et Ingénieur XR Multiplateforme",
       "description": "Je construis des produits AR, VR, MR, WebXR, visionOS et smart glasses avec Unity, OpenXR, ARKit, ARCore et des pipelines 3D temps réel, et je sais représenter ce travail clairement auprès du public et des partenaires."
     },
     "startup": {
-      "title": "Developer Relations, Écosystème et Leadership Produit",
-      "description": "Je pilote des prototypes, livraisons client, ateliers, programmes partenaires et expériences prêtes à être lancées pour l'informatique spatiale, les wearables et les écosystèmes développeurs."
+      "title": "Developer Relations, Écosystème et Partenariats",
+      "description": "J'aide les écosystèmes développeurs à grandir grâce à des ateliers, programmes partenaires, accompagnement au lancement et conseils concrets qui relient produits, communautés et objectifs business."
     },
     "engineer": {
       "title": "Ingénieur Logiciel et Informatique",
@@ -261,7 +261,7 @@
     },
     "social": {
       "title": "Prise de Parole & Storytelling d'Écosystème",
-      "description": "Je transforme le travail technique en démos, talks, documentation et narration developer-facing pour des produits, partenaires et communautés internationales."
+      "description": "Je transforme le travail technique en démos, talks, documentation et récits developer-facing clairs pour des produits, partenaires et communautés internationales."
     },
     "stats": {
       "projects": "Projets",

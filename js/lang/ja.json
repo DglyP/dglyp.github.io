@@ -1,14 +1,14 @@
 {
   "meta": {
     "title": "Degly Pava - XRテクノロジーエバンジェリスト | クロスプラットフォームXR・ウェアラブルエンジニア",
-    "description": "私は東京を拠点とするDegly Pavaです。XRテクノロジーエバンジェリストであり、クロスプラットフォームXR・ウェアラブルエンジニアです。スマートグラス、WebXR、visionOS、Unityにまたがって開発しながら、Developer Relations、国際登壇、Meta Horizon StartやMIT Reality Hackでのメンタリング、そして地域を越えた開発者エコシステムづくりにも取り組んでいます。",
+    "description": "私は東京を拠点とするDegly Pavaです。XRテクノロジーエバンジェリストとして、visionOS、WebXR、Unity、スマートグラスにまたがるクロスプラットフォームXR・ウェアラブル体験をつくりながら、Developer Relations、国際登壇、Meta Horizon StartやMIT Reality Hackでのメンタリング、そして地域を越えたパートナーシップと開発者エコシステムづくりにも取り組んでいます。",
     "keywords": "XRテクノロジーエバンジェリスト, 拡張現実エバンジェリスト, クロスプラットフォームXRエンジニア, ウェアラブル, Developer Relations, グローバルXRメンター, MIT Reality Hackメンター, Meta Horizon Start Mentor, Unity, OpenXR, visionOS, WebXR, Meta Ray-Ban Display, XREAL, ARグラス, スマートグラス, 登壇, 東京",
     "author": "Degly Pava",
     "ogTitle": "Degly Pava - XRテクノロジーエバンジェリスト | クロスプラットフォームXR・ウェアラブルエンジニア",
     "ogSiteName": "Degly Pava ポートフォリオ",
     "twitterTitle": "Degly Pava - XRテクノロジーエバンジェリスト | クロスプラットフォームXR・ウェアラブルエンジニア",
-    "ogDescription": "私は東京を拠点とするDegly Pavaです。XRテクノロジーエバンジェリストであり、クロスプラットフォームXR・ウェアラブルエンジニアです。スマートグラス、WebXR、visionOS、Unityにまたがって開発しながら、Developer Relations、国際登壇、Meta Horizon StartやMIT Reality Hackでのメンタリング、そして地域を越えた開発者エコシステムづくりにも取り組んでいます。",
-    "twitterDescription": "私は東京を拠点とするDegly Pavaです。XRテクノロジーエバンジェリストであり、クロスプラットフォームXR・ウェアラブルエンジニアです。スマートグラス、WebXR、visionOS、Unityにまたがって開発しながら、Developer Relations、国際登壇、Meta Horizon StartやMIT Reality Hackでのメンタリング、そして地域を越えた開発者エコシステムづくりにも取り組んでいます。"
+    "ogDescription": "私は東京を拠点とするDegly Pavaです。XRテクノロジーエバンジェリストとして、visionOS、WebXR、Unity、スマートグラスにまたがるクロスプラットフォームXR・ウェアラブル体験をつくりながら、Developer Relations、国際登壇、Meta Horizon StartやMIT Reality Hackでのメンタリング、そして地域を越えたパートナーシップと開発者エコシステムづくりにも取り組んでいます。",
+    "twitterDescription": "私は東京を拠点とするDegly Pavaです。XRテクノロジーエバンジェリストとして、visionOS、WebXR、Unity、スマートグラスにまたがるクロスプラットフォームXR・ウェアラブル体験をつくりながら、Developer Relations、国際登壇、Meta Horizon StartやMIT Reality Hackでのメンタリング、そして地域を越えたパートナーシップと開発者エコシステムづくりにも取り組んでいます。"
   },
   "navigation": {
     "home": "ホーム",
@@ -27,13 +27,13 @@
   },
   "sidebar": {
     "name": "Degly Pava",
-    "position": "XRテクノロジーエバンジェリスト<br>クロスプラットフォームXR・ウェアラブルエンジニア<br>Meta Horizon Start Mentor • MIT Reality Hackメンター • Global Developer Mentor",
+    "position": "XRテクノロジーエバンジェリスト<br>クロスプラットフォームXR・ウェアラブルエンジニア<br>Developer Relations • Meta Horizon Start Mentor • MITメンター • Global Developer Mentor",
     "location": "東京、日本"
   },
   "hero": {
     "slide1": {
       "title": "こんにちは！<br>私はDeglyです",
-      "subtitle": "XRテクノロジーエバンジェリスト<br>クロスプラットフォームXR・ウェアラブルエンジニア<br>Meta Horizon Start Mentor • MIT Reality Hackメンター • Global Developer Mentor",
+      "subtitle": "XRテクノロジーエバンジェリスト<br>クロスプラットフォームXR・ウェアラブルエンジニア<br>Developer Relations • Meta Horizon Start Mentor • MITメンター • Global Developer Mentor",
       "downloadCV": "履歴書ダウンロード",
       "viewProjects": "プロジェクト表示"
     },
@@ -46,8 +46,8 @@
   "about": {
     "heading": "自己紹介",
     "title": "私は誰ですか？",
-    "intro": "<strong>こんにちは、Degly Pavaです</strong>。私は東京を拠点とするXRテクノロジーエバンジェリスト、クロスプラットフォームXR・ウェアラブルエンジニア、そしてDeveloper Relationsメンターです。Unity、OpenXR、visionOS、WebXR、ARグラス、モバイルXRで空間体験をつくり届けながら、その仕事を講演、ワークショップ、パートナーシップへとつなげ、より多くの開発者がこれらの技術で挑戦できるようにしています。",
-    "summary": "私はXRエバンジェリズム、エンジニアリング、開発者コミュニティづくりが交わる場所で価値を出しています。複数プラットフォームで届けながら、メンタリングし、登壇し、グローバルなエコシステムの成長を支えています。",
+    "intro": "<strong>こんにちは、Degly Pavaです</strong>。私は東京を拠点とするXRテクノロジーエバンジェリストであり、クロスプラットフォームXR・ウェアラブルエンジニアです。Unity、OpenXR、visionOS、WebXR、スマートグラスで空間体験をつくり届けながら、Developer Relationsにも取り組み、登壇やメンタリングを通じて、これらの技術がどんな価値を生むのかをチームに伝えています。",
+    "summary": "私が最もやりがいを感じるのは、エバンジェリズムとエンジニアリングが交わる仕事です。実際にXRプロダクトを届け、技術を公の場で伝え、開発者やパートナーがそれと一緒に成長できるよう支援しています。",
     "detailed": {
       "paragraph1": "私の専門知識は、日本、米国、コロンビアの業界リーダーから注目を集めた最先端の拡張現実体験に及びます。CAPCOMやNintendoなどのゲーム大手と協力し、ユニバーサル・スタジオ・ジャパンのAR開発を主導し、QualcommのAR Developer Pathfinders Programを通じてARグラス技術を開拓しました。",
       "paragraph2": "XR以外にも、2つのAndroidアプリケーションを開発し、オープンソースプロジェクトにも貢献してきました。Apple Vision ProやPICO XRなどの新興技術向けに複数のOpenUPMパッケージを開発し、日本のXR市場で15+社に採用されています。",
@@ -73,7 +73,7 @@
   "snapshot": {
     "heading": "採用担当者向け概要",
     "title": "私が最も価値を出せる領域",
-    "lede": "私が最も価値を発揮できるのは、XRエバンジェリズム、クロスプラットフォーム開発、ウェアラブル製品づくり、Developer Relations、国際パートナーシップが交わる領域です。体験を形にし、複数デバイスへ広げ、世界中の開発者をメンタリングし、その価値をパートナーやオーディエンスへわかりやすく伝えられます。",
+    "lede": "私が最も価値を発揮できるのは、XRエバンジェリズム、クロスプラットフォーム開発、ウェアラブル製品づくり、Developer Relations、国際パートナーシップが交わる領域です。体験を形にし、複数デバイスへ広げ、世界中の開発者をメンタリングし、その価値をパートナー、コミュニティ、エンドユーザーへわかりやすく伝えられます。",
     "roles": {
       "title": "相性の良い役割",
       "item1": "XR、ウェアラブル、空間コンピューティング、AI、開発者プラットフォーム向けXR Technology Evangelist / Developer Relationsリード",
@@ -214,7 +214,7 @@
         "date": "2024年6月 – 現在",
         "bullet1": "SwiftとUnityを連携し、STYLY GalleryのApple Vision Pro対応を拡張。XRプラットフォーム全体で20,000+ダウンロードへの到達拡大に貢献しました。",
         "bullet2": "Apple Vision Pro、PICO XR、より広いXRワークフロー向けのOpenUPMパッケージとクロスプラットフォームツールを開発し、日本で15+社に採用されました。",
-        "bullet3": "XREALによる大規模エンターテインメント体験やTOKYO NODEでのDEN-NOH Vision / Ghost in the Shellなど、ウェアラブル／位置連動XRプロジェクトを企画・開発すると同時に、デモ、ワークショップ、パートナープログラム、国際的な開発者エコシステム施策も支援しています。"
+        "bullet3": "Meta Ray-Ban Display WebApps、XREALによる大規模エンターテインメント体験、TOKYO NODEでのDEN-NOH Vision / Ghost in the Shellなど、スマートグラス、ウェアラブル、位置連動XRプロジェクトを企画・開発すると同時に、デモ、ワークショップ、Developer Relations、パートナープログラム、国際的なエコシステム施策も支援しています。"
       },
       "erasmus": {
         "title": "ERASMUS - IMLEX Quality Board Member",
@@ -238,14 +238,14 @@
   },
   "services": {
     "heading": "何ができるか？",
-    "title": "構築し、発信し、リードできること",
+    "title": "構築し、発信し、成長も支えられること",
     "vr": {
       "title": "XRエバンジェリスト兼クロスプラットフォームXRエンジニア",
       "description": "Unity、OpenXR、ARKit、ARCore、リアルタイム3Dパイプラインを使ってAR、VR、MR、WebXR、visionOS、スマートグラス向けのプロダクトをつくり、その価値を一般向けにもパートナー向けにもわかりやすく伝えられます。"
     },
     "startup": {
-      "title": "Developer Relations・エコシステム・プロダクトリード",
-      "description": "空間コンピューティング、ウェアラブル製品、開発者エコシステムに向けて、プロトタイプ、クライアント向け開発、ワークショップ、パートナープログラム、ローンチ可能な体験づくりをリードします。"
+      "title": "Developer Relations・エコシステム・パートナーシップ",
+      "description": "ワークショップ、パートナープログラム、ローンチ支援、実践的なガイダンスを通じて、製品・コミュニティ・ビジネス目標をつなぎながら開発者エコシステムの成長を支えます。"
     },
     "engineer": {
       "title": "ソフトウェア・コンピュータエンジニア",
@@ -261,7 +261,7 @@
     },
     "social": {
       "title": "登壇・エコシステムストーリーテリング",
-      "description": "技術的な仕事を、製品・パートナー・国際コミュニティ向けのデモ、講演、ドキュメント、開発者向けストーリーへと変換します。"
+      "description": "技術的な仕事を、製品・パートナー・国際コミュニティ向けのわかりやすいデモ、講演、ドキュメント、開発者向けストーリーへと変換します。"
     },
     "stats": {
       "projects": "プロジェクト",
