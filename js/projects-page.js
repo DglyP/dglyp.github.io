@@ -5,8 +5,6 @@
  */
 
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('Projects Page Manager: DOM loaded');
-    
     // Check if we're on the projects page
     if (document.getElementById('all-projects')) {
         loadAllProjects();
@@ -19,15 +17,14 @@ document.addEventListener('DOMContentLoaded', function() {
  */
 async function loadAllProjects() {
     try {
-        console.log('Projects Page Manager: Loading all projects...');
         const response = await fetch('js/data/projects.json');
-        console.log('Response status:', response.status);
+        if (!response.ok) {
+            throw new Error(`Failed to load projects: ${response.status}`);
+        }
         const data = await response.json();
-        console.log('Loaded data:', data);
         
         if (data && data.projects && Array.isArray(data.projects)) {
             displayAllProjects(data.projects);
-            console.log(`Projects Page Manager: Loaded ${data.projects.length} projects`);
         } else {
             console.error('Projects Page Manager: Invalid projects data structure');
         }
@@ -46,9 +43,6 @@ function displayAllProjects(projects) {
         return;
     }
     
-    console.log('Displaying projects in container:', container);
-    console.log('Projects to display:', projects);
-    
     // Sort projects to show featured ones first
     const sortedProjects = [...projects].sort((a, b) => {
         if (a.featured && !b.featured) return -1;
@@ -59,12 +53,9 @@ function displayAllProjects(projects) {
     container.innerHTML = '';
     
     sortedProjects.forEach((project, index) => {
-        console.log(`Rendering project ${index}:`, project.title);
         const projectElement = renderProjectForPage(project, index);
         container.appendChild(projectElement);
     });
-    
-    console.log('All projects rendered. Container HTML:', container.innerHTML.substring(0, 200) + '...');
     
     // Add animation delay for staggered effect
     addStaggeredAnimation();
@@ -196,20 +187,13 @@ function filterProjects(filter) {
  * Add staggered animation to make projects visible
  */
 function addStaggeredAnimation() {
-    console.log('Projects Page Manager: Adding staggered animation...');
     const visibleProjects = document.querySelectorAll('#all-projects .col-md-6[style*="block"], #all-projects .col-md-6:not([style*="none"])');
-    console.log(`Projects Page Manager: Found ${visibleProjects.length} visible projects`);
     
     visibleProjects.forEach((project, index) => {
         setTimeout(() => {
-            console.log(`Projects Page Manager: Animating project ${index + 1}`);
-            const animateBox = project.querySelector('.animate-box');
-            if (animateBox) {
-                // Make the project visible by setting opacity and adding animation classes
-                animateBox.style.opacity = '1';
-                animateBox.style.visibility = 'visible';
-                animateBox.classList.add('animated', animateBox.getAttribute('data-animate-effect') || 'fadeInRight');
-            }
+            project.style.opacity = '1';
+            project.style.visibility = 'visible';
+            project.classList.add('animated', project.getAttribute('data-animate-effect') || 'fadeInRight');
         }, index * 150);
     });
 }
