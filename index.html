@@ -707,7 +707,12 @@
 												ensuring quality standards for a €1.58M European-funded XR Master's program, I bridge innovation with education.
 											</p>
 										</div>
-										<p><a href="#" class="read-more-toggle" onclick="toggleReadMore(event)"><span data-translate="about.readMore">Read More</span> <i class="icon-arrow-down3"></i></a></p>
+											<p>
+												<a href="#" class="read-more-toggle" onclick="toggleReadMore(event)">
+													<span class="read-more-label" data-translate="about.readMore" data-read-more-key="about.readMore" data-read-less-key="about.readLess">Read More</span>
+													<i class="read-more-icon icon-arrow-down3"></i>
+												</a>
+											</p>
 									</div>
 								</div>
 							</div>
@@ -2171,39 +2176,51 @@
 		});
 
 		// Progressive disclosure functionality
-		function toggleReadMore(event) {
-			event.preventDefault();
-			var details = document.querySelector('.about-details');
-			var summary = document.querySelector('.about-summary');
-			var toggle = event.target;
-			
-			if (details.style.display === 'none') {
-				details.style.display = 'block';
-				summary.style.display = 'none';
-				toggle.innerHTML = 'Read Less <i class="icon-arrow-up3"></i>';
-			} else {
-				details.style.display = 'none';
-				summary.style.display = 'block';
-				toggle.innerHTML = 'Read More <i class="icon-arrow-down3"></i>';
+			function toggleReadMore(event) {
+				event.preventDefault();
+				var details = document.querySelector('.about-details');
+				var summary = document.querySelector('.about-summary');
+				var toggle = event.currentTarget;
+				var label = toggle.querySelector('.read-more-label');
+				var icon = toggle.querySelector('.read-more-icon');
+				var readMoreText = window.translationManager ? window.translationManager.getText(label.dataset.readMoreKey) : 'Read More';
+				var readLessText = window.translationManager ? window.translationManager.getText(label.dataset.readLessKey) : 'Read Less';
+				
+				if (details.style.display === 'none') {
+					details.style.display = 'block';
+					summary.style.display = 'none';
+					label.textContent = readLessText;
+					icon.className = 'read-more-icon icon-arrow-up3';
+				} else {
+					details.style.display = 'none';
+					summary.style.display = 'block';
+					label.textContent = readMoreText;
+					icon.className = 'read-more-icon icon-arrow-down3';
+				}
 			}
-		}
 
-		function toggleExperience(event, element) {
-			event.preventDefault();
-			var entry = element.closest('.timeline-label');
-			var details = entry.querySelector('.experience-details');
-			var summary = entry.querySelector('.experience-summary');
-			
-			if (details.style.display === 'none') {
-				details.style.display = 'block';
-				if (summary) summary.style.display = 'none';
-				element.innerHTML = 'Read Less <i class="icon-arrow-up3"></i>';
-			} else {
-				details.style.display = 'none';
-				if (summary) summary.style.display = 'block';
-				element.innerHTML = 'Read More <i class="icon-arrow-down3"></i>';
+			function toggleExperience(event, element) {
+				event.preventDefault();
+				var entry = element.closest('.timeline-label');
+				var details = entry.querySelector('.experience-details');
+				var summary = entry.querySelector('.experience-summary');
+				var label = element.querySelector('.read-more-label');
+				var icon = element.querySelector('.read-more-icon');
+				var readMoreText = window.translationManager && label ? window.translationManager.getText(label.dataset.readMoreKey) : 'Read More';
+				var readLessText = window.translationManager && label ? window.translationManager.getText(label.dataset.readLessKey) : 'Read Less';
+				
+				if (details.style.display === 'none') {
+					details.style.display = 'block';
+					if (summary) summary.style.display = 'none';
+					if (label) label.textContent = readLessText;
+					if (icon) icon.className = 'read-more-icon icon-arrow-up3';
+				} else {
+					details.style.display = 'none';
+					if (summary) summary.style.display = 'block';
+					if (label) label.textContent = readMoreText;
+					if (icon) icon.className = 'read-more-icon icon-arrow-down3';
+				}
 			}
-		}
 	</script>
 
 	<!-- Navigation Scroll Fix -->
