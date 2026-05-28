@@ -204,10 +204,50 @@
 				color: #f7f7f7;
 				border-top: 1px solid #222;
 				border-bottom: 1px solid #222;
+				margin: 28px 0 36px;
+				padding: 64px 0 56px;
+				scroll-margin-top: 30px;
 			}
-		.recruiter-snapshot .heading-meta {
-			color: #f9bf3f;
-		}
+			.recruiter-bridge {
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+				gap: 14px 18px;
+				margin: 24px 0 18px;
+				padding: 18px 20px;
+				border: 1px solid rgba(255,255,255,0.12);
+				border-radius: 6px;
+				background: rgba(255,255,255,0.04);
+			}
+			.recruiter-bridge .bridge-label {
+				display: inline-flex;
+				align-items: center;
+				padding: 6px 10px;
+				border-radius: 4px;
+				background: #f9bf3f;
+				color: #111;
+				font-size: 12px;
+				font-weight: 700;
+				letter-spacing: 0.04em;
+				text-transform: uppercase;
+			}
+			.recruiter-bridge p {
+				margin: 0;
+				color: #d8d8d8;
+				font-size: 15px;
+				line-height: 1.6;
+				flex: 1 1 320px;
+			}
+			.recruiter-bridge a {
+				color: #fff;
+				font-weight: 700;
+				text-decoration: none;
+				border-bottom: 1px solid rgba(249,191,63,0.7);
+				padding-bottom: 2px;
+			}
+			.recruiter-snapshot .heading-meta {
+				color: #f9bf3f;
+			}
 		.recruiter-snapshot .colorlib-heading {
 			color: #fff;
 			margin-bottom: 22px;
@@ -532,13 +572,25 @@
 				.capability-section .capability-grid {
 					grid-template-columns: repeat(2, minmax(0, 1fr));
 				}
+				.recruiter-snapshot {
+					padding: 56px 0 48px;
+				}
 			}
 			@media (max-width: 560px) {
-			.proof-grid {
-				grid-template-columns: 1fr;
-			}
-			.proof-highlights {
-				grid-template-columns: 1fr;
+				.recruiter-snapshot {
+					margin: 20px 0 28px;
+					padding: 44px 0 38px;
+				}
+				.recruiter-bridge {
+					padding: 16px 16px;
+					margin-top: 20px;
+					margin-bottom: 12px;
+				}
+				.proof-grid {
+					grid-template-columns: 1fr;
+				}
+				.proof-highlights {
+					grid-template-columns: 1fr;
 			}
 				.proof-number {
 					font-size: 30px;
@@ -713,9 +765,14 @@
 													<i class="read-more-icon icon-arrow-down3"></i>
 												</a>
 											</p>
+											<div class="recruiter-bridge animate-box" data-animate-effect="fadeInLeft">
+												<span class="bridge-label" data-translate="about.recruiterBridge.label">Recruiter Snapshot</span>
+												<p data-translate="about.recruiterBridge.text">Right after this intro, you’ll see a compact hiring summary with roles, proof, skills, and links grouped together.</p>
+												<a href="#snapshot" data-translate="about.recruiterBridge.link">Jump to it</a>
+											</div>
+										</div>
 									</div>
 								</div>
-							</div>
 							<div class="row">
 								<div class="col-md-3 animate-box" data-animate-effect="fadeInLeft">
 									<div class="services color-1">

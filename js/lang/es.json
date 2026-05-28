@@ -53,6 +53,11 @@
     },
     "readMore": "Leer Más",
     "readLess": "Leer Menos",
+    "recruiterBridge": {
+      "label": "Resumen para Reclutadores",
+      "text": "Justo después de esta introducción verás un resumen de contratación compacto con roles, pruebas, habilidades y enlaces agrupados.",
+      "link": "Ir allí"
+    },
     "expertise": {
       "title1": "Ingeniería Informática",
       "title2": "Realidades Aumentadas y Virtuales",

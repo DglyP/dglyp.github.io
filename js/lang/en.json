@@ -53,6 +53,11 @@
     },
     "readMore": "Read More",
     "readLess": "Read Less",
+    "recruiterBridge": {
+      "label": "Recruiter Snapshot",
+      "text": "Right after this intro, you’ll see a compact hiring summary with roles, proof, skills, and links grouped together.",
+      "link": "Jump to it"
+    },
     "expertise": {
       "title1": "Computer Engineering",
       "title2": "Augmented and Virtual Realities",

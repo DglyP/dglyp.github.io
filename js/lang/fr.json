@@ -53,6 +53,11 @@
     },
     "readMore": "Lire Plus",
     "readLess": "Lire Moins",
+    "recruiterBridge": {
+      "label": "Résumé Recruteur",
+      "text": "Juste après cette introduction, vous verrez un résumé de recrutement compact avec les rôles, les preuves, les compétences et les liens regroupés.",
+      "link": "Aller au résumé"
+    },
     "expertise": {
       "title1": "Ingénierie Informatique",
       "title2": "Réalités Augmentées et Virtuelles",
