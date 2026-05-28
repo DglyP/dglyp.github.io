@@ -1,12 +1,14 @@
 {
   "meta": {
-    "title": "Degly Pava - Extended Reality Evangelist | Apple Vision Pro & Unity XR",
-    "description": "Degly Pava - 東京を拠点とするExtended Reality Evangelist / Apple Vision Pro向けSenior Unity Engineer。Meta Horizon Start Mentor、MIT Reality Hackメンター、700+人の開発者支援、291M+ ARインタラクション、20K+ XRプラットフォームダウンロード、MWC 2025 Apple Vision Pro展示。",
-    "keywords": "Extended Reality Evangelist, Senior Unity Engineer, Apple Vision Pro開発者, Meta Horizon Start Mentor, visionOS, XR開発者, AR VR, Unity, MWC 2025, MIT Reality Hack mentor, 291M ARインタラクション, OpenUPM, PICO XR, KDDI, Meta, 東京",
+    "title": "Degly Pava - クロスプラットフォームXR・ウェアラブルエンジニア | Unity・OpenXR・空間コンピューティング",
+    "description": "Degly Pavaは東京を拠点とするクロスプラットフォームXR・ウェアラブルエンジニアです。Unity、OpenXR、visionOS、WebXR、ARグラス、空間コンピューティングを専門とし、Meta Ray-Ban Display WebApps、XREALのロケーションベースドエンターテインメント、STYLY、大規模没入体験の実績があります。",
+    "keywords": "クロスプラットフォームXRエンジニア, ウェアラブル開発者, 空間コンピューティング, Unity, OpenXR, visionOS, WebXR, Meta Ray-Ban Display, XREAL, ARグラス, スマートグラス, Meta Horizon Start Mentor, 東京",
     "author": "Degly Pava",
-    "ogTitle": "Degly Pava - Extended Reality Evangelist | Apple Vision Pro & Unity XR",
+    "ogTitle": "Degly Pava - クロスプラットフォームXR・ウェアラブルエンジニア | Unity・OpenXR・空間コンピューティング",
     "ogSiteName": "Degly Pava ポートフォリオ",
-    "twitterTitle": "Degly Pava - Extended Reality Evangelist | Apple Vision Pro & Unity XR"
+    "twitterTitle": "Degly Pava - クロスプラットフォームXR・ウェアラブルエンジニア | Unity・OpenXR・空間コンピューティング",
+    "ogDescription": "Degly Pavaは東京を拠点とするクロスプラットフォームXR・ウェアラブルエンジニアです。Unity、OpenXR、visionOS、WebXR、ARグラス、空間コンピューティングを専門とし、Meta Ray-Ban Display WebApps、XREALのロケーションベースドエンターテインメント、STYLY、大規模没入体験の実績があります。",
+    "twitterDescription": "Degly Pavaは東京を拠点とするクロスプラットフォームXR・ウェアラブルエンジニアです。Unity、OpenXR、visionOS、WebXR、ARグラス、空間コンピューティングを専門とし、Meta Ray-Ban Display WebApps、XREALのロケーションベースドエンターテインメント、STYLY、大規模没入体験の実績があります。"
   },
   "navigation": {
     "home": "ホーム",
@@ -25,13 +27,13 @@
   },
   "sidebar": {
     "name": "Degly Pava",
-    "position": "Extended Reality Evangelist | Senior Unity Engineer - Apple Vision Pro",
+    "position": "クロスプラットフォームXRエンジニア<br>ウェアラブル・空間コンピューティング開発者",
     "location": "東京、日本"
   },
   "hero": {
     "slide1": {
       "title": "こんにちは！<br>私はDeglyです",
-      "subtitle": "Extended Reality Evangelist<br>Senior Unity Engineer - Apple Vision Pro<br>Meta Horizon Start Mentor",
+      "subtitle": "クロスプラットフォームXRエンジニア<br>ウェアラブル・空間コンピューティング開発者<br>Meta Horizon Start Mentor",
       "downloadCV": "履歴書ダウンロード",
       "viewProjects": "プロジェクト表示"
     },
@@ -44,8 +46,8 @@
   "about": {
     "heading": "自己紹介",
     "title": "私は誰ですか？",
-    "intro": "<strong>こんにちは、Degly Pavaです</strong>。東京を拠点とするExtended Reality Evangelist / Apple Vision Pro向けSenior Unity Engineerです。Unity、visionOS、C#/C++、AR/VR/MRプロダクト戦略、開発者エコシステム支援を通じて、アイデアを没入型体験へ変えています。",
-    "summary": "Meta Horizon Start Mentor • MIT Reality Hack ベストXRメンター • 20K+ XRプラットフォームダウンロード • 291M+ ARインタラクション • XRグラスと空間コンピューティングの講演者",
+    "intro": "<strong>こんにちは、Degly Pavaです</strong>。東京を拠点とするクロスプラットフォームXRエンジニア兼ウェアラブル開発者です。Unity、OpenXR、visionOS、WebXR、ARグラス、モバイルXRを用いて、本番対応の空間体験を構築し、実装力とプロダクト戦略、開発者エコシステム支援を組み合わせています。",
+    "summary": "Meta Horizon Start Mentor • MIT Reality Hack ベストXRメンター • Meta Ray-Ban Display WebApps • XREAL LBE と DEN-NOH Vision • 20K+ XRダウンロード",
     "detailed": {
       "paragraph1": "私の専門知識は、日本、米国、コロンビアの業界リーダーから注目を集めた最先端の拡張現実体験に及びます。CAPCOMやNintendoなどのゲーム大手と協力し、ユニバーサル・スタジオ・ジャパンのAR開発を主導し、QualcommのAR Developer Pathfinders Programを通じてARグラス技術を開拓しました。",
       "paragraph2": "XR以外にも、2つのAndroidアプリケーションを開発し、オープンソースプロジェクトにも貢献してきました。Apple Vision ProやPICO XRなどの新興技術向けに複数のOpenUPMパッケージを開発し、日本のXR市場で15+社に採用されています。",
@@ -71,12 +73,12 @@
   "snapshot": {
     "heading": "採用担当者向け概要",
     "title": "私が最も価値を出せる領域",
-    "lede": "私の強みは、XRエンジニアリング、Developer Relations、プロダクトストーリーテリング、国際的なパートナーシップが交わる領域です。デモを作り、プラットフォームを説明し、エコシステムを育て、ステージで価値を伝えることができます。",
+    "lede": "私が最も価値を発揮するのは、クロスプラットフォームXRエンジニアリング、ウェアラブル製品実装、Developer Relations、国際パートナーシップが重なる領域です。体験を実装し、複数デバイスへ適応し、エコシステムを支援し、仕事の価値を明確に伝えられます。",
     "roles": {
       "title": "相性の良い役割",
-      "item1": "XR、AI、空間コンピューティング、開発者プラットフォーム向けDeveloper Relations / Technology Evangelist",
-      "item2": "Apple Vision Pro、ARグラス、MR、クロスプラットフォームデモ向けSenior Unity / visionOS / XR Engineer",
-      "item3": "日本、北米、欧州、ラテンアメリカをつなぐXRパートナーシップ、エコシステム、コミュニティリード"
+      "item1": "XR、ウェアラブル、空間コンピューティング、AI、開発者プラットフォーム向けDeveloper Relations / Technology Evangelist",
+      "item2": "ウェアラブル、スマートグラス、visionOS、WebXR、クロスプラットフォーム空間プロダクト向けSenior Unity / OpenXR / XR Engineer",
+      "item3": "日本、北米、欧州、ラテンアメリカをつなぐXRプロダクト、パートナーシップ、またはエコシステムリード"
     },
     "skills": {
       "title": "主な強み",
@@ -208,11 +210,11 @@
     "title": "最新の経験",
     "jobs": {
       "styly": {
-        "title": "STYLY Inc. Technology Evangelist / Senior Unity Engineer - Apple Vision Pro",
+        "title": "STYLY Inc. Technology Evangelist / Senior XR Engineer",
         "date": "2024年6月 – 現在",
-        "bullet1": "SwiftとUnityをつなぎ、STYLY GalleryをApple Vision Proに対応させ、XRプラットフォーム全体で20,000+ダウンロードへの到達拡大に貢献。",
-        "bullet2": "Apple Vision ProやPICO XRなどの新興技術向けOpenUPMパッケージを複数開発し、日本のXR市場で15+社に採用。",
-        "bullet3": "50+名規模のハッカソン、デモ、学生イベントを支援し、日本・欧州・カナダの企業とのつながりを構築。"
+        "bullet1": "SwiftとUnityを連携し、STYLY GalleryのApple Vision Pro対応を拡張。XRプラットフォーム全体で20,000+ダウンロードへの到達拡大に貢献しました。",
+        "bullet2": "Apple Vision Pro、PICO XR、より広いXRワークフロー向けのOpenUPMパッケージとクロスプラットフォームツールを開発し、日本で15+社に採用されました。",
+        "bullet3": "XREALの大規模エンターテインメント案件やTOKYO NODEのDEN-NOH Vision / Ghost in the Shellを含む、ウェアラブルおよびロケーションベースドXR体験の企画・開発を担当しました。"
       },
       "erasmus": {
         "title": "ERASMUS - IMLEX Quality Board Member",

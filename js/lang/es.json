@@ -1,12 +1,14 @@
 {
   "meta": {
-    "title": "Degly Pava - Evangelista de Realidad Extendida | Apple Vision Pro y Unity XR",
-    "description": "Degly Pava - Evangelista de Realidad Extendida e Ingeniero Senior Unity para Apple Vision Pro en Tokio. Mentor de Meta Horizon Start, mentor de MIT Reality Hack, 700+ desarrolladores mentoreados, 291M+ interacciones AR, 20K+ descargas de plataforma XR y showcase de Apple Vision Pro en MWC 2025.",
-    "keywords": "Evangelista de Realidad Extendida, Ingeniero Senior Unity, desarrollador Apple Vision Pro, Meta Horizon Start Mentor, visionOS, desarrollador XR, AR VR, Unity, MWC 2025, mentor MIT Reality Hack, 291M interacciones AR, OpenUPM, PICO XR, KDDI, Meta, Tokio Japón",
+    "title": "Degly Pava - Ingeniero XR Multiplataforma y Wearables | Unity, OpenXR y Computación Espacial",
+    "description": "Degly Pava es un ingeniero XR multiplataforma y de wearables en Tokio, especializado en Unity, OpenXR, visionOS, WebXR, gafas AR y computación espacial. Mentor de Meta Horizon Start con trabajo entregado en Meta Ray-Ban Display WebApps, entretenimiento basado en ubicación con XREAL, STYLY y experiencias inmersivas a gran escala.",
+    "keywords": "ingeniero XR multiplataforma, desarrollador de wearables, ingeniero de computación espacial, Unity, OpenXR, visionOS, WebXR, Meta Ray-Ban Display, XREAL, gafas AR, computación wearable, gafas inteligentes, Meta Horizon Start Mentor, Tokio Japón",
     "author": "Degly Pava",
-    "ogTitle": "Degly Pava - Evangelista de Realidad Extendida | Apple Vision Pro y Unity XR",
+    "ogTitle": "Degly Pava - Ingeniero XR Multiplataforma y Wearables | Unity, OpenXR y Computación Espacial",
     "ogSiteName": "Portafolio de Degly Pava",
-    "twitterTitle": "Degly Pava - Evangelista de Realidad Extendida | Apple Vision Pro y Unity XR"
+    "twitterTitle": "Degly Pava - Ingeniero XR Multiplataforma y Wearables | Unity, OpenXR y Computación Espacial",
+    "ogDescription": "Degly Pava es un ingeniero XR multiplataforma y de wearables en Tokio, especializado en Unity, OpenXR, visionOS, WebXR, gafas AR y computación espacial. Mentor de Meta Horizon Start con trabajo entregado en Meta Ray-Ban Display WebApps, entretenimiento basado en ubicación con XREAL, STYLY y experiencias inmersivas a gran escala.",
+    "twitterDescription": "Degly Pava es un ingeniero XR multiplataforma y de wearables en Tokio, especializado en Unity, OpenXR, visionOS, WebXR, gafas AR y computación espacial. Mentor de Meta Horizon Start con trabajo entregado en Meta Ray-Ban Display WebApps, entretenimiento basado en ubicación con XREAL, STYLY y experiencias inmersivas a gran escala."
   },
   "navigation": {
     "home": "Inicio",
@@ -25,13 +27,13 @@
   },
   "sidebar": {
     "name": "Degly Pava",
-    "position": "Evangelista de Realidad Extendida | Ingeniero Senior Unity - Apple Vision Pro",
+    "position": "Ingeniero XR Multiplataforma<br>Desarrollador de Wearables y Computación Espacial",
     "location": "Tokio, Japón"
   },
   "hero": {
     "slide1": {
       "title": "¡Hola!<br>Soy Degly",
-      "subtitle": "Evangelista de Realidad Extendida<br>Ingeniero Senior Unity - Apple Vision Pro<br>Mentor de Meta Horizon Start",
+      "subtitle": "Ingeniero XR Multiplataforma<br>Desarrollador de Wearables y Computación Espacial<br>Mentor de Meta Horizon Start",
       "downloadCV": "Descargar CV",
       "viewProjects": "Ver Proyectos"
     },
@@ -44,8 +46,8 @@
   "about": {
     "heading": "Acerca de Mí",
     "title": "¿Quién Soy?",
-    "intro": "<strong>Hola, soy Degly Pava</strong>, Evangelista de Realidad Extendida e Ingeniero Senior Unity para Apple Vision Pro en Tokio, Japón. Convierto ideas en realidad inmersiva con Unity, visionOS, C#/C++, estrategia de producto AR/VR/MR y trabajo de ecosistemas de desarrolladores.",
-    "summary": "Mentor de Meta Horizon Start • Mejor mentor XR en MIT Reality Hack • 20K+ descargas de plataforma XR • 291M+ interacciones AR • Speaker sobre gafas XR y computación espacial",
+    "intro": "<strong>Hola, soy Degly Pava</strong>, ingeniero XR multiplataforma y desarrollador de wearables en Tokio, Japón. Construyo experiencias espaciales listas para producción con Unity, OpenXR, visionOS, WebXR, gafas AR y XR móvil, combinando ingeniería práctica, estrategia de producto y trabajo con ecosistemas de desarrolladores.",
+    "summary": "Mentor de Meta Horizon Start • Mejor mentor XR en MIT Reality Hack • Meta Ray-Ban Display WebApps • XREAL LBE y DEN-NOH Vision • 20K+ descargas XR",
     "detailed": {
       "paragraph1": "Mi experiencia abarca experiencias de Realidad Extendida de vanguardia que han captado la atención de líderes de la industria en Japón, EE.UU. y Colombia. He trabajado con gigantes de los videojuegos como CAPCOM y Nintendo, lideré el desarrollo AR para Universal Studios Japan, y fui pionero en tecnología de gafas AR a través del Programa de Desarrolladores Pioneros de Qualcomm.",
       "paragraph2": "Más allá de XR, he desarrollado 2 aplicaciones Android y contribuido a proyectos de código abierto, demostrando versatilidad en plataformas móviles y web. También desarrollé múltiples paquetes OpenUPM para tecnologías emergentes como Apple Vision Pro y dispositivos PICO XR, adoptados por 15+ empresas en el mercado XR de Japón.",
@@ -71,12 +73,12 @@
   "snapshot": {
     "heading": "Resumen para Reclutadores",
     "title": "Dónde Creo Más Valor",
-    "lede": "Soy más fuerte donde se cruzan la ingeniería XR, developer relations, narrativa de producto y alianzas internacionales. Puedo construir la demo, explicar la plataforma, mentorear el ecosistema y representar el trabajo en el escenario.",
+    "lede": "Creo más valor donde se cruzan la ingeniería XR multiplataforma, la ejecución de productos wearable, las relaciones con desarrolladores y las alianzas internacionales. Puedo entregar la experiencia, adaptarla entre dispositivos, mentorear el ecosistema y comunicar el trabajo con claridad.",
     "roles": {
       "title": "Roles ideales",
-      "item1": "Developer Relations / Evangelista Tecnológico para XR, IA, computación espacial o plataformas de desarrolladores",
-      "item2": "Ingeniero Senior Unity / visionOS / XR para Apple Vision Pro, gafas AR, MR y demos multiplataforma",
-      "item3": "Líder de alianzas, ecosistema o comunidad XR conectando Japón, Norteamérica, Europa y Latinoamérica"
+      "item1": "Developer Relations / Evangelista Tecnológico para XR, wearables, computación espacial, IA o plataformas para desarrolladores",
+      "item2": "Ingeniero Senior Unity / OpenXR / XR para wearables, gafas inteligentes, visionOS, WebXR y productos espaciales multiplataforma",
+      "item3": "Líder de producto, alianzas o ecosistema XR conectando Japón, Norteamérica, Europa y Latinoamérica"
     },
     "skills": {
       "title": "Fortalezas clave",
@@ -208,11 +210,11 @@
     "title": "Experiencia Reciente",
     "jobs": {
       "styly": {
-        "title": "Evangelista Tecnológico e Ingeniero Senior Unity - Apple Vision Pro en STYLY Inc.",
+        "title": "Evangelista Tecnológico e Ingeniero Senior XR en STYLY Inc.",
         "date": "Junio 2024 – Presente",
-        "bullet1": "Unifiqué STYLY Gallery para compatibilidad con Apple Vision Pro, conectando Swift y Unity y ampliando el alcance a 20,000+ descargas en plataformas XR.",
-        "bullet2": "Desarrollé múltiples paquetes OpenUPM para tecnologías emergentes como Apple Vision Pro y PICO XR, adoptados por 15+ empresas en el mercado XR de Japón.",
-        "bullet3": "Supervisé hackathons, demos y eventos estudiantiles con 50+ participantes mientras creaba conexiones con empresas en Japón, Europa y Canadá."
+        "bullet1": "Amplié STYLY Gallery para compatibilidad con Apple Vision Pro conectando Swift y Unity, ayudando a extender su alcance a 20,000+ descargas en plataformas XR.",
+        "bullet2": "Desarrollé paquetes OpenUPM y tooling multiplataforma para Apple Vision Pro, PICO XR y flujos XR más amplios, adoptados por 15+ empresas en Japón.",
+        "bullet3": "Planifiqué y desarrollé experiencias XR para wearables y entretenimiento basado en ubicación, incluyendo trabajo a gran escala con XREAL y DEN-NOH Vision / Ghost in the Shell en TOKYO NODE."
       },
       "erasmus": {
         "title": "Miembro de la Junta de Calidad ERASMUS - IMLEX",
