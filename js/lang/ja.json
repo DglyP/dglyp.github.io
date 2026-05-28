@@ -1,14 +1,14 @@
 {
   "meta": {
-    "title": "Degly Pava - クロスプラットフォームXR・ウェアラブルエンジニア | Unity・OpenXR・空間コンピューティング",
-    "description": "Degly Pavaは東京を拠点とするクロスプラットフォームXR・ウェアラブルエンジニアです。Unity、OpenXR、visionOS、WebXR、ARグラス、空間コンピューティングを専門とし、Meta Ray-Ban Display WebApps、XREALのロケーションベースドエンターテインメント、STYLY、大規模没入体験の実績があります。",
-    "keywords": "クロスプラットフォームXRエンジニア, ウェアラブル開発者, 空間コンピューティング, Unity, OpenXR, visionOS, WebXR, Meta Ray-Ban Display, XREAL, ARグラス, スマートグラス, Meta Horizon Start Mentor, 東京",
+    "title": "Degly Pava - XRテクノロジーエバンジェリスト | クロスプラットフォームXR・ウェアラブルエンジニア",
+    "description": "Degly Pavaは東京を拠点とするXRテクノロジーエバンジェリスト、クロスプラットフォームXR・ウェアラブルエンジニア、Developer Relationsメンターです。Unity、OpenXR、visionOS、WebXR、Meta Ray-Ban Display、XREAL、スマートグラスにまたがって開発しながら、世界中の開発者をメンタリングし、国際登壇を行い、日本・米国・欧州・ラテンアメリカを横断するパートナーシップを支援しています。",
+    "keywords": "XRテクノロジーエバンジェリスト, 拡張現実エバンジェリスト, クロスプラットフォームXRエンジニア, ウェアラブル, Developer Relations, グローバルXRメンター, MIT Reality Hackメンター, Meta Horizon Start Mentor, Unity, OpenXR, visionOS, WebXR, Meta Ray-Ban Display, XREAL, ARグラス, スマートグラス, 登壇, 東京",
     "author": "Degly Pava",
-    "ogTitle": "Degly Pava - クロスプラットフォームXR・ウェアラブルエンジニア | Unity・OpenXR・空間コンピューティング",
+    "ogTitle": "Degly Pava - XRテクノロジーエバンジェリスト | クロスプラットフォームXR・ウェアラブルエンジニア",
     "ogSiteName": "Degly Pava ポートフォリオ",
-    "twitterTitle": "Degly Pava - クロスプラットフォームXR・ウェアラブルエンジニア | Unity・OpenXR・空間コンピューティング",
-    "ogDescription": "Degly Pavaは東京を拠点とするクロスプラットフォームXR・ウェアラブルエンジニアです。Unity、OpenXR、visionOS、WebXR、ARグラス、空間コンピューティングを専門とし、Meta Ray-Ban Display WebApps、XREALのロケーションベースドエンターテインメント、STYLY、大規模没入体験の実績があります。",
-    "twitterDescription": "Degly Pavaは東京を拠点とするクロスプラットフォームXR・ウェアラブルエンジニアです。Unity、OpenXR、visionOS、WebXR、ARグラス、空間コンピューティングを専門とし、Meta Ray-Ban Display WebApps、XREALのロケーションベースドエンターテインメント、STYLY、大規模没入体験の実績があります。"
+    "twitterTitle": "Degly Pava - XRテクノロジーエバンジェリスト | クロスプラットフォームXR・ウェアラブルエンジニア",
+    "ogDescription": "Degly Pavaは東京を拠点とするXRテクノロジーエバンジェリスト、クロスプラットフォームXR・ウェアラブルエンジニア、Developer Relationsメンターです。Unity、OpenXR、visionOS、WebXR、Meta Ray-Ban Display、XREAL、スマートグラスにまたがって開発しながら、世界中の開発者をメンタリングし、国際登壇を行い、日本・米国・欧州・ラテンアメリカを横断するパートナーシップを支援しています。",
+    "twitterDescription": "Degly Pavaは東京を拠点とするXRテクノロジーエバンジェリスト、クロスプラットフォームXR・ウェアラブルエンジニア、Developer Relationsメンターです。Unity、OpenXR、visionOS、WebXR、Meta Ray-Ban Display、XREAL、スマートグラスにまたがって開発しながら、世界中の開発者をメンタリングし、国際登壇を行い、日本・米国・欧州・ラテンアメリカを横断するパートナーシップを支援しています。"
   },
   "navigation": {
     "home": "ホーム",
@@ -27,13 +27,13 @@
   },
   "sidebar": {
     "name": "Degly Pava",
-    "position": "クロスプラットフォームXRエンジニア<br>ウェアラブル・空間コンピューティング開発者",
+    "position": "XRテクノロジーエバンジェリスト<br>クロスプラットフォームXR・ウェアラブルエンジニア",
     "location": "東京、日本"
   },
   "hero": {
     "slide1": {
       "title": "こんにちは！<br>私はDeglyです",
-      "subtitle": "クロスプラットフォームXRエンジニア<br>ウェアラブル・空間コンピューティング開発者<br>Meta Horizon Start Mentor",
+      "subtitle": "XRテクノロジーエバンジェリスト<br>クロスプラットフォームXR・ウェアラブルエンジニア<br>Meta Horizon Start Mentor • MIT Mentor • Global Developer Mentor",
       "downloadCV": "履歴書ダウンロード",
       "viewProjects": "プロジェクト表示"
     },
@@ -46,12 +46,12 @@
   "about": {
     "heading": "自己紹介",
     "title": "私は誰ですか？",
-    "intro": "<strong>こんにちは、Degly Pavaです</strong>。東京を拠点とするクロスプラットフォームXRエンジニア兼ウェアラブル開発者です。Unity、OpenXR、visionOS、WebXR、ARグラス、モバイルXRを用いて、本番対応の空間体験を構築し、実装力とプロダクト戦略、開発者エコシステム支援を組み合わせています。",
-    "summary": "Meta Horizon Start Mentor • MIT Reality Hack ベストXRメンター • Meta Ray-Ban Display WebApps • XREAL LBE と DEN-NOH Vision • 20K+ XRダウンロード",
+    "intro": "<strong>こんにちは、Degly Pavaです</strong>。東京を拠点とするXRテクノロジーエバンジェリスト、クロスプラットフォームXR・ウェアラブルエンジニア、Developer Relationsメンターです。Unity、OpenXR、visionOS、WebXR、ARグラス、モバイルXRを用いた本番対応の空間体験を構築しながら、技術を公の場で伝え、開発者エコシステムを支援し、地域をまたぐパートナーシップを後押ししています。",
+    "summary": "XRテクノロジーエバンジェリスト • Meta Horizon Start Mentor • MIT Reality Hackメンター • グローバル開発者メンター • Meta Ray-Ban Display WebApps • XREAL LBE • DEN-NOH Vision",
     "detailed": {
       "paragraph1": "私の専門知識は、日本、米国、コロンビアの業界リーダーから注目を集めた最先端の拡張現実体験に及びます。CAPCOMやNintendoなどのゲーム大手と協力し、ユニバーサル・スタジオ・ジャパンのAR開発を主導し、QualcommのAR Developer Pathfinders Programを通じてARグラス技術を開拓しました。",
       "paragraph2": "XR以外にも、2つのAndroidアプリケーションを開発し、オープンソースプロジェクトにも貢献してきました。Apple Vision ProやPICO XRなどの新興技術向けに複数のOpenUPMパッケージを開発し、日本のXR市場で15+社に採用されています。",
-      "paragraph3": "Apple Vision Pro向けUnityベースの宇宙探査ゲームの調整から、158万ユーロ規模の欧州資金によるXR修士プログラムの品質基準の確保まで、私はイノベーションと教育を橋渡ししています。"
+      "paragraph3": "STYLYでApple Vision Pro対応や空間デモを届けることから、世界中の開発者メンタリング、XRグラスに関する国際登壇、そして158万ユーロ規模の欧州XR修士プログラム支援まで、私はエンジニアリング実行、Developer Relations、プロダクトストーリーテリング、グローバルパートナーシップを橋渡ししています。"
     },
     "readMore": "もっと読む",
     "readLess": "閉じる",
@@ -73,22 +73,22 @@
   "snapshot": {
     "heading": "採用担当者向け概要",
     "title": "私が最も価値を出せる領域",
-    "lede": "私が最も価値を発揮するのは、クロスプラットフォームXRエンジニアリング、ウェアラブル製品実装、Developer Relations、国際パートナーシップが重なる領域です。体験を実装し、複数デバイスへ適応し、エコシステムを支援し、仕事の価値を明確に伝えられます。",
+    "lede": "私が最も価値を発揮するのは、XRエバンジェリズム、クロスプラットフォームXRエンジニアリング、ウェアラブル製品実装、Developer Relations、国際パートナーシップが重なる領域です。体験を実装し、複数デバイスへ適応し、グローバルな開発者コミュニティをメンタリングし、その価値をパートナー・聴衆・各地域エコシステムに明確に伝えられます。",
     "roles": {
       "title": "相性の良い役割",
-      "item1": "XR、ウェアラブル、空間コンピューティング、AI、開発者プラットフォーム向けDeveloper Relations / Technology Evangelist",
+      "item1": "XR、ウェアラブル、空間コンピューティング、AI、開発者プラットフォーム向けXR Technology Evangelist / Developer Relationsリード",
       "item2": "ウェアラブル、スマートグラス、visionOS、WebXR、クロスプラットフォーム空間プロダクト向けSenior Unity / OpenXR / XR Engineer",
-      "item3": "日本、北米、欧州、ラテンアメリカをつなぐXRプロダクト、パートナーシップ、またはエコシステムリード"
+      "item3": "日本、北米、欧州、ラテンアメリカをつなぐXRプロダクト、パートナーシップ、エコシステム、またはメンタープログラムのリード"
     },
     "skills": {
       "title": "主な強み",
       "item1": "Unity、C#、C++、Swift連携、visionOS、OpenXR、ARKit、ARCore、WebXR、シェーダー、OpenUPMパッケージ",
       "item2": "AR/VR/MRプロダクト戦略、UX、パフォーマンス最適化、公開ワークフロー、Go-to-market支援",
-      "item3": "登壇、ワークショップ、ハッカソンメンタリング、技術ストーリーテリング、グローバル開発者支援"
+      "item3": "登壇、ワークショップ、MIT・Metaでのメンタリング、技術ストーリーテリング、地域横断のグローバル開発者支援"
     },
     "search": {
       "title": "検索シグナル",
-      "item1": "主なスキル：Augmented Reality、Software Development、Unity、Virtual Reality、User Experience",
+      "item1": "主なスキル：XRエバンジェリズム、Developer Relations、XRエンジニアリング、Unity、Wearable Computing、Spatial Computing",
       "item2": "言語：英語、スペイン語、フランス語、日本語",
       "item3": "米国、日本、国際チームでのオンサイト、ハイブリッド、リモート機会に対応"
     }
@@ -214,7 +214,7 @@
         "date": "2024年6月 – 現在",
         "bullet1": "SwiftとUnityを連携し、STYLY GalleryのApple Vision Pro対応を拡張。XRプラットフォーム全体で20,000+ダウンロードへの到達拡大に貢献しました。",
         "bullet2": "Apple Vision Pro、PICO XR、より広いXRワークフロー向けのOpenUPMパッケージとクロスプラットフォームツールを開発し、日本で15+社に採用されました。",
-        "bullet3": "XREALの大規模エンターテインメント案件やTOKYO NODEのDEN-NOH Vision / Ghost in the Shellを含む、ウェアラブルおよびロケーションベースドXR体験の企画・開発を担当しました。"
+        "bullet3": "XREALの大規模案件やTOKYO NODEのDEN-NOH Vision / Ghost in the Shellを含む、ウェアラブルおよびロケーションベースドXR体験の企画・開発を担当しつつ、デモ、ワークショップ、パートナープログラム、国際的な開発者エコシステム施策も支援しました。"
       },
       "erasmus": {
         "title": "ERASMUS - IMLEX Quality Board Member",
@@ -238,14 +238,14 @@
   },
   "services": {
     "heading": "何ができるか？",
-    "title": "構築・リードできること",
+    "title": "構築し、発信し、リードできること",
     "vr": {
-      "title": "XR / 空間コンピューティングエンジニア",
-      "description": "Unity、OpenXR、ARKit、ARCore、リアルタイム3Dパイプラインを用いて、AR、VR、MR、visionOS製品を構築します。"
+      "title": "XRエバンジェリスト兼クロスプラットフォームXRエンジニア",
+      "description": "Unity、OpenXR、ARKit、ARCore、リアルタイム3Dパイプラインを用いて、AR、VR、MR、WebXR、visionOS、スマートグラス製品を構築し、技術的な仕事をパブリックおよびパートナー向けに伝えます。"
     },
     "startup": {
-      "title": "スタジオ創業者・プロダクトビルダー",
-      "description": "Omni ApplicationsとLucidDreamsの創業者として、XR製品をプロトタイプからローンチ、クライアント納品、成長までリードします。"
+      "title": "Developer Relations・エコシステム・プロダクトリード",
+      "description": "空間コンピューティング、ウェアラブル製品、開発者エコシステム向けに、プロトタイプ、クライアント納品、ワークショップ、パートナープログラム、ローンチ対応体験をリードします。"
     },
     "engineer": {
       "title": "ソフトウェア・コンピュータエンジニア",
@@ -260,8 +260,8 @@
       "description": "英語、スペイン語、フランス語、日本語を使い、日本、ヨーロッパ、北米、ラテンアメリカの多文化チームと協働します。"
     },
     "social": {
-      "title": "クリエイティブ制作・パブリックプレゼンス",
-      "description": "技術ストーリーテリング、デモ、写真、映像、音楽制作、イベントでの発信力を開発者向けの仕事に活かします。"
+      "title": "登壇・エコシステムストーリーテリング",
+      "description": "技術的な仕事を、製品・パートナー・国際コミュニティ向けのデモ、講演、ドキュメント、開発者向けストーリーへと変換します。"
     },
     "stats": {
       "projects": "プロジェクト",
@@ -344,7 +344,7 @@
   "skills": {
     "heading": "スキルと影響",
     "title": "技術スキルマトリクス",
-    "intro": "構築できるシステム、リリース経験のあるプラットフォーム、仕事の背景にあるリーダーシップを、採用担当者が把握しやすい形で整理しています。",
+    "intro": "構築できるクロスプラットフォームシステム、育てている開発者エコシステム、そしてその背後にあるパブリックなリーダーシップを、採用担当者が把握しやすい形で整理しています。",
     "engineering": {
       "title": "XRエンジニアリング",
       "item1": "Unity、C#、C++、Swift連携、visionOS、OpenXR、ARKit、ARCore、WebXR、ShaderLab、HLSL。",
@@ -353,9 +353,9 @@
     },
     "ecosystem": {
       "title": "開発者エコシステム",
-      "item1": "Meta Horizon Startメンタリング、MIT Reality Hack審査、ハッカソンワークショップ、開発者教育。",
-      "item2": "OpenUPMパッケージ公開、技術ドキュメント、デモ、オンボーディング、開発者サポート。",
-      "item3": "XR Tokyo、AWE Nite Orlando、ColombiaXR、国際XRコミュニティでの登壇。"
+      "item1": "Meta Horizon Startメンタリング、MIT Reality Hackメンタリング、ハッカソン審査、グローバル開発者教育。",
+      "item2": "OpenUPMパッケージ公開、技術ドキュメント、デモ、オンボーディング、パートナー支援、開発者エコシステム構築。",
+      "item3": "XR Tokyo、TOKYO NODE LAB、AWE Nite Orlando、ColombiaXR、国際XRコミュニティでの登壇。"
     },
     "product": {
       "title": "プロダクト・リーダーシップ",
