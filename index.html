@@ -215,9 +215,9 @@
 				gap: 14px 18px;
 				margin: 24px 0 18px;
 				padding: 18px 20px;
-				border: 1px solid rgba(255,255,255,0.12);
+				border: 1px solid rgba(255,255,255,0.15);
 				border-radius: 6px;
-				background: rgba(255,255,255,0.04);
+				background: #1a1a1a;
 			}
 			.recruiter-bridge .bridge-label {
 				display: inline-flex;
@@ -576,9 +576,22 @@
 					padding: 56px 0 48px;
 				}
 			}
+			@media (max-width: 768px) {
+				.recruiter-snapshot {
+					margin-left: -1em;
+					margin-right: -1em;
+				}
+				.recruiter-snapshot .colorlib-narrow-content {
+					padding-left: 1.2em;
+					padding-right: 1.2em;
+				}
+			}
 			@media (max-width: 560px) {
 				.recruiter-snapshot {
-					margin: 20px 0 28px;
+					margin-top: 20px;
+					margin-bottom: 28px;
+					margin-left: -1em;
+					margin-right: -1em;
 					padding: 44px 0 38px;
 				}
 				.recruiter-bridge {
