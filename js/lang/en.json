@@ -1,16 +1,18 @@
 {
   "meta": {
-    "title": "Degly Pava - Senior XR Specialist | 700+ Developers Mentored | Apple Vision Pro MWC 2025",
-    "description": "Degly Pava - Senior XR Specialist & CEO who mentored 700+ developers globally, created 291M+ AR interactions, and showcased Apple Vision Pro at MWC 2025. Expert in Unity, AR/VR development with partnerships at MIT, KDDI, and Meta.",
-    "keywords": "XR developer, AR VR specialist, Unity developer, Apple Vision Pro, MWC 2025, developer mentor, 291M AR interactions, MIT partnership, KDDI, Meta, Tokyo Japan, immersive technology, extended reality, augmented reality, virtual reality",
+    "title": "Degly Pava - Extended Reality Evangelist | Apple Vision Pro & Unity XR",
+    "description": "Degly Pava - Extended Reality Evangelist and Senior Unity Engineer for Apple Vision Pro in Tokyo. Meta Horizon Start Mentor, MIT Reality Hack mentor, 700+ developers mentored, 291M+ AR interactions, 20K+ XR platform downloads, and MWC 2025 Apple Vision Pro showcase.",
+    "keywords": "Extended Reality Evangelist, Senior Unity Engineer, Apple Vision Pro developer, Meta Horizon Start Mentor, visionOS, XR developer, AR VR specialist, Unity developer, MWC 2025, MIT Reality Hack mentor, 291M AR interactions, OpenUPM, PICO XR, KDDI, Meta, Tokyo Japan",
     "author": "Degly Pava",
-    "ogTitle": "Degly Pava - Senior XR Specialist | 700+ Developers Mentored | Apple Vision Pro MWC 2025",
+    "ogTitle": "Degly Pava - Extended Reality Evangelist | Apple Vision Pro & Unity XR",
     "ogSiteName": "Degly Pava Portfolio",
-    "twitterTitle": "Degly Pava - Senior XR Specialist | 700+ Developers Mentored | Apple Vision Pro MWC 2025"
+    "twitterTitle": "Degly Pava - Extended Reality Evangelist | Apple Vision Pro & Unity XR"
   },
   "navigation": {
     "home": "Home",
     "about": "About",
+    "snapshot": "Recruiter Snapshot",
+    "proof": "Proof",
     "speaking": "Speaking & Leadership",
     "work": "Work / Portfolio",
     "experienceLatest": "Latest Experience",
@@ -23,31 +25,31 @@
   },
   "sidebar": {
     "name": "Degly Pava",
-    "position": "Senior XR Specialist – CEO",
+    "position": "Extended Reality Evangelist | Senior Unity Engineer - Apple Vision Pro",
     "location": "Tokyo, Japan"
   },
   "hero": {
     "slide1": {
       "title": "Hi!<br>I'm Degly",
-      "subtitle": "Senior XR Specialist & CEO<br>Mentored over 700+ creators globally<br>Regular Speaker at AI/XR conferences<br>Featured at MWC 2025 & MIT",
+      "subtitle": "Extended Reality Evangelist<br>Senior Unity Engineer - Apple Vision Pro<br>Meta Horizon Start Mentor",
       "downloadCV": "Download CV",
       "viewProjects": "View Projects"
     },
     "slide2": {
       "title": "Building the<br>Future of XR",
-      "subtitle": "Global partnerships with MIT, KDDI, Meta<br>Apple Vision Pro presenter at MWC 2025<br>291M+ XR interactions on Social Networks",
+      "subtitle": "20K+ XR platform downloads<br>OpenUPM packages adopted by 15+ companies<br>291M+ XR interactions on social platforms",
       "viewPortfolio": "View Portfolio"
     }
   },
   "about": {
     "heading": "About Me",
     "title": "Who Am I?",
-    "intro": "<strong>Hey I'm Degly Pava</strong>, Senior Extended Reality Specialist and CEO in Tokyo, Japan. I've mentored 700+ developers globally, created 291M+ AR interactions, and built partnerships with MIT, KDDI, and Meta.",
-    "summary": "Featured at MWC 2025 with Apple Vision Pro demo • Developed STYLY platform hosting 50,000+ XR experiences • Global XR community leader",
+    "intro": "<strong>Hey I'm Degly Pava</strong>, an Extended Reality Evangelist and Senior Unity Engineer for Apple Vision Pro in Tokyo, Japan. I turn ideas into immersive reality through Unity, visionOS, C#/C++, AR/VR/MR product strategy, and developer ecosystem work.",
+    "summary": "Meta Horizon Start Mentor • MIT Reality Hack best XR mentor • 20K+ XR platform downloads • 291M+ AR interactions • Speaker on XR glasses and spatial computing",
     "detailed": {
       "paragraph1": "My expertise spans cutting-edge Extended Reality experiences that have garnered attention from industry leaders across Japan, USA, and Colombia. I've worked with gaming giants like CAPCOM and Nintendo, led AR development for Universal Studios Japan, and pioneered AR glasses technology through Qualcomm's Developer Pathfinders Program.",
-      "paragraph2": "Beyond XR, I've developed 2 Android applications and contributed to numerous open source projects, demonstrating versatility across mobile and web platforms. I also created a Unity package library for seamless Apple Vision Pro Spatial Persona integration, simplifying complex visionOS development workflows for the developer community.",
-      "paragraph3": "From coordinating Unity-based space exploration games for Apple Vision Pro to ensuring quality standards for a €12M European XR Master's program, I bridge innovation with education."
+      "paragraph2": "Beyond XR, I've developed 2 Android applications and contributed to open source projects, demonstrating versatility across mobile and web platforms. I developed multiple OpenUPM packages for emerging technologies including Apple Vision Pro and PICO XR devices, adopted by 15+ companies in Japan's XR market.",
+      "paragraph3": "From coordinating Unity-based space exploration games for Apple Vision Pro to ensuring quality standards for a €1.58M European-funded XR Master's program, I bridge innovation with education."
     },
     "readMore": "Read More",
     "readLess": "Read Less",
@@ -60,6 +62,78 @@
     "callToAction": "Want to know more?",
     "socialPrompt": "Check my social networks",
     "socialHandle": "@deglypava"
+  },
+  "snapshot": {
+    "heading": "Recruiter Snapshot",
+    "title": "Where I Create the Most Value",
+    "lede": "I am strongest where technical XR engineering, developer relations, product storytelling, and international partnerships meet. I can build the demo, explain the platform, mentor the ecosystem, and represent the work on stage.",
+    "roles": {
+      "title": "Best-fit roles",
+      "item1": "Developer Relations / Technology Evangelist for XR, AI, spatial computing, or developer platforms",
+      "item2": "Senior Unity / visionOS / XR Engineer for Apple Vision Pro, AR glasses, MR, and cross-platform demos",
+      "item3": "XR Partnerships, ecosystem, or community lead bridging Japan, North America, Europe, and Latin America"
+    },
+    "skills": {
+      "title": "Core strengths",
+      "item1": "Unity, C#, C++, Swift bridge work, visionOS, OpenXR, ARKit, ARCore, WebXR, shaders, and OpenUPM packages",
+      "item2": "AR/VR/MR product strategy, UX, performance optimization, publishing workflows, and go-to-market guidance",
+      "item3": "Public speaking, workshops, hackathon mentoring, technical storytelling, and global developer enablement"
+    },
+    "search": {
+      "title": "Search signals",
+      "item1": "Top skills: Augmented Reality, Software Development, Unity, Virtual Reality, User Experience",
+      "item2": "Languages: English, Spanish, French, and Japanese",
+      "item3": "Open to on-site, hybrid, and remote opportunities across the United States, Japan, and international teams"
+    }
+  },
+  "proof": {
+    "heading": "Proof of Work",
+    "title": "A Public Evidence Trail",
+    "intro": "A clear trail of shipped XR projects, global developer mentorship, conference demos, and platform impact across Japan, the US, Europe, and Latin America.",
+    "cards": {
+      "mentored": {
+        "label": "Developers Mentored",
+        "description": "Hands-on XR workshops, technical guidance, and community support across international developer programs."
+      },
+      "interactions": {
+        "label": "XR Interactions",
+        "description": "AR experiences built for TikTok, Instagram, and Snapchat with large-scale audience engagement."
+      },
+      "downloads": {
+        "label": "XR Platform Downloads",
+        "description": "Apple Vision Pro platform compatibility work helped expand STYLY Gallery reach across XR platforms."
+      },
+      "packages": {
+        "label": "Companies Using Packages",
+        "description": "OpenUPM packages for Apple Vision Pro and PICO XR adopted across Japan's XR market."
+      },
+      "mwc": {
+        "label": "Apple Vision Pro Demo",
+        "description": "Coordinated an Apple Vision Pro game showcase as part of KDDI's XR innovation presence."
+      },
+      "meta": {
+        "label": "Horizon Start Mentor",
+        "description": "Mentoring XR startups and game developers on platform strategy, publishing workflows, and go-to-market planning."
+      }
+    },
+    "highlights": {
+      "media": {
+        "title": "Recent public visibility",
+        "description": "Featured in Japanese TV coverage discussing XR glasses and the future of immersive technologies."
+      },
+      "speaking": {
+        "title": "Speaking and community leadership",
+        "description": "Speaker at XR Tokyo, TOKYO NODE LAB, and AWE Nite Orlando on spatial computing, XR glasses, and creator ecosystems."
+      },
+      "urban": {
+        "title": "Urban XR case work",
+        "description": "Developer and public face of a Harajuku smart-glasses project exploring AI-guided sightseeing and local discovery."
+      },
+      "realityHack": {
+        "title": "Reality Hack recognition",
+        "description": "Judge and mentor for VisionOS, Swift, and Unity at MIT Reality Hack, recognized as best XR mentor."
+      }
+    }
   },
   "speaking": {
     "heading": "Speaking & Leadership",
@@ -129,16 +203,16 @@
     "title": "Latest Experience",
     "jobs": {
       "styly": {
-        "title": "Senior Extended Reality Specialist – Manager at STYLY Inc.",
-        "date": "July 2024 – Present",
-        "bullet1": "Coordinated a Unity-based space exploration game demo designed for Apple Vision Pro called Astroscoop, showcased at MWC 2025 as part of KDDI's forward-looking XR initiative; contributed to STYLY's growing reputation in immersive gaming and experiences.",
-        "bullet2": "Led global developer outreach and bilingual partnerships for STYLY, facilitating collaboration between Japanese and international teams; built strategic relationships with MIT, Parsons School of Design, and leading XR developers across the US, Korea, and Latin America.",
-        "bullet3": "Drove platform growth through mentorship, technical workshops, and global event presence—supporting over 700 developers and contributing to a catalog of 50,000+ published XR contents; featured at Tokyo Game Show, MIT Reality Hack, SushiTech, AWE, and other major industry events."
+        "title": "Technology Evangelist & Senior Unity Engineer - Apple Vision Pro at STYLY Inc.",
+        "date": "June 2024 – Present",
+        "bullet1": "Unified the STYLY Gallery platform for Apple Vision Pro compatibility, bridging Swift and Unity code and expanding reach to 20,000+ downloads across XR platforms.",
+        "bullet2": "Developed multiple OpenUPM packages for emerging technologies including Apple Vision Pro and PICO XR devices, adopted by 15+ companies in Japan's XR market.",
+        "bullet3": "Supervised hackathons, demos, and student events with 50+ participants while building connections with companies in Japan, Europe, and Canada."
       },
       "erasmus": {
-        "title": "Quality Assurance (QA) Specialist on XR, ERASMUS-IMLEX Board of Directors",
+        "title": "ERASMUS - IMLEX Quality Board Member",
         "date": "September 2023 – Present",
-        "bullet1": "Ensured the quality and industry relevance of a €12M XR Master's degree funded by the European Commission, supporting the development of next-gen talent in immersive technologies and game design across multiple universities."
+        "bullet1": "Member of the Quality Board for a European-funded Joint Master's Degree, supporting course quality, compliance, and cooperation between European and Japanese universities."
       },
       "pretia": {
         "title": "Senior Unity AR Engineer, Solution Division at Pretia Technologies",
@@ -157,36 +231,36 @@
   },
   "services": {
     "heading": "What can I do?",
-    "title": "Here are some of my skills",
+    "title": "What I can build and lead",
     "vr": {
-      "title": "VR/AR/XR Developer",
-      "description": "Working and learning everyday to finally fool everybody's brain"
+      "title": "XR / Spatial Computing Engineer",
+      "description": "Builds AR, VR, MR, and visionOS products with Unity, OpenXR, ARKit, ARCore, and real-time 3D pipelines."
     },
     "startup": {
-      "title": "Startup Enthusiast", 
-      "description": "Founder of Omni Applications, LucidDreams and La Panadería Gourmet"
+      "title": "Studio Founder & Product Builder",
+      "description": "Founder of Omni Applications and LucidDreams, leading XR products from prototype to launch, client delivery, and growth."
     },
     "engineer": {
-      "title": "S&Computer Engineer",
-      "description": "\"Scientists study the world as it is; engineers create the world that has never been.\""
+      "title": "Software & Computer Engineer",
+      "description": "Designs maintainable systems with C#, C++, Swift, JavaScript, Python, Git workflows, and production-minded architecture."
     },
     "photonics": {
-      "title": "Photonics",
-      "description": "It's incredible how much information our eyes receive.."
+      "title": "Optics, Imaging & Photonics",
+      "description": "Applies computational imaging, lighting, eye tracking, and human perception research to immersive experiences."
     },
     "languages": {
-      "title": "Languages",
-      "description": "I can translate your name to Español, Français, 한국어 or 日본語"
+      "title": "Multilingual Communication",
+      "description": "Works across English, Spanish, French, Japanese, and multicultural teams in Japan, Europe, North America, and Latin America."
     },
     "social": {
-      "title": "Social Skills",
-      "description": "Music Production, DJing, Photography and Sports, I'll be able to do everything"
+      "title": "Creative Production & Public Presence",
+      "description": "Brings technical storytelling, demos, photography, video, music production, and event energy into developer-facing work."
     },
     "stats": {
       "projects": "Projects",
-      "research": "Research groups", 
-      "awards": "Awards",
-      "countries": "Visited countries"
+      "mentored": "Developers mentored",
+      "interactions": "M+ XR interactions",
+      "downloads": "K+ platform downloads"
     }
   },
   "certificates": {
@@ -262,30 +336,31 @@
   },
   "skills": {
     "heading": "Skills & Impact",
-    "title": "XR Leadership & Technical Expertise",
-    "community": {
-      "title": "XR Community Impact",
-      "subtitle": "XR Community",
-      "members": "200+ members across 4 countries"
+    "title": "Technical Skill Matrix",
+    "intro": "A recruiter-friendly view of the systems I can build, the platforms I have shipped on, and the leadership signals behind the work.",
+    "engineering": {
+      "title": "XR Engineering",
+      "item1": "Unity, C#, C++, Swift bridging, visionOS, OpenXR, ARKit, ARCore, WebXR, ShaderLab, and HLSL.",
+      "item2": "Apple Vision Pro, Meta Quest, PICO XR, XREAL, mobile AR, smart glasses, and cross-platform XR delivery.",
+      "item3": "Performance optimization, SDK integration, package development, input systems, spatial UI, and real-time 3D pipelines."
     },
-    "technical": {
-      "title": "Technical Expertise",
-      "skills": ["Unity", "AR/VR", "JavaScript", "Python"]
+    "ecosystem": {
+      "title": "Developer Ecosystems",
+      "item1": "Meta Horizon Start mentoring, MIT Reality Hack judging, hackathon workshops, and developer education.",
+      "item2": "OpenUPM package publishing, technical documentation, demos, onboarding, and developer support.",
+      "item3": "Public speaking for XR Tokyo, AWE Nite Orlando, ColombiaXR, and international XR communities."
     },
-    "leadership": {
-      "title": "Leadership",
-      "subtitle": "Tech Stack",
-      "stack": ["Unity", "AR", "JS", "Python", "C#"]
+    "product": {
+      "title": "Product & Leadership",
+      "item1": "Studio founder with SDLC, Agile, Scrum, Kanban, stakeholder management, and client delivery experience.",
+      "item2": "Go-to-market guidance, publishing workflows, platform strategy, user experience, and growth consultation.",
+      "item3": "XR campaigns and products with 291M+ lifetime interactions and measurable engagement lift."
     },
-    "focus": {
-      "title": "Career Focus Distribution",
-      "areas": [
-        "XR Leadership",
-        "Technology Learning", 
-        "Project Creation",
-        "Strategic Partnerships",
-        "Mentoring & Teaching"
-      ]
+    "research": {
+      "title": "Research & Creative Technology",
+      "item1": "Four-master's background across imaging, light, computer vision, XR, and computational media.",
+      "item2": "Eye tracking, pupil mimicry simulation, Blender workflows, 360 video, immersive storytelling, and medical XR concepts.",
+      "item3": "Multilingual collaboration in English, Spanish, French, and Japanese across Japan, Europe, the United States, and Colombia."
     }
   },
   "experience": {

@@ -79,7 +79,6 @@ class TranslationManager {
             const translations = await response.json();
             this.translations[language] = translations;
             
-            console.log(`Translations loaded for: ${language}`);
         } catch (error) {
             console.error(`Error loading translations for ${language}:`, error);
             
@@ -91,7 +90,7 @@ class TranslationManager {
     }
 
     getText(key) {
-        const keys = key.split('.');
+        const keys = key.replace(/\[(\d+)\]/g, '.$1').split('.');
         let translation = this.translations[this.currentLanguage];
         
         // Navigate through nested keys

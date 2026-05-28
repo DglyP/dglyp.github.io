@@ -152,7 +152,7 @@
 
 	var clickMenu = function() {
 		// Enhanced navigation with instant content display
-		$('#navbar a:not([class="external"]), a[href^="#"]').click(function(event){
+		$('#navbar a:not(.external), a[href^="#"]:not([data-toggle="collapse"]):not(.read-more-toggle)').click(function(event){
 			event.preventDefault();
 			
 			var section = $(this).data('nav-section');

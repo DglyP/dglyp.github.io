@@ -33,7 +33,6 @@ $(document).ready(function() {
     });
     
     // Override the original window scroll handler
-    var originalWindowScroll = $(window).scroll;
     $(window).off('scroll'); // Remove original handler
     
     // Add new scroll handler that respects navigation scrolling
@@ -46,7 +45,7 @@ $(document).ready(function() {
     });
     
     // Prevent navigation from closing when touching/clicking within navigation area
-    $('#colorlib-aside .colorlib-nav').on('touchstart touchmove click', function(e) {
+    $('#colorlib-aside, #colorlib-main-menu').on('touchstart touchmove click', function(e) {
         e.stopPropagation(); // Prevent the event from bubbling up
     });
     
@@ -101,6 +100,4 @@ $(document).ready(function() {
         'scroll-behavior': 'smooth',
         '-webkit-scroll-behavior': 'smooth'
     });
-    
-    console.log('Navigation scroll fix loaded - you can now scroll within the navigation menu!');
 });

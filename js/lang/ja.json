@@ -1,16 +1,18 @@
 {
   "meta": {
-    "title": "Degly Pava - シニアXRスペシャリスト | 700+開発者メンタリング | Apple Vision Pro MWC 2025",
-    "description": "Degly Pava - 世界中で700人以上の開発者をメンタリングし、291M+ ARインタラクションを創造し、MWC 2025でApple Vision Proを発表したシニアXRスペシャリスト兼CEO。MIT、KDDI、Metaとのパートナーシップを持つUnity、AR/VR開発エキスパート。",
-    "keywords": "XR開発者, AR VRスペシャリスト, Unity開発者, Apple Vision Pro, MWC 2025, 開発者メンター, 291M ARインタラクション, MITパートナーシップ, KDDI, Meta, 東京日本, イマーシブテクノロジー, 拡張現実, 仮想現実, 複合現実",
+    "title": "Degly Pava - Extended Reality Evangelist | Apple Vision Pro & Unity XR",
+    "description": "Degly Pava - 東京を拠点とするExtended Reality Evangelist / Apple Vision Pro向けSenior Unity Engineer。Meta Horizon Start Mentor、MIT Reality Hackメンター、700+人の開発者支援、291M+ ARインタラクション、20K+ XRプラットフォームダウンロード、MWC 2025 Apple Vision Pro展示。",
+    "keywords": "Extended Reality Evangelist, Senior Unity Engineer, Apple Vision Pro開発者, Meta Horizon Start Mentor, visionOS, XR開発者, AR VR, Unity, MWC 2025, MIT Reality Hack mentor, 291M ARインタラクション, OpenUPM, PICO XR, KDDI, Meta, 東京",
     "author": "Degly Pava",
-    "ogTitle": "Degly Pava - シニアXRスペシャリスト | 700+開発者メンタリング | Apple Vision Pro MWC 2025",
+    "ogTitle": "Degly Pava - Extended Reality Evangelist | Apple Vision Pro & Unity XR",
     "ogSiteName": "Degly Pava ポートフォリオ",
-    "twitterTitle": "Degly Pava - シニアXRスペシャリスト | 700+開発者メンタリング | Apple Vision Pro MWC 2025"
+    "twitterTitle": "Degly Pava - Extended Reality Evangelist | Apple Vision Pro & Unity XR"
   },
   "navigation": {
     "home": "ホーム",
     "about": "自己紹介",
+    "snapshot": "採用担当者向け概要",
+    "proof": "実績",
     "speaking": "講演とリーダーシップ",
     "work": "作品 / ポートフォリオ",
     "experienceLatest": "最新の経験",
@@ -23,31 +25,31 @@
   },
   "sidebar": {
     "name": "Degly Pava",
-    "position": "シニアXRスペシャリスト – CEO",
+    "position": "Extended Reality Evangelist | Senior Unity Engineer - Apple Vision Pro",
     "location": "東京、日本"
   },
   "hero": {
     "slide1": {
       "title": "こんにちは！<br>私はDeglyです",
-      "subtitle": "シニアXRスペシャリスト兼CEO<br>世界中で700+人のクリエイターをメンタリング<br>AI/XRカンファレンスでの定期講演者<br>MWC 2025とMITで発表",
+      "subtitle": "Extended Reality Evangelist<br>Senior Unity Engineer - Apple Vision Pro<br>Meta Horizon Start Mentor",
       "downloadCV": "履歴書ダウンロード",
       "viewProjects": "プロジェクト表示"
     },
     "slide2": {
       "title": "XRの<br>未来を構築",
-      "subtitle": "MIT、KDDI、Metaとのグローバルパートナーシップ<br>MWC 2025でApple Vision Proプレゼンター<br>SNSで291M+ XRインタラクション",
+      "subtitle": "20K+ XRプラットフォームダウンロード<br>15+社に採用されたOpenUPMパッケージ<br>SNSで291M+ XRインタラクション",
       "viewPortfolio": "ポートフォリオ表示"
     }
   },
   "about": {
     "heading": "自己紹介",
     "title": "私は誰ですか？",
-    "intro": "<strong>こんにちは、私はDegly Pavaです</strong>、東京在住のシニア拡張現実スペシャリスト兼CEOです。世界中で700人以上の開発者をメンタリングし、291M+のARインタラクションを創造し、MIT、KDDI、Metaとのパートナーシップを構築しています。",
-    "summary": "MWC 2025でApple Vision Proデモを発表 • 50,000+ XRエクスペリエンスをホストするSTYLYプラットフォームを開発 • グローバルXRコミュニティリーダー",
+    "intro": "<strong>こんにちは、Degly Pavaです</strong>。東京を拠点とするExtended Reality Evangelist / Apple Vision Pro向けSenior Unity Engineerです。Unity、visionOS、C#/C++、AR/VR/MRプロダクト戦略、開発者エコシステム支援を通じて、アイデアを没入型体験へ変えています。",
+    "summary": "Meta Horizon Start Mentor • MIT Reality Hack ベストXRメンター • 20K+ XRプラットフォームダウンロード • 291M+ ARインタラクション • XRグラスと空間コンピューティングの講演者",
     "detailed": {
       "paragraph1": "私の専門知識は、日本、米国、コロンビアの業界リーダーから注目を集めた最先端の拡張現実体験に及びます。CAPCOMやNintendoなどのゲーム大手と協力し、ユニバーサル・スタジオ・ジャパンのAR開発を主導し、QualcommのAR Developer Pathfinders Programを通じてARグラス技術を開拓しました。",
-      "paragraph2": "XRを超えて、2つのAndroidアプリケーションを開発し、数多くのオープンソースプロジェクトに貢献し、モバイルおよびWebプラットフォーム全体での多様性を実証しました。また、Apple Vision ProのSpatial Personaのシームレスな統合のためのUnityパッケージライブラリを作成し、開発者コミュニティのための複雑なvisionOS開発ワークフローを簡素化しました。",
-      "paragraph3": "Apple Vision Pro向けUnityベースの宇宙探査ゲームの調整から、12M€のヨーロッパXRマスタープログラムの品質基準の確保まで、私はイノベーションと教育を橋渡ししています。"
+      "paragraph2": "XR以外にも、2つのAndroidアプリケーションを開発し、オープンソースプロジェクトにも貢献してきました。Apple Vision ProやPICO XRなどの新興技術向けに複数のOpenUPMパッケージを開発し、日本のXR市場で15+社に採用されています。",
+      "paragraph3": "Apple Vision Pro向けUnityベースの宇宙探査ゲームの調整から、158万ユーロ規模の欧州資金によるXR修士プログラムの品質基準の確保まで、私はイノベーションと教育を橋渡ししています。"
     },
     "readMore": "もっと読む",
     "readLess": "閉じる",
@@ -60,6 +62,78 @@
     "callToAction": "もっと知りたいですか？",
     "socialPrompt": "私のソーシャルメディアをチェック",
     "socialHandle": "@deglypava"
+  },
+  "snapshot": {
+    "heading": "採用担当者向け概要",
+    "title": "私が最も価値を出せる領域",
+    "lede": "私の強みは、XRエンジニアリング、Developer Relations、プロダクトストーリーテリング、国際的なパートナーシップが交わる領域です。デモを作り、プラットフォームを説明し、エコシステムを育て、ステージで価値を伝えることができます。",
+    "roles": {
+      "title": "相性の良い役割",
+      "item1": "XR、AI、空間コンピューティング、開発者プラットフォーム向けDeveloper Relations / Technology Evangelist",
+      "item2": "Apple Vision Pro、ARグラス、MR、クロスプラットフォームデモ向けSenior Unity / visionOS / XR Engineer",
+      "item3": "日本、北米、欧州、ラテンアメリカをつなぐXRパートナーシップ、エコシステム、コミュニティリード"
+    },
+    "skills": {
+      "title": "主な強み",
+      "item1": "Unity、C#、C++、Swift連携、visionOS、OpenXR、ARKit、ARCore、WebXR、シェーダー、OpenUPMパッケージ",
+      "item2": "AR/VR/MRプロダクト戦略、UX、パフォーマンス最適化、公開ワークフロー、Go-to-market支援",
+      "item3": "登壇、ワークショップ、ハッカソンメンタリング、技術ストーリーテリング、グローバル開発者支援"
+    },
+    "search": {
+      "title": "検索シグナル",
+      "item1": "主なスキル：Augmented Reality、Software Development、Unity、Virtual Reality、User Experience",
+      "item2": "言語：英語、スペイン語、フランス語、日本語",
+      "item3": "米国、日本、国際チームでのオンサイト、ハイブリッド、リモート機会に対応"
+    }
+  },
+  "proof": {
+    "heading": "実績",
+    "title": "公開された実績の証拠",
+    "intro": "公開されたXRプロジェクト、グローバルな開発者メンタリング、カンファレンスでのデモ、そして日本・米国・欧州・ラテンアメリカにまたがるプラットフォーム実績。",
+    "cards": {
+      "mentored": {
+        "label": "メンタリングした開発者",
+        "description": "国際的な開発者プログラムでの実践的XRワークショップ、技術支援、コミュニティサポート。"
+      },
+      "interactions": {
+        "label": "XRインタラクション",
+        "description": "TikTok、Instagram、Snapchat向けAR体験による大規模なエンゲージメント。"
+      },
+      "downloads": {
+        "label": "XRプラットフォームDL",
+        "description": "Apple Vision Pro対応により、STYLY GalleryのXRプラットフォーム全体での到達範囲拡大に貢献。"
+      },
+      "packages": {
+        "label": "パッケージ採用企業",
+        "description": "Apple Vision ProとPICO XR向けOpenUPMパッケージが日本のXR市場で採用。"
+      },
+      "mwc": {
+        "label": "Apple Vision Proデモ",
+        "description": "KDDIのXRイノベーション展示の一環として、Apple Vision Proゲームのショーケースを調整。"
+      },
+      "meta": {
+        "label": "Horizon Start Mentor",
+        "description": "XRスタートアップとゲーム開発者に、プラットフォーム戦略、公開ワークフロー、Go-to-marketをメンタリング。"
+      }
+    },
+    "highlights": {
+      "media": {
+        "title": "最近のメディア露出",
+        "description": "日本のテレビでXRグラスと没入型技術の未来について紹介。"
+      },
+      "speaking": {
+        "title": "講演とコミュニティリーダーシップ",
+        "description": "XR Tokyo、TOKYO NODE LAB、AWE Nite Orlandoで空間コンピューティング、XRグラス、クリエイターエコシステムについて登壇。"
+      },
+      "urban": {
+        "title": "都市型XR事例",
+        "description": "HarajukuでのAI観光・地域発見スマートグラスプロジェクトにおける開発者および公的な顔。"
+      },
+      "realityHack": {
+        "title": "Reality Hackでの評価",
+        "description": "MIT Reality HackでVisionOS、Swift、Unityの審査員・メンターを務め、ベストXRメンターとして評価。"
+      }
+    }
   },
   "speaking": {
     "heading": "講演とリーダーシップ",
@@ -129,16 +203,16 @@
     "title": "最新の経験",
     "jobs": {
       "styly": {
-        "title": "STYLY Inc. シニア拡張現実スペシャリスト – マネージャー",
-        "date": "2024年7月 – 現在",
-        "bullet1": "KDDIの最先端XRイニシアティブの一部としてMWC 2025で発表された、Apple Vision Pro向けに設計されたUnityベースの空間探索ゲーム「Astroscoop」のデモを調整；イマーシブゲームと体験におけるSTYLYの成長する評判に貢献。",
-        "bullet2": "STYLYのグローバル開発者アウトリーチとバイリンガルパートナーシップを主導し、日本と国際チーム間の協力を促進；MIT、Parsons School of Design、米国、韓国、ラテンアメリカの主要XR開発者との戦略的関係を構築。",
-        "bullet3": "メンタリング、技術ワークショップ、グローバルイベント参加を通じてプラットフォーム成長を推進—700人以上の開発者をサポートし、50,000以上のXRコンテンツカタログに貢献；東京ゲームショウ、MIT Reality Hack、SushiTech、AWE、その他主要業界イベントで発表。"
+        "title": "STYLY Inc. Technology Evangelist / Senior Unity Engineer - Apple Vision Pro",
+        "date": "2024年6月 – 現在",
+        "bullet1": "SwiftとUnityをつなぎ、STYLY GalleryをApple Vision Proに対応させ、XRプラットフォーム全体で20,000+ダウンロードへの到達拡大に貢献。",
+        "bullet2": "Apple Vision ProやPICO XRなどの新興技術向けOpenUPMパッケージを複数開発し、日本のXR市場で15+社に採用。",
+        "bullet3": "50+名規模のハッカソン、デモ、学生イベントを支援し、日本・欧州・カナダの企業とのつながりを構築。"
       },
       "erasmus": {
-        "title": "XR品質保証（QA）スペシャリスト、ERASMUS-IMLEX理事会",
+        "title": "ERASMUS - IMLEX Quality Board Member",
         "date": "2023年9月 – 現在",
-        "bullet1": "欧州委員会資金による12M€のXRマスタープログラムの品質と業界関連性を確保し、複数の大学でイマーシブテクノロジーとゲームデザインの次世代人材開発をサポート。"
+        "bullet1": "欧州資金による共同修士プログラムのQuality Boardメンバーとして、授業品質、要件遵守、欧州・日本の大学間連携を支援。"
       },
       "pretia": {
         "title": "Pretia Technologies ソリューション部門 シニアUnity ARエンジニア",
@@ -157,36 +231,36 @@
   },
   "services": {
     "heading": "何ができるか？",
-    "title": "私のスキルの一部です",
+    "title": "構築・リードできること",
     "vr": {
-      "title": "VR/AR/XR開発者",
-      "description": "最終的にすべての人の脳を騙すために毎日働き、学んでいます"
+      "title": "XR / 空間コンピューティングエンジニア",
+      "description": "Unity、OpenXR、ARKit、ARCore、リアルタイム3Dパイプラインを用いて、AR、VR、MR、visionOS製品を構築します。"
     },
     "startup": {
-      "title": "スタートアップ愛好家",
-      "description": "Omni Applications、LucidDreams、La Panadería Gourmetの創設者"
+      "title": "スタジオ創業者・プロダクトビルダー",
+      "description": "Omni ApplicationsとLucidDreamsの創業者として、XR製品をプロトタイプからローンチ、クライアント納品、成長までリードします。"
     },
     "engineer": {
-      "title": "システム・コンピュータエンジニア",
-      "description": "「科学者は現在の世界を研究し；エンジニアは存在しなかった世界を創造する。」"
+      "title": "ソフトウェア・コンピュータエンジニア",
+      "description": "C#、C++、Swift、JavaScript、Python、Gitワークフロー、プロダクション志向の設計で保守性の高いシステムを構築します。"
     },
     "photonics": {
-      "title": "フォトニクス",
-      "description": "私たちの目が受け取る情報の量は驚くべきものです..."
+      "title": "光学・イメージング・フォトニクス",
+      "description": "計算イメージング、ライティング、視線追跡、人間の知覚研究を没入型体験に応用します。"
     },
     "languages": {
-      "title": "言語",
-      "description": "あなたの名前をEspañol、Français、한국어、または日本語に翻訳できます"
+      "title": "多言語コミュニケーション",
+      "description": "英語、スペイン語、フランス語、日本語を使い、日本、ヨーロッパ、北米、ラテンアメリカの多文化チームと協働します。"
     },
     "social": {
-      "title": "ソーシャルスキル",
-      "description": "音楽制作、DJ、写真、スポーツ、何でもできるでしょう"
+      "title": "クリエイティブ制作・パブリックプレゼンス",
+      "description": "技術ストーリーテリング、デモ、写真、映像、音楽制作、イベントでの発信力を開発者向けの仕事に活かします。"
     },
     "stats": {
       "projects": "プロジェクト",
-      "research": "研究グループ",
-      "awards": "賞",
-      "countries": "訪問国"
+      "mentored": "メンタリングした開発者",
+      "interactions": "M+ XRインタラクション",
+      "downloads": "K+ プラットフォームダウンロード"
     }
   },
   "certificates": {
@@ -262,30 +336,31 @@
   },
   "skills": {
     "heading": "スキルと影響",
-    "title": "XRリーダーシップと技術的専門知識",
-    "community": {
-      "title": "XRコミュニティインパクト",
-      "subtitle": "XRコミュニティ",
-      "members": "4カ国で200+メンバー"
+    "title": "技術スキルマトリクス",
+    "intro": "構築できるシステム、リリース経験のあるプラットフォーム、仕事の背景にあるリーダーシップを、採用担当者が把握しやすい形で整理しています。",
+    "engineering": {
+      "title": "XRエンジニアリング",
+      "item1": "Unity、C#、C++、Swift連携、visionOS、OpenXR、ARKit、ARCore、WebXR、ShaderLab、HLSL。",
+      "item2": "Apple Vision Pro、Meta Quest、PICO XR、XREAL、モバイルAR、スマートグラス、クロスプラットフォームXR開発。",
+      "item3": "パフォーマンス最適化、SDK統合、パッケージ開発、入力システム、空間UI、リアルタイム3Dパイプライン。"
     },
-    "technical": {
-      "title": "技術的専門知識",
-      "skills": ["Unity", "AR/VR", "JavaScript", "Python"]
+    "ecosystem": {
+      "title": "開発者エコシステム",
+      "item1": "Meta Horizon Startメンタリング、MIT Reality Hack審査、ハッカソンワークショップ、開発者教育。",
+      "item2": "OpenUPMパッケージ公開、技術ドキュメント、デモ、オンボーディング、開発者サポート。",
+      "item3": "XR Tokyo、AWE Nite Orlando、ColombiaXR、国際XRコミュニティでの登壇。"
     },
-    "leadership": {
-      "title": "リーダーシップ",
-      "subtitle": "技術スタック",
-      "stack": ["Unity", "AR", "JS", "Python", "C#"]
+    "product": {
+      "title": "プロダクト・リーダーシップ",
+      "item1": "SDLC、Agile、Scrum、Kanban、ステークホルダー管理、クライアント納品の経験を持つスタジオ創業者。",
+      "item2": "Go-to-market支援、公開ワークフロー、プラットフォーム戦略、UX、成長コンサルティング。",
+      "item3": "累計291M+インタラクションと測定可能なエンゲージメント向上を生んだXRキャンペーン・製品。"
     },
-    "focus": {
-      "title": "キャリアフォーカス分布",
-      "areas": [
-        "XRリーダーシップ",
-        "技術学習",
-        "プロジェクト創造",
-        "戦略的パートナーシップ",
-        "メンタリングと指導"
-      ]
+    "research": {
+      "title": "研究・クリエイティブテクノロジー",
+      "item1": "イメージング、光、コンピュータビジョン、XR、計算メディアにまたがる4つの修士レベルのバックグラウンド。",
+      "item2": "視線追跡、瞳孔模倣シミュレーション、Blenderワークフロー、360度映像、没入型ストーリーテリング、医療XRコンセプト。",
+      "item3": "英語、スペイン語、フランス語、日本語で、日本、ヨーロッパ、米国、コロンビアの多文化環境と連携。"
     }
   },
   "experience": {
