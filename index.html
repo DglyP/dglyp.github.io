@@ -589,21 +589,42 @@
 			}
 			@media (max-width: 768px) {
 				.recruiter-snapshot {
-					margin-left: -1em;
-					margin-right: -1em;
+					box-sizing: border-box;
+					margin-left: calc(50% - 50vw);
+					margin-right: calc(50% - 50vw);
+					overflow: hidden;
+					width: 100vw;
 				}
 				.recruiter-snapshot .colorlib-narrow-content {
-					padding-left: 1.2em;
-					padding-right: 1.2em;
+					box-sizing: border-box;
+					padding-left: 24px;
+					padding-right: 24px;
+					width: 100%;
+				}
+				.snapshot-grid,
+				.proof-grid,
+				.proof-highlights,
+				.skill-matrix {
+					min-width: 0;
+				}
+				.snapshot-block,
+				.proof-card,
+				.proof-highlight,
+				.skill-column {
+					box-sizing: border-box;
+					min-width: 0;
+					overflow-wrap: anywhere;
 				}
 			}
 			@media (max-width: 560px) {
 				.recruiter-snapshot {
 					margin-top: 20px;
 					margin-bottom: 28px;
-					margin-left: -1em;
-					margin-right: -1em;
 					padding: 44px 0 38px;
+				}
+				.recruiter-snapshot .colorlib-narrow-content {
+					padding-left: 22px;
+					padding-right: 22px;
 				}
 				.recruiter-bridge {
 					padding: 16px 16px;
@@ -718,8 +739,8 @@
 					   				<div class="slider-text-inner js-fullheight">
 					   					<div class="desc">
 						   					<h1 data-translate="hero.slide1.title">Hi! <br>I'm Degly</h1>
-												<h2 data-translate="hero.slide1.subtitle">XR Technology Evangelist<br>Cross-Platform XR &amp; Wearable Engineer<br>I build, explain, and scale immersive technology across platforms.</h2>
-												<div style="margin-top: 20px;">
+												<h2 data-translate="hero.slide1.subtitle">XR Technology Evangelist<br>Cross-Platform XR<br>Wearable Engineer</h2>
+												<div class="hero-actions">
 													<p><a class="btn btn-primary btn-learn" href="./DeglyPava_CV042025.pdf" style="margin-right: 10px;"><span data-translate="hero.slide1.downloadCV">Download CV</span> <i class="icon-download4"></i></a>
 													<a class="btn btn-primary btn-learn" href="projects.html"><span data-translate="hero.slide1.viewProjects">View Projects</span> <i class="icon-briefcase3"></i></a></p>
 												</div>
@@ -2071,11 +2092,39 @@
 			background: #fafafa;
 		}
 		
-		/* Hero section specific styling */
-		#colorlib-hero {
-			padding: 0;
-			margin: 0;
-		}
+			/* Hero section specific styling */
+			#colorlib-hero {
+				padding: 0;
+				margin: 0;
+			}
+
+			#colorlib-hero .flexslider .slider-text > .slider-text-inner .desc {
+				max-width: 560px;
+			}
+
+			#colorlib-hero .flexslider .slider-text > .slider-text-inner h2 {
+				max-width: 520px;
+			}
+
+			#colorlib-hero .hero-actions {
+				margin-top: 20px;
+			}
+
+			#colorlib-hero .hero-actions p {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 10px;
+				margin: 0;
+			}
+
+			#colorlib-hero .hero-actions .btn {
+				margin: 0 !important;
+				white-space: nowrap;
+			}
+
+			#colorlib-hero .flexslider .slides > li.flex-active-slide .slider-text {
+				opacity: 1;
+			}
 		
 		/* Improved readability */
 		p {
@@ -2105,21 +2154,55 @@
 		}
 		
 		/* Timeline improvements */
-		.timeline-entry .timeline-label h2 {
-			font-size: 1.4em;
-			margin-bottom: 15px;
-		}
-		
-		.timeline-entry .timeline-label span {
-			color: #f9bf3f;
-			font-weight: 600;
-		}
+			.timeline-centered .timeline-entry .timeline-entry-inner .timeline-label h2,
+			.timeline-entry .timeline-label h2 {
+				font-family: "Quicksand", Arial, sans-serif;
+				font-size: 19px;
+				font-weight: 500;
+				line-height: 1.45;
+				margin-bottom: 15px;
+			}
+
+			.timeline-centered .timeline-entry .timeline-entry-inner .timeline-label h2 a,
+			.timeline-centered .timeline-entry .timeline-entry-inner .timeline-label h2 a span,
+			.timeline-entry .timeline-label h2 a,
+			.timeline-entry .timeline-label h2 a span {
+				color: #000;
+				font-family: "Quicksand", Arial, sans-serif;
+				font-weight: 500;
+			}
+
+			.timeline-centered .timeline-entry .timeline-entry-inner .timeline-label h2 > span,
+			.timeline-entry .timeline-label h2 > span {
+				color: #f9bf3f;
+				display: inline-block;
+				font-family: "Quicksand", Arial, sans-serif;
+				font-size: 14px;
+				font-weight: 600;
+			}
+
+			.timeline-entry .timeline-label ul {
+				margin: 0;
+				padding-left: 20px;
+			}
+
+			.timeline-entry .timeline-label li {
+				color: #555;
+				font-family: "Quicksand", Arial, sans-serif;
+				font-size: 15px;
+				line-height: 1.75;
+				margin-bottom: 8px;
+			}
 		
 		/* Mobile responsiveness */
 		@media (max-width: 768px) {
-			section {
-				padding: 60px 0;
-			}
+				section:not(#colorlib-hero) {
+					padding: 60px 0;
+				}
+
+				section.recruiter-snapshot {
+					padding: 52px 0 46px;
+				}
 			
 			.colorlib-heading {
 				font-size: 2em;
@@ -2129,10 +2212,110 @@
 				font-size: 2.5em;
 			}
 			
-			.hero-section h2 {
-				font-size: 1.2em;
+				.hero-section h2 {
+					font-size: 1.2em;
+				}
+
+				#colorlib-main {
+					box-sizing: border-box;
+					padding-left: 1em;
+					padding-right: 1em;
+				}
+
+				#colorlib-hero {
+					margin-left: -1em;
+					margin-right: -1em;
+					width: calc(100% + 2em);
+				}
+
+				#colorlib-hero .container-fluid,
+				#colorlib-hero .row,
+				#colorlib-hero .slider-text {
+					box-sizing: border-box;
+					float: none !important;
+					margin-left: 0;
+					margin-right: 0;
+					max-width: 100%;
+					padding-left: 0;
+					padding-right: 0;
+					width: 100%;
+				}
+
+				#colorlib-hero .container-fluid,
+				#colorlib-hero .row {
+					height: 100%;
+					padding-left: 0;
+					padding-right: 0;
+					width: 100%;
+				}
+
+				#colorlib-hero .slider-text {
+					left: 0 !important;
+					position: absolute !important;
+					right: 0 !important;
+					top: 0 !important;
+					width: 100% !important;
+				}
+
+				#colorlib-hero .flexslider .slider-text > .slider-text-inner {
+					align-items: center;
+					display: flex !important;
+					height: auto !important;
+					justify-content: center;
+					min-height: auto !important;
+					padding: 2em 1.25em;
+					text-align: center;
+					width: 100%;
+				}
+
+				#colorlib-hero .flexslider .slider-text > .slider-text-inner .desc,
+				#colorlib-hero .flexslider .slider-text > .slider-text-inner h2 {
+					margin-left: auto;
+					margin-right: auto;
+					max-width: 100%;
+				}
+
+				#colorlib-hero .flexslider .slider-text > .slider-text-inner .desc {
+					box-sizing: border-box;
+					padding-left: 16px;
+					padding-right: 16px;
+					transform: none !important;
+					width: min(100%, 340px);
+				}
+
+				#colorlib-hero .flexslider .slider-text > .slider-text-inner h2 {
+					font-size: 17px;
+					line-height: 1.5;
+					margin-left: auto;
+					margin-right: auto;
+				}
+
+				#colorlib-hero .hero-actions p {
+					justify-content: center;
+				}
+
+				#colorlib-hero .hero-actions .btn {
+					box-sizing: border-box;
+					max-width: 280px;
+					width: 100% !important;
+				}
+
+				.timeline-entry .timeline-label h2 {
+					font-size: 17px;
+				}
+
+				.timeline-centered .timeline-entry .timeline-entry-inner .timeline-label h2 > span,
+				.timeline-entry .timeline-label h2 > span {
+					display: block;
+					margin-top: 4px;
+				}
 			}
-		}
+
+			@media (max-width: 560px) {
+				section.recruiter-snapshot {
+					padding: 44px 0 38px;
+				}
+			}
 
 		/* Progressive disclosure styles */
 		.read-more-toggle {
