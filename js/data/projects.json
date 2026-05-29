@@ -48,7 +48,7 @@
       "id": "meta-rayban-display-webapps",
       "title": "Meta Ray-Ban Display WebApps",
       "description": "Planned and built web apps for Meta Ray-Ban Display smart glasses, focusing on wearable UX, display-first interaction design, and lightweight web delivery for hands-free spatial use cases.",
-      "image": "images/img-2.jpg",
+      "image": "images/caroussel-photos/StarVAir2Glasses.jpeg",
       "url": "https://github.com/facebookincubator/meta-wearables-webapp",
       "technologies": [
         "Wearables",
@@ -63,7 +63,7 @@
       "id": "xreal-location-based-entertainment",
       "title": "XREAL Location-Based Entertainment Experiences",
       "description": "Planned and developed large-scale XREAL location-based entertainment experiences, translating smart-glasses interaction design into reliable multi-user deployments for public venues and immersive events.",
-      "image": "images/img-3.jpg",
+      "image": "images/caroussel-photos/KDDI Demos.jpg",
       "url": "https://styly.inc/news/ghost-in-the-shell-ar-2026/",
       "technologies": [
         "Unity",
@@ -78,14 +78,14 @@
       "id": "dennoh-vision-tokyo-node",
       "title": "DEN-NOH Vision / Ghost in the Shell at TOKYO NODE",
       "description": "Planned and developed the DEN-NOH Vision AR experience for Ghost in the Shell at TOKYO NODE, combining XREAL smart glasses, spatial storytelling, and exhibition-scale XR delivery for a public installation.",
-      "image": "images/img-1.jpg",
+      "image": "images/caroussel-photos/TokyoXRNode.jpg",
       "url": "https://www.tokyonode.jp/sp/exhibition-ghostintheshell/",
       "technologies": [
         "Unity",
         "OpenXR",
         "XREAL",
         "AR",
-        "Spatial Computing"
+        "Location-Based Entertainment"
       ],
       "featured": true
     },

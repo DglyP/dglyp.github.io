@@ -27,13 +27,13 @@
   },
   "sidebar": {
     "name": "Degly Pava",
-    "position": "Évangéliste Technologique XR<br>Ingénieur XR Multiplateforme et Wearables<br>Developer Relations • Meta Horizon Start Mentor • Mentor MIT • Mentor Global des Développeurs",
+    "position": "Évangéliste Technologique XR<br>Ingénieur XR Multiplateforme et Wearables<br>Developer Relations, mentorat et leadership public XR",
     "location": "Tokyo, Japon"
   },
   "hero": {
     "slide1": {
       "title": "Salut !<br>Je suis Degly",
-      "subtitle": "Évangéliste Technologique XR<br>Ingénieur XR Multiplateforme et Wearables<br>Developer Relations • Meta Horizon Start Mentor • Mentor MIT • Mentor Global des Développeurs",
+      "subtitle": "Évangéliste Technologique XR<br>Ingénieur XR Multiplateforme et Wearables<br>Je construis, explique et fais grandir la technologie immersive sur plusieurs plateformes.",
       "downloadCV": "Télécharger CV",
       "viewProjects": "Voir Projets"
     },
@@ -214,7 +214,8 @@
         "date": "Juin 2024 – Présent",
         "bullet1": "J'ai étendu STYLY Gallery à la compatibilité Apple Vision Pro en reliant Swift et Unity, contribuant à porter sa diffusion à 20 000+ téléchargements sur les plateformes XR.",
         "bullet2": "J'ai développé des packages OpenUPM et un outillage multiplateforme pour Apple Vision Pro, PICO XR et des workflows XR plus larges, adoptés par 15+ entreprises au Japon.",
-        "bullet3": "J'ai planifié et développé des projets XR smart glasses, wearables et géolocalisés, dont Meta Ray-Ban Display WebApps, des expériences XREAL à grande échelle et DEN-NOH Vision / Ghost in the Shell à TOKYO NODE, tout en soutenant aussi des démos, ateliers, actions de developer relations, programmes partenaires et initiatives internationales d'écosystème."
+        "bullet3": "J'ai planifié et développé des projets XR smart glasses, wearables et géolocalisés, dont Meta Ray-Ban Display WebApps, des expériences XREAL à grande échelle et le projet DEN-NOH Vision / Ghost in the Shell à TOKYO NODE.",
+        "bullet4": "J'ai aussi soutenu des démos, ateliers, actions de developer relations, programmes partenaires et initiatives internationales d'écosystème afin que le travail soit compris et adopté au-delà de l'équipe d'ingénierie."
       },
       "erasmus": {
         "title": "Membre du Conseil Qualité ERASMUS - IMLEX",

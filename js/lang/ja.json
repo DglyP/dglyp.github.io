@@ -27,13 +27,13 @@
   },
   "sidebar": {
     "name": "Degly Pava",
-    "position": "XRテクノロジーエバンジェリスト<br>クロスプラットフォームXR・ウェアラブルエンジニア<br>Developer Relations • Meta Horizon Start Mentor • MITメンター • Global Developer Mentor",
+    "position": "XRテクノロジーエバンジェリスト<br>クロスプラットフォームXR・ウェアラブルエンジニア<br>Developer Relations、メンタリング、XRのパブリックリーダーシップ",
     "location": "東京、日本"
   },
   "hero": {
     "slide1": {
       "title": "こんにちは！<br>私はDeglyです",
-      "subtitle": "XRテクノロジーエバンジェリスト<br>クロスプラットフォームXR・ウェアラブルエンジニア<br>Developer Relations • Meta Horizon Start Mentor • MITメンター • Global Developer Mentor",
+      "subtitle": "XRテクノロジーエバンジェリスト<br>クロスプラットフォームXR・ウェアラブルエンジニア<br>没入型技術をつくり、伝え、複数のプラットフォームへ広げます。",
       "downloadCV": "履歴書ダウンロード",
       "viewProjects": "プロジェクト表示"
     },
@@ -214,7 +214,8 @@
         "date": "2024年6月 – 現在",
         "bullet1": "SwiftとUnityを連携し、STYLY GalleryのApple Vision Pro対応を拡張。XRプラットフォーム全体で20,000+ダウンロードへの到達拡大に貢献しました。",
         "bullet2": "Apple Vision Pro、PICO XR、より広いXRワークフロー向けのOpenUPMパッケージとクロスプラットフォームツールを開発し、日本で15+社に採用されました。",
-        "bullet3": "Meta Ray-Ban Display WebApps、XREALによる大規模エンターテインメント体験、TOKYO NODEでのDEN-NOH Vision / Ghost in the Shellなど、スマートグラス、ウェアラブル、位置連動XRプロジェクトを企画・開発すると同時に、デモ、ワークショップ、Developer Relations、パートナープログラム、国際的なエコシステム施策も支援しています。"
+        "bullet3": "Meta Ray-Ban Display WebApps、XREALによる大規模エンターテインメント体験、TOKYO NODEでのDEN-NOH Vision / Ghost in the Shellプロジェクトなど、スマートグラス、ウェアラブル、位置連動XRプロジェクトを企画・開発しています。",
+        "bullet4": "デモ、ワークショップ、Developer Relations、パートナープログラム、国際的なエコシステム施策も支援し、技術がエンジニアリングチームの外でも理解され、活用されるようにしています。"
       },
       "erasmus": {
         "title": "ERASMUS - IMLEX Quality Board Member",
