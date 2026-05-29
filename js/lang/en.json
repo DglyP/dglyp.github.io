@@ -47,7 +47,7 @@
     "heading": "About Me",
     "title": "Who Am I?",
     "intro": "<strong>Hey, I'm Degly Pava</strong>. I'm an XR Technology Evangelist and cross-platform XR & wearable engineer based in Tokyo. I build spatial experiences across Unity, OpenXR, visionOS, WebXR, and smart glasses, and I also do developer relations work—speaking, mentoring, and helping teams understand how these technologies create real value.",
-    "summary": "The work I enjoy most sits between evangelism and engineering: shipping real XR products, representing the technology publicly, and helping developers and partners grow with it.",
+    "summary": "My work sits between evangelism and engineering, with public proof across Meta, Apple Vision Pro, Nintendo, CAPCOM, Qualcomm, MIT Reality Hack, AWE, STYLY, and XREAL.",
     "detailed": {
       "paragraph1": "My work spans smart glasses, wearables, mobile AR, WebXR, and large-scale spatial installations across Japan, the US, Europe, and Latin America. I've worked with CAPCOM and Nintendo, led AR development for Universal Studios Japan, and explored AR glasses through Qualcomm's developer programs while representing XR publicly through demos, talks, and ecosystem work with partners across regions.",
       "paragraph2": "I've planned and developed Meta Ray-Ban Display WebApps, XREAL large-scale location-based entertainment experiences, and the DEN-NOH Vision / Ghost in the Shell project at TOKYO NODE. I also build OpenUPM packages and cross-platform tooling now used by 15+ companies in Japan's XR market.",
@@ -88,7 +88,7 @@
     },
     "search": {
       "title": "Search signals",
-      "item1": "Top skills: XR Technology Evangelism, Developer Relations, XR Engineering, Unity, Wearable Computing, Spatial Computing",
+      "item1": "Recognition signals: Meta mentoring, Apple Vision Pro development, MIT Reality Hack mentorship, AWE speaking, Nintendo/CAPCOM collaboration, Qualcomm AR glasses work, and XREAL smart-glasses deployments",
       "item2": "Languages: English, Spanish, French, and Japanese",
       "item3": "Open to on-site, hybrid, and remote opportunities across the United States, Japan, and international teams"
     }
@@ -215,7 +215,7 @@
         "bullet1": "Expanded STYLY Gallery for Apple Vision Pro compatibility by bridging Swift and Unity, helping extend reach to 20,000+ downloads across XR platforms.",
         "bullet2": "Developed OpenUPM packages and cross-platform tooling for Apple Vision Pro, PICO XR, and broader XR workflows, adopted by 15+ companies in Japan's market.",
         "bullet3": "Planned and developed smart-glasses, wearable, and location-based XR work including Meta Ray-Ban Display WebApps, XREAL large-scale entertainment experiences, and the DEN-NOH Vision / Ghost in the Shell project at TOKYO NODE.",
-        "bullet4": "Supported demos, workshops, developer relations, partner programs, and international ecosystem initiatives so the work could be understood and adopted beyond the engineering team."
+        "bullet4": "Supported demos, workshops, developer relations, partner programs, and international ecosystem initiatives connected to Meta, MIT Reality Hack, AWE, STYLY, KDDI, and Japan's XR market."
       },
       "erasmus": {
         "title": "ERASMUS - IMLEX Quality Board Member",
@@ -349,7 +349,7 @@
     "engineering": {
       "title": "XR Engineering",
       "item1": "I ship XR systems across Unity, C#, C++, Swift bridging, visionOS, OpenXR, ARKit, ARCore, WebXR, wearable web apps, ShaderLab, and HLSL.",
-      "item2": "That work has included Apple Vision Pro, Meta Ray-Ban Display, Meta Quest, PICO XR, XREAL, mobile AR, smart glasses, and cross-platform XR delivery.",
+      "item2": "That work has included Apple Vision Pro, Meta Ray-Ban Display, Meta Quest, PICO XR, XREAL, Qualcomm AR glasses work, mobile AR, smart glasses, and cross-platform XR delivery.",
       "item3": "I'm comfortable with performance optimization, SDK integration, package development, input systems, spatial UI, LBE deployment constraints, and real-time 3D pipelines."
     },
     "ecosystem": {

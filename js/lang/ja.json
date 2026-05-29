@@ -47,7 +47,7 @@
     "heading": "自己紹介",
     "title": "私は誰ですか？",
     "intro": "<strong>こんにちは、Degly Pavaです</strong>。私は東京を拠点とするXRテクノロジーエバンジェリストであり、クロスプラットフォームXR・ウェアラブルエンジニアです。Unity、OpenXR、visionOS、WebXR、スマートグラスで空間体験をつくり届けながら、Developer Relationsにも取り組み、登壇やメンタリングを通じて、これらの技術がどんな価値を生むのかをチームに伝えています。",
-    "summary": "私が最もやりがいを感じるのは、エバンジェリズムとエンジニアリングが交わる仕事です。実際にXRプロダクトを届け、技術を公の場で伝え、開発者やパートナーがそれと一緒に成長できるよう支援しています。",
+    "summary": "私の仕事はエバンジェリズムとエンジニアリングの交点にあり、Meta、Apple Vision Pro、Nintendo、CAPCOM、Qualcomm、MIT Reality Hack、AWE、STYLY、XREALに関わる公開実績があります。",
     "detailed": {
       "paragraph1": "私の専門知識は、日本、米国、コロンビアの業界リーダーから注目を集めた最先端の拡張現実体験に及びます。CAPCOMやNintendoなどのゲーム大手と協力し、ユニバーサル・スタジオ・ジャパンのAR開発を主導し、QualcommのAR Developer Pathfinders Programを通じてARグラス技術を開拓しました。",
       "paragraph2": "XR以外にも、2つのAndroidアプリケーションを開発し、オープンソースプロジェクトにも貢献してきました。Apple Vision ProやPICO XRなどの新興技術向けに複数のOpenUPMパッケージを開発し、日本のXR市場で15+社に採用されています。",
@@ -88,7 +88,7 @@
     },
     "search": {
       "title": "検索シグナル",
-      "item1": "主なスキル：XRエバンジェリズム、Developer Relations、XRエンジニアリング、Unity、Wearable Computing、Spatial Computing",
+      "item1": "認知シグナル：Metaでのメンタリング、Apple Vision Pro開発、MIT Reality Hackメンタリング、AWE登壇、Nintendo/CAPCOMとの協業、QualcommのARグラス関連経験、XREAL展開",
       "item2": "言語：英語、スペイン語、フランス語、日本語",
       "item3": "米国、日本、国際チームでのオンサイト、ハイブリッド、リモート機会に対応"
     }
@@ -215,7 +215,7 @@
         "bullet1": "SwiftとUnityを連携し、STYLY GalleryのApple Vision Pro対応を拡張。XRプラットフォーム全体で20,000+ダウンロードへの到達拡大に貢献しました。",
         "bullet2": "Apple Vision Pro、PICO XR、より広いXRワークフロー向けのOpenUPMパッケージとクロスプラットフォームツールを開発し、日本で15+社に採用されました。",
         "bullet3": "Meta Ray-Ban Display WebApps、XREALによる大規模エンターテインメント体験、TOKYO NODEでのDEN-NOH Vision / Ghost in the Shellプロジェクトなど、スマートグラス、ウェアラブル、位置連動XRプロジェクトを企画・開発しています。",
-        "bullet4": "デモ、ワークショップ、Developer Relations、パートナープログラム、国際的なエコシステム施策も支援し、技術がエンジニアリングチームの外でも理解され、活用されるようにしています。"
+        "bullet4": "Meta、MIT Reality Hack、AWE、STYLY、KDDI、日本のXR市場に関わるデモ、ワークショップ、Developer Relations、パートナープログラム、国際的なエコシステム施策も支援しています。"
       },
       "erasmus": {
         "title": "ERASMUS - IMLEX Quality Board Member",
@@ -349,7 +349,7 @@
     "engineering": {
       "title": "XRエンジニアリング",
       "item1": "Unity、C#、C++、Swift連携、visionOS、OpenXR、ARKit、ARCore、WebXR、ShaderLab、HLSL。",
-      "item2": "Apple Vision Pro、Meta Quest、PICO XR、XREAL、モバイルAR、スマートグラス、クロスプラットフォームXR開発。",
+      "item2": "Apple Vision Pro、Meta Ray-Ban Display、Meta Quest、PICO XR、XREAL、QualcommのARグラス関連経験、モバイルAR、スマートグラス、クロスプラットフォームXR開発。",
       "item3": "パフォーマンス最適化、SDK統合、パッケージ開発、入力システム、空間UI、リアルタイム3Dパイプライン。"
     },
     "ecosystem": {

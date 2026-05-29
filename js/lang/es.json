@@ -47,7 +47,7 @@
     "heading": "Acerca de Mí",
     "title": "¿Quién Soy?",
     "intro": "<strong>Hola, soy Degly Pava</strong>. Soy evangelista de tecnología XR e ingeniero XR multiplataforma y de wearables en Tokio. Construyo experiencias espaciales con Unity, OpenXR, visionOS, WebXR y smart glasses, y también hago developer relations: doy charlas, mentoreo y ayudo a equipos a entender cómo estas tecnologías crean valor real.",
-    "summary": "Disfruto más el trabajo que une evangelismo e ingeniería: lanzar productos XR reales, representar la tecnología públicamente y ayudar a desarrolladores y partners a crecer con ella.",
+    "summary": "Mi trabajo vive entre el evangelismo y la ingeniería, con pruebas públicas junto a Meta, Apple Vision Pro, Nintendo, CAPCOM, Qualcomm, MIT Reality Hack, AWE, STYLY y XREAL.",
     "detailed": {
       "paragraph1": "Mi experiencia abarca experiencias de Realidad Extendida de vanguardia que han captado la atención de líderes de la industria en Japón, EE.UU. y Colombia. He trabajado con gigantes de los videojuegos como CAPCOM y Nintendo, lideré el desarrollo AR para Universal Studios Japan, y fui pionero en tecnología de gafas AR a través del Programa de Desarrolladores Pioneros de Qualcomm.",
       "paragraph2": "Más allá de XR, he desarrollado 2 aplicaciones Android y contribuido a proyectos de código abierto, demostrando versatilidad en plataformas móviles y web. También desarrollé múltiples paquetes OpenUPM para tecnologías emergentes como Apple Vision Pro y dispositivos PICO XR, adoptados por 15+ empresas en el mercado XR de Japón.",
@@ -88,7 +88,7 @@
     },
     "search": {
       "title": "Señales de búsqueda",
-      "item1": "Habilidades principales: Evangelismo XR, Developer Relations, Ingeniería XR, Unity, Wearable Computing, Spatial Computing",
+      "item1": "Señales de reconocimiento: mentoría en Meta, desarrollo Apple Vision Pro, mentoría MIT Reality Hack, charlas en AWE, colaboración con Nintendo/CAPCOM, trabajo Qualcomm en gafas AR y despliegues XREAL",
       "item2": "Idiomas: inglés, español, francés y japonés",
       "item3": "Abierto a oportunidades presenciales, híbridas y remotas en Estados Unidos, Japón y equipos internacionales"
     }
@@ -215,7 +215,7 @@
         "bullet1": "Amplié STYLY Gallery para compatibilidad con Apple Vision Pro conectando Swift y Unity, ayudando a extender su alcance a 20,000+ descargas en plataformas XR.",
         "bullet2": "Desarrollé paquetes OpenUPM y tooling multiplataforma para Apple Vision Pro, PICO XR y flujos XR más amplios, adoptados por 15+ empresas en Japón.",
         "bullet3": "Planifiqué y desarrollé trabajo XR de smart glasses, wearables y experiencias basadas en ubicación, incluyendo Meta Ray-Ban Display WebApps, experiencias XREAL de entretenimiento a gran escala y el proyecto DEN-NOH Vision / Ghost in the Shell en TOKYO NODE.",
-        "bullet4": "También apoyé demos, talleres, developer relations, programas con partners e iniciativas internacionales de ecosistema para que el trabajo pudiera entenderse y adoptarse más allá del equipo de ingeniería."
+        "bullet4": "También apoyé demos, talleres, developer relations, programas con partners e iniciativas internacionales de ecosistema conectadas con Meta, MIT Reality Hack, AWE, STYLY, KDDI y el mercado XR de Japón."
       },
       "erasmus": {
         "title": "Miembro de la Junta de Calidad ERASMUS - IMLEX",
@@ -349,7 +349,7 @@
     "engineering": {
       "title": "Ingeniería XR",
       "item1": "Unity, C#, C++, integración con Swift, visionOS, OpenXR, ARKit, ARCore, WebXR, ShaderLab y HLSL.",
-      "item2": "Apple Vision Pro, Meta Quest, PICO XR, XREAL, AR móvil, smart glasses y entrega XR multiplataforma.",
+      "item2": "Apple Vision Pro, Meta Ray-Ban Display, Meta Quest, PICO XR, XREAL, trabajo Qualcomm en gafas AR, AR móvil, smart glasses y entrega XR multiplataforma.",
       "item3": "Optimización de rendimiento, integración de SDKs, desarrollo de paquetes, sistemas de input, UI espacial y pipelines 3D en tiempo real."
     },
     "ecosystem": {
