@@ -225,22 +225,26 @@
 
 
 	var sliderMain = function() {
+
+		var showActiveHeroText = function(slider) {
+			$('.slider-text').removeClass('animated fadeInUp');
+			slider.slides.eq(slider.currentSlide).find('.slider-text').addClass('animated fadeInUp');
+		};
 		
 	  	$('#colorlib-hero .flexslider').flexslider({
 			animation: "fade",
 			slideshowSpeed: 5000,
 			directionNav: true,
-			start: function(){
+			start: function(slider){
 				setTimeout(function(){
-					$('.slider-text').removeClass('animated fadeInUp');
-					$('.flex-active-slide').find('.slider-text').addClass('animated fadeInUp');
-				}, 500);
+					showActiveHeroText(slider);
+				}, 200);
 			},
 			before: function(){
-				setTimeout(function(){
-					$('.slider-text').removeClass('animated fadeInUp');
-					$('.flex-active-slide').find('.slider-text').addClass('animated fadeInUp');
-				}, 500);
+				$('.slider-text').removeClass('animated fadeInUp');
+			},
+			after: function(slider){
+				showActiveHeroText(slider);
 			}
 
 	  	});

@@ -217,6 +217,11 @@ class TranslationManager {
             if (description && meta.description) {
                 description.setAttribute('content', meta.description);
             }
+
+            const keywords = document.querySelector('meta[name=\"keywords\"]');
+            if (keywords && meta.keywords) {
+                keywords.setAttribute('content', meta.keywords);
+            }
             
             // Update OG meta tags
             const ogTitle = document.querySelector('meta[property=\"og:title\"]');
@@ -227,6 +232,16 @@ class TranslationManager {
             const ogDescription = document.querySelector('meta[property=\"og:description\"]');
             if (ogDescription && meta.ogDescription) {
                 ogDescription.setAttribute('content', meta.ogDescription);
+            }
+
+            const twitterTitle = document.querySelector('meta[name=\"twitter:title\"]');
+            if (twitterTitle && meta.twitterTitle) {
+                twitterTitle.setAttribute('content', meta.twitterTitle);
+            }
+
+            const twitterDescription = document.querySelector('meta[name=\"twitter:description\"]');
+            if (twitterDescription && meta.twitterDescription) {
+                twitterDescription.setAttribute('content', meta.twitterDescription);
             }
         }
     }

@@ -7,7 +7,11 @@
       "image": "images/img-0.png",
       "url": "portfolio1.html",
       "demoUrl": "https://deglypava.com/portfolio1.html",
-      "technologies": ["ThreeJS", "GLSL", "AR"],
+      "technologies": [
+        "ThreeJS",
+        "GLSL",
+        "AR"
+      ],
       "featured": true
     },
     {
@@ -17,7 +21,12 @@
       "image": "images/img-7.jpg",
       "url": "Projects/Sprint.html",
       "demoUrl": "https://deglypava.com/Projects/Sprint.html",
-      "technologies": ["MediaPipe", "AR", "3D", "Computer Vision"],
+      "technologies": [
+        "MediaPipe",
+        "AR",
+        "3D",
+        "Computer Vision"
+      ],
       "featured": false
     },
     {
@@ -27,8 +36,58 @@
       "image": "images/astroscoop.jpg",
       "url": "https://styly.inc/ja/news/mwc2025/",
       "demoUrl": "https://styly.inc/ja/news/mwc2025/",
-      "technologies": ["Unity", "Vision Pro", "STYLY", "Mixed Reality"],
+      "technologies": [
+        "Unity",
+        "Vision Pro",
+        "STYLY",
+        "Mixed Reality"
+      ],
       "featured": false
+    },
+    {
+      "id": "meta-rayban-display-webapps",
+      "title": "Meta Ray-Ban Display WebApps",
+      "description": "Planned and built web apps for Meta Ray-Ban Display smart glasses, focusing on wearable UX, display-first interaction design, and lightweight web delivery for hands-free spatial use cases.",
+      "image": "images/caroussel-photos/StarVAir2Glasses.jpeg",
+      "url": "https://github.com/facebookincubator/meta-wearables-webapp",
+      "technologies": [
+        "Wearables",
+        "JavaScript",
+        "Meta",
+        "Smart Glasses",
+        "AR"
+      ],
+      "featured": true
+    },
+    {
+      "id": "xreal-location-based-entertainment",
+      "title": "XREAL Location-Based Entertainment Experiences",
+      "description": "Planned and developed large-scale XREAL location-based entertainment experiences, translating smart-glasses interaction design into reliable multi-user deployments for public venues and immersive events.",
+      "image": "images/caroussel-photos/KDDI Demos.jpg",
+      "url": "https://styly.inc/news/ghost-in-the-shell-ar-2026/",
+      "technologies": [
+        "Unity",
+        "OpenXR",
+        "XREAL",
+        "AR",
+        "LBE"
+      ],
+      "featured": false
+    },
+    {
+      "id": "dennoh-vision-tokyo-node",
+      "title": "DEN-NOH Vision / Ghost in the Shell at TOKYO NODE",
+      "description": "Planned and developed the DEN-NOH Vision AR experience for Ghost in the Shell at TOKYO NODE, combining XREAL smart glasses, spatial storytelling, and exhibition-scale XR delivery for a public installation.",
+      "image": "images/caroussel-photos/TokyoXRNode.jpg",
+      "url": "https://www.tokyonode.jp/sp/exhibition-ghostintheshell/",
+      "technologies": [
+        "Unity",
+        "OpenXR",
+        "XREAL",
+        "AR",
+        "Location-Based Entertainment"
+      ],
+      "featured": true
     },
     {
       "id": "holobrain",
@@ -37,7 +96,12 @@
       "image": "images/HoloBrain.jpg",
       "url": "https://youtu.be/Hd8Lbw6UR2M",
       "demoUrl": "https://youtu.be/Hd8Lbw6UR2M",
-      "technologies": ["Unity", "C++", "Medical XR", "HoloLens"],
+      "technologies": [
+        "Unity",
+        "C++",
+        "Medical XR",
+        "HoloLens"
+      ],
       "featured": true
     },
     {
@@ -47,7 +111,12 @@
       "image": "images/img-6.jpg",
       "url": "https://github.com/DglyP/3DColorVisualizer",
       "demoUrl": "https://github.com/DglyP/3DColorVisualizer",
-      "technologies": ["ThreeJS", "GLSL", "WebXR", "VR"],
+      "technologies": [
+        "ThreeJS",
+        "GLSL",
+        "WebXR",
+        "VR"
+      ],
       "featured": false
     },
     {
@@ -57,7 +126,11 @@
       "image": "images/img-8.jpg",
       "url": "./images/colmap.jpg",
       "demoUrl": "./images/Kadan.jpg",
-      "technologies": ["COLMAP", "MeshLab", "Photogrammetry"],
+      "technologies": [
+        "COLMAP",
+        "MeshLab",
+        "Photogrammetry"
+      ],
       "featured": false
     },
     {
@@ -67,7 +140,12 @@
       "image": "images/ARCar.png",
       "url": "https://github.com/DglyP/AR_Car_Tracking",
       "demoUrl": "https://github.com/DglyP/AR_Car_Tracking",
-      "technologies": ["Vuforia", "Arduino", "OpenXR", "HoloLens"],
+      "technologies": [
+        "Vuforia",
+        "Arduino",
+        "OpenXR",
+        "HoloLens"
+      ],
       "featured": false
     },
     {
@@ -77,7 +155,12 @@
       "image": "images/img-4.jpg",
       "url": "https://youtu.be/rN7Y3q2KkUU",
       "demoUrl": "https://youtu.be/rN7Y3q2KkUU",
-      "technologies": ["ARCore", "ARKit", "Photon", "Medical AR"],
+      "technologies": [
+        "ARCore",
+        "ARKit",
+        "Photon",
+        "Medical AR"
+      ],
       "featured": false
     },
     {
@@ -87,7 +170,12 @@
       "image": "images/img-5.jpg",
       "url": "./images/Emotion.mp4",
       "demoUrl": "./images/Emotion.mp4",
-      "technologies": ["Deep Learning", "CNN", "OpenCV", "CUDA"],
+      "technologies": [
+        "Deep Learning",
+        "CNN",
+        "OpenCV",
+        "CUDA"
+      ],
       "featured": false
     },
     {
@@ -97,7 +185,12 @@
       "image": "images/ARFilters.jpg",
       "url": "https://www.instagram.com/arfiltercreator/",
       "demoUrl": "https://www.instagram.com/arfiltercreator/",
-      "technologies": ["Spark AR", "Effect House", "Lens Studio", "Social XR"],
+      "technologies": [
+        "Spark AR",
+        "Effect House",
+        "Lens Studio",
+        "Social XR"
+      ],
       "featured": true
     },
     {
@@ -107,98 +200,144 @@
       "image": "images/PupilMimicry.jpg",
       "url": "https://deglypava.com/projects/pupil-mimicry.html",
       "demoUrl": "https://deglypava.com/projects/pupil-mimicry.html",
-      "technologies": ["Unity", "OpenXR", "Eye Tracking", "AI", "HCI"],
+      "technologies": [
+        "Unity",
+        "OpenXR",
+        "Eye Tracking",
+        "AI",
+        "HCI"
+      ],
       "featured": false
-  },
-  {
-    "id": "ar-asteroids",
-    "title": "Asteroids AR",
-    "description": "Unity AR reinterpretation of the classic arcade game with spawning asteroids, UFOs, scoring and health systems.",
-    "image": "images/ARAsteroids.jpg",
-    "url": "https://github.com/DglyP/AR_AsteroidsGame",
-    "demoUrl": "https://github.com/DglyP/AR_AsteroidsGame",
-    "technologies": ["Unity", "AR", "C#", "ShaderLab", "HLSL"],
-    "featured": false
-  },
-  {
-    "id": "unity-zeromq-multiplayer",
-    "title": "Unity ZeroMQ Multiplayer Test",
-    "description": "Prototype networking bridge using ZeroMQ between Unity clients (with some Python helpers).",
-    "image": "images/ZeroMQ.jpg",
-    "url": "https://github.com/DglyP/UnityZeroMQ_MultiplayerTest",
-    "demoUrl": "https://github.com/DglyP/UnityZeroMQ_MultiplayerTest",
-    "technologies": ["Unity", "ZeroMQ", "C#", "Python", "Networking"],
-    "featured": false
-  },
-  {
-    "id": "realtime-3d-rendering",
-    "title": "Realtime 3D Rendering (JS & GLSL)",
-    "description": "Interactive 3D scenes in the browser with custom shader effects and controls.",
-    "image": "images/GLSLShaders.jpg",
-    "url": "https://github.com/DglyP/Realtime3DRendering",
-    "demoUrl": "https://github.com/DglyP/Realtime3DRendering",
-    "technologies": ["JavaScript", "GLSL", "WebGL"],
-    "featured": false
-  },
-  {
-    "id": "shader-image-processing",
-    "title": "Shader-Based Image Processing (Three.js)",
-    "description": "GPU-accelerated image processing pipeline in Three.js with custom GLSL shaders.",
-    "image": "images/Shaders.jpg",
-    "url": "https://github.com/DglyP/ShaderBasedImageProcessing",
-    "demoUrl": "https://github.com/DglyP/ShaderBasedImageProcessing",
-    "technologies": ["ThreeJS", "GLSL", "WebGL"],
-    "featured": false
-  },
-  {
-    "id": "ar-marker-opencv",
-    "title": "AR Marker Detection (OpenCV, C++)",
-    "description": "Real-time detection and tracking of AR markers as a basis for robust overlays.",
-    "image": "images/ARTracker.png",
-    "url": "https://github.com/DglyP/ARMarker",
-    "demoUrl": "https://github.com/DglyP/ARMarker",
-    "technologies": ["OpenCV", "C++"],
-    "featured": false
-  },
-  {
-    "id": "eye-tracking-testbed",
-    "title": "Eye Tracking Testbed",
-    "description": "Unity playground for eye-tracking experiments (blinks, luminance, fixation tasks).",
-    "image": "images/EYETracking.jpg",
-    "url": "https://github.com/DglyP/EyeTest",
-    "demoUrl": "https://github.com/DglyP/EyeTest",
-    "technologies": ["Unity", "Eye Tracking", "C#"],
-    "featured": false
-  },
-  {
-    "id": "colombia-xr",
-    "title": "Colombia XR",
-    "description": "Community site highlighting XR organizations and events in Colombia (static site, Vercel).",
-    "image": "images/ColombiaXR.png",
-    "url": "https://colombiaxr.com",
-    "demoUrl": "https://colombiaxr.com",
-    "technologies": ["HTML", "JavaScript", "Static Site"],
-    "featured": true
-  },
-  {
-    "id": "arduino-robotics",
-    "title": "Arduino Robotics (AR Car Base)",
-    "description": "Bluetooth-controlled Arduino car that became the physical base for the HoloLens AR racing game.",
-    "image": "images/ArduinoCar.jpg",
-    "url": "https://github.com/DglyP/ArduinoRobotics",
-    "demoUrl": "https://github.com/DglyP/ArduinoRobotics",
-    "technologies": ["Arduino", "C++", "Bluetooth"],
-    "featured": false
-  },
-  {
-    "id": "steamvr-training",
-    "title": "SteamVR Training Project",
-    "description": "Early VR training exercises for HTC Vive/SteamVR as part of visual computing coursework.",
-    "image": "images/STEAMVR.jpg",
-    "url": "https://github.com/DglyP/SteamVR-Project-1",
-    "demoUrl": "https://github.com/DglyP/SteamVR-Project-1",
-    "technologies": ["Unity", "SteamVR", "VR", "C#"],
-    "featured": false
-  }
-]
+    },
+    {
+      "id": "ar-asteroids",
+      "title": "Asteroids AR",
+      "description": "Unity AR reinterpretation of the classic arcade game with spawning asteroids, UFOs, scoring and health systems.",
+      "image": "images/ARAsteroids.jpg",
+      "url": "https://github.com/DglyP/AR_AsteroidsGame",
+      "demoUrl": "https://github.com/DglyP/AR_AsteroidsGame",
+      "technologies": [
+        "Unity",
+        "AR",
+        "C#",
+        "ShaderLab",
+        "HLSL"
+      ],
+      "featured": false
+    },
+    {
+      "id": "unity-zeromq-multiplayer",
+      "title": "Unity ZeroMQ Multiplayer Test",
+      "description": "Prototype networking bridge using ZeroMQ between Unity clients (with some Python helpers).",
+      "image": "images/ZeroMQ.jpg",
+      "url": "https://github.com/DglyP/UnityZeroMQ_MultiplayerTest",
+      "demoUrl": "https://github.com/DglyP/UnityZeroMQ_MultiplayerTest",
+      "technologies": [
+        "Unity",
+        "ZeroMQ",
+        "C#",
+        "Python",
+        "Networking"
+      ],
+      "featured": false
+    },
+    {
+      "id": "realtime-3d-rendering",
+      "title": "Realtime 3D Rendering (JS & GLSL)",
+      "description": "Interactive 3D scenes in the browser with custom shader effects and controls.",
+      "image": "images/GLSLShaders.jpg",
+      "url": "https://github.com/DglyP/Realtime3DRendering",
+      "demoUrl": "https://github.com/DglyP/Realtime3DRendering",
+      "technologies": [
+        "JavaScript",
+        "GLSL",
+        "WebGL"
+      ],
+      "featured": false
+    },
+    {
+      "id": "shader-image-processing",
+      "title": "Shader-Based Image Processing (Three.js)",
+      "description": "GPU-accelerated image processing pipeline in Three.js with custom GLSL shaders.",
+      "image": "images/Shaders.jpg",
+      "url": "https://github.com/DglyP/ShaderBasedImageProcessing",
+      "demoUrl": "https://github.com/DglyP/ShaderBasedImageProcessing",
+      "technologies": [
+        "ThreeJS",
+        "GLSL",
+        "WebGL"
+      ],
+      "featured": false
+    },
+    {
+      "id": "ar-marker-opencv",
+      "title": "AR Marker Detection (OpenCV, C++)",
+      "description": "Real-time detection and tracking of AR markers as a basis for robust overlays.",
+      "image": "images/ARTracker.png",
+      "url": "https://github.com/DglyP/ARMarker",
+      "demoUrl": "https://github.com/DglyP/ARMarker",
+      "technologies": [
+        "OpenCV",
+        "C++"
+      ],
+      "featured": false
+    },
+    {
+      "id": "eye-tracking-testbed",
+      "title": "Eye Tracking Testbed",
+      "description": "Unity playground for eye-tracking experiments (blinks, luminance, fixation tasks).",
+      "image": "images/EYETracking.jpg",
+      "url": "https://github.com/DglyP/EyeTest",
+      "demoUrl": "https://github.com/DglyP/EyeTest",
+      "technologies": [
+        "Unity",
+        "Eye Tracking",
+        "C#"
+      ],
+      "featured": false
+    },
+    {
+      "id": "colombia-xr",
+      "title": "Colombia XR",
+      "description": "Community site highlighting XR organizations and events in Colombia (static site, Vercel).",
+      "image": "images/ColombiaXR.png",
+      "url": "https://colombiaxr.com",
+      "demoUrl": "https://colombiaxr.com",
+      "technologies": [
+        "HTML",
+        "JavaScript",
+        "Static Site"
+      ],
+      "featured": true
+    },
+    {
+      "id": "arduino-robotics",
+      "title": "Arduino Robotics (AR Car Base)",
+      "description": "Bluetooth-controlled Arduino car that became the physical base for the HoloLens AR racing game.",
+      "image": "images/ArduinoCar.jpg",
+      "url": "https://github.com/DglyP/ArduinoRobotics",
+      "demoUrl": "https://github.com/DglyP/ArduinoRobotics",
+      "technologies": [
+        "Arduino",
+        "C++",
+        "Bluetooth"
+      ],
+      "featured": false
+    },
+    {
+      "id": "steamvr-training",
+      "title": "SteamVR Training Project",
+      "description": "Early VR training exercises for HTC Vive/SteamVR as part of visual computing coursework.",
+      "image": "images/STEAMVR.jpg",
+      "url": "https://github.com/DglyP/SteamVR-Project-1",
+      "demoUrl": "https://github.com/DglyP/SteamVR-Project-1",
+      "technologies": [
+        "Unity",
+        "SteamVR",
+        "VR",
+        "C#"
+      ],
+      "featured": false
+    }
+  ]
 }
