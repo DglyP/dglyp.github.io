@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Video Browser</title>
+    <style>
+        :root {
+            --bg-color: #000;
+            --text-color: #fff;
+            --accent-color: #ff0; /* High contrast yellow */
+            --danger-color: #f44;
+            --surface-color: #222;
+            --focus-outline: 4px solid var(--accent-color);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            background-color: #111;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: var(--text-color);
+            overflow: hidden;
+        }
+
+        #app-container {
+            width: 600px;
+            height: 600px;
+            background-color: var(--bg-color);
+            position: relative;
+            border: 2px solid #444;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .screen {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+        }
+
+        .screen.active {
+            display: flex;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* UI Elements */
+        .focusable {
+            background: var(--surface-color);
+            color: white;
+            border: 2px solid #444;
+            padding: 15px;
+            font-size: 18px;
+            cursor: pointer;
+            outline: none;
+            transition: transform 0.1s;
+        }
+
+        .focusable:focus, .focusable.focused {
+            border: var(--focus-outline);
+            background: #333;
+            transform: scale(1.02);
+            z-index: 10;
+        }
+
+        input.focusable {
+            width: 100%;
+            margin-bottom: 15px;
+            background: #111;
+        }
+
+        button.focusable {
+            width: 100%;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        /* Connect Screen */
+        #recent-servers {
+            margin-top: 30px;
+            flex-grow: 1;
+            overflow-y: auto;
+        }
+
+        .recent-item {
+            display: block;
+            margin-bottom: 10px;
+            text-align: left;
+            font-size: 14px;
+            padding: 10px;
+        }
+
+        /* Video List Screen */
+        .list-container {
+            display: flex;
+            flex-grow: 1;
+            gap: 15px;
+            overflow: hidden;
+        }
+
+        #video-list {
+            flex: 2;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .video-item {
+            text-align: left;
+            padding: 12px;
+            font-size: 16px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .sidebar {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        /* Player Screen */
+        #player-wrapper {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            position: relative;
+        }
+
+        video {
+            width: 100%;
+            background: black;
+            max-height: 300px;
+        }
+
+        #video-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .player-controls {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+        }
+
+        .control-btn {
+            padding: 10px;
+            font-size: 14px;
+        }
+
+        /* Overlays */
+        #status-message {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            padding: 10px;
+            background: rgba(0,0,0,0.8);
+            border: 1px solid var(--accent-color);
+            text-align: center;
+            display: none;
+            z-index: 100;
+        }
+
+        .modal {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.9);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 200;
+        }
+
+        .modal-content {
+            background: var(--surface-color);
+            padding: 30px;
+            border: 2px solid var(--accent-color);
+            text-align: center;
+            max-width: 80%;
+        }
+
+        .modal-buttons {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        /* Scrollbar styling */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #111;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #444;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="app-container">
+        <!-- Status Notification -->
+        <div id="status-message"></div>
+
+        <!-- Resume Dialog -->
+        <div id="resume-modal" class="modal">
+            <div class="modal-content">
+                <p id="resume-text">Resume playback from 00:00?</p>
+                <div class="modal-buttons">
+                    <button id="resume-yes" class="focusable">YES (Enter)</button>
+                    <button id="resume-no" class="focusable">NO</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONNECT SCREEN -->
+        <div id="screen-connect" class="screen active">
+            <h1>Network Video Browser</h1>
+            <input type="text" id="server-url" class="focusable" placeholder="http://192.168.1.100:8000" spellcheck="false">
+            <button id="connect-btn" class="focusable">CONNECT</button>
+            
+            <div id="recent-servers">
+                <p style="margin-bottom:10px; font-size: 14px; opacity: 0.7;">RECENT SERVERS:</p>
+                <div id="recent-list"></div>
+            </div>
+        </div>
+
+        <!-- LIST SCREEN -->
+        <div id="screen-list" class="screen">
+            <h2 id="current-server-display" style="font-size: 14px; margin-bottom: 10px; opacity: 0.8; word-break: break-all;"></h2>
+            <div class="list-container">
+                <div id="video-list"></div>
+                <div class="sidebar">
+                    <button id="refresh-btn" class="focusable">REFRESH</button>
+                    <button id="disconnect-btn" class="focusable">DISCONNECT</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- PLAYER SCREEN -->
+        <div id="screen-player" class="screen">
+            <div id="player-wrapper">
+                <div id="video-title">Video Title</div>
+                <video id="main-video"></video>
+                
+                <div class="player-controls">
+                    <button class="focusable control-btn" data-action="play">PLAY/PAUSE</button>
+                    <button class="focusable control-btn" data-action="back10">-10s</button>
+                    <button class="focusable control-btn" data-action="fwd10">+10s</button>
+                    <button class="focusable control-btn" data-action="restart">RESTART</button>
+                    <button class="focusable control-btn" data-action="mute">MUTE/UNMUTE</button>
+                    <button class="focusable control-btn" data-action="voldown">VOL -</button>
+                    <button class="focusable control-btn" data-action="volup">VOL +</button>
+                    <button class="focusable control-btn" data-action="fullscreen">FULLSCREEN</button>
+                    <button id="player-back-btn" class="focusable control-btn" data-action="back">EXIT</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        /**
+         * NETWORK VIDEO BROWSER
+         * Single-file HTML5 Application
+         */
+
+        const State = {
+            currentScreen: 'connect',
+            serverUrl: '',
+            videos: [],
+            recentServers: [],
+            selectedVideo: null,
+            focusIndex: 0,
+            focusGroup: 'main', // 'main', 'sidebar', 'list', 'controls'
+            playbackPositions: {},
+            resumeTime: 0
+        };
+
+        const UI = {
+            screens: {
+                connect: document.getElementById('screen-connect'),
+                list: document.getElementById('screen-list'),
+                player: document.getElementById('screen-player')
+            },
+            status: document.getElementById('status-message'),
+            videoList: document.getElementById('recent-list'),
+            mainVideoList: document.getElementById('video-list'),
+            videoElement: document.getElementById('main-video'),
+            resumeModal: document.getElementById('resume-modal')
+        };
+
+        // --- STORAGE ---
+
+        const Storage = {
+            load() {
+                const servers = localStorage.getItem('nvb_recent_servers');
+                if (servers) State.recentServers = JSON.parse(servers);
+                
+                const lastServer = localStorage.getItem('nvb_last_server');
+                if (lastServer) {
+                    document.getElementById('server-url').value = lastServer;
+                    State.serverUrl = lastServer;
+                }
+
+                const positions = localStorage.getItem('nvb_positions');
+                if (positions) State.playbackPositions = JSON.parse(positions);
+            },
+            saveRecent(url) {
+                if (!url) return;
+                State.recentServers = [url, ...State.recentServers.filter(s => s !== url)].slice(0, 5);
+                localStorage.setItem('nvb_recent_servers', JSON.stringify(State.recentServers));
+                localStorage.setItem('nvb_last_server', url);
+            },
+            savePosition(videoId, time) {
+                State.playbackPositions[videoId] = time;
+                localStorage.setItem('nvb_positions', JSON.stringify(State.playbackPositions));
+            }
+        };
+
+        // --- API ---
+
+        const API = {
+            async fetchVideos(url) {
+                try {
+                    showStatus('Connecting...', 0);
+                    const cleanUrl = url.endsWith('/') ? url.slice(0, -1) : url;
+                    const response = await fetch(`${cleanUrl}/videos`, { signal: AbortSignal.timeout(5000) });
+                    
+                    if (!response.ok) throw new Error(`Server returned ${response.status}`);
+                    
+                    const data = await response.json();
+                    if (!Array.isArray(data)) throw new Error('Invalid response format');
+                    
+                    showStatus('Connected!', 2000);
+                    return data.map(v => ({
+                        name: v.name,
+                        url: v.url.startsWith('http') ? v.url : `${cleanUrl}${v.url}`
+                    }));
+                } catch (err) {
+                    showStatus(`Error: ${err.message}`, 4000);
+                    return null;
+                }
+            }
+        };
+
+        // --- NAVIGATION ---
+
+        function getFocusableElements() {
+            const activeScreen = UI.screens[State.currentScreen];
+            if (State.currentScreen === 'list') {
+                if (State.focusGroup === 'list') {
+                    return Array.from(UI.mainVideoList.querySelectorAll('.focusable'));
+                } else {
+                    return Array.from(activeScreen.querySelectorAll('.sidebar .focusable'));
+                }
+            }
+            return Array.from(activeScreen.querySelectorAll('.focusable'));
+        }
+
+        function updateFocus() {
+            // Remove previous focus
+            document.querySelectorAll('.focused').forEach(el => el.classList.remove('focused'));
+            
+            const elements = getFocusableElements();
+            if (elements.length > 0) {
+                if (State.focusIndex >= elements.length) State.focusIndex = elements.length - 1;
+                if (State.focusIndex < 0) State.focusIndex = 0;
+                
+                const el = elements[State.focusIndex];
+                el.focus();
+                el.classList.add('focused');
+                el.scrollIntoView({ block: 'nearest' });
+            }
+        }
+
+        function handleKey(e) {
+            // Modal handling
+            if (UI.resumeModal.style.display === 'flex') {
+                if (e.key === 'Enter') resumePlayback(true);
+                if (e.key === 'Escape' || e.key === 'ArrowRight') resumePlayback(false);
+                return;
+            }
+
+            const elements = getFocusableElements();
+
+            switch (e.key) {
+                case 'ArrowDown':
+                    State.focusIndex = (State.focusIndex + 1) % elements.length;
+                    updateFocus();
+                    break;
+                case 'ArrowUp':
+                    State.focusIndex = (State.focusIndex - 1 + elements.length) % elements.length;
+                    updateFocus();
+                    break;
+                case 'ArrowRight':
+                    if (State.currentScreen === 'list' && State.focusGroup === 'list') {
+                        State.focusGroup = 'sidebar';
+                        State.focusIndex = 0;
+                        updateFocus();
+                    } else if (State.currentScreen === 'player') {
+                        State.focusIndex = (State.focusIndex + 1) % elements.length;
+                        updateFocus();
+                    }
+                    break;
+                case 'ArrowLeft':
+                    if (State.currentScreen === 'list' && State.focusGroup === 'sidebar') {
+                        State.focusGroup = 'list';
+                        State.focusIndex = 0;
+                        updateFocus();
+                    } else if (State.currentScreen === 'player') {
+                        State.focusIndex = (State.focusIndex - 1 + elements.length) % elements.length;
+                        updateFocus();
+                    }
+                    break;
+                case 'Enter':
+                    if (document.activeElement) document.activeElement.click();
+                    break;
+            }
+        }
+
+        // --- UI ACTIONS ---
+
+        function showStatus(msg, duration = 3000) {
+            UI.status.textContent = msg;
+            UI.status.style.display = 'block';
+            if (duration > 0) {
+                setTimeout(() => { UI.status.style.display = 'none'; }, duration);
+            }
+        }
+
+        function switchScreen(screenName) {
+            Object.values(UI.screens).forEach(s => s.classList.remove('active'));
+            UI.screens[screenName].classList.add('active');
+            State.currentScreen = screenName;
+            State.focusIndex = 0;
+            State.focusGroup = screenName === 'list' ? 'list' : 'main';
+            
+            // Special focus for connect screen (input)
+            if (screenName === 'connect') {
+                document.getElementById('server-url').focus();
+            } else {
+                updateFocus();
+            }
+        }
+
+        async function connect(url) {
+            const val = url || document.getElementById('server-url').value;
+            if (!val) return showStatus('Enter a URL');
+            
+            State.serverUrl = val;
+            const videos = await API.fetchVideos(val);
+            if (videos) {
+                State.videos = videos;
+                Storage.saveRecent(val);
+                renderVideoList();
+                document.getElementById('current-server-display').textContent = `Connected to: ${val}`;
+                switchScreen('list');
+            }
+        }
+
+        function renderRecentServers() {
+            const list = document.getElementById('recent-list');
+            list.innerHTML = '';
+            State.recentServers.forEach(url => {
+                const btn = document.createElement('button');
+                btn.className = 'focusable recent-item';
+                btn.textContent = url;
+                btn.onclick = () => connect(url);
+                list.appendChild(btn);
+            });
+        }
+
+        function renderVideoList() {
+            UI.mainVideoList.innerHTML = '';
+            if (State.videos.length === 0) {
+                UI.mainVideoList.innerHTML = '<p style="padding:20px; text-align:center;">No videos found.</p>';
+                return;
+            }
+            State.videos.forEach((video, index) => {
+                const btn = document.createElement('button');
+                btn.className = 'focusable video-item';
+                btn.textContent = video.name;
+                btn.onclick = () => openPlayer(video);
+                UI.mainVideoList.appendChild(btn);
+            });
+        }
+
+        // --- PLAYER LOGIC ---
+
+        function openPlayer(video) {
+            State.selectedVideo = video;
+            document.getElementById('video-title').textContent = video.name;
+            UI.videoElement.src = video.url;
+            UI.videoElement.load();
+
+            const savedPos = State.playbackPositions[video.name];
+            if (savedPos && savedPos > 5) {
+                State.resumeTime = savedPos;
+                document.getElementById('resume-text').textContent = `Resume from ${formatTime(savedPos)}?`;
+                UI.resumeModal.style.display = 'flex';
+            } else {
+                switchScreen('player');
+                UI.videoElement.play().catch(e => showStatus('Playback Error: ' + e.message));
+            }
+        }
+
+        function resumePlayback(yes) {
+            UI.resumeModal.style.display = 'none';
+            switchScreen('player');
+            if (yes) {
+                UI.videoElement.currentTime = State.resumeTime;
+            }
+            UI.videoElement.play().catch(e => showStatus('Playback Error: ' + e.message));
+        }
+
+        function formatTime(sec) {
+            const m = Math.floor(sec / 60);
+            const s = Math.floor(sec % 60);
+            return `${m}:${s < 10 ? '0' : ''}${s}`;
+        }
+
+        // Handle Player Controls
+        document.querySelector('.player-controls').addEventListener('click', (e) => {
+            const action = e.target.dataset.action;
+            if (!action) return;
+
+            const v = UI.videoElement;
+            switch (action) {
+                case 'play': v.paused ? v.play() : v.pause(); break;
+                case 'back10': v.currentTime -= 10; break;
+                case 'fwd10': v.currentTime += 10; break;
+                case 'restart': v.currentTime = 0; v.play(); break;
+                case 'mute': v.muted = !v.muted; break;
+                case 'voldown': v.volume = Math.max(0, v.volume - 0.1); break;
+                case 'volup': v.volume = Math.min(1, v.volume + 0.1); break;
+                case 'fullscreen': 
+                    if (v.requestFullscreen) v.requestFullscreen();
+                    else if (v.webkitRequestFullscreen) v.webkitRequestFullscreen();
+                    break;
+                case 'back': 
+                    v.pause();
+                    switchScreen('list');
+                    break;
+            }
+        });
+
+        // Save position every 5 seconds
+        UI.videoElement.ontimeupdate = () => {
+            if (State.selectedVideo && UI.videoElement.currentTime > 0) {
+                Storage.savePosition(State.selectedVideo.name, UI.videoElement.currentTime);
+            }
+        };
+
+        UI.videoElement.onerror = () => {
+            showStatus('Error loading video. Format may not be supported.', 5000);
+        };
+
+        // --- INITIALIZATION ---
+
+        document.getElementById('connect-btn').onclick = () => connect();
+        document.getElementById('refresh-btn').onclick = () => connect(State.serverUrl);
+        document.getElementById('disconnect-btn').onclick = () => {
+            State.videos = [];
+            switchScreen('connect');
+            renderRecentServers();
+        };
+
+        document.getElementById('resume-yes').onclick = () => resumePlayback(true);
+        document.getElementById('resume-no').onclick = () => resumePlayback(false);
+
+        // Global Event Listeners
+        window.addEventListener('keydown', handleKey);
+        
+        // Mouse click to focus
+        document.addEventListener('mousedown', (e) => {
+            if (e.target.classList.contains('focusable')) {
+                const elements = getFocusableElements();
+                const idx = elements.indexOf(e.target);
+                if (idx !== -1) {
+                    State.focusIndex = idx;
+                    updateFocus();
+                }
+            }
+        });
+
+        // Start App
+        Storage.load();
+        renderRecentServers();
+        updateFocus();
+
+    </script>
+</body>
+</html>
