@@ -251,7 +251,7 @@
             <button id="connect-btn" class="focusable">CONNECT</button>
             
             <div id="recent-servers">
-                <p style="margin-bottom:10px; font-size: 14px; opacity: 0.7;">RECENT SERVERS:</p>
+                <p style="margin-bottom:10px; font-size: 14px; opacity: 0.7;">FAVORITES / RECENT:</p>
                 <div id="recent-list"></div>
             </div>
         </div>
@@ -295,6 +295,13 @@
          * Single-file HTML5 Application
          */
 
+        // --- CONFIGURATION ---
+        const DEFAULT_SERVERS = [
+            "http://localhost:8000",
+            "http://127.0.0.1:8000",
+            "http://192.168.128.161:8000"
+        ];
+
         const State = {
             currentScreen: 'connect',
             serverUrl: '',
@@ -325,12 +332,19 @@
         const Storage = {
             load() {
                 const servers = localStorage.getItem('nvb_recent_servers');
-                if (servers) State.recentServers = JSON.parse(servers);
+                if (servers) {
+                    State.recentServers = JSON.parse(servers);
+                } else {
+                    // Initialize with default favorites if first run
+                    State.recentServers = [...DEFAULT_SERVERS];
+                }
                 
                 const lastServer = localStorage.getItem('nvb_last_server');
                 if (lastServer) {
                     document.getElementById('server-url').value = lastServer;
                     State.serverUrl = lastServer;
+                } else if (DEFAULT_SERVERS.length > 0) {
+                    document.getElementById('server-url').value = DEFAULT_SERVERS[0];
                 }
 
                 const positions = localStorage.getItem('nvb_positions');
