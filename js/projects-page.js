@@ -73,7 +73,9 @@ function renderProjectForPage(project, index) {
     
     // Add data attributes for filtering
     const technologies = project.technologies ? project.technologies.join(' ').toLowerCase() : '';
+    const category = resolveProjectCategory(project);
     div.setAttribute('data-technologies', technologies);
+    div.setAttribute('data-category', category);
     div.setAttribute('data-featured', project.featured ? 'true' : 'false');
     
     // Determine primary link
@@ -135,6 +137,31 @@ function renderProjectForPage(project, index) {
 }
 
 /**
+ * Resolve a stable category for project filtering
+ */
+function resolveProjectCategory(project) {
+    if (project.category) {
+        return String(project.category).toLowerCase();
+    }
+
+    const technologies = (project.technologies || []).map(tech => String(tech).toLowerCase());
+    const title = String(project.title || '').toLowerCase();
+
+    if (technologies.includes('styly') || title.includes('styly')) return 'styly';
+    if (technologies.includes('meta') || title.includes('meta horizon start') || title.includes('meta')) return 'meta-start';
+    if (
+        technologies.includes('wearables') ||
+        technologies.includes('smart glasses') ||
+        technologies.includes('vision pro') ||
+        technologies.includes('xreal')
+    ) return 'wearables';
+    if (technologies.includes('ar')) return 'ar';
+    if (technologies.includes('vr')) return 'vr';
+
+    return 'xr';
+}
+
+/**
  * Setup filter functionality
  */
 function setupFilters() {
@@ -158,6 +185,7 @@ function setupFilters() {
  */
 function filterProjects(filter) {
     const projects = document.querySelectorAll('#all-projects .col-md-6');
+    const categoryFilters = ['styly', 'meta-start', 'wearables'];
     
     projects.forEach(project => {
         let shouldShow = true;
@@ -166,6 +194,8 @@ function filterProjects(filter) {
             shouldShow = true;
         } else if (filter === 'featured') {
             shouldShow = project.getAttribute('data-featured') === 'true';
+        } else if (categoryFilters.includes(filter)) {
+            shouldShow = project.getAttribute('data-category') === filter;
         } else {
             // Check if project has the technology
             const technologies = project.getAttribute('data-technologies') || '';

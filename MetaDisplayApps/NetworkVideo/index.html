@@ -301,6 +301,8 @@
             "http://127.0.0.1:8000",
             "http://192.168.128.161:8000"
         ];
+        const DEFAULT_USERNAME = "meta";
+        const DEFAULT_PASSWORD = "degly";
 
         const State = {
             currentScreen: 'connect',
@@ -324,7 +326,10 @@
             videoList: document.getElementById('recent-list'),
             mainVideoList: document.getElementById('video-list'),
             videoElement: document.getElementById('main-video'),
-            resumeModal: document.getElementById('resume-modal')
+            resumeModal: document.getElementById('resume-modal'),
+            inputs: {
+                url: document.getElementById('server-url')
+            }
         };
 
         // --- STORAGE ---
@@ -341,10 +346,10 @@
                 
                 const lastServer = localStorage.getItem('nvb_last_server');
                 if (lastServer) {
-                    document.getElementById('server-url').value = lastServer;
+                    UI.inputs.url.value = lastServer;
                     State.serverUrl = lastServer;
                 } else if (DEFAULT_SERVERS.length > 0) {
-                    document.getElementById('server-url').value = DEFAULT_SERVERS[0];
+                    UI.inputs.url.value = DEFAULT_SERVERS[0];
                 }
 
                 const positions = localStorage.getItem('nvb_positions');
@@ -366,27 +371,108 @@
 
         const API = {
             async fetchVideos(url) {
+                const cleanUrl = url.endsWith('/') ? url.slice(0, -1) : url;
+                const authHeader = 'Basic ' + btoa(DEFAULT_USERNAME + ":" + DEFAULT_PASSWORD);
+                
                 try {
                     showStatus('Connecting...', 0);
-                    const cleanUrl = url.endsWith('/') ? url.slice(0, -1) : url;
-                    const response = await fetch(`${cleanUrl}/videos`, { signal: AbortSignal.timeout(5000) });
                     
-                    if (!response.ok) throw new Error(`Server returned ${response.status}`);
-                    
-                    const data = await response.json();
-                    if (!Array.isArray(data)) throw new Error('Invalid response format');
-                    
-                    showStatus('Connected!', 2000);
-                    return data.map(v => ({
-                        name: v.name,
-                        url: v.url.startsWith('http') ? v.url : `${cleanUrl}${v.url}`
-                    }));
+                    // Attempt 1: Try the /videos JSON endpoint
+                    let response = await fetch(`${cleanUrl}/videos`, { 
+                        method: 'GET',
+                        headers: { 'Authorization': authHeader },
+                        mode: 'cors'
+                    });
+
+                    if (response.ok) {
+                        const data = await response.json();
+                        if (Array.isArray(data)) {
+                            showStatus('Connected!', 2000);
+                            return data.map(v => ({
+                                name: v.name,
+                                url: v.url.startsWith('http') ? v.url : `${cleanUrl}${v.url}`
+                            }));
+                        }
+                    }
+
+                    // Attempt 2: WebDAV PROPFIND
+                    showStatus('Trying WebDAV...', 0);
+                    response = await fetch(`${cleanUrl}/`, {
+                        method: 'PROPFIND',
+                        headers: { 'Authorization': authHeader, 'Depth': '1' },
+                        mode: 'cors'
+                    });
+
+                    if (response.ok) {
+                        const text = await response.text();
+                        return parseWebDAV(text, cleanUrl);
+                    }
+
+                    // Attempt 3: MiXPlorer/Simple HTTP Scraper Fallback
+                    showStatus('Trying HTTP Listing...', 0);
+                    response = await fetch(`${cleanUrl}/`, {
+                        method: 'GET',
+                        headers: { 'Authorization': authHeader },
+                        mode: 'cors'
+                    });
+
+                    if (response.ok) {
+                        const html = await response.text();
+                        return parseHTML(html, cleanUrl);
+                    }
+
+                    throw new Error(response.status === 401 ? 'Auth Failed' : 'No videos found');
+
                 } catch (err) {
-                    showStatus(`Error: ${err.message}`, 4000);
+                    let msg = err.message;
+                    if (err.name === 'TypeError') {
+                        msg = "CONNECTION BLOCKED: Android/MiXPlorer doesn't allow remote access. \n\nFIX: Use 'WebDAV Server' app by Olive Tree and enable 'CORS' in settings.";
+                    }
+                    showStatus(msg, 15000);
                     return null;
                 }
             }
         };
+
+        function parseWebDAV(xmlText, baseUrl) {
+            const parser = new DOMParser();
+            const xmlDoc = parser.parseFromString(xmlText, "text/xml");
+            const responses = xmlDoc.getElementsByTagName("D:response");
+            const videos = [];
+            const extensions = ['.mp4', '.webm', '.mov', '.mkv'];
+
+            for (let res of responses) {
+                const href = res.getElementsByTagName("D:href")[0].textContent;
+                const name = decodeURIComponent(href.split('/').pop());
+                if (extensions.some(ext => name.toLowerCase().endsWith(ext)) && name !== "") {
+                    videos.push({
+                        name: name,
+                        url: href.startsWith('http') ? href : baseUrl + href
+                    });
+                }
+            }
+            return videos.length > 0 ? videos : null;
+        }
+
+        function parseHTML(htmlText, baseUrl) {
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(htmlText, "text/html");
+            const links = Array.from(doc.querySelectorAll('a'));
+            const videos = [];
+            const extensions = ['.mp4', '.webm', '.mov', '.mkv'];
+
+            links.forEach(link => {
+                const href = link.getAttribute('href');
+                const name = link.textContent.trim();
+                if (href && extensions.some(ext => href.toLowerCase().endsWith(ext))) {
+                    videos.push({
+                        name: name || href,
+                        url: href.startsWith('http') ? href : baseUrl + (href.startsWith('/') ? '' : '/') + href
+                    });
+                }
+            });
+            return videos.length > 0 ? videos : null;
+        }
 
         // --- NAVIGATION ---
 
@@ -482,14 +568,15 @@
             
             // Special focus for connect screen (input)
             if (screenName === 'connect') {
-                document.getElementById('server-url').focus();
+                UI.inputs.url.focus();
             } else {
                 updateFocus();
             }
         }
 
         async function connect(url) {
-            const val = url || document.getElementById('server-url').value;
+            const val = url || UI.inputs.url.value;
+            
             if (!val) return showStatus('Enter a URL');
             
             State.serverUrl = val;

@@ -1,0 +1,488 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X0K0P2Z0EJ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);} 
+      gtag('js', new Date());
+      gtag('config', 'G-X0K0P2Z0EJ');
+    </script>
+    <script src="js/analytics-events.js" defer></script>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Degly Pava | Recruiter Profile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Recruiter-friendly profile page for Degly Pava with role-by-role summaries, STYLY project thumbnails, Meta mentorship links, and measurable outcomes.">
+
+    <link rel="shortcut icon" href="/images/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/flexslider.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive-navigation-fix.css">
+    <link rel="stylesheet" href="css/navigation-fixes.css">
+    <link rel="stylesheet" href="css/mobile-nav-fixes.css">
+
+    <script src="js/modernizr-2.6.2.min.js"></script>
+
+    <style>
+      .recruiter-hero {
+        background: linear-gradient(150deg, #fafafa 0%, #f3f3f3 55%, #f8f8f8 100%);
+        border-top: 1px solid #e7e7e7;
+        border-bottom: 1px solid #e7e7e7;
+        color: #333;
+        padding: 64px 0 52px;
+      }
+
+      .recruiter-hero .heading-meta,
+      .section-wrap .heading-meta {
+        color: #f9bf3f;
+        letter-spacing: 0.16em;
+      }
+
+      .recruiter-hero .colorlib-heading {
+        color: #222;
+        margin-bottom: 16px;
+      }
+
+      .hero-lede {
+        max-width: 930px;
+        color: #555;
+        font-size: 18px;
+        line-height: 1.78;
+      }
+
+      .quick-actions {
+        margin-top: 18px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .quick-actions .btn {
+        border: 1px solid #f9bf3f;
+        color: #f9bf3f;
+        background: transparent;
+      }
+
+      .quick-actions .btn:hover {
+        background: #f9bf3f;
+        color: #111;
+      }
+
+      .section-wrap {
+        padding: 58px 0 16px;
+      }
+
+      .section-wrap.alt {
+        background: #f7f7f7;
+        border-top: 1px solid #e8e8e8;
+        border-bottom: 1px solid #e8e8e8;
+        color: #333;
+      }
+
+      .section-intro {
+        max-width: 920px;
+        font-size: 17px;
+        line-height: 1.78;
+        margin-bottom: 20px;
+      }
+
+      .achievement-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      .achievement-card {
+        border: 1px solid #ececec;
+        border-radius: 8px;
+        padding: 14px;
+        background: #fff;
+      }
+
+      .achievement-card strong {
+        display: block;
+        font-size: 28px;
+        line-height: 1.04;
+        color: #111;
+      }
+
+      .achievement-card span {
+        display: block;
+        margin-top: 6px;
+        color: #666;
+        line-height: 1.5;
+      }
+
+      .experience-list {
+        display: grid;
+        gap: 14px;
+      }
+
+      .experience-item {
+        border: 1px solid #e5e5e5;
+        border-radius: 8px;
+        padding: 18px;
+        background: #fff;
+      }
+
+      .experience-item h3 {
+        margin: 0 0 6px;
+        color: #222;
+        font-size: 22px;
+      }
+
+      .experience-meta {
+        color: #8b6c31;
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin-bottom: 10px;
+      }
+
+      .experience-item p,
+      .experience-item li {
+        color: #555;
+        line-height: 1.72;
+      }
+
+      .experience-item ul {
+        margin: 0;
+        padding-left: 18px;
+      }
+
+      .thumb-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .thumb-card {
+        border: 1px solid #ececec;
+        border-radius: 8px;
+        overflow: hidden;
+        background: #fff;
+      }
+
+      .thumb-card img {
+        width: 100%;
+        height: 190px;
+        object-fit: cover;
+        display: block;
+      }
+
+      .thumb-content {
+        padding: 14px;
+      }
+
+      .thumb-content h3 {
+        margin: 0 0 8px;
+        font-size: 18px;
+      }
+
+      .thumb-content p {
+        margin: 0 0 8px;
+        color: #666;
+        line-height: 1.6;
+      }
+
+      .thumb-content a {
+        color: #a2700f;
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      .thumb-content a:hover {
+        text-decoration: underline;
+      }
+
+      .meta-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      .meta-card {
+        border: 1px solid #ececec;
+        border-radius: 8px;
+        padding: 14px;
+        background: #fff;
+      }
+
+      .meta-card h3 {
+        margin: 0 0 8px;
+        font-size: 17px;
+      }
+
+      .meta-card a {
+        color: #a2700f;
+        text-decoration: none;
+        font-weight: 700;
+      }
+
+      .meta-card a:hover {
+        text-decoration: underline;
+      }
+
+      .meta-note {
+        margin-top: 14px;
+        border: 1px dashed #d0d0d0;
+        border-radius: 8px;
+        padding: 12px;
+        color: #666;
+      }
+
+      @media (max-width: 1200px) {
+        .achievement-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .thumb-grid,
+        .meta-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 768px) {
+        .achievement-grid,
+        .thumb-grid,
+        .meta-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .thumb-card img {
+          height: 220px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="colorlib-page">
+      <div class="container-wrap">
+        <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation menu"><i></i></a>
+
+        <aside id="colorlib-aside" role="complementary" class="border js-fullheight" style="overflow: hidden;">
+          <div class="text-center">
+            <a href="https://www.instagram.com/deglypava/"><div class="author-img" style="background-image: url('./img/Profile2.jpg'); width: 150px; height: 150px; border-radius: 50%; background-size: cover; background-position: center; display: block; margin: 0 auto 30px; border: 2px solid #999; background-color: #f0f0f0;" role="img" aria-label="Degly Pava profile photo"></div></a>
+            <h1 id="colorlib-logo"><a href="index.html">Degly Pava</a></h1>
+            <span class="position">XR Technology Evangelist<br>Cross-Platform XR &amp; Wearable Engineer<br>Developer Relations, Mentorship &amp; Public XR Leadership<br>Tokyo, Japan</span>
+          </div>
+
+          <nav id="colorlib-main-menu" role="navigation" class="navbar" aria-label="Profile navigation">
+            <div id="navbar" class="collapse">
+              <ul>
+                <li class="active"><a href="#overview">Overview</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#styly-projects">STYLY Projects</a></li>
+                <li><a href="#meta-mentorship">Supported Games</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+              <div style="margin-top: 14px; text-align: center;">
+                <a href="index.html" style="display: inline-block; padding: 8px 12px; border: 1px solid #f9bf3f; border-radius: 4px; color: #f9bf3f; font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700; text-decoration: none;" aria-label="Return to homepage">Back to Main Site</a>
+              </div>
+            </div>
+          </nav>
+
+          <div class="colorlib-footer">
+            <p><small>&copy; <script>document.write(new Date().getFullYear());</script> Degly Pava. All rights reserved.</small></p>
+            <ul>
+              <li><a href="https://www.linkedin.com/in/deglypava/" aria-label="LinkedIn Profile"><i class="icon-linkedin2"></i></a></li>
+              <li><a href="https://github.com/DglyP" aria-label="GitHub Profile"><i class="icon-github"></i></a></li>
+              <li><a href="mailto:deglypavapava@gmail.com" aria-label="Email Contact"><i class="icon-mail6"></i></a></li>
+            </ul>
+          </div>
+        </aside>
+
+        <main id="colorlib-main" role="main">
+          <section class="recruiter-hero" id="overview">
+            <div class="colorlib-narrow-content">
+              <span class="heading-meta">Overview</span>
+              <h2 class="colorlib-heading">I build XR products, ecosystems, and launch-ready experiences</h2>
+              <p class="hero-lede">I work at the intersection of XR engineering, developer enablement, and public product storytelling. If you are building wearables, spatial apps, XR platforms, or developer ecosystems, this page shows what I ship and how I can help your team move faster.</p>
+              <div class="quick-actions">
+                <a class="btn btn-primary btn-learn" href="mailto:deglypavapava@gmail.com">Work With Me</a>
+                <a class="btn btn-primary btn-learn" href="https://www.linkedin.com/in/deglypava/" target="_blank" rel="noreferrer noopener">LinkedIn</a>
+                <a class="btn btn-primary btn-learn" href="projects.html">Project Archive</a>
+              </div>
+            </div>
+          </section>
+
+          <section class="section-wrap" id="achievements">
+            <div class="colorlib-narrow-content">
+              <span class="heading-meta">Achievements</span>
+              <h2 class="colorlib-heading">Measured Outcomes</h2>
+              <div class="achievement-grid">
+                <article class="achievement-card"><strong>291M+</strong><span>AR and social XR interactions delivered</span></article>
+                <article class="achievement-card"><strong>20K+</strong><span>XR platform downloads supported through integrations</span></article>
+                <article class="achievement-card"><strong>15+</strong><span>Companies using package/tooling workflows</span></article>
+                <article class="achievement-card"><strong>700+</strong><span>Developers mentored through talks, workshops, and direct support</span></article>
+                <article class="achievement-card"><strong>50+</strong><span>Industry clients supported in AR/XR deployments</span></article>
+                <article class="achievement-card"><strong>173</strong><span>Countries reached by AR app/game releases</span></article>
+                <article class="achievement-card"><strong>5+</strong><span>Complex XR and AI projects delivered</span></article>
+                <article class="achievement-card"><strong>MWC 2025</strong><span>Astroscoop Apple Vision Pro showcase with KDDI</span></article>
+              </div>
+            </div>
+          </section>
+
+          <section class="section-wrap alt" id="experience">
+            <div class="colorlib-narrow-content">
+              <span class="heading-meta">Experience</span>
+              <h2 class="colorlib-heading">What I have done</h2>
+              <p class="section-intro">A quick public summary of the roles, platforms, and outcomes I have delivered across XR engineering, developer relations, and ecosystem growth.</p>
+
+              <div class="experience-list">
+                <article class="experience-item animate-box" data-animate-effect="fadeInLeft">
+                  <h3>STYLY, Inc.</h3>
+                  <p class="experience-meta">Technology Evangelist and Senior XR Engineer | 2024 - Present | Tokyo</p>
+                  <ul>
+                    <li>Shipped cross-platform XR integrations across Unity, OpenXR, visionOS, Android XR, and wearable ecosystems.</li>
+                    <li>Built SDK-style tooling and partner-ready technical workflows used by multiple companies.</li>
+                    <li>Connected engineering delivery with public demos, developer relations, and ecosystem partnerships.</li>
+                  </ul>
+                </article>
+
+                <article class="experience-item animate-box" data-animate-effect="fadeInRight">
+                  <h3>Meta Horizon Start</h3>
+                  <p class="experience-meta">Mentor | 2025 - Present | Remote</p>
+                  <ul>
+                    <li>Mentored developers and game teams on product direction, store readiness, and growth-related execution.</li>
+                    <li>Provided technical and strategic feedback in recurring sessions across multiple projects.</li>
+                  </ul>
+                </article>
+
+                <article class="experience-item animate-box" data-animate-effect="fadeInLeft">
+                  <h3>Pretia Technologies</h3>
+                  <p class="experience-meta">Senior Unity AR Engineer | 2023 - 2024 | Tokyo</p>
+                  <ul>
+                    <li>Delivered Unity AR products and pipelines for enterprise and entertainment use cases.</li>
+                    <li>Built cross-device architectures spanning mobile and OpenXR devices.</li>
+                  </ul>
+                </article>
+
+                <article class="experience-item animate-box" data-animate-effect="fadeInRight">
+                  <h3>ColombiaXR</h3>
+                  <p class="experience-meta">Founder and Ecosystem Lead | 2021 - 2025 | Colombia</p>
+                  <ul>
+                    <li>Built a developer/community ecosystem and promoted XR adoption through events and collaboration.</li>
+                    <li>Led social XR projects and campaigns at scale with measurable engagement outcomes.</li>
+                  </ul>
+                </article>
+              </div>
+            </div>
+          </section>
+
+          <section class="section-wrap" id="styly-projects">
+            <div class="colorlib-narrow-content">
+              <span class="heading-meta">STYLY Projects</span>
+              <h2 class="colorlib-heading">Thumbnail Highlights</h2>
+              <p class="section-intro">Selected projects and public signals from STYLY work and XR leadership activity.</p>
+
+              <div class="thumb-grid">
+                <article class="thumb-card animate-box" data-animate-effect="fadeInLeft">
+                  <img src="https://www.tokyonode.jp/sp/exhibition-ghostintheshell/assets/images/common/ogp.jpg" alt="DEN-NOH Vision Ghost in the Shell at TOKYO NODE">
+                  <div class="thumb-content">
+                    <h3>DEN-NOH Vision / Ghost in the Shell</h3>
+                    <p>Exhibition-scale AR experience using XREAL smart glasses and spatial storytelling at TOKYO NODE.</p>
+                    <a href="https://www.tokyonode.jp/sp/exhibition-ghostintheshell/" target="_blank" rel="noreferrer noopener">View reference</a>
+                  </div>
+                </article>
+
+                <article class="thumb-card animate-box" data-animate-effect="fadeInUp">
+                  <img src="https://styly.inc/wp-content/uploads/2024/01/c1681f46e5410783b6f2ef02bce895a0.png" alt="LocalLens on STYLY">
+                  <div class="thumb-content">
+                    <h3>LocalLens on STYLY</h3>
+                    <p>Location-aware XR concept and platform exploration for contextual spatial experiences.</p>
+                    <a href="https://styly.inc" target="_blank" rel="noreferrer noopener">STYLY reference</a>
+                  </div>
+                </article>
+
+                <article class="thumb-card animate-box" data-animate-effect="fadeInRight">
+                  <img src="https://styly.inc/wp-content/uploads/2025/01/987451a4553528ef0501e0404acccb5d.jpg" alt="Astroscoop at MWC">
+                  <div class="thumb-content">
+                    <h3>Astroscoop at MWC 2025</h3>
+                    <p>Apple Vision Pro mixed-reality game demo presented with KDDI at Mobile World Congress 2025.</p>
+                    <a href="https://styly.inc/ja/news/mwc2025/" target="_blank" rel="noreferrer noopener">View reference</a>
+                  </div>
+                </article>
+
+                <article class="thumb-card animate-box" data-animate-effect="fadeInLeft">
+                  <img src="https://static1.squarespace.com/static/61e46ccadefd334d334f5f61/t/6671ae93b6c4a76f85e9412e/1718726291149/RH+Logo+Scnshot.jpg?format=1500w" alt="Best Mentor at MIT Reality Hack">
+                  <div class="thumb-content">
+                    <h3>Best Mentor at MIT Reality Hack</h3>
+                    <p>Mentorship and judging support for XR teams across VisionOS, Unity, and Swift project tracks.</p>
+                    <a href="https://mitrealityhack.com/" target="_blank" rel="noreferrer noopener">MIT Reality Hack</a>
+                  </div>
+                </article>
+
+                <article class="thumb-card animate-box" data-animate-effect="fadeInUp">
+                  <img src="https://deglypava.com/images/caroussel-photos/BlaBlaEvents.jpg" alt="Speaker at XR Tokyo">
+                  <div class="thumb-content">
+                    <h3>Speaker at XR Tokyo</h3>
+                    <p>Talked about AI + XR glasses, spatial computing trends, and developer ecosystem direction.</p>
+                    <a href="index.html#speaking" target="_blank" rel="noreferrer noopener">Speaking section</a>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </section>
+
+          <section class="section-wrap" id="meta-mentorship">
+            <div class="colorlib-narrow-content">
+              <span class="heading-meta">Meta Mentorship</span>
+              <h2 class="colorlib-heading">Games and Teams I Have Supported</h2>
+              <p class="section-intro">Public links to games, studios, and project pages related to my Meta Horizon Start mentorship work.</p>
+
+              <div class="meta-grid">
+                <article class="meta-card"><h3>PICKABOOM</h3><a href="https://www.pickaboomvr.com/" target="_blank" rel="noreferrer noopener">Website</a></article>
+                <article class="meta-card"><h3>CrepeMaster</h3><a href="https://hallucinations-studio.com/crepe-master/" target="_blank" rel="noreferrer noopener">Website</a></article>
+                <article class="meta-card"><h3>FPSEnhancedReality</h3><a href="https://www.virtualgoreality.com/" target="_blank" rel="noreferrer noopener">Website</a></article>
+                <article class="meta-card"><h3>PaintedRealms</h3><a href="https://paintedrealmsgame.com/" target="_blank" rel="noreferrer noopener">Website</a></article>
+                <article class="meta-card"><h3>RunesUnbound</h3><a href="https://www.meta.com/en-gb/experiences/runes-unbound/9403896492974493/" target="_blank" rel="noreferrer noopener">Meta Store</a></article>
+                <article class="meta-card"><h3>SolProtocol</h3><a href="https://linktr.ee/solprotocolvr" target="_blank" rel="noreferrer noopener">Project Link Hub</a></article>
+                <article class="meta-card"><h3>SoulRetreat</h3><a href="https://www.soulretreat.app/" target="_blank" rel="noreferrer noopener">Website</a></article>
+                <article class="meta-card"><h3>TowerisVR</h3><a href="https://www.towerisvr.com/" target="_blank" rel="noreferrer noopener">Website</a></article>
+                <article class="meta-card"><h3>iWorlds</h3><a href="https://exitconditions.com/" target="_blank" rel="noreferrer noopener">Studio Website</a></article>
+              </div>
+
+              <div class="meta-note">
+                If you are exploring collaborations, I can share deeper case studies, launch support details, and strategy notes in a private follow-up.
+              </div>
+            </div>
+          </section>
+
+          <section class="section-wrap alt" id="contact">
+            <div class="colorlib-narrow-content">
+              <span class="heading-meta">Contact</span>
+              <h2 class="colorlib-heading">Let’s build something together</h2>
+              <p class="section-intro">Open to collaborations, speaking, consulting, and full-time opportunities in XR, wearables, and developer ecosystem work.</p>
+              <p>Email: <a href="mailto:deglypavapava@gmail.com">deglypavapava@gmail.com</a><br>
+              LinkedIn: <a href="https://www.linkedin.com/in/deglypava/" target="_blank" rel="noreferrer noopener">linkedin.com/in/deglypava</a><br>
+              Website: <a href="https://deglypava.com" target="_blank" rel="noreferrer noopener">deglypava.com</a></p>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.flexslider-min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.countTo.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/navigation-scroll-fix.js"></script>
+  </body>
+</html>

@@ -1,1 +1,19 @@
 node_modules
+
+# OS / build junk
+.DS_Store
+**/.DS_Store
+.sass-cache/
+__pycache__/
+*.pyc
+
+# Binaries that should not be published
+app-release.apk
+
+# Private career materials — NEVER commit (this repo is public at deglypava.com)
+Careers/
+JOBDESCRIPTIONFILE.md
+DeglyPava_Manager.pdf
+DeglyPava_Netflix_GamesSDK_Resume.html
+DeglyPava_Netflix_GamesSDK_Resume.pdf
+DeglyPava_Netflix_GamesSDK_Resume_larger-font.pdf

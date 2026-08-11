@@ -36,6 +36,7 @@
       "image": "images/astroscoop.jpg",
       "url": "https://styly.inc/ja/news/mwc2025/",
       "demoUrl": "https://styly.inc/ja/news/mwc2025/",
+      "category": "styly",
       "technologies": [
         "Unity",
         "Vision Pro",
@@ -50,6 +51,7 @@
       "description": "Planned and built web apps for Meta Ray-Ban Display smart glasses, focusing on wearable UX, display-first interaction design, and lightweight web delivery for hands-free spatial use cases.",
       "image": "images/caroussel-photos/StarVAir2Glasses.jpeg",
       "url": "https://github.com/facebookincubator/meta-wearables-webapp",
+      "category": "wearables",
       "technologies": [
         "Wearables",
         "JavaScript",
@@ -65,6 +67,7 @@
       "description": "Planned and developed large-scale XREAL location-based entertainment experiences, translating smart-glasses interaction design into reliable multi-user deployments for public venues and immersive events.",
       "image": "images/caroussel-photos/KDDI Demos.jpg",
       "url": "https://styly.inc/news/ghost-in-the-shell-ar-2026/",
+      "category": "styly",
       "technologies": [
         "Unity",
         "OpenXR",
@@ -80,6 +83,7 @@
       "description": "Planned and developed the DEN-NOH Vision AR experience for Ghost in the Shell at TOKYO NODE, combining XREAL smart glasses, spatial storytelling, and exhibition-scale XR delivery for a public installation.",
       "image": "images/caroussel-photos/TokyoXRNode.jpg",
       "url": "https://www.tokyonode.jp/sp/exhibition-ghostintheshell/",
+      "category": "styly",
       "technologies": [
         "Unity",
         "OpenXR",
@@ -336,6 +340,54 @@
         "SteamVR",
         "VR",
         "C#"
+      ],
+      "featured": false
+    },
+    {
+      "id": "local-lens-styly",
+      "title": "LocalLens on STYLY",
+      "description": "Location-aware XR concept developed in the STYLY ecosystem for contextual spatial experiences.",
+      "image": "https://styly.inc/wp-content/uploads/2024/01/c1681f46e5410783b6f2ef02bce895a0.png",
+      "url": "https://styly.inc",
+      "demoUrl": "https://styly.inc",
+      "category": "styly",
+      "technologies": [
+        "STYLY",
+        "AR",
+        "Location-Based",
+        "Spatial Computing"
+      ],
+      "featured": true
+    },
+    {
+      "id": "meta-horizon-start-mentorship",
+      "title": "Meta Horizon Start Mentorship",
+      "description": "Mentored XR game teams on product direction, store readiness, and launch execution across the Meta Start ecosystem.",
+      "image": "images/caroussel-photos/BlaBlaEvents.jpg",
+      "url": "recruiter-profile.html#meta-mentorship",
+      "demoUrl": "recruiter-profile.html#meta-mentorship",
+      "category": "meta-start",
+      "technologies": [
+        "Meta",
+        "Mentorship",
+        "VR",
+        "Developer Relations"
+      ],
+      "featured": true
+    },
+    {
+      "id": "mit-reality-hack-mentor",
+      "title": "MIT Reality Hack Mentor Award",
+      "description": "Supported XR teams as mentor and judge across VisionOS, Unity, and Swift tracks at MIT Reality Hack.",
+      "image": "https://static1.squarespace.com/static/61e46ccadefd334d334f5f61/t/6671ae93b6c4a76f85e9412e/1718726291149/RH+Logo+Scnshot.jpg?format=1500w",
+      "url": "https://mitrealityhack.com/",
+      "demoUrl": "https://mitrealityhack.com/",
+      "category": "meta-start",
+      "technologies": [
+        "Mentorship",
+        "XR",
+        "VisionOS",
+        "Unity"
       ],
       "featured": false
     }
