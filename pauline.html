@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pauline's Japan — 4–19 Oct</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Space+Grotesk:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1C2333;
+    --indigo:#22314E;
+    --indigo-dark:#161D2C;
+    --paper:#EEEAE1;
+    --paper-dim:#E3DECF;
+    --vermilion:#B93B2C;
+    --line:#C9C2AE;
+    --muted:#6B7280;
+    --card:#F7F4EC;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    line-height:1.5;
+  }
+  .signage{
+    font-family:'Space Grotesk',monospace;
+    letter-spacing:0.02em;
+  }
+  h1,h2,h3{
+    font-family:'Fraunces',serif;
+    margin:0;
+    font-weight:600;
+  }
+
+  /* HERO */
+  .hero{
+    background:var(--indigo);
+    color:var(--paper);
+    padding:64px 24px 40px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero-inner{
+    max-width:920px;
+    margin:0 auto;
+  }
+  .hero .eyebrow{
+    font-family:'Space Grotesk',monospace;
+    font-size:13px;
+    color:#C9B896;
+    margin-bottom:14px;
+  }
+  .hero h1{
+    font-size:clamp(36px,6vw,58px);
+    line-height:1.05;
+    color:var(--paper);
+    max-width:11ch;
+  }
+  .hero p.sub{
+    margin-top:14px;
+    font-size:16px;
+    color:#B9C0D1;
+    max-width:46ch;
+  }
+  .route-line{
+    margin-top:44px;
+    width:100%;
+    overflow-x:auto;
+    padding-bottom:6px;
+  }
+  .route-line svg{ display:block; min-width:900px; }
+
+  /* STOPS NAV */
+  .stops-nav{
+    position:sticky;
+    top:0;
+    z-index:10;
+    background:var(--indigo-dark);
+    border-bottom:1px solid #33405C;
+    overflow-x:auto;
+    white-space:nowrap;
+  }
+  .stops-nav a{
+    display:inline-block;
+    padding:14px 18px;
+    color:#AEB7CC;
+    text-decoration:none;
+    font-family:'Space Grotesk',monospace;
+    font-size:13px;
+    border-right:1px solid #2C384F;
+  }
+  .stops-nav a:hover{ color:var(--paper); background:#1E2740; }
+
+  main{ max-width:920px; margin:0 auto; padding:0 24px; }
+
+  .section-head{
+    display:flex;
+    align-items:baseline;
+    justify-content:space-between;
+    gap:16px;
+    padding:56px 0 20px;
+    border-bottom:1px solid var(--line);
+  }
+  .section-head h2{ font-size:28px; }
+  .section-head .tag{
+    font-family:'Space Grotesk',monospace;
+    font-size:12px;
+    color:var(--muted);
+    white-space:nowrap;
+  }
+  .tag.confirmed{ color:#2F6B4F; }
+  .tag.suggested{ color:var(--vermilion); }
+
+  .scene{
+    width:100%;
+    height:auto;
+    margin-top:24px;
+    border:1px solid var(--line);
+    background:var(--card);
+  }
+  .scene svg{ display:block; width:100%; height:150px; }
+  .scene-caption{
+    font-family:'Space Grotesk',monospace;
+    font-size:11px;
+    color:var(--muted);
+    margin-top:8px;
+  }
+
+  .timeline{
+    position:relative;
+    padding-left:28px;
+    border-left:2px dashed var(--line);
+    margin-top:28px;
+  }
+  .day-card{
+    position:relative;
+    padding:0 0 40px 20px;
+  }
+  .day-card::before{
+    content:"";
+    position:absolute;
+    left:-30px;
+    top:4px;
+    width:12px;
+    height:12px;
+    border-radius:50%;
+    background:var(--indigo);
+    border:2px solid var(--paper);
+    outline:2px solid var(--line);
+  }
+  .day-card .date{
+    font-family:'Space Grotesk',monospace;
+    font-size:13px;
+    color:var(--muted);
+    margin-bottom:4px;
+  }
+  .day-card h3{ font-size:20px; margin-bottom:8px; }
+  .day-card ul{ margin:0 0 12px; padding-left:18px; }
+  .day-card li{ margin-bottom:4px; }
+  .day-card textarea{
+    width:100%;
+    min-height:44px;
+    resize:vertical;
+    border:1px dashed var(--line);
+    background:var(--card);
+    border-radius:2px;
+    padding:8px 10px;
+    font-family:'Inter',sans-serif;
+    font-size:13px;
+    color:var(--ink);
+  }
+  .day-card textarea::placeholder{ color:#A79E88; }
+  .note-label{
+    font-family:'Space Grotesk',monospace;
+    font-size:11px;
+    color:var(--muted);
+    margin-bottom:4px;
+    display:block;
+  }
+
+  /* OPTION CARDS */
+  .option-list{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    margin-bottom:14px;
+  }
+  .option-card{
+    display:flex;
+    align-items:flex-start;
+    gap:10px;
+    border:1px solid var(--line);
+    background:var(--card);
+    padding:10px 12px;
+  }
+  .option-card input[type=checkbox]{
+    margin-top:4px;
+    flex-shrink:0;
+    accent-color:var(--indigo);
+    cursor:pointer;
+  }
+  .option-body{ flex:1; min-width:0; }
+  .option-name{
+    font-weight:600;
+    color:var(--ink);
+    text-decoration:none;
+    border-bottom:1px dashed var(--vermilion);
+  }
+  .option-name:hover{ color:var(--vermilion); }
+  .option-tag{
+    font-family:'Space Grotesk',monospace;
+    font-size:10px;
+    letter-spacing:0.03em;
+    text-transform:uppercase;
+    color:var(--muted);
+    border:1px solid var(--line);
+    padding:1px 6px;
+    margin-left:8px;
+    white-space:nowrap;
+  }
+  .option-blurb{
+    font-size:13px;
+    color:#3B3F4A;
+    margin-top:3px;
+  }
+  .checkable-item.checked{ opacity:0.55; }
+  .checkable-item.checked .option-name{ text-decoration:line-through; color:var(--muted); }
+  .grid-option label{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    cursor:pointer;
+  }
+  .grid-option .option-name{ font-family:'Fraunces',serif; font-size:17px; border-bottom:none; }
+  .grid-option .stats-line{
+    font-family:'Space Grotesk',monospace;
+    font-size:12px;
+    color:var(--vermilion);
+    margin:8px 0 6px;
+  }
+  .join-badge{
+    display:inline-block;
+    font-family:'Space Grotesk',monospace;
+    font-size:10px;
+    letter-spacing:0.03em;
+    text-transform:uppercase;
+    background:var(--indigo);
+    color:var(--paper);
+    padding:1px 7px;
+    margin-left:6px;
+    white-space:nowrap;
+  }
+
+  .personal-note{
+    max-width:920px;
+    margin:28px auto 0;
+    padding:0 24px;
+  }
+  .personal-note-inner{
+    background:var(--card);
+    border-left:3px solid var(--vermilion);
+    padding:18px 20px;
+    font-size:15px;
+    line-height:1.6;
+    color:var(--ink);
+  }
+  .personal-note-inner .sign{
+    display:block;
+    margin-top:10px;
+    font-family:'Fraunces',serif;
+    font-style:italic;
+    color:var(--muted);
+    font-size:14px;
+  }
+
+  /* PACKING */
+  .pack-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:24px;
+    margin-top:28px;
+  }
+  .pack-cat h4{
+    font-family:'Space Grotesk',monospace;
+    font-size:13px;
+    color:var(--vermilion);
+    margin:0 0 10px;
+  }
+  .pack-cat label{
+    display:flex;
+    align-items:flex-start;
+    gap:8px;
+    font-size:14px;
+    margin-bottom:8px;
+    cursor:pointer;
+  }
+  .pack-cat input[type=checkbox]{
+    margin-top:3px;
+    accent-color:var(--indigo);
+  }
+  .pack-cat label.checked span{
+    text-decoration:line-through;
+    color:var(--muted);
+  }
+
+  /* INFO CARDS */
+  .info-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:1px;
+    background:var(--line);
+    margin-top:28px;
+    border:1px solid var(--line);
+  }
+  .info-card{
+    background:var(--card);
+    padding:20px;
+  }
+  .info-card h4{
+    font-family:'Fraunces',serif;
+    font-size:17px;
+    margin:0 0 8px;
+  }
+  .info-card p{ margin:0; font-size:14px; color:#3B3F4A; }
+
+  /* BUDGET */
+  table.budget{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:28px;
+    font-size:14px;
+  }
+  table.budget th, table.budget td{
+    text-align:left;
+    padding:10px 8px;
+    border-bottom:1px solid var(--line);
+  }
+  table.budget th{
+    font-family:'Space Grotesk',monospace;
+    font-size:12px;
+    color:var(--muted);
+    font-weight:500;
+  }
+  table.budget td.num{ font-family:'Space Grotesk',monospace; text-align:right; }
+  table.budget tr.total td{ font-weight:600; border-bottom:none; padding-top:14px; }
+
+  footer{
+    max-width:920px;
+    margin:0 auto;
+    padding:40px 24px 80px;
+    color:var(--muted);
+    font-size:13px;
+  }
+  .save-note{
+    font-family:'Space Grotesk',monospace;
+    font-size:11px;
+    color:var(--muted);
+    margin-top:6px;
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow signage">TOKYO → HAKONE/FUJI → KANSAI · 4—19 OCTOBER</div>
+    <h1>Pauline's Japan</h1>
+    <p class="sub">Every day below is a menu, not a fixed plan — check off what she wants to do, click any place to look it up. Degly joins for Tokyo and a few nights in Hakone/Fujikawaguchiko; the rest carries on with the group.</p>
+    <div class="route-line">
+      <svg viewBox="0 0 900 60" xmlns="http://www.w3.org/2000/svg">
+        <line x1="20" y1="30" x2="880" y2="30" stroke="#3A4868" stroke-width="3"/>
+        <g id="route-dots" font-family="Space Grotesk" font-size="11" fill="#B9C0D1"></g>
+      </svg>
+    </div>
+    </div>
+</div>
+
+<div class="personal-note">
+  <div class="personal-note-inner">
+    Poli — I'm sorry this took so long to actually reach you. You asked ages ago and I kept saying "yes, sending it" and then just... didn't. That's on me, not you. It's all here now, properly, and I'm not going quiet on you again.
+    <br><br>
+    Also — I'm in for Tokyo and a few nights in Hakone/Fujikawaguchiko with you. Anything tagged <span class="join-badge">Degly's in</span> below is something I'll actually be there for. Everything else is yours and the group's to run with.
+    <span class="sign">— Degly</span>
+  </div>
+</div>
+
+<nav class="stops-nav signage">
+  <a href="#tokyo">TOKYO</a>
+  <a href="#hakonefuji">HAKONE + FUJI</a>
+  <a href="#kansai">KANSAI</a>
+  <a href="#trails">TRAILS</a>
+  <a href="#more">MORE TRAILS</a>
+  <a href="#stays">STAYS</a>
+  <a href="#packing">PACKING</a>
+  <a href="#info">INFO</a>
+  <a href="#budget">BUDGET</a>
+</nav>
+
+<main>
+
+  <section id="tokyo">
+    <div class="section-head">
+      <h2>Tokyo</h2>
+      <span class="tag confirmed">DEGLY JOINS, EXCEPT THE HIKE · 6—9 OCT</span>
+    </div>
+    <div class="scene">
+      <svg viewBox="0 0 900 150" xmlns="http://www.w3.org/2000/svg">
+        <rect width="900" height="150" fill="#F7F4EC"/>
+        <path d="M0,120 Q100,90 200,115 T400,110 T600,120 T900,105 V150 H0 Z" fill="#DAD3BE"/>
+        <path d="M0,135 Q150,110 320,132 T650,128 T900,132 V150 H0 Z" fill="#C9C2AE"/>
+        <path d="M0,145 C150,130 300,148 450,138 C600,128 750,148 900,140 V150 H0 Z" fill="#22314E" opacity="0.85"/>
+        <circle cx="770" cy="45" r="22" fill="#B93B2C" opacity="0.85"/>
+        <g stroke="#8B8365" stroke-width="2" fill="none" opacity="0.6">
+          <path d="M60,150 L75,95 L90,150"/>
+          <path d="M110,150 L128,80 L146,150"/>
+          <path d="M150,150 L162,110 L174,150"/>
+        </g>
+      </svg>
+      <div class="scene-caption" style="padding:0 12px 12px;">City icons first, then a breather in Okutama's cedar ridgelines</div>
+    </div>
+    <div class="timeline" id="tokyo-timeline"></div>
+  </section>
+
+  <section id="hakonefuji">
+    <div class="section-head">
+      <h2>Hakone &amp; Fuji</h2>
+      <span class="tag confirmed">DEGLY JOINS, EXCEPT THE HIKES · 10—13 OCT</span>
+    </div>
+    <div class="scene">
+      <svg viewBox="0 0 900 150" xmlns="http://www.w3.org/2000/svg">
+        <rect width="900" height="150" fill="#F7F4EC"/>
+        <path d="M450,25 L560,145 L340,145 Z" fill="#EEEAE1" stroke="#22314E" stroke-width="2"/>
+        <path d="M480,55 L520,100 L440,100 Z" fill="#22314E" opacity="0.15"/>
+        <path d="M0,145 Q150,120 300,140 T600,138 T900,142 V150 H0 Z" fill="#8B8365" opacity="0.5"/>
+        <ellipse cx="450" cy="148" rx="200" ry="6" fill="#B9C0D1" opacity="0.6"/>
+        <circle cx="150" cy="40" r="16" fill="#B93B2C" opacity="0.8"/>
+      </svg>
+      <div class="scene-caption" style="padding:0 12px 12px;">Lake Ashi, Owakudani's steam vents, and the Fuji Five Lakes</div>
+    </div>
+    <div class="timeline" id="hakonefuji-timeline"></div>
+  </section>
+
+  <section id="kansai">
+    <div class="section-head">
+      <h2>Kyoto, Nara &amp; Osaka</h2>
+      <span class="tag suggested">REST OF THE TRIP · 14—19 OCT</span>
+    </div>
+    <div class="scene">
+      <svg viewBox="0 0 900 150" xmlns="http://www.w3.org/2000/svg">
+        <rect width="900" height="150" fill="#F7F4EC"/>
+        <path d="M0,150 L120,40 L200,100 L260,55 L340,150 Z" fill="#C9C2AE"/>
+        <path d="M250,150 L400,30 L470,90 L540,60 L650,150 Z" fill="#22314E" opacity="0.9"/>
+        <path d="M560,150 L680,70 L740,110 L820,55 L900,150 Z" fill="#8B8365" opacity="0.7"/>
+        <ellipse cx="450" cy="140" rx="120" ry="10" fill="#B9C0D1" opacity="0.5"/>
+      </svg>
+      <div class="scene-caption" style="padding:0 12px 12px;">Shrines, markets, and a couple of quieter forest walks in between</div>
+    </div>
+    <div class="timeline" id="onward-timeline"></div>
+  </section>
+
+  <section id="trails">
+    <div class="section-head">
+      <h2>Trails at a glance</h2>
+      <span class="tag">DISTANCE · GAIN · DIFFICULTY</span>
+    </div>
+    <div class="info-grid" id="trails-grid"></div>
+  </section>
+
+  <section id="more">
+    <div class="section-head">
+      <h2>The deep-nature alternative</h2>
+      <span class="tag suggested">SWAP FOR KANSAI, IF THE GROUP WANTS A HIKING FINALE</span>
+    </div>
+    <div class="scene">
+      <svg viewBox="0 0 900 150" xmlns="http://www.w3.org/2000/svg">
+        <rect width="900" height="150" fill="#F7F4EC"/>
+        <path d="M0,150 V100 Q225,120 450,100 T900,105 V150 Z" fill="#DCEBD8" opacity="0.9"/>
+        <g stroke="#6B7C60" stroke-width="1.5" opacity="0.6">
+          <line x1="60" y1="150" x2="60" y2="105"/>
+          <line x1="140" y1="150" x2="140" y2="98"/>
+          <line x1="230" y1="150" x2="230" y2="108"/>
+          <line x1="330" y1="150" x2="330" y2="100"/>
+          <line x1="430" y1="150" x2="430" y2="104"/>
+          <line x1="540" y1="150" x2="540" y2="96"/>
+          <line x1="650" y1="150" x2="650" y2="106"/>
+          <line x1="760" y1="150" x2="760" y2="99"/>
+          <line x1="850" y1="150" x2="850" y2="103"/>
+        </g>
+        <path d="M660,150 L700,45 L740,150 Z" fill="#22314E" opacity="0.15"/>
+      </svg>
+      <div class="scene-caption" style="padding:0 12px 12px;">Kamikochi's alpine valley and the Kumano Kodo pilgrim trail</div>
+    </div>
+    <p style="margin-top:16px;color:var(--muted);font-size:14px;max-width:64ch;">Honest trade-off: fitting Kyoto, Nara, and Osaka properly already fills the back half of the trip. If the group would rather trade some of that for real mountain time, this is the swap — Kamikochi's alpine valley, the old Nakasendo highway, and several days on the Kumano Kodo pilgrim trail, instead of the Kansai cities. It's a full replacement for days 14–19 above, not an add-on.</p>
+    <div class="timeline" id="deepnature-timeline" style="margin-top:20px;"></div>
+    <p style="margin-top:8px;color:var(--muted);font-size:14px;max-width:64ch;">A few more trail options if any single day above needs swapping:</p>
+    <div class="info-grid" id="more-trails-grid" style="margin-top:16px;"></div>
+  </section>
+
+  <section id="stays">
+    <div class="section-head">
+      <h2>Where to stay</h2>
+      <span class="tag">BOOK EARLY — ROOMS ARE SMALL</span>
+    </div>
+    <div class="info-grid" id="stays-grid"></div>
+  </section>
+
+  <section id="packing">
+    <div class="section-head">
+      <h2>Packing</h2>
+      <span class="tag">TAP TO CHECK OFF</span>
+    </div>
+    <div class="pack-grid" id="pack-grid"></div>
+    <div class="save-note">Checks are saved on this device automatically.</div>
+  </section>
+
+  <section id="info">
+    <div class="section-head">
+      <h2>Good to know</h2>
+      <span class="tag">OCTOBER IN JAPAN</span>
+    </div>
+    <div class="info-grid">
+      <div class="info-card">
+        <h4>IC card</h4>
+        <p>Get a Suica or Pasmo on arrival (Narita/Haneda, or any station machine) and tap it on every train, bus, and most konbini. Top up as you go — cash and card both work at the machines.</p>
+      </div>
+      <div class="info-card">
+        <h4>JR Pass or Hakone Free Pass</h4>
+        <p>Price out the JR Pass against a Hakone Free Pass plus separate shinkansen tickets — for this route the JR Pass isn't always the cheaper option, since Hakone's local transport runs on its own pass.</p>
+      </div>
+      <div class="info-card">
+        <h4>Onsen etiquette</h4>
+        <p>Wash and rinse fully before getting in. Tattoos can be an issue at some traditional ryokans — check ahead or look for a private/family bath option if that applies.</p>
+      </div>
+      <div class="info-card">
+        <h4>Weather</h4>
+        <p>Early-to-mid October runs mild, roughly 16–24°C, with the odd rain shower. Layers plus one light rain shell cover it — no need for heavy jackets yet.</p>
+      </div>
+      <div class="info-card">
+        <h4>Cash still matters</h4>
+        <p>Cards are more accepted than a few years ago, but small shops, temples, and some ramen counters are cash-only. Keep a stack of ¥1000 notes and coins on hand.</p>
+      </div>
+      <div class="info-card">
+        <h4>Konbini life</h4>
+        <p>7-Eleven, Lawson, and FamilyMart are genuinely useful for meals, ATMs, and bathroom stops — don't skip them out of politeness, everyone uses them constantly.</p>
+      </div>
+      <div class="info-card">
+        <h4>Quick etiquette</h4>
+        <p>No eating while walking, keep phone calls off trains, and carry a small bag for trash — public bins are rare. Shoes off wherever there's a raised entryway.</p>
+      </div>
+      <div class="info-card">
+        <h4>Bear awareness</h4>
+        <p>Okutama has had active bear advisories. Carry a bear bell, stick to marked trails, and avoid hiking alone at dawn or dusk in that area.</p>
+      </div>
+      <div class="info-card">
+        <h4>Book lodges early</h4>
+        <p>Kamikochi and the Kumano Kodo villages have very few rooms each, and October foliage season fills them fast. Lock these in before anything else on the route.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="budget">
+    <div class="section-head">
+      <h2>Rough daily budget</h2>
+      <span class="tag">PER PERSON, ESTIMATE</span>
+    </div>
+    <table class="budget">
+      <thead>
+        <tr><th>Category</th><th>Budget</th><th class="num">Mid-range</th></tr>
+      </thead>
+      <tbody id="budget-body"></tbody>
+      <tr class="total"><td>Total / day</td><td id="budget-total-low"></td><td class="num" id="budget-total-high"></td></tr>
+    </table>
+    <p style="font-size:13px;color:var(--muted);margin-top:10px;">Excludes flights and the JR Pass, which are one-off costs on top of this. Treat these as ballpark planning numbers, not quotes.</p>
+  </section>
+
+</main>
+
+<footer>
+  Built for Pauline's trip — Tokyo and Hakone/Fuji confirmed with Degly, Kansai leg is a starting point to merge with the rest of the group's plan, deep-nature route is there if a hiking finale wins out.
+</footer>
+
+<script>
+const tokyoDays = [
+  { date: "MON 6 OCT", focus: "Arrival — Yotsuya / Shinjuku", options: [
+      { name: "Shinjuku Gyoen", tag: "nature", joins: true, blurb: "Big, peaceful garden — an easy first walk after landing." },
+      { name: "Omoide Yokocho", tag: "food", joins: true, blurb: "Tiny yakitori-alley dinner, lantern-lit and atmospheric." },
+      { name: "Golden Gai", tag: "nightlife", joins: true, blurb: "A maze of micro-bars — just wander in and see what's open." }
+    ]},
+  { date: "TUE 7 OCT", focus: "Asakusa, Ueno, Akihabara", options: [
+      { name: "Senso-ji Temple", tag: "must-see", joins: true, blurb: "Tokyo's oldest temple, with the Nakamise shopping street leading up to it." },
+      { name: "Ueno Park", tag: "nature", joins: true, blurb: "Big park with museums on the edges if there's time to spare." },
+      { name: "Ameyoko Market", tag: "food", joins: true, blurb: "Street-market chaos — snacks, seafood, cheap finds." },
+      { name: "Akihabara", tag: "must-see", joins: true, blurb: "Neon, arcades, and electronics — best after dark." }
+    ]},
+  { date: "WED 8 OCT", focus: "Harajuku, Omotesando, Shibuya", options: [
+      { name: "Meiji Shrine", tag: "nature", joins: true, blurb: "A quiet forested shrine right next to Harajuku's chaos." },
+      { name: "Takeshita Street", tag: "must-see", joins: true, blurb: "Crepes, quirky fashion, peak Harajuku energy." },
+      { name: "Omotesando", tag: "must-see", joins: true, blurb: "Tree-lined avenue, slower pace, higher-end shopping and architecture." },
+      { name: "Shibuya Crossing", tag: "must-see", joins: true, blurb: "The famous crossing, then a rooftop view before dark." }
+    ]},
+  { date: "THU 9 OCT", focus: "Okutama — a nature day", options: [
+      { name: "Musashi Mitake Shrine", tag: "nature", blurb: "Cable car or hike up, then the rock-garden loop around the summit." },
+      { name: "Mukashi Michi Trail", tag: "nature", blurb: "Old river-gorge path — quiet, forested, almost no other hikers midweek." },
+      { name: "Mt. Kumotori", tag: "hike-hard", blurb: "Full-day option instead: Tokyo's highest point, 7–9 hrs round trip, bear bell recommended." }
+    ]}
+];
+
+const hakoneFujiDays = [
+  { date: "FRI 10 OCT", focus: "Tokyo → Hakone", options: [
+      { name: "Lake Ashi pirate-ship cruise", tag: "must-see", joins: true, blurb: "Fuji views on a clear day, classic Hakone photo stop." },
+      { name: "Hakone Open-Air Museum", tag: "must-see", joins: true, blurb: "Sculpture park with a dedicated Picasso pavilion." },
+      { name: "Hakone Shrine", tag: "must-see", joins: true, blurb: "The torii gate standing in the lake — best around sunset." }
+    ]},
+  { date: "SAT 11 OCT", focus: "Owakudani & a quiet Fuji view", options: [
+      { name: "Owakudani volcanic valley", tag: "must-see", joins: true, blurb: "Ropeway up to the steam vents — try the black eggs boiled in the sulphur springs." },
+      { name: "Mt. Kintoki", tag: "nature", blurb: "Short hike, ~2.5 hrs round trip, gentle grade — one of the better quiet Fuji views near Hakone." },
+      { name: "Second onsen soak", tag: "relax", joins: true, blurb: "Back at the ryokan — the whole point of staying in Hakone." }
+    ]},
+  { date: "SUN 12 OCT", focus: "Hakone → Fujikawaguchiko", options: [
+      { name: "Chureito Pagoda", tag: "must-see", joins: true, blurb: "The classic pagoda-plus-Fuji photo, best in morning light." },
+      { name: "Lake Kawaguchiko walk", tag: "nature", joins: true, blurb: "Slow lakeside path with Fuji across the water." },
+      { name: "Oshino Hakkai", tag: "must-see", joins: true, blurb: "Small thatched-roof village with spring-fed ponds." }
+    ]},
+  { date: "MON 13 OCT", focus: "Last day together", options: [
+      { name: "Mt. Mitsutoge", tag: "hike-hard", blurb: "Long but one of the best uncrowded Fuji views in the whole area." },
+      { name: "Kawaguchiko cafe day", tag: "relax", joins: true, blurb: "Easy lake day if legs need a rest before the group splits." },
+      { name: "Kawaguchiko Music Forest Museum", tag: "must-see", joins: true, blurb: "Quirky music-box museum with lake and Fuji views from the garden." }
+    ]}
+];
+
+const onwardDays = [
+  { date: "TUE 14 OCT", focus: "Arrive Kyoto", options: [
+      { name: "Fushimi Inari Taisha", tag: "must-see", blurb: "Thousands of vermilion torii gates — go at opening time, before the crowds." },
+      { name: "Nishiki Market", tag: "food", blurb: "Kyoto's kitchen street, good for lunch and snacking your way through." },
+      { name: "Gion", tag: "must-see", blurb: "Lantern-lit streets at dusk, a chance of spotting a geiko." }
+    ]},
+  { date: "WED 15 OCT", focus: "Arashiyama & Kinkaku-ji", options: [
+      { name: "Arashiyama Bamboo Grove", tag: "nature", blurb: "Arrive before 8am to actually feel the quiet." },
+      { name: "Tenryu-ji", tag: "must-see", blurb: "Temple garden right next to the bamboo grove." },
+      { name: "Kinkaku-ji", tag: "must-see", blurb: "The Golden Pavilion — best in the afternoon light." },
+      { name: "Kurama to Kibune trail", tag: "hike", blurb: "Quieter alternative: a forested ridge walk between two small onsen villages." }
+    ]},
+  { date: "THU 16 OCT", focus: "Nara day trip", options: [
+      { name: "Nara Park", tag: "must-see", blurb: "The deer, careful with the crackers." },
+      { name: "Todai-ji Temple", tag: "must-see", blurb: "The great Buddha hall — one of the largest wooden buildings on earth." },
+      { name: "Kasuga Taisha forest paths", tag: "nature", blurb: "Past the main crowds, quiet cedar-forest walking." }
+    ]},
+  { date: "FRI 17 OCT", focus: "Kyoto → Osaka", options: [
+      { name: "Osaka Castle", tag: "must-see", blurb: "Grounds are free to wander, tower has a small museum inside." },
+      { name: "Dotonbori", tag: "food", blurb: "Neon canal-side street food — takoyaki, okonomiyaki, the works." },
+      { name: "Kuromon Market", tag: "food", blurb: "Osaka's answer to Nishiki, great for grazing." }
+    ]},
+  { date: "SAT 18 OCT", focus: "Osaka, flex day", options: [
+      { name: "Universal Studios Japan", tag: "must-see", blurb: "If the group wants a theme-park day, this is the one." },
+      { name: "Minoo Park waterfall trail", tag: "nature", blurb: "Genuinely quiet forested walk to a waterfall, 30 min from the city, wild monkeys included." },
+      { name: "Shinsekai", tag: "must-see", blurb: "Retro Osaka neighbourhood, good for an evening wander." }
+    ]},
+  { date: "SUN 19 OCT", focus: "Final day", options: [
+      { name: "Pack & buffer time", tag: "logistics", blurb: "For anything missed or delayed earlier in the trip." },
+      { name: "One last easy walk", tag: "nature", blurb: "Somewhere green and unhurried before heading home." },
+      { name: "Last konbini run", tag: "food", blurb: "You'll miss it more than you'd expect." }
+    ]}
+];
+
+const deepNatureDays = [
+  { date: "TUE 14 OCT", focus: "Tokyo → Kamikochi", options: [
+      { name: "Taisho Pond", tag: "nature", blurb: "Easy afternoon walk on arrival — dead trees standing in turquoise water." },
+      { name: "Kamikochi mountain lodge check-in", tag: "logistics", blurb: "No private cars allowed in the valley — bus or taxi only." }
+    ]},
+  { date: "WED 15 OCT", focus: "Kamikochi — Myojin Pond loop", options: [
+      { name: "Myojin Pond Loop", tag: "hike", blurb: "7.7 km, ~160m gain, moderate — the classic Kamikochi valley walk." },
+      { name: "Early start (before 8am)", tag: "logistics", blurb: "The path is genuinely quiet before 8am and after 3pm." }
+    ]},
+  { date: "THU 16 OCT", focus: "Kamikochi — Tokusawa or Karasawa", options: [
+      { name: "Tokusawa extension", tag: "hike", blurb: "2–3 hrs further than Myojin, gentler grade." },
+      { name: "Karasawa Cirque", tag: "hike-hard", blurb: "Long day, ~800m gain, some of the earliest autumn colour in Japan." }
+    ]},
+  { date: "FRI 17 OCT", focus: "Kamikochi → Magome (Kiso Valley)", options: [
+      { name: "Magome post town", tag: "must-see", blurb: "Edo-era hillside town, a warm-down stop between two bigger hikes." }
+    ]},
+  { date: "SAT 18 OCT", focus: "Nakasendo — Magome to Tsumago", options: [
+      { name: "Nakasendo Trail", tag: "hike", blurb: "7.7 km, ~2.5 hrs, easy — an old shogunate highway through cedar forest." },
+      { name: "Tsumago post town", tag: "must-see", blurb: "One of the best-preserved Edo-era towns in Japan." }
+    ]},
+  { date: "SUN 19 OCT", focus: "Begin the Kumano Kodo", options: [
+      { name: "Takijiri-oji to Takahara", tag: "hike", blurb: "First day of the Nakahechi pilgrimage route — this leg needs several more days than the Kansai plan." }
+    ]}
+];
+
+function searchUrl(name){
+  return "https://www.google.com/search?q=" + encodeURIComponent(name + ", Japan");
+}
+
+function renderDayOptions(containerId, days){
+  const el = document.getElementById(containerId);
+  el.innerHTML = days.map((d, di) => `
+    <div class="day-card">
+      <div class="date signage">${d.date}</div>
+      <h3>${d.focus}</h3>
+      <div class="option-list">
+        ${d.options.map((o, oi) => {
+          const key = `${containerId}:${di}:${oi}`;
+          return `
+          <div class="option-card checkable-item">
+            <input type="checkbox" data-key="${key}">
+            <div class="option-body">
+              <a class="option-name" href="${searchUrl(o.name)}" target="_blank" rel="noopener">${o.name}</a>
+              <span class="option-tag">${o.tag}</span>
+              ${o.joins ? `<span class="join-badge">Degly's in</span>` : ""}
+              <div class="option-blurb">${o.blurb}</div>
+            </div>
+          </div>`;
+        }).join("")}
+      </div>
+      <span class="note-label">NOTE</span>
+      <textarea placeholder="Add a note, booking link, or change…" data-key="note:${containerId}:${di}"></textarea>
+    </div>
+  `).join("");
+}
+renderDayOptions("tokyo-timeline", tokyoDays);
+renderDayOptions("hakonefuji-timeline", hakoneFujiDays);
+renderDayOptions("onward-timeline", onwardDays);
+renderDayOptions("deepnature-timeline", deepNatureDays);
+
+// route dots in hero
+(function(){
+  const total = tokyoDays.length + hakoneFujiDays.length + onwardDays.length;
+  const g = document.getElementById("route-dots");
+  const startX = 40, endX = 860;
+  let svg = "";
+  for(let i=0;i<total;i++){
+    const x = startX + (endX-startX) * (i/(total-1));
+    let color = "#EEEAE1";
+    if(i < tokyoDays.length) color = "#B93B2C";
+    else if(i < tokyoDays.length + hakoneFujiDays.length) color = "#C9A24B";
+    svg += `<circle cx="${x}" cy="30" r="5" fill="${color}"/>`;
+  }
+  g.innerHTML = svg;
+})();
+
+function renderInfoOptions(containerId, items, keyPrefix){
+  const el = document.getElementById(containerId);
+  el.innerHTML = items.map((t, i) => {
+    const key = `${keyPrefix}:${i}`;
+    return `
+    <div class="info-card checkable-item grid-option">
+      <label>
+        <input type="checkbox" data-key="${key}">
+        <a class="option-name" href="${searchUrl(t.name)}" target="_blank" rel="noopener">${t.name}</a>
+      </label>
+      ${t.stats ? `<p class="stats-line">${t.stats}</p>` : ""}
+      <p>${t.note}</p>
+    </div>`;
+  }).join("");
+}
+
+// trail cards — nature woven into the main route
+const trails = [
+  { name: "Mukashi Michi Trail, Okutama", stats: "~10 km · gentle · half-day", note: "Old river-gorge path near Mt. Mitake — forested, close to empty on weekdays, ends at a soba restaurant." },
+  { name: "Mt. Kintoki, Hakone", stats: "~7 km · moderate · half-day", note: "A short climb above the tourist crowds at Owakudani, with one of the better quiet Fuji views in the Hakone area." },
+  { name: "Mt. Mitsutoge, Fuji Five Lakes", stats: "12–18 km · 750–1,100m gain · hard", note: "One of the best uncrowded Fuji viewpoints, from Kawaguchiko. Steep and long, optional on the Hakone/Fuji leg." },
+  { name: "Arashiyama Bamboo Grove walk", stats: "~1.5 km · flat · 30 min", note: "Short but genuinely atmospheric if you go before 8am, before the tour groups arrive." },
+  { name: "Nara Park forest paths", stats: "~5 km · flat · 1.5 hrs", note: "Past the main deer-park crowds toward Kasuga Taisha, the paths run through quiet cedar forest." },
+  { name: "Minoo Park waterfall trail, Osaka", stats: "~3 km each way · gentle · 1.5 hrs", note: "Forested river walk to a 33m waterfall, 30 minutes from central Osaka. Wild monkeys, very few tourists." }
+];
+renderInfoOptions("trails-grid", trails, "trail");
+
+// more trail options (swap-ins for a single day, not full route changes)
+const moreTrails = [
+  { name: "Senjogahara Marsh, Nikko", stats: "6.3 km · flat · ~2.5 hrs", note: "Boardwalk across a highland marsh at 1,400m, golden grasses in October, ends at Yumoto Onsen. A different landscape entirely — swap for a Tokyo-area day if you'd rather see marsh than mountain." },
+  { name: "Mt. Kumotori (Kamosawa route)", stats: "~18 km · 1,100m gain · full day", note: "Tokyo's highest point, if one Okutama day isn't enough. Steady beech-forest climb, no scrambling. Bear bell recommended." },
+  { name: "Kumano Kodo — Kohechi route", stats: "~70 km over 3–4 days · steep, remote", note: "Links Koyasan to Kumano Hongu Taisha over three passes above 1,000m. Far fewer hikers than Nakahechi, but for experienced legs only." },
+  { name: "Tokusawa to Yokoo, Kamikochi", stats: "~15 km round trip · gentle grade", note: "If Karasawa feels too long, this extends past Tokusawa through forest and riverside clearings." }
+];
+renderInfoOptions("more-trails-grid", moreTrails, "moretrail");
+
+// stays
+const stays = [
+  { name: "Hakone onsen ryokan", note: "Worth the splurge for one or two nights — private or shared onsen baths, kaiseki dinner included. Book well ahead for October foliage season." },
+  { name: "Fujikawaguchiko lakeside lodge", note: "A room facing Lake Kawaguchiko with a clear-morning Fuji view is the whole point — check the view angle before booking, not every room has it." },
+  { name: "Kyoto machiya guesthouse", note: "A converted townhouse in Gion or near Nishiki Market puts you inside the old city instead of near the station." },
+  { name: "Osaka hotel near Namba/Dotonbori", note: "Central and walkable to the food streets; also the easiest base for a Universal Studios or Minoo Park day." },
+  { name: "Kamikochi mountain lodges", note: "For the deep-nature route: Tokusawa Lodge or a Myojin-area ryokan put you closer to the trailheads than the bus terminal hotels." },
+  { name: "Magome or Tsumago ryokan", note: "For the deep-nature route: small family-run inns right on the old highway." },
+  { name: "Yunomine or Kawayu Onsen", note: "For the deep-nature route: Yunomine is Japan's oldest hot spring village; Kawayu lets you dig your own pool into the riverbed." }
+];
+renderInfoOptions("stays-grid", stays, "stay");
+
+// packing list
+const packing = {
+  "Documents": ["Passport", "Printed flight + accommodation confirmations", "Travel insurance details", "JR Pass exchange voucher (if bought)"],
+  "Money": ["Cash — Japan is still cash-heavy", "One card with no foreign transaction fee", "Coin purse (you will collect coins)"],
+  "Tech": ["Type-A plug adapter", "Portable charger", "eSIM or pocket wifi sorted before landing"],
+  "Clothing": ["Layers for 16–24°C, cooler in the mountains", "Light rain shell — non-negotiable on the trails", "Broken-in hiking boots, not new ones", "A warm layer for evenings at altitude (Kamikochi gets cold at night)"],
+  "Hiking gear": ["Bear bell (Okutama has active advisories)", "Trekking poles, especially for the Kumano Kodo's stone steps", "Small headlamp — mountain lodges lights-out early", "Blister kit, refillable water bottle, trail snacks"],
+  "Extras": ["Small trash bag (public bins are rare)", "Cash for lodges and trailside vending machines — no cards out here", "A little notebook for bus times / addresses"]
+};
+const packGrid = document.getElementById("pack-grid");
+packGrid.innerHTML = Object.entries(packing).map(([cat, items]) => `
+  <div class="pack-cat">
+    <h4 class="signage">${cat.toUpperCase()}</h4>
+    ${items.map((it,i) => `
+      <label data-key="pack:${cat}:${i}">
+        <input type="checkbox">
+        <span>${it}</span>
+      </label>
+    `).join("")}
+  </div>
+`).join("");
+
+// budget table
+const budget = [
+  ["Accommodation", "¥4,000", "¥12,000"],
+  ["Food", "¥2,500", "¥6,000"],
+  ["Local transport", "¥1,000", "¥2,000"],
+  ["Activities / entry fees", "¥1,500", "¥4,000"]
+];
+document.getElementById("budget-body").innerHTML = budget.map(r => `
+  <tr><td>${r[0]}</td><td>${r[1]}</td><td class="num">${r[2]}</td></tr>
+`).join("");
+const lowTotal = budget.reduce((s,r)=>s+parseInt(r[1].replace(/[^\d]/g,"")),0);
+const highTotal = budget.reduce((s,r)=>s+parseInt(r[2].replace(/[^\d]/g,"")),0);
+document.getElementById("budget-total-low").textContent = "¥" + lowTotal.toLocaleString();
+document.getElementById("budget-total-high").textContent = "¥" + highTotal.toLocaleString();
+
+// persistence: checkboxes + notes
+async function loadState(){
+  try{
+    const res = await window.storage.get("japan-trip-state");
+    return res ? JSON.parse(res.value) : {};
+  }catch(e){ return {}; }
+}
+async function saveState(state){
+  try{ await window.storage.set("japan-trip-state", JSON.stringify(state)); }catch(e){}
+}
+
+(async function initPersistence(){
+  const state = await loadState();
+
+  document.querySelectorAll('.pack-cat label').forEach(label => {
+    const key = label.dataset.key;
+    const checkbox = label.querySelector('input');
+    if(state[key]){ checkbox.checked = true; label.classList.add('checked'); }
+    checkbox.addEventListener('change', async () => {
+      label.classList.toggle('checked', checkbox.checked);
+      state[key] = checkbox.checked;
+      await saveState(state);
+    });
+  });
+
+  document.querySelectorAll('.checkable-item input[type=checkbox]').forEach(cb => {
+    const key = cb.dataset.key;
+    const item = cb.closest('.checkable-item');
+    if(state[key]){ cb.checked = true; item.classList.add('checked'); }
+    cb.addEventListener('change', async () => {
+      item.classList.toggle('checked', cb.checked);
+      state[key] = cb.checked;
+      await saveState(state);
+    });
+  });
+
+  document.querySelectorAll('textarea[data-key]').forEach(ta => {
+    const key = ta.dataset.key;
+    if(state[key]) ta.value = state[key];
+    ta.addEventListener('blur', async () => {
+      state[key] = ta.value;
+      await saveState(state);
+    });
+  });
+})();
+
+// smooth scroll for nav
+document.querySelectorAll('.stops-nav a').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    document.querySelector(a.getAttribute('href')).scrollIntoView({behavior:'smooth', block:'start'});
+  });
+});
+</script>
+
+</body>
+</html>
